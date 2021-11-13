@@ -30,19 +30,19 @@ namespace Exam_Preparation_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblContest = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblContest = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,6 +57,27 @@ namespace Exam_Preparation_System
             this.panel1.Size = new System.Drawing.Size(1208, 733);
             this.panel1.TabIndex = 4;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(702, 607);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(506, 126);
+            this.panel3.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AllowDrop = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(184, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Thời gian đếm ngược";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -67,6 +88,15 @@ namespace Exam_Preparation_System
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblContest);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(702, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(506, 126);
+            this.panel2.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -90,15 +120,6 @@ namespace Exam_Preparation_System
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblContest);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(702, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(506, 126);
-            this.panel2.TabIndex = 3;
-            // 
             // lblContest
             // 
             this.lblContest.AllowDrop = true;
@@ -110,27 +131,6 @@ namespace Exam_Preparation_System
             this.lblContest.Size = new System.Drawing.Size(217, 31);
             this.lblContest.TabIndex = 0;
             this.lblContest.Text = "Cuộc thi sắp tới";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(702, 607);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(506, 126);
-            this.panel3.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AllowDrop = true;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(184, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thời gian đếm ngược";
             // 
             // FormHome
             // 
@@ -145,13 +145,13 @@ namespace Exam_Preparation_System
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.Text = "Trang chủ";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -162,8 +162,8 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblContest;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblContest;
     }
 }

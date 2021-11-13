@@ -19,22 +19,14 @@ namespace Exam_Preparation_System
         private IconButton currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
-        private FormEditProfile profile = new FormEditProfile();
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
-        );
 
         public FormMainMenu()
         {
             InitializeComponent();
+            // center screen
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -43,18 +35,9 @@ namespace Exam_Preparation_System
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            WindowState = FormWindowState.Maximized;
+           
             reset();
             openChildForm(new FormHome());
-
-            
-            // border radius for form
-            /*this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));*/
-
-            // border radius for panel
-            /*panelContent.Region = Region.FromHrgn(CreateRoundRectRgn(0, panelContent.Height, panelContent.Width,
-            panelContent.Height, 30, 30));*/
-
         }
 
 
@@ -192,7 +175,9 @@ namespace Exam_Preparation_System
 
         private void btnEditProfile_Click(object sender, EventArgs e)
         {
-            profile.ShowDialog();
+            
         }
+
+        
     }
 }
