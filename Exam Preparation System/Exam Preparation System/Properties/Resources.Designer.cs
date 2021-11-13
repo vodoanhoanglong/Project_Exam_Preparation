@@ -63,9 +63,9 @@ namespace Exam_Preparation_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down {
+        internal static System.Drawing.Bitmap logo_home {
             get {
-                object obj = ResourceManager.GetObject("down", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,29 @@ namespace Exam_Preparation_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap multi_color {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("multi_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap online_training {
+            get {
+                object obj = ResourceManager.GetObject("online_training", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tech_war {
+            get {
+                object obj = ResourceManager.GetObject("tech_war", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

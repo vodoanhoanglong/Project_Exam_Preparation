@@ -19,6 +19,18 @@ namespace Exam_Preparation_System
         private IconButton currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
+        private FormEditProfile profile = new FormEditProfile();
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
 
         public FormMainMenu()
         {
@@ -31,12 +43,18 @@ namespace Exam_Preparation_System
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+            WindowState = FormWindowState.Maximized;
+            reset();
+            openChildForm(new FormHome());
 
-            /*this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            WindowState = FormWindowState.Maximized;*/
             
+            // border radius for form
+            /*this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));*/
+
+            // border radius for panel
+            /*panelContent.Region = Region.FromHrgn(CreateRoundRectRgn(0, panelContent.Height, panelContent.Width,
+            panelContent.Height, 30, 30));*/
+
         }
 
 
@@ -70,6 +88,8 @@ namespace Exam_Preparation_System
             {
                 disableButton();
                 currBtn = (IconButton)senderBtn;
+                if (currBtn.Text == "Thi trực tuyến")
+                    panelSubmenu.Visible = true;
                 currBtn.BackColor = Color.FromArgb(57, 56, 61);
                 currBtn.ForeColor = color;
                 currBtn.IconColor = color;
@@ -95,18 +115,20 @@ namespace Exam_Preparation_System
                 currBtn.IconColor = Color.White;
                 currBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                panelSubmenu.Visible = false;
             }
         }
 
 
-        private void btnExercise_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color1);
+            openChildForm(new FormHome());
         }
 
-        private void btnExam_Click(object sender, EventArgs e)
+        private void btnWarehouse_Click(object sender, EventArgs e)
         {
-          activateButton(sender, RGBColors.color2);
+            activateButton(sender, RGBColors.color2);
         }
 
         private void btnExamManager_Click(object sender, EventArgs e)
@@ -130,10 +152,10 @@ namespace Exam_Preparation_System
         {
             disableButton();
             leftBorderBtn.Visible = false;
-
+            panelSubmenu.Visible = false;
             iconCurrChildForm.IconChar = IconChar.Home;
-            iconCurrChildForm.IconColor = Color.MediumSlateBlue;
-            lblTitle.Text = "Home";
+            iconCurrChildForm.IconColor = RGBColors.color1;
+            lblTitle.Text = "Trang chủ";
         }
 
         private void panelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -142,6 +164,35 @@ namespace Exam_Preparation_System
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+       
+
+        private void btnCreateExam_Click(object sender, EventArgs e)
+        {
+            panelSubmenu.Visible = false;
+         
+        }
+
+        private void btnListExam_Click(object sender, EventArgs e)
+        {
+            panelSubmenu.Visible = false;
+
+        }
+
+        private void btnMark_Click(object sender, EventArgs e)
+        {
+            panelSubmenu.Visible = false;
+
+        }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+            panelSubmenu.Visible = false;
+
+        }
+
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            profile.ShowDialog();
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditProfile.Designer.cs">
+      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEditProfile.resx">
+      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,13 +106,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\utc2icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\down.png" />
+    <None Include="Resources\online_training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multi_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tech_war.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
