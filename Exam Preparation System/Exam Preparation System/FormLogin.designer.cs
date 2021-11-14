@@ -33,13 +33,13 @@ namespace Exam_Preparation_System
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.gtsShowPassword = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
             this.gbtnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gtxtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.gtxtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,6 +67,19 @@ namespace Exam_Preparation_System
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(499, 467);
             this.guna2Panel1.TabIndex = 2;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Exam_Preparation_System.Properties.Resources.BackgroundLogin;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.InitialImage = null;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-316, -31);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(814, 515);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2ControlBox2
             // 
@@ -158,19 +171,6 @@ namespace Exam_Preparation_System
             this.gbtnLogin.Text = "LOGIN";
             this.gbtnLogin.Click += new System.EventHandler(this.gbtnLogin_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Exam_Preparation_System.Properties.Resources.BackgroundLogin;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.InitialImage = null;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-316, -31);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(814, 515);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::Exam_Preparation_System.Properties.Resources.utc2icon;
@@ -189,6 +189,7 @@ namespace Exam_Preparation_System
             this.gtxtUserName.AutoRoundedCorners = true;
             this.gtxtUserName.BorderColor = System.Drawing.Color.White;
             this.gtxtUserName.BorderRadius = 17;
+            this.gtxtUserName.BorderThickness = 2;
             this.gtxtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gtxtUserName.DefaultText = "";
             this.gtxtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -220,6 +221,7 @@ namespace Exam_Preparation_System
             this.gtxtPassword.AutoRoundedCorners = true;
             this.gtxtPassword.BorderColor = System.Drawing.Color.White;
             this.gtxtPassword.BorderRadius = 17;
+            this.gtxtPassword.BorderThickness = 2;
             this.gtxtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gtxtPassword.DefaultText = "";
             this.gtxtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));

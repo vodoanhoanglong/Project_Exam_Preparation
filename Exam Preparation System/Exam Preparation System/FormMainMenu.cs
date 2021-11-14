@@ -173,11 +173,15 @@ namespace Exam_Preparation_System
 
         }
 
-        private void btnEditProfile_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            
+            FormLogin.instance.Visible = true;
+            this.Dispose();
         }
 
-        
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,16 +30,28 @@ namespace Exam_Preparation_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelSubMenuStudent = new System.Windows.Forms.Panel();
+            this.sperator = new System.Windows.Forms.Label();
+            this.panelSubmenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelContent = new System.Windows.Forms.Panel();
+            this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btnProfile = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.sperator = new System.Windows.Forms.Label();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnChart = new FontAwesome.Sharp.IconButton();
-            this.panelSubmenu = new System.Windows.Forms.Panel();
             this.btnResult = new FontAwesome.Sharp.IconButton();
             this.btnMark = new FontAwesome.Sharp.IconButton();
             this.btnListExam = new FontAwesome.Sharp.IconButton();
@@ -47,25 +59,14 @@ namespace Exam_Preparation_System
             this.btnExamManager = new FontAwesome.Sharp.IconButton();
             this.btnWarehouse = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelHeader = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.iconCurrChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.panelContent = new System.Windows.Forms.Panel();
-            this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.panelMenu.SuspendLayout();
             this.panelSubMenuStudent.SuspendLayout();
             this.panelSubmenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -98,6 +99,150 @@ namespace Exam_Preparation_System
             this.panelSubMenuStudent.Size = new System.Drawing.Size(220, 117);
             this.panelSubMenuStudent.TabIndex = 14;
             this.panelSubMenuStudent.TabStop = true;
+            // 
+            // sperator
+            // 
+            this.sperator.BackColor = System.Drawing.Color.Red;
+            this.sperator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sperator.ForeColor = System.Drawing.Color.Red;
+            this.sperator.Location = new System.Drawing.Point(10, 932);
+            this.sperator.Name = "sperator";
+            this.sperator.Size = new System.Drawing.Size(200, 2);
+            this.sperator.TabIndex = 13;
+            // 
+            // panelSubmenu
+            // 
+            this.panelSubmenu.Controls.Add(this.btnResult);
+            this.panelSubmenu.Controls.Add(this.btnMark);
+            this.panelSubmenu.Controls.Add(this.btnListExam);
+            this.panelSubmenu.Controls.Add(this.btnCreateExam);
+            this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubmenu.Location = new System.Drawing.Point(0, 322);
+            this.panelSubmenu.Name = "panelSubmenu";
+            this.panelSubmenu.Size = new System.Drawing.Size(220, 117);
+            this.panelSubmenu.TabIndex = 0;
+            this.panelSubmenu.TabStop = true;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Controls.Add(this.panel2);
+            this.panelLogo.Controls.Add(this.panel1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(220, 142);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 121);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 21);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 21);
+            this.panel1.TabIndex = 0;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panelHeader.Controls.Add(this.label1);
+            this.panelHeader.Controls.Add(this.btnProfile);
+            this.panelHeader.Controls.Add(this.lblTitle);
+            this.panelHeader.Controls.Add(this.iconCurrChildForm);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(223, 24);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1214, 61);
+            this.panelHeader.TabIndex = 1;
+            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(987, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 22, 0, 0);
+            this.label1.Size = new System.Drawing.Size(163, 39);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Võ Đoàn Hoàng Long";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(62, 23);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(49, 17);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Home";
+            // 
+            // panelContent
+            // 
+            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(223, 85);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1214, 936);
+            this.panelContent.TabIndex = 2;
+            // 
+            // Elipse
+            // 
+            this.Elipse.BorderRadius = 20;
+            this.Elipse.TargetControl = this;
+            // 
+            // ShadowForm
+            // 
+            this.ShadowForm.BorderRadius = 20;
+            this.ShadowForm.ShadowColor = System.Drawing.Color.DarkGray;
+            this.ShadowForm.TargetForm = this;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnProfile.CheckedState.Parent = this.btnProfile;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnProfile.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnProfile.HoverState.Parent = this.btnProfile;
+            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
+            this.btnProfile.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnProfile.ImageRotate = 0F;
+            this.btnProfile.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnProfile.Location = new System.Drawing.Point(1150, 0);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnProfile.PressedState.Parent = this.btnProfile;
+            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
+            this.btnProfile.Size = new System.Drawing.Size(64, 61);
+            this.btnProfile.TabIndex = 2;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // iconCurrChildForm
+            // 
+            this.iconCurrChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.iconCurrChildForm.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.iconCurrChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrChildForm.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.iconCurrChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrChildForm.Location = new System.Drawing.Point(15, 17);
+            this.iconCurrChildForm.Name = "iconCurrChildForm";
+            this.iconCurrChildForm.Size = new System.Drawing.Size(41, 32);
+            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconCurrChildForm.TabIndex = 0;
+            this.iconCurrChildForm.TabStop = false;
             // 
             // iconButton1
             // 
@@ -183,16 +328,6 @@ namespace Exam_Preparation_System
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             // 
-            // sperator
-            // 
-            this.sperator.BackColor = System.Drawing.Color.Red;
-            this.sperator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sperator.ForeColor = System.Drawing.Color.Red;
-            this.sperator.Location = new System.Drawing.Point(10, 932);
-            this.sperator.Name = "sperator";
-            this.sperator.Size = new System.Drawing.Size(200, 2);
-            this.sperator.TabIndex = 13;
-            // 
             // btnLogout
             // 
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -214,6 +349,7 @@ namespace Exam_Preparation_System
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnChart
             // 
@@ -237,19 +373,6 @@ namespace Exam_Preparation_System
             this.btnChart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChart.UseVisualStyleBackColor = true;
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
-            // 
-            // panelSubmenu
-            // 
-            this.panelSubmenu.Controls.Add(this.btnResult);
-            this.panelSubmenu.Controls.Add(this.btnMark);
-            this.panelSubmenu.Controls.Add(this.btnListExam);
-            this.panelSubmenu.Controls.Add(this.btnCreateExam);
-            this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenu.Location = new System.Drawing.Point(0, 322);
-            this.panelSubmenu.Name = "panelSubmenu";
-            this.panelSubmenu.Size = new System.Drawing.Size(220, 117);
-            this.panelSubmenu.TabIndex = 0;
-            this.panelSubmenu.TabStop = true;
             // 
             // btnResult
             // 
@@ -408,17 +531,6 @@ namespace Exam_Preparation_System
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Controls.Add(this.panel2);
-            this.panelLogo.Controls.Add(this.panel1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 142);
-            this.panelLogo.TabIndex = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -429,114 +541,6 @@ namespace Exam_Preparation_System
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 121);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 21);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 21);
-            this.panel1.TabIndex = 0;
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panelHeader.Controls.Add(this.label1);
-            this.panelHeader.Controls.Add(this.btnProfile);
-            this.panelHeader.Controls.Add(this.lblTitle);
-            this.panelHeader.Controls.Add(this.iconCurrChildForm);
-            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(223, 24);
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1214, 61);
-            this.panelHeader.TabIndex = 1;
-            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader_MouseDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(987, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 22, 0, 0);
-            this.label1.Size = new System.Drawing.Size(163, 39);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Võ Đoàn Hoàng Long";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnProfile.CheckedState.Parent = this.btnProfile;
-            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnProfile.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnProfile.HoverState.Parent = this.btnProfile;
-            this.btnProfile.Image = global::Exam_Preparation_System.Properties.Resources.user;
-            this.btnProfile.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnProfile.ImageRotate = 0F;
-            this.btnProfile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnProfile.Location = new System.Drawing.Point(1150, 0);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnProfile.PressedState.Parent = this.btnProfile;
-            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
-            this.btnProfile.Size = new System.Drawing.Size(64, 61);
-            this.btnProfile.TabIndex = 2;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(62, 23);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(49, 17);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Home";
-            // 
-            // iconCurrChildForm
-            // 
-            this.iconCurrChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconCurrChildForm.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconCurrChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrChildForm.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconCurrChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrChildForm.Location = new System.Drawing.Point(15, 17);
-            this.iconCurrChildForm.Name = "iconCurrChildForm";
-            this.iconCurrChildForm.Size = new System.Drawing.Size(41, 32);
-            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconCurrChildForm.TabIndex = 0;
-            this.iconCurrChildForm.TabStop = false;
-            // 
-            // panelContent
-            // 
-            this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(223, 85);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1214, 936);
-            this.panelContent.TabIndex = 2;
-            // 
-            // Elipse
-            // 
-            this.Elipse.BorderRadius = 20;
-            this.Elipse.TargetControl = this;
-            // 
-            // ShadowForm
-            // 
-            this.ShadowForm.BorderRadius = 20;
-            this.ShadowForm.ShadowColor = System.Drawing.Color.DarkGray;
-            this.ShadowForm.TargetForm = this;
             // 
             // FormMainMenu
             // 
@@ -556,10 +560,10 @@ namespace Exam_Preparation_System
             this.panelSubMenuStudent.ResumeLayout(false);
             this.panelSubmenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

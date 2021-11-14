@@ -124,9 +124,6 @@
     <None Include="Resources\tech_war.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\username.png" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BackgroundLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
