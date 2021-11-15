@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exam_Preparation_System.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace Exam_Preparation_System
     public partial class FormLogin : Form
     {
         public static Form instance;
+        public static USER info;
+        ContextDB context = new ContextDB();
         public FormLogin()
         {
             InitializeComponent();
@@ -25,29 +28,46 @@ namespace Exam_Preparation_System
         private void gtsShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (gtsShowPassword.Checked)
-            {
                 gtxtPassword.UseSystemPasswordChar = false;
-            }
             else
-            {
                 gtxtPassword.UseSystemPasswordChar = true;
-            }
         }
 
         private void gtxtUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
+            gtxtUserName.MaxLength = 10;
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;   
+        }
+
+        private Boolean checkAccount()
+        {   
+            try
             {
-                e.Handled = true;
-                gtxtUserName.MaxLength = 10;
+                USER user = context.USERS.Where(u => u.UserID == gtxtUserName.Text && u.Password == gtxtPassword.Text).FirstOrDefault();
+                if (user == null)
+                    return false;
+                info = user;
             }
+            catch (Exception e)
+            {
+                return false;
+            }
+            return true;
         }
 
         private void gbtnLogin_Click(object sender, EventArgs e)
         {
-            FormMainMenu menu = new FormMainMenu();
-            menu.Show();
-            this.Visible = false;
+            if (gtxtUserName.Text == "" || gtxtPassword.Text == "")
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            else if(!checkAccount())
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai");   
+            else
+            {
+                FormMainMenu menu = new FormMainMenu();
+                menu.Show();
+                this.Visible = false;
+            }
         }
     }
 }

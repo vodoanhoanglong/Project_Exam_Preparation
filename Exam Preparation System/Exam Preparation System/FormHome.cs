@@ -1,5 +1,4 @@
-﻿using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Exam_Preparation_System
 {
-    public partial class FormHome : MaterialForm
+    public partial class FormHome : Form
     {
       
         public FormHome()

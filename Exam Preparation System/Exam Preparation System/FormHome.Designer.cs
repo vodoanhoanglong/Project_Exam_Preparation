@@ -34,9 +34,9 @@ namespace Exam_Preparation_System
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblContest = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblContest = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,6 +98,18 @@ namespace Exam_Preparation_System
             this.panel2.Size = new System.Drawing.Size(506, 126);
             this.panel2.TabIndex = 3;
             // 
+            // lblContest
+            // 
+            this.lblContest.AllowDrop = true;
+            this.lblContest.AutoSize = true;
+            this.lblContest.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContest.ForeColor = System.Drawing.Color.Black;
+            this.lblContest.Location = new System.Drawing.Point(204, 40);
+            this.lblContest.Name = "lblContest";
+            this.lblContest.Size = new System.Drawing.Size(217, 31);
+            this.lblContest.TabIndex = 0;
+            this.lblContest.Text = "Cuộc thi sắp tới";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -120,18 +132,6 @@ namespace Exam_Preparation_System
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // lblContest
-            // 
-            this.lblContest.AllowDrop = true;
-            this.lblContest.AutoSize = true;
-            this.lblContest.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContest.ForeColor = System.Drawing.Color.Black;
-            this.lblContest.Location = new System.Drawing.Point(204, 40);
-            this.lblContest.Name = "lblContest";
-            this.lblContest.Size = new System.Drawing.Size(217, 31);
-            this.lblContest.TabIndex = 0;
-            this.lblContest.Text = "Cuộc thi sắp tới";
-            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,7 +140,6 @@ namespace Exam_Preparation_System
             this.ClientSize = new System.Drawing.Size(1214, 936);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
-            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Name = "FormHome";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.Text = "Trang chủ";

@@ -1,6 +1,4 @@
-﻿using FontAwesome.Sharp;
-using MaterialSkin;
-using MaterialSkin.Controls;
+﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +12,12 @@ using System.Windows.Forms;
 
 namespace Exam_Preparation_System
 {
-    public partial class FormMainMenu : MaterialForm
+
+    public partial class FormMainMenu : Form
     {
-        private IconButton currBtn;
-        private Panel leftBorderBtn;
+        private const string admin = "60510710671";
+        private Guna2Button currBtn;
+        private Panel leftBorderBtn, currSubBtn;
         private Form currChildForm;
 
         public FormMainMenu()
@@ -26,34 +26,43 @@ namespace Exam_Preparation_System
             // center screen
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            currSubBtn = panelSubMenu;
+            /*lblName.Text = FormLogin.info.FullName;*/
+            if (FormLogin.info.UserID != admin)
+            {
+                panelSubMenu.Visible = false;
+                currSubBtn = panelSubMenuStudent;
+                btnChart.Visible = false;
+                btnWarehouse.Visible = false;
+            }
+            else panelSubMenuStudent.Visible = false;
+
+            currSubBtn.Visible = false;
+
 
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
 
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey900, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-           
-            reset();
-            openChildForm(new FormHome());
+
+
+            /*openChildForm(new FormHome());*/
         }
 
 
         private void openChildForm(Form childForm)
         {
-            if(currChildForm != null)
+            if (currChildForm != null)
                 currChildForm.Close();
             currChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelContent.Controls.Add(childForm);
-            panelContent.Tag = childForm;
+            /*panelContent.Controls.Add(childForm);
+            panelContent.Tag = childForm;*/
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
+            /*lblTitle.Text = childForm.Text;*/
         }
 
         private struct RGBColors
@@ -61,7 +70,7 @@ namespace Exam_Preparation_System
             public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(24,161, 251);
+            public static Color color4 = Color.FromArgb(24, 161, 251);
             public static Color color5 = Color.FromArgb(249, 88, 155);
         }
 
@@ -70,35 +79,30 @@ namespace Exam_Preparation_System
             if (senderBtn != null)
             {
                 disableButton();
-                currBtn = (IconButton)senderBtn;
+                currBtn = (Guna2Button)senderBtn;
                 if (currBtn.Text == "Thi trực tuyến")
-                    panelSubmenu.Visible = true;
-                currBtn.BackColor = Color.FromArgb(57, 56, 61);
+                    currSubBtn.Visible = true;
+                currBtn.FillColor = Color.FromArgb(239, 242, 249);
                 currBtn.ForeColor = color;
-                currBtn.IconColor = color;
-
 
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currBtn.Location.Y);
+                leftBorderBtn.Size = new Size(5,45);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
 
-                iconCurrChildForm.IconChar = currBtn.IconChar;
-                iconCurrChildForm.IconColor = color;
+                /*iconCurrChildForm.IconChar = currBtn.IconChar;
+                iconCurrChildForm.IconColor = color;*/
             }
         }
 
         private void disableButton()
         {
-            if(currBtn != null)
+            if (currBtn != null)
             {
-                currBtn.BackColor = Color.FromArgb(50, 50, 50);
-                currBtn.ForeColor = Color.White;
-                currBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currBtn.IconColor = Color.White;
-                currBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currBtn.ImageAlign = ContentAlignment.MiddleLeft;
-                panelSubmenu.Visible = false;
+                currBtn.FillColor = Color.White;
+                currBtn.ForeColor = Color.Black;
+                currSubBtn.Visible = false;
             }
         }
 
@@ -106,22 +110,23 @@ namespace Exam_Preparation_System
         private void btnHome_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color1);
-            openChildForm(new FormHome());
+            /*openChildForm(new FormHome());*/
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color2);
+            /*openChildForm(new FormWarehouse());*/
         }
 
         private void btnExamManager_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color4);
+            activateButton(sender, RGBColors.color3);
         }
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color3);
+            activateButton(sender, RGBColors.color4);
         }
 
         // Drag Form with pannel
@@ -131,49 +136,57 @@ namespace Exam_Preparation_System
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void reset()
-        {
-            disableButton();
-            leftBorderBtn.Visible = false;
-            panelSubmenu.Visible = false;
-            iconCurrChildForm.IconChar = IconChar.Home;
-            iconCurrChildForm.IconColor = RGBColors.color1;
-            lblTitle.Text = "Trang chủ";
-        }
 
-        private void panelHeader_MouseDown(object sender, MouseEventArgs e)
+        /*private void panelHeader_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        }*/
 
-       
+
 
         private void btnCreateExam_Click(object sender, EventArgs e)
         {
-            panelSubmenu.Visible = false;
-         
+            currSubBtn.Visible = false;
         }
 
         private void btnListExam_Click(object sender, EventArgs e)
         {
-            panelSubmenu.Visible = false;
-
+            currSubBtn.Visible = false;
         }
 
         private void btnMark_Click(object sender, EventArgs e)
         {
-            panelSubmenu.Visible = false;
-
+            currSubBtn.Visible = false;
         }
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            panelSubmenu.Visible = false;
-
+            currSubBtn.Visible = false;
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+
+        private void btnExercise_Click(object sender, EventArgs e)
+        {
+            currSubBtn.Visible = false;
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            currSubBtn.Visible = false;
+        }
+
+        private void btnJoinExam_Click(object sender, EventArgs e)
+        {
+            currSubBtn.Visible = false;
+        }
+
+        private void btnViewResult_Click(object sender, EventArgs e)
+        {
+            currSubBtn.Visible = false;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
             FormLogin.instance.Visible = true;
             this.Dispose();
@@ -181,7 +194,7 @@ namespace Exam_Preparation_System
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            currSubBtn.Visible = false;
         }
     }
 }
