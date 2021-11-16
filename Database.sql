@@ -14,15 +14,15 @@ CREATE TABLE USERS(
 
 CREATE TABLE SUBJECTS(
 	SubjectID int identity(1,1) primary key,
-	SubName varchar(20),
+	SubName nvarchar(50),
 	Descriptions varchar(max)
 );
 
 CREATE TABLE QUESTIONS(
 	QuestionID int identity(1,1) primary key,
-	Contents varchar(max),
+	Contents nvarchar(max),
 	Images varchar(max),
-	Levels int not null,
+	Levels int,
 	Forms bit,
 	SubjectID int foreign key references SUBJECTS(SubjectID)
 );
@@ -72,7 +72,7 @@ CREATE TABLE EXAMRESULTS(
 
 CREATE TABLE ANSWERS(
 	AnswersID int identity(1,1) primary key,
-	AnswersContent varchar(50) not null,
+	AnswersContent nvarchar(max) not null,
 	isCorrect bit not null,
 	QuestionID int,
 	foreign key(QuestionID) references QUESTIONS(QuestionID),
@@ -88,5 +88,15 @@ GO
 
 Insert into USERS VALUES ('6051071067', '1','Võ Đoàn Hoàng Long', '3/3/2001', 1, '0932765080')
 
+Insert into SUBJECTS(SubName) VALUES(N'Lập trình hướng đối tượng'),
+									(N'Cấu trúc dữ liệu giải thuật'),
+									(N'Phân tích thiết kế hệ thống'),
+									(N'Thiết kế cơ sở dữ liệu'),
+									(N'Lập trình trực quan')
 
+Insert into QUESTIONS(Contents,SubjectID) VALUES(N'OOP thuộc ngôn ngữ nào', 1);
+INSERT INTO ANSWERS(AnswersContent,isCorrect,QuestionID) VALUES(N'C', 0, 1),
+															(N'C++', 1, 1),
+															(N'Java', 0, 1),
+															(N'C#', 0, 1)
 

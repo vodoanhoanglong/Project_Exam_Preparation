@@ -15,7 +15,7 @@ namespace Exam_Preparation_System
 
     public partial class FormMainMenu : Form
     {
-        private const string admin = "60510710671";
+        private const string admin = "6051071067";
         private Guna2Button currBtn;
         private Panel leftBorderBtn, currSubBtn;
         private Form currChildForm;
@@ -28,22 +28,21 @@ namespace Exam_Preparation_System
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             currSubBtn = panelSubMenu;
             /*lblName.Text = FormLogin.info.FullName;*/
-            if (FormLogin.info.UserID != admin)
+            /*if (FormLogin.info.UserID != admin)
             {
                 panelSubMenu.Visible = false;
                 currSubBtn = panelSubMenuStudent;
                 btnChart.Visible = false;
                 btnWarehouse.Visible = false;
             }
-            else panelSubMenuStudent.Visible = false;
+            else panelSubMenuStudent.Visible = false;*/
 
             currSubBtn.Visible = false;
-
+            panelSubMenuStudent.Visible = false;
 
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
-
 
 
             /*openChildForm(new FormHome());*/
@@ -58,8 +57,8 @@ namespace Exam_Preparation_System
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            /*panelContent.Controls.Add(childForm);
-            panelContent.Tag = childForm;*/
+            panelContent.Controls.Add(childForm);
+            panelContent.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             /*lblTitle.Text = childForm.Text;*/
@@ -82,6 +81,7 @@ namespace Exam_Preparation_System
                 currBtn = (Guna2Button)senderBtn;
                 if (currBtn.Text == "Thi trực tuyến")
                     currSubBtn.Visible = true;
+
                 currBtn.FillColor = Color.FromArgb(239, 242, 249);
                 currBtn.ForeColor = color;
 
@@ -110,13 +110,13 @@ namespace Exam_Preparation_System
         private void btnHome_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color1);
-            /*openChildForm(new FormHome());*/
+            openChildForm(new FormHome());
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color2);
-            /*openChildForm(new FormWarehouse());*/
+            openChildForm(new FormWarehouse());
         }
 
         private void btnExamManager_Click(object sender, EventArgs e)

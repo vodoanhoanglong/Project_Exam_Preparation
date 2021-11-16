@@ -53,6 +53,7 @@ namespace Exam_Preparation_System
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.panelSlideBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSubMenuStudent.SuspendLayout();
@@ -63,7 +64,7 @@ namespace Exam_Preparation_System
             // ShadowForm
             // 
             this.ShadowForm.BorderRadius = 20;
-            this.ShadowForm.ShadowColor = System.Drawing.Color.Gray;
+            this.ShadowForm.ShadowColor = System.Drawing.Color.Violet;
             this.ShadowForm.TargetForm = this;
             // 
             // Elipse
@@ -655,17 +656,25 @@ namespace Exam_Preparation_System
             this.btnProfile.TabIndex = 8;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(223, 40);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.ShadowDecoration.Parent = this.panelContent;
+            this.panelContent.Size = new System.Drawing.Size(1189, 809);
+            this.panelContent.TabIndex = 9;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1424, 861);
+            this.Controls.Add(this.panelContent);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.panelSlideBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
             this.panelSlideBar.ResumeLayout(false);
@@ -702,5 +711,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2Button btnExercise;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
+        private Guna.UI2.WinForms.Guna2Panel panelContent;
     }
 }
