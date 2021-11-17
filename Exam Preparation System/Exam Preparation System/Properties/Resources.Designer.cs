@@ -103,6 +103,16 @@ namespace Exam_Preparation_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exam_color {
+            get {
+                object obj = ResourceManager.GetObject("exam-color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_dot {
             get {
                 object obj = ResourceManager.GetObject("green-dot", resourceCulture);
@@ -123,9 +133,29 @@ namespace Exam_Preparation_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_color {
+            get {
+                object obj = ResourceManager.GetObject("home-color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap line_chart {
             get {
                 object obj = ResourceManager.GetObject("line-chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap line_chart_color {
+            get {
+                object obj = ResourceManager.GetObject("line-chart-color", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +266,16 @@ namespace Exam_Preparation_System.Properties {
         internal static System.Drawing.Bitmap warehouse {
             get {
                 object obj = ResourceManager.GetObject("warehouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warehouse_color {
+            get {
+                object obj = ResourceManager.GetObject("warehouse-color", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

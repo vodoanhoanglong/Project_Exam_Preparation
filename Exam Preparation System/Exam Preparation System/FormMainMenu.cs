@@ -20,6 +20,16 @@ namespace Exam_Preparation_System
         private Panel leftBorderBtn, currSubBtn;
         private Form currChildForm;
 
+        private System.Drawing.Bitmap home = global::Exam_Preparation_System.Properties.Resources.home;
+        private System.Drawing.Bitmap warehouse = global::Exam_Preparation_System.Properties.Resources.warehouse;
+        private System.Drawing.Bitmap exam = global::Exam_Preparation_System.Properties.Resources.exam;
+        private System.Drawing.Bitmap lineChart = global::Exam_Preparation_System.Properties.Resources.line_chart;
+
+        private System.Drawing.Bitmap homeColor = global::Exam_Preparation_System.Properties.Resources.home_color;
+        private System.Drawing.Bitmap warehouseColor = global::Exam_Preparation_System.Properties.Resources.warehouse_color;
+        private System.Drawing.Bitmap examColor = global::Exam_Preparation_System.Properties.Resources.exam_color;
+        private System.Drawing.Bitmap lineChartColor = global::Exam_Preparation_System.Properties.Resources.line_chart_color;
+
         public FormMainMenu()
         {
             InitializeComponent();
@@ -61,7 +71,7 @@ namespace Exam_Preparation_System
             panelContent.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            /*lblTitle.Text = childForm.Text;*/
+            lblTitle.Text = childForm.Text;
         }
 
         private struct RGBColors
@@ -70,7 +80,26 @@ namespace Exam_Preparation_System
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(24, 161, 251);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
+        }
+
+        private void setColorImage(string name)
+        {
+            bool checkColor = currBtn.ForeColor.ToArgb().Equals(Color.Black.ToArgb());
+            switch (name)
+            {
+                case "btnHome":
+                    currBtn.Image = checkColor ? homeColor : home;
+                    break;
+                case "btnWarehouse":
+                    currBtn.Image = checkColor ? warehouseColor : warehouse;
+                    break;
+                case "btnExamManager":
+                    currBtn.Image = checkColor ? examColor : exam;
+                    break;
+                default:
+                    currBtn.Image = checkColor ? lineChartColor : lineChart;
+                    break;
+            }
         }
 
         private void activateButton(object senderBtn, Color color)
@@ -82,17 +111,16 @@ namespace Exam_Preparation_System
                 if (currBtn.Text == "Thi trực tuyến")
                     currSubBtn.Visible = true;
 
+                setColorImage(currBtn.Name);
                 currBtn.FillColor = Color.FromArgb(239, 242, 249);
                 currBtn.ForeColor = color;
+                iconCurrChildForm.Image = currBtn.Image;
 
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currBtn.Location.Y);
                 leftBorderBtn.Size = new Size(5,45);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-
-                /*iconCurrChildForm.IconChar = currBtn.IconChar;
-                iconCurrChildForm.IconColor = color;*/
             }
         }
 
@@ -100,6 +128,7 @@ namespace Exam_Preparation_System
         {
             if (currBtn != null)
             {
+                setColorImage(currBtn.Name);
                 currBtn.FillColor = Color.White;
                 currBtn.ForeColor = Color.Black;
                 currSubBtn.Visible = false;

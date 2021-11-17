@@ -52,13 +52,16 @@ namespace Exam_Preparation_System
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.iconCurrChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelSlideBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSubMenuStudent.SuspendLayout();
             this.panelSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // ShadowForm
@@ -634,6 +637,14 @@ namespace Exam_Preparation_System
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 35);
             this.guna2ControlBox1.TabIndex = 5;
             // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(223, 40);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.ShadowDecoration.Parent = this.panelContent;
+            this.panelContent.Size = new System.Drawing.Size(1189, 809);
+            this.panelContent.TabIndex = 9;
+            // 
             // btnProfile
             // 
             this.btnProfile.CheckedState.Parent = this.btnProfile;
@@ -656,13 +667,27 @@ namespace Exam_Preparation_System
             this.btnProfile.TabIndex = 8;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // panelContent
+            // lblTitle
             // 
-            this.panelContent.Location = new System.Drawing.Point(223, 40);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.ShadowDecoration.Parent = this.panelContent;
-            this.panelContent.Size = new System.Drawing.Size(1189, 809);
-            this.panelContent.TabIndex = 9;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(280, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(37, 22);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Title";
+            // 
+            // iconCurrChildForm
+            // 
+            this.iconCurrChildForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.iconCurrChildForm.ImageRotate = 0F;
+            this.iconCurrChildForm.Location = new System.Drawing.Point(232, 3);
+            this.iconCurrChildForm.Name = "iconCurrChildForm";
+            this.iconCurrChildForm.ShadowDecoration.Parent = this.iconCurrChildForm;
+            this.iconCurrChildForm.Size = new System.Drawing.Size(40, 33);
+            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconCurrChildForm.TabIndex = 12;
+            this.iconCurrChildForm.TabStop = false;
             // 
             // FormMainMenu
             // 
@@ -670,11 +695,14 @@ namespace Exam_Preparation_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1424, 861);
+            this.Controls.Add(this.iconCurrChildForm);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.panelSlideBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
             this.panelSlideBar.ResumeLayout(false);
@@ -682,7 +710,9 @@ namespace Exam_Preparation_System
             this.panelSubMenuStudent.ResumeLayout(false);
             this.panelSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -712,5 +742,7 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Panel panelContent;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
+        private Guna.UI2.WinForms.Guna2PictureBox iconCurrChildForm;
     }
 }

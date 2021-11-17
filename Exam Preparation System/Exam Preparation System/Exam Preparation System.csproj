@@ -196,5 +196,17 @@
   <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line-chart-color.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
