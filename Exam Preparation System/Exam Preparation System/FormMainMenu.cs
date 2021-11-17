@@ -175,8 +175,9 @@ namespace Exam_Preparation_System
 
 
         private void btnCreateExam_Click(object sender, EventArgs e)
-        {
+        {   
             currSubBtn.Visible = false;
+            openChildForm(new FormCreateExam());
         }
 
         private void btnListExam_Click(object sender, EventArgs e)

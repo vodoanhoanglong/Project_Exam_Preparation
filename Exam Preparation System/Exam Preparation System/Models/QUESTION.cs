@@ -20,13 +20,6 @@ namespace Exam_Preparation_System.Models
 
         [Column(TypeName = "NVARCHAR")]
         public string Contents { get; set; }
-
-        public string Images { get; set; }
-
-        public int Levels { get; set; }
-
-        public bool? Forms { get; set; }
-
         public int? SubjectID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

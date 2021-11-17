@@ -314,7 +314,7 @@ namespace Exam_Preparation_System
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 20;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1208, 430);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1183, 388);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
             // btnDeleteQuestion
@@ -331,7 +331,7 @@ namespace Exam_Preparation_System
             this.btnDeleteQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteQuestion.ForeColor = System.Drawing.Color.White;
             this.btnDeleteQuestion.HoverState.Parent = this.btnDeleteQuestion;
-            this.btnDeleteQuestion.Location = new System.Drawing.Point(1059, 376);
+            this.btnDeleteQuestion.Location = new System.Drawing.Point(504, 325);
             this.btnDeleteQuestion.Name = "btnDeleteQuestion";
             this.btnDeleteQuestion.ShadowDecoration.Parent = this.btnDeleteQuestion;
             this.btnDeleteQuestion.Size = new System.Drawing.Size(65, 31);
@@ -353,7 +353,7 @@ namespace Exam_Preparation_System
             this.btnAddQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
             this.btnAddQuestion.HoverState.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Location = new System.Drawing.Point(970, 376);
+            this.btnAddQuestion.Location = new System.Drawing.Point(412, 325);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.ShadowDecoration.Parent = this.btnAddQuestion;
             this.btnAddQuestion.Size = new System.Drawing.Size(65, 31);
@@ -442,7 +442,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvQuestion.EnableHeadersVisualStyles = false;
             this.dgvQuestion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvQuestion.Location = new System.Drawing.Point(18, 477);
+            this.dgvQuestion.Location = new System.Drawing.Point(11, 407);
             this.dgvQuestion.Name = "dgvQuestion";
             this.dgvQuestion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -455,7 +455,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvQuestion.RowHeadersVisible = false;
             this.dgvQuestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestion.Size = new System.Drawing.Size(1163, 391);
+            this.dgvQuestion.Size = new System.Drawing.Size(1163, 385);
             this.dgvQuestion.TabIndex = 1;
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -525,7 +525,7 @@ namespace Exam_Preparation_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1214, 936);
+            this.ClientSize = new System.Drawing.Size(1189, 809);
             this.Controls.Add(this.dgvQuestion);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

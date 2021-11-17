@@ -30,3 +30,4 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\Enti
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormWarehouse.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditQuestion.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormCreateExam.resources

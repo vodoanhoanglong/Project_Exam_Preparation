@@ -12,6 +12,7 @@ namespace Exam_Preparation_System.Models
         {
         }
 
+
         public virtual DbSet<ANSWER> ANSWERS { get; set; }
         public virtual DbSet<CADIDATELIST> CADIDATELISTs { get; set; }
         public virtual DbSet<EXAMINATION> EXAMINATIONS { get; set; }
@@ -54,9 +55,6 @@ namespace Exam_Preparation_System.Models
                 .Property(e => e.Contents)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<QUESTION>()
-                .Property(e => e.Images)
-                .IsUnicode(false);
 
             modelBuilder.Entity<REPORT>()
                 .Property(e => e.Contents)

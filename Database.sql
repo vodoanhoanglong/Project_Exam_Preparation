@@ -23,13 +23,11 @@ CREATE TABLE QUESTIONS(
 	Contents nvarchar(max),
 	SubjectID int foreign key references SUBJECTS(SubjectID)
 );
-
+	
 CREATE TABLE EXAMQUESTIONS(
 	ExamQuestionID int identity(1,1) primary key,
-	HardRate int,
-	EasyRate int,
 	Quantity int not null,
-	ExecutionTime datetime not null,
+	ExecutionTime varchar not null,
 	QuestionID int,
 	SubjectID int,
 	foreign key(QuestionID) references QUESTIONS(QuestionID),
