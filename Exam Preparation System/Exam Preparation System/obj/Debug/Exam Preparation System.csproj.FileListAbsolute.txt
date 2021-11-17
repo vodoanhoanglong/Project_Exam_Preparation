@@ -21,7 +21,6 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.CoreCompileInputs.cache
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.exe
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.pdb
-D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\Guna.UI2.dll
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormLogin.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.dll
@@ -29,3 +28,5 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\Enti
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.xml
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.SqlServer.xml
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormWarehouse.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditQuestion.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache

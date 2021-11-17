@@ -21,9 +21,6 @@ CREATE TABLE SUBJECTS(
 CREATE TABLE QUESTIONS(
 	QuestionID int identity(1,1) primary key,
 	Contents nvarchar(max),
-	Images varchar(max),
-	Levels int,
-	Forms bit,
 	SubjectID int foreign key references SUBJECTS(SubjectID)
 );
 
@@ -94,9 +91,5 @@ Insert into SUBJECTS(SubName) VALUES(N'Lập trình hướng đối tượng'),
 									(N'Thiết kế cơ sở dữ liệu'),
 									(N'Lập trình trực quan')
 
-Insert into QUESTIONS(Contents,SubjectID) VALUES(N'OOP thuộc ngôn ngữ nào', 1);
-INSERT INTO ANSWERS(AnswersContent,isCorrect,QuestionID) VALUES(N'C', 0, 1),
-															(N'C++', 1, 1),
-															(N'Java', 0, 1),
-															(N'C#', 0, 1)
+
 

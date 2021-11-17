@@ -13,47 +13,50 @@ namespace Exam_Preparation_System
 {
     public partial class FormWarehouse : Form
     {
-        ContextDB context = new ContextDB();
+        private ContextDB context = Program.context;
+        private List<SUBJECT> subject = null;
         private const int MaxRows = 4;
-        private DataGridViewComboBoxColumn cmbdgv = new DataGridViewComboBoxColumn();
+        public static FormWarehouse instance;
         public FormWarehouse()
         {
             InitializeComponent();
+            instance = this;
         }
 
-        private void loadData()
+        private void resetInput()
+        {
+            txtAnswer.Text = "";
+            txtQuestion.Text = "";
+            dgvAnswer.Rows.Clear();
+            dgvAnswer.Refresh();
+
+        }
+
+        public void loadData()
         {
             // get data with correct answer
-            var query1 = from question in context.QUESTIONS
-                   join answer in context.ANSWERS on question.QuestionID equals answer.QuestionID
-                   where answer.isCorrect == true
-                   select new { subject = question.SUBJECT.SubName, question = question.Contents, answerCorrect = answer.AnswersContent };
-            // get data with another answer
-            var query2 = from question in context.QUESTIONS
+            var query = from question in context.QUESTIONS
                          join answer in context.ANSWERS on question.QuestionID equals answer.QuestionID
-                         where answer.isCorrect == false
-                         select new { answerID = answer.AnswersID, answer = answer.AnswersContent };
+                         where answer.isCorrect == true
+                         select new { questionID = question.QuestionID, subjectID = question.SUBJECT.SubjectID, subject = question.SUBJECT.SubName, question = question.Contents, answerCorrect = answer.AnswersContent };
 
-            cmbdgv.HeaderText = "Câu trả lời khác";
-            cmbdgv.DataSource = query2.ToList();
-            cmbdgv.ValueMember = "answerID";
-            cmbdgv.DisplayMember = "answer";
-            dgvQuestion.Columns["Subject"].DataPropertyName = "subject";
-            dgvQuestion.Columns["Question"].DataPropertyName = "question";
-            dgvQuestion.Columns["isCorrect"].DataPropertyName = "answerCorrect";
-            dgvQuestion.Columns[0].ReadOnly = true;
-            dgvQuestion.Columns[1].ReadOnly = true;
-            dgvQuestion.Columns[2].ReadOnly = true;
-            dgvQuestion.DataSource = query1.ToList();
-            dgvQuestion.Columns.Add(cmbdgv);
+            dgvQuestion.DataSource = query.ToList();
         }
 
         private void FormWarehouse_Load(object sender, EventArgs e)
         {
-            List<SUBJECT> subject = context.SUBJECTS.ToList();
+            dgvQuestion.AutoGenerateColumns = false;
+
+            subject = context.SUBJECTS.ToList();
             cmbSubject.DataSource = subject;
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
+
+            dgvQuestion.Columns["QuestionID"].DataPropertyName = "questionID";
+            dgvQuestion.Columns["SubjectName"].DataPropertyName = "subject";
+            dgvQuestion.Columns["Question"].DataPropertyName = "question";
+            dgvQuestion.Columns["isCorrect"].DataPropertyName = "answerCorrect";
+            dgvQuestion.Columns["SubjectID"].DataPropertyName = "subjectID";
 
             loadData();
         }
@@ -83,6 +86,21 @@ namespace Exam_Preparation_System
                 dgvAnswer.CurrentRow.Cells["Correct"].Value = true;
         }
 
+        private void dgvQuestion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                int questionID = Convert.ToInt32(dgvQuestion.Rows[e.RowIndex].Cells[0].Value.ToString());
+                int subjectID = Convert.ToInt32(dgvQuestion.Rows[e.RowIndex].Cells[5].Value);
+                string contentQuestion = dgvQuestion.Rows[e.RowIndex].Cells[1].Value.ToString();
+                FormEditQuestion f = new FormEditQuestion(questionID, subjectID, contentQuestion, subject);
+                f.ShowDialog();
+            }
+        }
+
         private void btnDeleteAnswer_Click(object sender, EventArgs e)
         {
             if (dgvAnswer.SelectedRows.Count == 0)
@@ -103,6 +121,24 @@ namespace Exam_Preparation_System
             return false;
         }
 
+        private void saveData()
+        {
+            QUESTION newQuestion = new QUESTION();
+            ANSWER newAnswer = new ANSWER();
+            newQuestion.Contents = txtQuestion.Text;
+            newQuestion.SubjectID = Convert.ToInt32(cmbSubject.SelectedValue);
+            context.QUESTIONS.Add(newQuestion);
+            foreach(DataGridViewRow row in dgvAnswer.Rows)
+            {
+                newAnswer.AnswersContent = row.Cells[0].Value.ToString();
+                newAnswer.isCorrect = Convert.ToBoolean(row.Cells[1].Value);
+                newAnswer.QuestionID = newQuestion.QuestionID;
+                context.ANSWERS.Add(newAnswer);
+                context.SaveChanges();
+            }
+            context.SaveChanges();
+        }
+
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
             if (txtQuestion.Text == "")
@@ -113,8 +149,25 @@ namespace Exam_Preparation_System
                 MessageBox.Show("Hãy chọn câu trả lời đúng");
             else
             {
-
+                saveData();
+                resetInput();
+                loadData();
             }
+        }
+
+        private void btnDeleteQuestion_Click(object sender, EventArgs e)
+        {
+            foreach (var r in dgvQuestion.SelectedRows
+                    .Cast<DataGridViewRow>()
+                    .Where(r => !r.IsNewRow))
+            {
+                int quesID = Convert.ToInt32(r.Cells[0].Value.ToString());
+                QUESTION delQuestion = context.QUESTIONS.Where(st => st.QuestionID == quesID).SingleOrDefault();
+                context.ANSWERS.Where(x => x.QuestionID == quesID).ToList().ForEach(item => context.ANSWERS.Remove(item));
+                context.QUESTIONS.Remove(delQuestion);
+                context.SaveChanges();
+            }
+            loadData();
         }
     }
 }

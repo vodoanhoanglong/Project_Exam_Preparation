@@ -18,6 +18,7 @@ namespace Exam_Preparation_System.Models
 
         public int QuestionID { get; set; }
 
+        [Column(TypeName = "NVARCHAR")]
         public string Contents { get; set; }
 
         public string Images { get; set; }
