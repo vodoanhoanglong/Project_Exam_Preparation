@@ -24,8 +24,6 @@ namespace Exam_Preparation_System.Models
         [StringLength(1)]
         public string ExecutionTime { get; set; }
 
-        public int? QuestionID { get; set; }
-
         public int? SubjectID { get; set; }
 
         public virtual SUBJECT SUBJECT { get; set; }

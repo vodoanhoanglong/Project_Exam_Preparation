@@ -60,14 +60,15 @@ namespace Exam_Preparation_System
 
         private void btnAddExamQuestion_Click(object sender, EventArgs e)
         {
-            if (txtExamName.Text == "" || txtTimeExam.Text == "00:00:00")
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cuộc thi");
+            if (txtTimeExam.Text == "00:00:00")
+                MessageBox.Show("Vui lòng nhập thời lượng đề thi");
             else if (dgvQuestion.Rows.Count == 0)
                 MessageBox.Show("Số lượng câu hỏi phải lớn hơn 0");
             else
             {
                 EXAMQUESTION examQuestion = new EXAMQUESTION();
-                
+                QUESTIONLIST questionList = new QUESTIONLIST();
+
             }    
         }
 

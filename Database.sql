@@ -27,7 +27,6 @@ CREATE TABLE EXAMQUESTIONS(
 	ExamQuestionID int identity(1,1) primary key,
 	Quantity int not null,
 	ExecutionTime varchar not null,
-	QuestionID int,
 	SubjectID int,
 	foreign key(SubjectID) references SUBJECTS(SubjectID)
 );
