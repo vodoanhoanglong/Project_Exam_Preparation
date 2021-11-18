@@ -14,8 +14,7 @@ CREATE TABLE USERS(
 
 CREATE TABLE SUBJECTS(
 	SubjectID int identity(1,1) primary key,
-	SubName nvarchar(50),
-	Descriptions varchar(max)
+	SubName nvarchar(50)
 );
 
 CREATE TABLE QUESTIONS(
@@ -30,25 +29,17 @@ CREATE TABLE EXAMQUESTIONS(
 	ExecutionTime varchar not null,
 	QuestionID int,
 	SubjectID int,
-	foreign key(QuestionID) references QUESTIONS(QuestionID),
 	foreign key(SubjectID) references SUBJECTS(SubjectID)
 );
 
-CREATE TABLE EXAMINATIONS(
-	ExaminationID int identity(1,1) primary key,
-	ExaminationName Nvarchar(50) not null,	
-	PINCode Varchar(50) not null,
-	ExamQuestionID int,
-	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
-);
+CREATE TABLE QUESTIONLIST(
+	ExamQuestionID INT,
+	QuestionID INT,	
+	CreateDate DateTime Default GETDATE(),
 
-CREATE TABLE CADIDATELIST(
-	UserID varchar(10),
-	ExaminationID int,
-	DateCreate datetime default GetDate(),
-	Primary key(UserID, ExaminationID),
-	foreign key(UserID) references USERS(UserID),
-	foreign key(ExaminationID) references EXAMINATIONS(ExaminationID)
+	PRIMARY KEY(ExamQuestionID,QuestionID),
+	foreign key(QuestionID) references QUESTIONS(QuestionID),
+	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
 );
 
 
@@ -72,13 +63,6 @@ CREATE TABLE ANSWERS(
 );
 
 
-CREATE TABLE REPORTS(
-	ReportID int identity(1,1) primary key,
-	Contents varchar(max) not null,
-	CreateAt datetime default GetDate()
-);
-GO
-
 Insert into USERS VALUES ('6051071067', '1','Võ Đoàn Hoàng Long', '3/3/2001', 1, '0932765080')
 
 Insert into SUBJECTS(SubName) VALUES(N'Lập trình hướng đối tượng'),
@@ -86,6 +70,89 @@ Insert into SUBJECTS(SubName) VALUES(N'Lập trình hướng đối tượng'),
 									(N'Phân tích thiết kế hệ thống'),
 									(N'Thiết kế cơ sở dữ liệu'),
 									(N'Lập trình trực quan')
+
+SET IDENTITY_INSERT [dbo].[SUBJECTS] ON 
+GO
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (1, N'Lập trình hướng đối tượng', NULL)
+GO
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (2, N'Cấu trúc dữ liệu giải thuật', NULL)
+GO
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (3, N'Phân tích thiết kế hệ thống', NULL)
+GO
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (4, N'Thiết kế cơ sở dữ liệu', NULL)
+GO
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (5, N'Lập trình trực quan', NULL)
+GO
+SET IDENTITY_INSERT [dbo].[SUBJECTS] OFF
+GO
+SET IDENTITY_INSERT [dbo].[QUESTIONS] ON 
+GO
+INSERT [dbo].[QUESTIONS] ([QuestionID], [Contents], [SubjectID]) VALUES (1, N'OOP là gì', 1)
+GO
+INSERT [dbo].[QUESTIONS] ([QuestionID], [Contents], [SubjectID]) VALUES (2, N'Trong C++ có bao nhiêu hàm main()', 1)
+GO
+INSERT [dbo].[QUESTIONS] ([QuestionID], [Contents], [SubjectID]) VALUES (3, N'Lệnh cout trong C++ đi kèm với cặp dấu nào', 1)
+GO
+INSERT [dbo].[QUESTIONS] ([QuestionID], [Contents], [SubjectID]) VALUES (4, N'Chú thích 1 dòng lệnh t dùng dấu nào', 1)
+GO
+INSERT [dbo].[QUESTIONS] ([QuestionID], [Contents], [SubjectID]) VALUES (5, N'Kiểu số nguyên là kiểu dữ liệu nào', 1)
+GO
+INSERT [dbo].[QUESTIONS] ([QuestionID], [Contents], [SubjectID]) VALUES (6, N'C++ là gì', 1)
+GO
+SET IDENTITY_INSERT [dbo].[QUESTIONS] OFF
+GO
+SET IDENTITY_INSERT [dbo].[ANSWERS] ON 
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (1, N'ai biết', 0, 1)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (2, N'i dont know', 0, 1)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (3, N'Hướng đối tượng', 1, 1)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (4, N'Framework', 0, 1)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (5, N'1', 1, 2)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (6, N'2', 0, 2)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (7, N'3', 0, 2)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (8, N'4', 0, 2)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (9, N'>>', 0, 3)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (10, N'\\', 0, 3)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (11, N'||', 0, 3)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (12, N'<<', 1, 3)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (13, N'/* và */', 0, 4)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (14, N'<<', 0, 4)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (15, N'//', 1, 4)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (16, N'??', 0, 4)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (17, N'string', 0, 5)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (18, N'boolean', 0, 5)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (19, N'int', 1, 5)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (20, N'char', 0, 5)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (21, N'Java', 0, 6)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (22, N'C#', 0, 6)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (23, N'OOP', 1, 6)
+GO
+INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]) VALUES (24, N'POP', 0, 6)
+GO
+SET IDENTITY_INSERT [dbo].[ANSWERS] OFF
+GO
 
 
 

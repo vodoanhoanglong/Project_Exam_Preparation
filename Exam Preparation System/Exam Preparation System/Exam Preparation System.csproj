@@ -102,13 +102,11 @@
       <DependentUpon>FormWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ANSWER.cs" />
-    <Compile Include="Models\CADIDATELIST.cs" />
     <Compile Include="Models\ContextDB.cs" />
-    <Compile Include="Models\EXAMINATION.cs" />
     <Compile Include="Models\EXAMQUESTION.cs" />
     <Compile Include="Models\EXAMRESULT.cs" />
     <Compile Include="Models\QUESTION.cs" />
-    <Compile Include="Models\REPORT.cs" />
+    <Compile Include="Models\QUESTIONLIST.cs" />
     <Compile Include="Models\SUBJECT.cs" />
     <Compile Include="Models\USER.cs" />
     <Compile Include="Program.cs" />
@@ -139,6 +137,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,9 +153,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\utc2icon.png" />

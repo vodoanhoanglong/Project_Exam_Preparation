@@ -18,10 +18,9 @@ namespace Exam_Preparation_System.Models
 
         public int SubjectID { get; set; }
 
-        [StringLength(20)]
+        [StringLength(50)]
+        [Column(TypeName = "NVARCHAR")]
         public string SubName { get; set; }
-
-        public string Descriptions { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EXAMQUESTION> EXAMQUESTIONS { get; set; }

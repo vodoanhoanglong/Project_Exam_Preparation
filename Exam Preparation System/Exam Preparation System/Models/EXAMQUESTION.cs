@@ -12,32 +12,28 @@ namespace Exam_Preparation_System.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public EXAMQUESTION()
         {
-            EXAMINATIONS = new HashSet<EXAMINATION>();
             EXAMRESULTS = new HashSet<EXAMRESULT>();
+            QUESTIONLISTs = new HashSet<QUESTIONLIST>();
         }
 
         public int ExamQuestionID { get; set; }
 
-        public int? HardRate { get; set; }
-
-        public int? EasyRate { get; set; }
-
         public int Quantity { get; set; }
 
-        public DateTime ExecutionTime { get; set; }
+        [Required]
+        [StringLength(1)]
+        public string ExecutionTime { get; set; }
 
         public int? QuestionID { get; set; }
 
         public int? SubjectID { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EXAMINATION> EXAMINATIONS { get; set; }
-
-        public virtual QUESTION QUESTION { get; set; }
-
         public virtual SUBJECT SUBJECT { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EXAMRESULT> EXAMRESULTS { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<QUESTIONLIST> QUESTIONLISTs { get; set; }
     }
 }

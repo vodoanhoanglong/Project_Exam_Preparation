@@ -13,20 +13,21 @@ namespace Exam_Preparation_System.Models
         public QUESTION()
         {
             ANSWERS = new HashSet<ANSWER>();
-            EXAMQUESTIONS = new HashSet<EXAMQUESTION>();
+            QUESTIONLISTs = new HashSet<QUESTIONLIST>();
         }
 
         public int QuestionID { get; set; }
 
         [Column(TypeName = "NVARCHAR")]
         public string Contents { get; set; }
+
         public int? SubjectID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ANSWER> ANSWERS { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EXAMQUESTION> EXAMQUESTIONS { get; set; }
+        public virtual ICollection<QUESTIONLIST> QUESTIONLISTs { get; set; }
 
         public virtual SUBJECT SUBJECT { get; set; }
     }

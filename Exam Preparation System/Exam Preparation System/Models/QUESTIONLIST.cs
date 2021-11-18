@@ -6,23 +6,23 @@ namespace Exam_Preparation_System.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CADIDATELIST")]
-    public partial class CADIDATELIST
+    [Table("QUESTIONLIST")]
+    public partial class QUESTIONLIST
     {
         [Key]
         [Column(Order = 0)]
-        [StringLength(10)]
-        public string UserID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ExamQuestionID { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ExaminationID { get; set; }
+        public int QuestionID { get; set; }
 
-        public DateTime? DateCreate { get; set; }
+        public DateTime? CreateDate { get; set; }
 
-        public virtual EXAMINATION EXAMINATION { get; set; }
+        public virtual EXAMQUESTION EXAMQUESTION { get; set; }
 
-        public virtual USER USER { get; set; }
+        public virtual QUESTION QUESTION { get; set; }
     }
 }

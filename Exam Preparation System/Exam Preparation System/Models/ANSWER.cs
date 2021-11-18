@@ -14,7 +14,6 @@ namespace Exam_Preparation_System.Models
 
         [Required]
         [Column(TypeName = "NVARCHAR")]
-        [StringLength(50)]
         public string AnswersContent { get; set; }
 
         public bool isCorrect { get; set; }

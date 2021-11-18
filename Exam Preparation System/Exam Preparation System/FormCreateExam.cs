@@ -57,5 +57,24 @@ namespace Exam_Preparation_System
             dgvQuestion.Columns["Question"].DataPropertyName = "question";
 
         }
+
+        private void btnAddExamQuestion_Click(object sender, EventArgs e)
+        {
+            if (txtExamName.Text == "" || txtTimeExam.Text == "00:00:00")
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cuộc thi");
+            else if (dgvQuestion.Rows.Count == 0)
+                MessageBox.Show("Số lượng câu hỏi phải lớn hơn 0");
+            else
+            {
+                EXAMQUESTION examQuestion = new EXAMQUESTION();
+                
+            }    
+        }
+
+        private void txtTimeExam_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

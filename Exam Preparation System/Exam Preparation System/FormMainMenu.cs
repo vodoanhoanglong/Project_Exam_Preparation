@@ -38,15 +38,15 @@ namespace Exam_Preparation_System
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             currSubBtn = panelSubMenu;
-            /*lblName.Text = FormLogin.info.FullName;*/
-            if (FormLogin.info.UserID != admin)
+
+            /*if (FormLogin.info.UserID != admin)
             {
                 panelSubMenu.Visible = false;
                 currSubBtn = panelSubMenuStudent;
                 btnChart.Visible = false;
                 btnWarehouse.Visible = false;
             }
-            else panelSubMenuStudent.Visible = false;
+            else panelSubMenuStudent.Visible = false;*/
 
             currSubBtn.Visible = false;
             panelSubMenuStudent.Visible = false;
@@ -56,7 +56,7 @@ namespace Exam_Preparation_System
             panelMenu.Controls.Add(leftBorderBtn);
 
 
-            /*openChildForm(new FormHome());*/
+            openChildForm(new FormHome());
         }
 
 
