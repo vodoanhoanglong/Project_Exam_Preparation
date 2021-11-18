@@ -21,10 +21,6 @@ namespace Exam_Preparation_System.Models
         [StringLength(50)]
         public string ExaminationName { get; set; }
 
-        public DateTime TimeStart { get; set; }
-
-        public DateTime TimeEnd { get; set; }
-
         [Required]
         [StringLength(50)]
         public string PINCode { get; set; }

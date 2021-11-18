@@ -30,6 +30,7 @@ namespace Exam_Preparation_System
         private System.Drawing.Bitmap examColor = global::Exam_Preparation_System.Properties.Resources.exam_color;
         private System.Drawing.Bitmap lineChartColor = global::Exam_Preparation_System.Properties.Resources.line_chart_color;
 
+        private System.Drawing.Bitmap userIcon = global::Exam_Preparation_System.Properties.Resources.user;
         public FormMainMenu()
         {
             InitializeComponent();
@@ -38,14 +39,14 @@ namespace Exam_Preparation_System
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             currSubBtn = panelSubMenu;
             /*lblName.Text = FormLogin.info.FullName;*/
-            /*if (FormLogin.info.UserID != admin)
+            if (FormLogin.info.UserID != admin)
             {
                 panelSubMenu.Visible = false;
                 currSubBtn = panelSubMenuStudent;
                 btnChart.Visible = false;
                 btnWarehouse.Visible = false;
             }
-            else panelSubMenuStudent.Visible = false;*/
+            else panelSubMenuStudent.Visible = false;
 
             currSubBtn.Visible = false;
             panelSubMenuStudent.Visible = false;
@@ -225,6 +226,8 @@ namespace Exam_Preparation_System
         private void btnProfile_Click(object sender, EventArgs e)
         {
             currSubBtn.Visible = false;
+            iconCurrChildForm.Image = userIcon;
+            openChildForm(new FormProfile());
         }
     }
 }

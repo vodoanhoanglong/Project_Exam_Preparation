@@ -36,9 +36,7 @@ CREATE TABLE EXAMQUESTIONS(
 
 CREATE TABLE EXAMINATIONS(
 	ExaminationID int identity(1,1) primary key,
-	ExaminationName Nvarchar(50) not null,
-	TimeStart datetime not null,
-	TimeEnd datetime not null,
+	ExaminationName Nvarchar(50) not null,	
 	PINCode Varchar(50) not null,
 	ExamQuestionID int,
 	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
