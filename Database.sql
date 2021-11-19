@@ -24,14 +24,18 @@ CREATE TABLE QUESTIONS(
 );
 	
 CREATE TABLE EXAMQUESTIONS(
-	ExamQuestionID int identity(1,1) primary key,
+	ExamQuestionID INT identity(1,1),
 	Quantity int not null,
-	ExecutionTime varchar not null,
+	ExecutionTime varchar(8) not null,
 	SubjectID int,
+
+	primary key(ExamQuestionID),
 	foreign key(SubjectID) references SUBJECTS(SubjectID)
 );
 
-CREATE TABLE QUESTIONLIST(
+
+
+CREATE TABLE LISTQUESTION(
 	ExamQuestionID INT,
 	QuestionID INT,	
 	CreateDate DateTime Default GETDATE(),
@@ -41,10 +45,9 @@ CREATE TABLE QUESTIONLIST(
 	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
 );
 
-
 CREATE TABLE EXAMRESULTS(
 	UserID varchar(10),
-	ExamQuestionID int,
+	ExamQuestionID INT,
 	ExamDate datetime default GetDate(),
 	Points float not null,
 	TimeComplete time not null,
@@ -72,15 +75,15 @@ Insert into SUBJECTS(SubName) VALUES(N'Lập trình hướng đối tượng'),
 
 SET IDENTITY_INSERT [dbo].[SUBJECTS] ON 
 GO
-INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (1, N'Lập trình hướng đối tượng', NULL)
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName]) VALUES (1, N'Lập trình hướng đối tượng')
 GO
-INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (2, N'Cấu trúc dữ liệu giải thuật', NULL)
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName]) VALUES (2, N'Cấu trúc dữ liệu giải thuật')
 GO
-INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (3, N'Phân tích thiết kế hệ thống', NULL)
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName]) VALUES (3, N'Phân tích thiết kế hệ thống')
 GO
-INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (4, N'Thiết kế cơ sở dữ liệu', NULL)
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName]) VALUES (4, N'Thiết kế cơ sở dữ liệu')
 GO
-INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName], [Descriptions]) VALUES (5, N'Lập trình trực quan', NULL)
+INSERT [dbo].[SUBJECTS] ([SubjectID], [SubName]) VALUES (5, N'Lập trình trực quan')
 GO
 SET IDENTITY_INSERT [dbo].[SUBJECTS] OFF
 GO

@@ -13,7 +13,7 @@ namespace Exam_Preparation_System.Models
         public EXAMQUESTION()
         {
             EXAMRESULTS = new HashSet<EXAMRESULT>();
-            QUESTIONLISTs = new HashSet<QUESTIONLIST>();
+            LISTQUESTIONs = new HashSet<LISTQUESTION>();
         }
 
         public int ExamQuestionID { get; set; }
@@ -21,7 +21,7 @@ namespace Exam_Preparation_System.Models
         public int Quantity { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(8)]
         public string ExecutionTime { get; set; }
 
         public int? SubjectID { get; set; }
@@ -32,6 +32,6 @@ namespace Exam_Preparation_System.Models
         public virtual ICollection<EXAMRESULT> EXAMRESULTS { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<QUESTIONLIST> QUESTIONLISTs { get; set; }
+        public virtual ICollection<LISTQUESTION> LISTQUESTIONs { get; set; }
     }
 }

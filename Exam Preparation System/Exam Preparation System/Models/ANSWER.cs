@@ -13,7 +13,6 @@ namespace Exam_Preparation_System.Models
         public int AnswersID { get; set; }
 
         [Required]
-        [Column(TypeName = "NVARCHAR")]
         public string AnswersContent { get; set; }
 
         public bool isCorrect { get; set; }

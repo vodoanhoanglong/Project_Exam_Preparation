@@ -6,8 +6,8 @@ namespace Exam_Preparation_System.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("QUESTIONLIST")]
-    public partial class QUESTIONLIST
+    [Table("LISTQUESTION")]
+    public partial class LISTQUESTION
     {
         [Key]
         [Column(Order = 0)]

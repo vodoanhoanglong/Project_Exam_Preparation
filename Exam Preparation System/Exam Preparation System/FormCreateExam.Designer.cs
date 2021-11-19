@@ -57,6 +57,8 @@ namespace Exam_Preparation_System
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2ShadowPanel1.SuspendLayout();
             this.gbExamQuetion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContests)).BeginInit();
@@ -152,7 +154,9 @@ namespace Exam_Preparation_System
             this.ExamID,
             this.Quantity,
             this.ExcuteTime,
-            this.SubName});
+            this.SubName,
+            this.CreateDate,
+            this.Details});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
@@ -199,6 +203,7 @@ namespace Exam_Preparation_System
             this.dgvListContests.ThemeStyle.RowsStyle.Height = 22;
             this.dgvListContests.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListContests.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListContests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListContests_CellContentClick);
             // 
             // btnAddExamQuestion
             // 
@@ -440,27 +445,53 @@ namespace Exam_Preparation_System
             // 
             // ExamID
             // 
+            this.ExamID.DataPropertyName = "ExamQuestionID";
+            this.ExamID.FillWeight = 113.9086F;
             this.ExamID.HeaderText = "Mã đề thi";
             this.ExamID.Name = "ExamID";
             this.ExamID.ReadOnly = true;
             // 
             // Quantity
             // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 113.9086F;
             this.Quantity.HeaderText = "Số lượng câu hỏi";
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
             // 
             // ExcuteTime
             // 
+            this.ExcuteTime.DataPropertyName = "ExecutionTime";
+            this.ExcuteTime.FillWeight = 113.9086F;
             this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
             this.ExcuteTime.Name = "ExcuteTime";
             this.ExcuteTime.ReadOnly = true;
             // 
             // SubName
             // 
+            this.SubName.DataPropertyName = "SubjectID";
+            this.SubName.FillWeight = 113.9086F;
             this.SubName.HeaderText = "Môn";
             this.SubName.Name = "SubName";
             this.SubName.ReadOnly = true;
+            // 
+            // CreateDate
+            // 
+            this.CreateDate.DataPropertyName = "CreateDate";
+            this.CreateDate.FillWeight = 113.9086F;
+            this.CreateDate.HeaderText = "Ngày tạo";
+            this.CreateDate.Name = "CreateDate";
+            this.CreateDate.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.FillWeight = 30.45685F;
+            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Details.HeaderText = "Chi tiết";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            this.Details.Text = "...";
+            this.Details.UseColumnTextForButtonValue = true;
             // 
             // FormCreateExam
             // 
@@ -505,5 +536,7 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExcuteTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreateDate;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
     }
 }

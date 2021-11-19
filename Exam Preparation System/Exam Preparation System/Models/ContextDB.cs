@@ -15,7 +15,7 @@ namespace Exam_Preparation_System.Models
         public virtual DbSet<ANSWER> ANSWERS { get; set; }
         public virtual DbSet<EXAMQUESTION> EXAMQUESTIONS { get; set; }
         public virtual DbSet<EXAMRESULT> EXAMRESULTS { get; set; }
-        public virtual DbSet<QUESTIONLIST> QUESTIONLISTs { get; set; }
+        public virtual DbSet<LISTQUESTION> LISTQUESTIONs { get; set; }
         public virtual DbSet<QUESTION> QUESTIONS { get; set; }
         public virtual DbSet<SUBJECT> SUBJECTS { get; set; }
         public virtual DbSet<USER> USERS { get; set; }
@@ -32,7 +32,7 @@ namespace Exam_Preparation_System.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<EXAMQUESTION>()
-                .HasMany(e => e.QUESTIONLISTs)
+                .HasMany(e => e.LISTQUESTIONs)
                 .WithRequired(e => e.EXAMQUESTION)
                 .WillCascadeOnDelete(false);
 
@@ -41,7 +41,7 @@ namespace Exam_Preparation_System.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<QUESTION>()
-                .HasMany(e => e.QUESTIONLISTs)
+                .HasMany(e => e.LISTQUESTIONs)
                 .WithRequired(e => e.QUESTION)
                 .WillCascadeOnDelete(false);
 

@@ -105,8 +105,8 @@
     <Compile Include="Models\ContextDB.cs" />
     <Compile Include="Models\EXAMQUESTION.cs" />
     <Compile Include="Models\EXAMRESULT.cs" />
+    <Compile Include="Models\LISTQUESTION.cs" />
     <Compile Include="Models\QUESTION.cs" />
-    <Compile Include="Models\QUESTIONLIST.cs" />
     <Compile Include="Models\SUBJECT.cs" />
     <Compile Include="Models\USER.cs" />
     <Compile Include="Program.cs" />
