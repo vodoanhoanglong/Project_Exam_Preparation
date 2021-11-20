@@ -59,7 +59,7 @@ namespace Exam_Preparation_System
             this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
             this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnswer)).BeginInit();
@@ -507,11 +507,11 @@ namespace Exam_Preparation_System
             // Details
             // 
             this.Details.FillWeight = 50.76142F;
-            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Details.HeaderText = "Chi tiết";
             this.Details.Name = "Details";
-            this.Details.Text = "Xem thêm";
-            this.Details.UseColumnTextForButtonValue = true;
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "Chi tiết";
+            this.Details.UseColumnTextForLinkValue = true;
             // 
             // SubjectID
             // 
@@ -567,7 +567,7 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn Question;
         private System.Windows.Forms.DataGridViewTextBoxColumn isCorrect;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
-        private System.Windows.Forms.DataGridViewButtonColumn Details;
+        private System.Windows.Forms.DataGridViewLinkColumn Details;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
     }
 }

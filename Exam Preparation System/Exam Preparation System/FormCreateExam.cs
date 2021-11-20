@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.SqlServer;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace Exam_Preparation_System
     public partial class FormCreateExam : Form
     {
         ContextDB context = Program.context;
+        private List<SUBJECT> subject = null;
         public FormCreateExam()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace Exam_Preparation_System
                         join eq in context.EXAMQUESTIONS
                         on lqs.FirstOrDefault().ExamQuestionID equals eq.ExamQuestionID    
                         select new 
-                        { eq.ExamQuestionID, eq.Quantity, eq.ExecutionTime, eq.SubjectID, lqs.FirstOrDefault().CreateDate };
+                        { eq.ExamQuestionID, eq.Quantity, eq.ExecutionTime, eq.SubjectID ,eq.SUBJECT.SubName, CreateDate = lqs.FirstOrDefault().CreateDate };
             dgvListContests.DataSource = query.ToList();
         }
 
@@ -37,14 +39,12 @@ namespace Exam_Preparation_System
         {
             dgvQuestion.AutoGenerateColumns = false;
 
-            List<SUBJECT> subject = context.SUBJECTS.ToList();
+            subject = context.SUBJECTS.ToList();
             cmbSubject.DataSource = subject;
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
 
-            dgvQuestion.Columns["QuestionID"].DataPropertyName = "questionID";
-            dgvQuestion.Columns["SubjectName"].DataPropertyName = "subject";
-            dgvQuestion.Columns["Question"].DataPropertyName = "question";
+            dgvListContests.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
 
             loadData();
         }
@@ -63,8 +63,9 @@ namespace Exam_Preparation_System
                 int quantity = (int)nudQuantity.Value;
                 int seed = random.Next();
                 var q = (from question in context.QUESTIONS
-                         where question.SubjectID == (int)cmbSubject.SelectedValue
-                         select new { questionID = question.QuestionID, subject = question.SUBJECT.SubName, question = question.Contents })
+                         join answer in context.ANSWERS on question.QuestionID equals answer.QuestionID
+                         where question.SubjectID == (int)cmbSubject.SelectedValue && answer.isCorrect == true
+                         select new { questionID = question.QuestionID, subject = question.SUBJECT.SubName, question = question.Contents, answer = answer.AnswersContent })
                          .OrderBy(s => (~(s.questionID & seed)) & (s.questionID | seed)).Take(quantity);
 
                 dgvQuestion.DataSource = q.ToList();
@@ -80,6 +81,8 @@ namespace Exam_Preparation_System
             else
             {
                 MessageBox.Show("Thêm đề thi thành công");
+                var currDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
+                var currDateParse = DateTime.ParseExact(currDate, "yyyy-MM-dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
                 EXAMQUESTION examQuestion = new EXAMQUESTION();
                 examQuestion.Quantity = (int)nudQuantity.Value;
                 examQuestion.ExecutionTime = txtTimeExam.Text;
@@ -89,6 +92,7 @@ namespace Exam_Preparation_System
                 {
                     // table have 2 primary key 
                     LISTQUESTION question = new LISTQUESTION();
+                    question.CreateDate = currDateParse;
                     question.ExamQuestionID = examQuestion.ExamQuestionID;
                     question.QuestionID = Convert.ToInt32(row.Cells[0].Value);
                     context.LISTQUESTIONs.Add(question);
@@ -112,7 +116,10 @@ namespace Exam_Preparation_System
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                
+                int examID = Convert.ToInt32(dgvListContests.Rows[e.RowIndex].Cells["ExamID"].Value);
+                int subjectID = Convert.ToInt32(dgvListContests.Rows[e.RowIndex].Cells["SubjectID"].Value);
+                FormEditContest dialog = new FormEditContest(examID, subjectID, subject);
+                dialog.ShowDialog();
             }
         }
     }

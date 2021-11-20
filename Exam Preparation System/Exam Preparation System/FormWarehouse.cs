@@ -90,14 +90,14 @@ namespace Exam_Preparation_System
         {
             var senderGrid = (DataGridView)sender;
 
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewLinkColumn &&
                 e.RowIndex >= 0)
             {
-                int questionID = Convert.ToInt32(dgvQuestion.Rows[e.RowIndex].Cells[0].Value.ToString());
+                int questionID = Convert.ToInt32(dgvQuestion.Rows[e.RowIndex].Cells[0].Value);
                 int subjectID = Convert.ToInt32(dgvQuestion.Rows[e.RowIndex].Cells[5].Value);
                 string contentQuestion = dgvQuestion.Rows[e.RowIndex].Cells[1].Value.ToString();
-                FormEditQuestion f = new FormEditQuestion(questionID, subjectID, contentQuestion, subject);
-                f.ShowDialog();
+                FormEditQuestion dialog = new FormEditQuestion(questionID, subjectID, contentQuestion, subject);
+                dialog.ShowDialog();
             }
         }
 

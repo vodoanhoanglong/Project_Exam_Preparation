@@ -26,6 +26,29 @@ namespace Exam_Preparation_System
             this.contentQuestion = contentQuestion;
         }
 
+        private void FormEditQuestion_Load(object sender, EventArgs e)
+        {
+            var query = from answer in context.ANSWERS
+                        where answer.QuestionID == questionID
+                        select new { answer.AnswersContent, answer.isCorrect, answer.AnswersID };
+
+            cmbSubject.DataSource = subject;
+            cmbSubject.ValueMember = "SubjectID";
+            cmbSubject.DisplayMember = "SubName";
+            cmbSubject.SelectedValue = subjectID;
+
+            txtQuestion.Text = contentQuestion;
+
+            query.ToList().ForEach(x =>
+            {
+                string firstColum = x.AnswersContent;
+                string secondColum = x.isCorrect.ToString();
+                string thirdColum = x.AnswersID.ToString();
+                string[] row = { firstColum, secondColum, thirdColum };
+                dgvAnswer.Rows.Add(row);
+            });
+        }
+
         private void dgvAnswer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvAnswer.CurrentRow == null)
@@ -76,32 +99,11 @@ namespace Exam_Preparation_System
             }
         }
 
-        private void btnAddQuestion_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void FormEditQuestion_Load(object sender, EventArgs e)
-        {
-            var query = from answer in context.ANSWERS
-                        where answer.QuestionID == questionID
-                        select new { answer.AnswersContent, answer.isCorrect, answer.AnswersID };
-
-            cmbSubject.DataSource = subject;
-            cmbSubject.ValueMember = "SubjectID";
-            cmbSubject.DisplayMember = "SubName";
-            cmbSubject.SelectedValue = subjectID;
-
-            txtQuestion.Text = contentQuestion;
-
-            query.ToList().ForEach(x =>
-            {
-                string firstColum = x.AnswersContent;
-                string secondColum = x.isCorrect.ToString();
-                string thirdColum = x.AnswersID.ToString();
-                string[] row = { firstColum, secondColum, thirdColum };
-                dgvAnswer.Rows.Add(row);
-            });    
-        }
+       
     }
 }
