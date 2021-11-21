@@ -161,7 +161,7 @@ namespace Exam_Preparation_System
                     .Cast<DataGridViewRow>()
                     .Where(r => !r.IsNewRow))
             {
-                int quesID = Convert.ToInt32(r.Cells[0].Value.ToString());
+                int quesID = Convert.ToInt32(r.Cells[0].Value);
                 QUESTION delQuestion = context.QUESTIONS.Where(st => st.QuestionID == quesID).SingleOrDefault();
                 context.ANSWERS.Where(x => x.QuestionID == quesID).ToList().ForEach(item => context.ANSWERS.Remove(item));
                 context.QUESTIONS.Remove(delQuestion);

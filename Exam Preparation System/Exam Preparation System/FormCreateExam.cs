@@ -17,14 +17,16 @@ namespace Exam_Preparation_System
     {
         ContextDB context = Program.context;
         private List<SUBJECT> subject = null;
+        public static FormCreateExam instance = null;
         public FormCreateExam()
         {
             InitializeComponent();
+            instance = this;
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
         }
 
-        private void loadData()
+        public void loadData()
         {
             var query = from lq in context.LISTQUESTIONs
                         group lq by lq.ExamQuestionID into lqs
@@ -72,6 +74,37 @@ namespace Exam_Preparation_System
             }
         }
 
+        private void resetInput()
+        {
+            nudQuantity.Value = 0;
+            txtTimeExam.Text = "00:00:00";
+            dgvQuestion.DataSource = null;
+        }
+
+        private void addData()
+        {
+            var currDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
+            var currDateParse = DateTime.ParseExact(currDate, "yyyy-MM-dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
+            EXAMQUESTION examQuestion = new EXAMQUESTION();
+            examQuestion.Quantity = (int)nudQuantity.Value;
+            examQuestion.ExecutionTime = txtTimeExam.Text;
+            examQuestion.SubjectID = (int)cmbSubject.SelectedValue;
+            context.EXAMQUESTIONS.Add(examQuestion);
+            foreach (DataGridViewRow row in dgvQuestion.Rows)
+            {
+                // table have 2 primary key 
+                LISTQUESTION question = new LISTQUESTION();
+                question.CreateDate = currDateParse;
+                question.ExamQuestionID = examQuestion.ExamQuestionID;
+                question.QuestionID = Convert.ToInt32(row.Cells[0].Value);
+                context.LISTQUESTIONs.Add(question);
+                context.SaveChanges();
+            }
+            context.SaveChanges();
+            resetInput();
+            loadData();
+        }
+
         private void btnAddExamQuestion_Click(object sender, EventArgs e)
         {
             if (txtTimeExam.Text == "00:00:00")
@@ -81,25 +114,7 @@ namespace Exam_Preparation_System
             else
             {
                 MessageBox.Show("Thêm đề thi thành công");
-                var currDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
-                var currDateParse = DateTime.ParseExact(currDate, "yyyy-MM-dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
-                EXAMQUESTION examQuestion = new EXAMQUESTION();
-                examQuestion.Quantity = (int)nudQuantity.Value;
-                examQuestion.ExecutionTime = txtTimeExam.Text;
-                examQuestion.SubjectID = (int)cmbSubject.SelectedValue;
-                context.EXAMQUESTIONS.Add(examQuestion);
-                foreach (DataGridViewRow row in dgvQuestion.Rows)
-                {
-                    // table have 2 primary key 
-                    LISTQUESTION question = new LISTQUESTION();
-                    question.CreateDate = currDateParse;
-                    question.ExamQuestionID = examQuestion.ExamQuestionID;
-                    question.QuestionID = Convert.ToInt32(row.Cells[0].Value);
-                    context.LISTQUESTIONs.Add(question);
-                    context.SaveChanges();
-                }
-                context.SaveChanges();
-                loadData();
+                addData();
             }
         }
 
@@ -121,6 +136,26 @@ namespace Exam_Preparation_System
                 FormEditContest dialog = new FormEditContest(examID, subjectID, subject);
                 dialog.ShowDialog();
             }
+        }
+
+        private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvQuestion.DataSource = null;
+        }
+
+        private void btnDeleteExamQuestion_Click(object sender, EventArgs e)
+        {
+            foreach (var r in dgvListContests.SelectedRows
+                    .Cast<DataGridViewRow>()
+                    .Where(r => !r.IsNewRow))
+            {
+                int examID = Convert.ToInt32(r.Cells["ExamID"].Value);
+                EXAMQUESTION delExamQuestion = context.EXAMQUESTIONS.Where(st => st.ExamQuestionID == examID).SingleOrDefault();
+                context.LISTQUESTIONs.Where(x => x.ExamQuestionID == examID).ToList().ForEach(item => context.LISTQUESTIONs.Remove(item));
+                context.EXAMQUESTIONS.Remove(delExamQuestion);
+                context.SaveChanges();
+            }
+            loadData();
         }
     }
 }
