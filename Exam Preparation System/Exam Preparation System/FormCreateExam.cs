@@ -128,7 +128,7 @@ namespace Exam_Preparation_System
         {
             var senderGrid = (DataGridView)sender;
 
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewLinkColumn &&
                 e.RowIndex >= 0)
             {
                 int examID = Convert.ToInt32(dgvListContests.Rows[e.RowIndex].Cells["ExamID"].Value);

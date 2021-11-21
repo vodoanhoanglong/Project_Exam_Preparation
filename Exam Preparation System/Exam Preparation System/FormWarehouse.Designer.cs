@@ -508,9 +508,10 @@ namespace Exam_Preparation_System
             // 
             this.Details.FillWeight = 50.76142F;
             this.Details.HeaderText = "Chi tiết";
+            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.Details.Name = "Details";
             this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.Text = "Chi tiết";
+            this.Details.Text = "...";
             this.Details.UseColumnTextForLinkValue = true;
             // 
             // SubjectID

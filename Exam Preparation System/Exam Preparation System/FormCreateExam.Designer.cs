@@ -33,22 +33,15 @@ namespace Exam_Preparation_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnDeleteExamQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.gbExamQuetion = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvListContests = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddExamQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnRandomQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -62,6 +55,13 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ShadowPanel1.SuspendLayout();
             this.gbExamQuetion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContests)).BeginInit();
@@ -209,67 +209,6 @@ namespace Exam_Preparation_System
             this.dgvListContests.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListContests.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListContests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListContests_CellContentClick);
-            // 
-            // ExamID
-            // 
-            this.ExamID.DataPropertyName = "ExamQuestionID";
-            this.ExamID.FillWeight = 113.9086F;
-            this.ExamID.HeaderText = "Mã đề thi";
-            this.ExamID.Name = "ExamID";
-            this.ExamID.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 113.9086F;
-            this.Quantity.HeaderText = "Số lượng câu hỏi";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // ExcuteTime
-            // 
-            this.ExcuteTime.DataPropertyName = "ExecutionTime";
-            this.ExcuteTime.FillWeight = 113.9086F;
-            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
-            this.ExcuteTime.Name = "ExcuteTime";
-            this.ExcuteTime.ReadOnly = true;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.FillWeight = 113.9086F;
-            this.SubName.HeaderText = "Môn";
-            this.SubName.Name = "SubName";
-            this.SubName.ReadOnly = true;
-            // 
-            // CreateDate
-            // 
-            this.CreateDate.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
-            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CreateDate.FillWeight = 113.9086F;
-            this.CreateDate.HeaderText = "Ngày tạo";
-            this.CreateDate.Name = "CreateDate";
-            this.CreateDate.ReadOnly = true;
-            // 
-            // Details
-            // 
-            this.Details.FillWeight = 30.45685F;
-            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Details.HeaderText = "Chi tiết";
-            this.Details.Name = "Details";
-            this.Details.ReadOnly = true;
-            this.Details.Text = "...";
-            this.Details.UseColumnTextForButtonValue = true;
-            // 
-            // SubjectID
-            // 
-            this.SubjectID.DataPropertyName = "SubjectID";
-            this.SubjectID.HeaderText = "SubjectID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
             // 
             // btnAddExamQuestion
             // 
@@ -521,6 +460,68 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Môn thi";
             // 
+            // ExamID
+            // 
+            this.ExamID.DataPropertyName = "ExamQuestionID";
+            this.ExamID.FillWeight = 113.9086F;
+            this.ExamID.HeaderText = "Mã đề thi";
+            this.ExamID.Name = "ExamID";
+            this.ExamID.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 113.9086F;
+            this.Quantity.HeaderText = "Số lượng câu hỏi";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // ExcuteTime
+            // 
+            this.ExcuteTime.DataPropertyName = "ExecutionTime";
+            this.ExcuteTime.FillWeight = 113.9086F;
+            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
+            this.ExcuteTime.Name = "ExcuteTime";
+            this.ExcuteTime.ReadOnly = true;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.FillWeight = 113.9086F;
+            this.SubName.HeaderText = "Môn";
+            this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
+            // 
+            // CreateDate
+            // 
+            this.CreateDate.DataPropertyName = "CreateDate";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
+            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CreateDate.FillWeight = 113.9086F;
+            this.CreateDate.HeaderText = "Ngày tạo";
+            this.CreateDate.Name = "CreateDate";
+            this.CreateDate.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.FillWeight = 30.45685F;
+            this.Details.HeaderText = "Chi tiết";
+            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "...";
+            this.Details.UseColumnTextForLinkValue = true;
+            // 
+            // SubjectID
+            // 
+            this.SubjectID.DataPropertyName = "SubjectID";
+            this.SubjectID.HeaderText = "SubjectID";
+            this.SubjectID.Name = "SubjectID";
+            this.SubjectID.ReadOnly = true;
+            this.SubjectID.Visible = false;
+            // 
             // FormCreateExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -566,7 +567,7 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn ExcuteTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreateDate;
-        private System.Windows.Forms.DataGridViewButtonColumn Details;
+        private System.Windows.Forms.DataGridViewLinkColumn Details;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
     }
 }
