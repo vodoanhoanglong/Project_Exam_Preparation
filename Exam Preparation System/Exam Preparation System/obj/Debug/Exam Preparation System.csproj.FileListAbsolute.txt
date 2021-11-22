@@ -33,3 +33,5 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormCreateExam.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormProfile.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditContest.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewExam.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamPreparation.resources

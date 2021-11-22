@@ -77,6 +77,12 @@
     <Compile Include="FormEditQuestion.Designer.cs">
       <DependentUpon>FormEditQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormExamPreparation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExamPreparation.Designer.cs">
+      <DependentUpon>FormExamPreparation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     </Compile>
     <Compile Include="FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewExam.Designer.cs">
+      <DependentUpon>FormViewExam.cs</DependentUpon>
     </Compile>
     <Compile Include="FormWarehouse.cs">
       <SubType>Form</SubType>
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="FormEditQuestion.resx">
       <DependentUpon>FormEditQuestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormExamPreparation.resx">
+      <DependentUpon>FormExamPreparation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewExam.resx">
+      <DependentUpon>FormViewExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWarehouse.resx">
       <DependentUpon>FormWarehouse.cs</DependentUpon>

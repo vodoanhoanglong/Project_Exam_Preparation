@@ -15,6 +15,8 @@ namespace Exam_Preparation_System
 
     public partial class FormMainMenu : Form
     {
+        public static FormMainMenu instance;
+
         private const string admin = "6051071067";
         private Guna2Button currBtn;
         private Panel leftBorderBtn, currSubBtn;
@@ -34,6 +36,8 @@ namespace Exam_Preparation_System
         public FormMainMenu()
         {
             InitializeComponent();
+            instance = this;
+
             // center screen
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
@@ -60,7 +64,7 @@ namespace Exam_Preparation_System
         }
 
 
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (currChildForm != null)
                 currChildForm.Close();
