@@ -129,6 +129,9 @@
     <Compile Include="Models\USER.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RJRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="FormCreateExam.resx">
       <DependentUpon>FormCreateExam.cs</DependentUpon>
     </EmbeddedResource>
