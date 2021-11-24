@@ -64,7 +64,7 @@ namespace Exam_Preparation_System
                 result.Add(queryAnswer.Where(x => x.isCorrect).FirstOrDefault().AnswersContent);
 
                 pnlQuestion.Location = new System.Drawing.Point(4, height);
-                pnlQuestion.Name = "pnlQuestion" + question.QuestionID.ToString();
+                pnlQuestion.Name = "pnlQuestion." + question.QuestionID.ToString();
                 pnlQuestion.ShadowDecoration.Parent = pnlQuestion;
                 pnlQuestion.Size = new System.Drawing.Size(1100, 200);
 
@@ -102,40 +102,52 @@ namespace Exam_Preparation_System
             });
         }
 
+        private bool checkPoint(string value , int index)
+        {
+            if (result[index].Equals(value.Remove(0, 3)))
+                return true;
+            return false;
+        }
+
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
-            /*string str = "";
-            foreach (var control in GetControlHierarchy(pnlExam))
-            {
-                str += control.Name + "\n";
-                *//*if (control is RadioButton)
-                {
-                    RadioButton radioValue = (RadioButton)control;
-                    if (radioValue.Checked == true)
-                        MessageBox.Show(radioValue.Text);
-                }*//*
-            }
-            MessageBox.Show(str);*/
-
+            string noChoice = "";
+            int index = 0, correctQuantity = 0;
             var children = pnlExam.Controls.OfType<Control>();
-            children.ToList().ForEach(x =>
+
+            children.ToList().ForEach(pnlQuestion =>
             {
                 int count = 0;
-                var childrens = x.Controls.OfType<RadioButton>();
-                childrens.ToList().ForEach(radio =>
-                {  
-                    if (radio.Checked == true)
-                        MessageBox.Show(radio.Text);
-                    else
-                        count++;
-                });
-                if(count == 4)
+                var grandChildren = pnlQuestion.Controls.OfType<Control>();
+                grandChildren.ToList().ForEach(control =>
                 {
-                    MessageBox.Show("Câu chưa chọn " + x.Name);
-                    return;
-                }    
+                    if (control is RadioButton)
+                    {
+                        RadioButton radio = (RadioButton)control;
+                        if (radio.Checked == true)
+                            correctQuantity = checkPoint(radio.Text, index++) ? ++correctQuantity : correctQuantity;
+                        else
+                            count++;
+                    }
+                    if (count == 4)
+                        noChoice += control is Guna.UI2.WinForms.Guna2HtmlLabel ? control.Text.Split('.')[0] + " " : null;
+                });
+                if (count == 4)
+                    index++;
             });
+
+            if (noChoice == "")
+                MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
+            else
+            {
+                DialogResult dlr = MessageBox.Show("Câu chưa chọn: " + noChoice + "\nNhấn OK để nộp bài", "", MessageBoxButtons.OKCancel);
+                if (dlr == DialogResult.OK)
+                    MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
+                else return;
+            } 
+                
+                   
         }
     }
 }
