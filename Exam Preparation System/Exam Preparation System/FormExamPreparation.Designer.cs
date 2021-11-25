@@ -29,9 +29,12 @@ namespace Exam_Preparation_System
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlExamContainer = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlExam = new Guna.UI2.WinForms.Guna2Panel();
             this.btnFinished = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtTimeExam = new Guna.UI2.WinForms.Guna2TextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnlExamContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,12 +81,47 @@ namespace Exam_Preparation_System
             this.btnFinished.Text = "Nộp bài";
             this.btnFinished.Click += new System.EventHandler(this.btnFinished_Click);
             // 
+            // txtTimeExam
+            // 
+            this.txtTimeExam.BorderRadius = 10;
+            this.txtTimeExam.BorderThickness = 2;
+            this.txtTimeExam.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimeExam.DefaultText = "00:00:00";
+            this.txtTimeExam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimeExam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimeExam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimeExam.DisabledState.Parent = this.txtTimeExam;
+            this.txtTimeExam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimeExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimeExam.FocusedState.Parent = this.txtTimeExam;
+            this.txtTimeExam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTimeExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimeExam.HoverState.Parent = this.txtTimeExam;
+            this.txtTimeExam.Location = new System.Drawing.Point(542, 13);
+            this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimeExam.MaxLength = 8;
+            this.txtTimeExam.Name = "txtTimeExam";
+            this.txtTimeExam.PasswordChar = '\0';
+            this.txtTimeExam.PlaceholderText = "";
+            this.txtTimeExam.SelectedText = "";
+            this.txtTimeExam.SelectionStart = 8;
+            this.txtTimeExam.ShadowDecoration.Parent = this.txtTimeExam;
+            this.txtTimeExam.Size = new System.Drawing.Size(103, 36);
+            this.txtTimeExam.TabIndex = 16;
+            this.txtTimeExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // FormExamPreparation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1173, 809);
+            this.Controls.Add(this.txtTimeExam);
             this.Controls.Add(this.btnFinished);
             this.Controls.Add(this.pnlExamContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -100,5 +138,7 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlExamContainer;
         private Guna.UI2.WinForms.Guna2Panel pnlExam;
         private Guna.UI2.WinForms.Guna2GradientButton btnFinished;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimeExam;
+        private System.Windows.Forms.Timer timer;
     }
 }

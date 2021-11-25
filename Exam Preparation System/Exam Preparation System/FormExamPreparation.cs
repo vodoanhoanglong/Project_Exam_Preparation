@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace Exam_Preparation_System
@@ -16,47 +17,53 @@ namespace Exam_Preparation_System
         private ContextDB context = Program.context;
         private List<string> result = new List<string>();
         private int examID;
+
+        private int totalSeconds;
         public FormExamPreparation(int examID)
         {
             InitializeComponent();
             this.examID = examID;
         }
 
-        private IEnumerable<Control> GetControlHierarchy(Control root)
-        {
-            var queue = new Queue<Control>();
-
-            queue.Enqueue(root);
-
-            do
-            {
-                var control = queue.Dequeue();
-
-                yield return control;
-
-                foreach (var child in control.Controls.OfType<Control>())
-                    queue.Enqueue(child);
-
-            } while (queue.Count > 0);
-
-        }
-
-
         private void FormExamPreparation_Load(object sender, EventArgs e)
         {
             loadData();
+            timer.Enabled = true;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (totalSeconds > 0)
+            {
+                int hours = totalSeconds / 3600;
+                int minutes = (totalSeconds - (hours * 3600)) / 60;
+                int seconds = totalSeconds - (hours * 3600) - (minutes * 60) ;
+                txtTimeExam.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
+                totalSeconds--;
+            }
+            else
+            {
+                timer.Stop();
+                MessageBox.Show("Hết giờ");
+            }
         }
 
         private void loadData()
         {
-            var queryQuestion = context.LISTQUESTIONs.Where(x => x.ExamQuestionID == examID).Select(x => x.QUESTION);
-            int height = 25;
-            int noQ = 1;
+            var queryQuestion = context.LISTQUESTIONs.Where(x => x.ExamQuestionID == examID).Select(x => x.QUESTION).ToList();
+            var queryTime = context.EXAMQUESTIONS.Where(x => x.ExamQuestionID == examID).Select(x => x.ExecutionTime).ToList()[0];
+            int height = 25, noQ = 1, h, m, s;
+            string[] splitTime = queryTime.ToString().Split(':');
 
-            queryQuestion.ToList().ForEach(question =>
+            h = Convert.ToInt32(splitTime[0]);
+            m = Convert.ToInt32(splitTime[1]);
+            s = Convert.ToInt32(splitTime[2]);
+            totalSeconds = (h * 3600) + (m * 60) + s;
+
+            queryQuestion.ForEach(question =>
             {
                 int noA = 68;
-                var queryAnswer = context.ANSWERS.Where(x => x.QuestionID == question.QuestionID);
+                var queryAnswer = context.ANSWERS.Where(x => x.QuestionID == question.QuestionID).ToList();
 
                 Guna.UI2.WinForms.Guna2HtmlLabel lblQuestion = new Guna.UI2.WinForms.Guna2HtmlLabel();
                 Guna.UI2.WinForms.Guna2Panel pnlQuestion = new Guna.UI2.WinForms.Guna2Panel();
@@ -78,7 +85,7 @@ namespace Exam_Preparation_System
                 lblQuestion.Text = noQ++ + ". " + question.Contents.ToString();
                 lblQuestion.Padding = new System.Windows.Forms.Padding(0, 0, 0, 15);
 
-                for(int i = queryAnswer.ToList().Count - 1; i >= 0; i--)
+                for(int i = queryAnswer.Count - 1; i >= 0; i--)
                 {
                     RJRadioButton radio = new RJRadioButton();
 
@@ -101,6 +108,8 @@ namespace Exam_Preparation_System
                 height += 200;
             });
         }
+
+        
 
         private bool checkPoint(string value , int index)
         {
@@ -145,9 +154,7 @@ namespace Exam_Preparation_System
                 if (dlr == DialogResult.OK)
                     MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
                 else return;
-            } 
-                
-                   
+            }         
         }
     }
 }
