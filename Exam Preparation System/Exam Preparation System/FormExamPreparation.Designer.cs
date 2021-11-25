@@ -35,6 +35,9 @@ namespace Exam_Preparation_System
             this.btnFinished = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtTimeExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.lblCodeExam = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSubject = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlExamContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +76,7 @@ namespace Exam_Preparation_System
             this.btnFinished.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnFinished.ForeColor = System.Drawing.Color.White;
             this.btnFinished.HoverState.Parent = this.btnFinished;
-            this.btnFinished.Location = new System.Drawing.Point(1025, 71);
+            this.btnFinished.Location = new System.Drawing.Point(1025, 78);
             this.btnFinished.Name = "btnFinished";
             this.btnFinished.ShadowDecoration.Parent = this.btnFinished;
             this.btnFinished.Size = new System.Drawing.Size(136, 32);
@@ -94,10 +97,10 @@ namespace Exam_Preparation_System
             this.txtTimeExam.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTimeExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.FocusedState.Parent = this.txtTimeExam;
-            this.txtTimeExam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTimeExam.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.txtTimeExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.HoverState.Parent = this.txtTimeExam;
-            this.txtTimeExam.Location = new System.Drawing.Point(542, 13);
+            this.txtTimeExam.Location = new System.Drawing.Point(1025, 3);
             this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimeExam.MaxLength = 8;
             this.txtTimeExam.Name = "txtTimeExam";
@@ -106,7 +109,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.SelectedText = "";
             this.txtTimeExam.SelectionStart = 8;
             this.txtTimeExam.ShadowDecoration.Parent = this.txtTimeExam;
-            this.txtTimeExam.Size = new System.Drawing.Size(103, 36);
+            this.txtTimeExam.Size = new System.Drawing.Size(136, 49);
             this.txtTimeExam.TabIndex = 16;
             this.txtTimeExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -115,12 +118,45 @@ namespace Exam_Preparation_System
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // lblCodeExam
+            // 
+            this.lblCodeExam.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeExam.Location = new System.Drawing.Point(507, 12);
+            this.lblCodeExam.Name = "lblCodeExam";
+            this.lblCodeExam.Size = new System.Drawing.Size(63, 27);
+            this.lblCodeExam.TabIndex = 17;
+            this.lblCodeExam.Text = "Mã đề ";
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject.Location = new System.Drawing.Point(13, 41);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(67, 22);
+            this.lblSubject.TabIndex = 18;
+            this.lblSubject.Text = "Môn thi: ";
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.BackColor = System.Drawing.Color.Transparent;
+            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(13, 78);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(125, 22);
+            this.lblFullName.TabIndex = 19;
+            this.lblFullName.Text = "Họ tên thí sinh: ";
+            // 
             // FormExamPreparation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1173, 809);
+            this.Controls.Add(this.lblFullName);
+            this.Controls.Add(this.lblSubject);
+            this.Controls.Add(this.lblCodeExam);
             this.Controls.Add(this.txtTimeExam);
             this.Controls.Add(this.btnFinished);
             this.Controls.Add(this.pnlExamContainer);
@@ -130,6 +166,7 @@ namespace Exam_Preparation_System
             this.Load += new System.EventHandler(this.FormExamPreparation_Load);
             this.pnlExamContainer.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,5 +177,8 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2GradientButton btnFinished;
         private Guna.UI2.WinForms.Guna2TextBox txtTimeExam;
         private System.Windows.Forms.Timer timer;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCodeExam;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblSubject;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName;
     }
 }

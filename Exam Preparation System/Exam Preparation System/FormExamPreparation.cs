@@ -16,8 +16,7 @@ namespace Exam_Preparation_System
     {
         private ContextDB context = Program.context;
         private List<string> result = new List<string>();
-        private int examID;
-        private int totalSeconds;
+        private int examID, totalSeconds;
         private bool checkTimeEnd = false;
         public FormExamPreparation(int examID)
         {
@@ -57,6 +56,9 @@ namespace Exam_Preparation_System
             int height = 25, noQ = 1, h, m, s;
             string[] splitTime = queryTime.ToString().Split(':');
 
+            lblCodeExam.Text += examID.ToString();
+            lblSubject.Text += queryQuestion[0].SUBJECT.SubName.ToString();
+            lblFullName.Text += FormLogin.info.FullName;
             txtTimeExam.Text = splitTime[0] + ":" + splitTime[1] + ":" + splitTime[2];
             h = Convert.ToInt32(splitTime[0]);
             m = Convert.ToInt32(splitTime[1]);
@@ -125,9 +127,11 @@ namespace Exam_Preparation_System
         private void btnFinished_Click(object sender, EventArgs e)
         {
             string noChoice = "";
-            int index = 0, correctQuantity = 0;
+            int index = 0, correctQuantity = 0, totalQuestion;
+            DialogResult dlr;
             var children = pnlExam.Controls.OfType<Control>();
 
+            totalQuestion = children.Count();
             children.ToList().ForEach(pnlQuestion =>
             {
                 int count = 0;
@@ -149,17 +153,29 @@ namespace Exam_Preparation_System
                     index++;
             });
 
-            if (noChoice == "")
-                MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
-            else if(checkTimeEnd)
-                MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
+             
+            if(checkTimeEnd)
+                showResultDialog(correctQuantity, totalQuestion);
+            else if (noChoice == "")
+            {
+                dlr = MessageBox.Show("Bạn có chắc muốn nộp bài không", "", MessageBoxButtons.OKCancel);
+                if (dlr == DialogResult.OK)
+                    showResultDialog(correctQuantity, totalQuestion);
+                else return;
+            }
             else
             {
-                DialogResult dlr = MessageBox.Show("Câu chưa chọn: " + noChoice + "\nNhấn OK để nộp bài", "", MessageBoxButtons.OKCancel);
+                dlr = MessageBox.Show("Câu chưa chọn: " + noChoice + "\nNhấn OK để nộp bài", "", MessageBoxButtons.OKCancel);
                 if (dlr == DialogResult.OK)
-                    MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
+                    showResultDialog(correctQuantity, totalQuestion);
                 else return;
             }         
+        }
+        private void showResultDialog(int totalCorrect, int totalQuestion)
+        {
+            timer.Stop();
+            FormExamResult resultDialog = new FormExamResult(totalCorrect, totalQuestion, lblCodeExam.Text, lblSubject.Text);
+            resultDialog.ShowDialog();
         }
     }
 }

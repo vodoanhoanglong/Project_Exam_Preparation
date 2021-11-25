@@ -35,3 +35,7 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditContest.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewExam.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamPreparation.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.dll
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\WinFormAnimation.dll
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.xml
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamResult.resources
