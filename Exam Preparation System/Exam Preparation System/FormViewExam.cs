@@ -113,10 +113,7 @@ namespace Exam_Preparation_System
                 e.RowIndex >= 0)
             {
                 int examID = Convert.ToInt32(dgvListContests.Rows[e.RowIndex].Cells["ExamID"].Value);
-                /*int subjectID = Convert.ToInt32(dgvListContests.Rows[e.RowIndex].Cells["SubjectID"].Value);*/
-                /*FormMainMenu.instance.openChildForm(new FormExamPreparation());*/
-                FormExamPreparation form = new FormExamPreparation(examID);
-                form.Show();
+                FormMainMenu.instance.openChildForm(new FormExamPreparation(examID));
             }
         }
     }

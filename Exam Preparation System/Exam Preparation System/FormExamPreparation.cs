@@ -17,8 +17,8 @@ namespace Exam_Preparation_System
         private ContextDB context = Program.context;
         private List<string> result = new List<string>();
         private int examID;
-
         private int totalSeconds;
+        private bool checkTimeEnd = false;
         public FormExamPreparation(int examID)
         {
             InitializeComponent();
@@ -35,16 +35,18 @@ namespace Exam_Preparation_System
         {
             if (totalSeconds > 0)
             {
+                totalSeconds--;
                 int hours = totalSeconds / 3600;
                 int minutes = (totalSeconds - (hours * 3600)) / 60;
                 int seconds = totalSeconds - (hours * 3600) - (minutes * 60) ;
                 txtTimeExam.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
-                totalSeconds--;
             }
             else
             {
                 timer.Stop();
+                checkTimeEnd = true;
                 MessageBox.Show("Hết giờ");
+                btnFinished_Click(sender, e);
             }
         }
 
@@ -55,6 +57,7 @@ namespace Exam_Preparation_System
             int height = 25, noQ = 1, h, m, s;
             string[] splitTime = queryTime.ToString().Split(':');
 
+            txtTimeExam.Text = splitTime[0] + ":" + splitTime[1] + ":" + splitTime[2];
             h = Convert.ToInt32(splitTime[0]);
             m = Convert.ToInt32(splitTime[1]);
             s = Convert.ToInt32(splitTime[2]);
@@ -147,6 +150,8 @@ namespace Exam_Preparation_System
             });
 
             if (noChoice == "")
+                MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
+            else if(checkTimeEnd)
                 MessageBox.Show("Số câu đúng là: " + correctQuantity.ToString());
             else
             {

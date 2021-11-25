@@ -17,7 +17,7 @@ namespace Exam_Preparation_System
     {
         public static FormMainMenu instance;
 
-        private const string admin = "6051071067";
+        private const string admin = "60510710671";
         private Guna2Button currBtn;
         private Panel leftBorderBtn, currSubBtn;
         private Form currChildForm;
@@ -43,14 +43,14 @@ namespace Exam_Preparation_System
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             currSubBtn = panelSubMenu;
 
-            /*if (FormLogin.info.UserID != admin)
+            if (FormLogin.info.UserID != admin)
             {
                 panelSubMenu.Visible = false;
                 currSubBtn = panelSubMenuStudent;
                 btnChart.Visible = false;
                 btnWarehouse.Visible = false;
             }
-            else panelSubMenuStudent.Visible = false;*/
+            else panelSubMenuStudent.Visible = false;
 
             currSubBtn.Visible = false;
             panelSubMenuStudent.Visible = false;
@@ -164,11 +164,11 @@ namespace Exam_Preparation_System
         }
 
         // Drag Form with pannel
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+/*        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);*/
 
 
         /*private void panelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -204,6 +204,7 @@ namespace Exam_Preparation_System
         private void btnExercise_Click(object sender, EventArgs e)
         {
             currSubBtn.Visible = false;
+            openChildForm(new FormViewExam());
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
