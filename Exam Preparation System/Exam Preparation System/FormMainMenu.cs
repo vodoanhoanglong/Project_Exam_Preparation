@@ -19,7 +19,7 @@ namespace Exam_Preparation_System
 
         private const string admin = "60510710671";
         private Guna2Button currBtn;
-        private Panel leftBorderBtn, currSubBtn;
+        private Panel leftBorderBtn;
         private Form currChildForm;
 
         private System.Drawing.Bitmap home = global::Exam_Preparation_System.Properties.Resources.home;
@@ -41,26 +41,34 @@ namespace Exam_Preparation_System
             // center screen
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-            currSubBtn = panelSubMenu;
 
+            btnExamManager.Text = "Tạo đề thi";
+            panelSubMenuStudent.Visible = false;
             if (FormLogin.info.UserID != admin)
             {
-                panelSubMenu.Visible = false;
-                currSubBtn = panelSubMenuStudent;
                 btnChart.Visible = false;
                 btnWarehouse.Visible = false;
+                btnExamManager.Text = "Thi trực tuyến";
             }
-            else panelSubMenuStudent.Visible = false;
-
-            currSubBtn.Visible = false;
-            panelSubMenuStudent.Visible = false;
 
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
 
-
+            // constructor home page
             openChildForm(new FormHome());
+
+            currBtn = btnHome;
+            leftBorderBtn.BackColor = RGBColors.color1;
+            leftBorderBtn.Location = new Point(0, currBtn.Location.Y);
+            leftBorderBtn.Size = new Size(5, 45);
+            leftBorderBtn.Visible = true;
+            leftBorderBtn.BringToFront();
+
+            currBtn.Image = homeColor;
+            currBtn.FillColor = Color.FromArgb(239, 242, 249);
+            currBtn.ForeColor = RGBColors.color1;
+            iconCurrChildForm.Image = currBtn.Image;
         }
 
 
@@ -107,6 +115,8 @@ namespace Exam_Preparation_System
             }
         }
 
+       
+
         private void activateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -114,8 +124,7 @@ namespace Exam_Preparation_System
                 disableButton();
                 currBtn = (Guna2Button)senderBtn;
                 if (currBtn.Text == "Thi trực tuyến")
-                    currSubBtn.Visible = true;
-
+                    lblTitle.Text = "Thi trực tuyến";
                 setColorImage(currBtn.Name);
                 currBtn.FillColor = Color.FromArgb(239, 242, 249);
                 currBtn.ForeColor = color;
@@ -136,7 +145,7 @@ namespace Exam_Preparation_System
                 setColorImage(currBtn.Name);
                 currBtn.FillColor = Color.White;
                 currBtn.ForeColor = Color.Black;
-                currSubBtn.Visible = false;
+                panelSubMenuStudent.Visible = false;
             }
         }
 
@@ -156,6 +165,9 @@ namespace Exam_Preparation_System
         private void btnExamManager_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color3);
+            if (FormLogin.info.UserID != admin)
+                panelSubMenuStudent.Visible = true;
+            else openChildForm(new FormCreateExam());
         }
 
         private void btnChart_Click(object sender, EventArgs e)
@@ -179,47 +191,15 @@ namespace Exam_Preparation_System
 
 
 
-        private void btnCreateExam_Click(object sender, EventArgs e)
-        {   
-            currSubBtn.Visible = false;
-            openChildForm(new FormCreateExam());
-        }
-
-        private void btnListExam_Click(object sender, EventArgs e)
-        {
-            currSubBtn.Visible = false;
-        }
-
-        private void btnMark_Click(object sender, EventArgs e)
-        {
-            currSubBtn.Visible = false;
-        }
-
-        private void btnResult_Click(object sender, EventArgs e)
-        {
-            currSubBtn.Visible = false;
-        }
-
-
         private void btnExercise_Click(object sender, EventArgs e)
         {
-            currSubBtn.Visible = false;
+            panelSubMenuStudent.Visible = false;
             openChildForm(new FormViewExam());
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            currSubBtn.Visible = false;
-        }
-
-        private void btnJoinExam_Click(object sender, EventArgs e)
-        {
-            currSubBtn.Visible = false;
         }
 
         private void btnViewResult_Click(object sender, EventArgs e)
         {
-            currSubBtn.Visible = false;
+            panelSubMenuStudent.Visible = false;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -230,7 +210,7 @@ namespace Exam_Preparation_System
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            currSubBtn.Visible = false;
+            panelSubMenuStudent.Visible = false;
             iconCurrChildForm.Image = userIcon;
             openChildForm(new FormProfile());
         }

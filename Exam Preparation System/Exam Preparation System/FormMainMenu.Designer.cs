@@ -38,14 +38,7 @@ namespace Exam_Preparation_System
             this.btnChart = new Guna.UI2.WinForms.Guna2Button();
             this.panelSubMenuStudent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnViewResult = new Guna.UI2.WinForms.Guna2Button();
-            this.btnJoinExam = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRegister = new Guna.UI2.WinForms.Guna2Button();
             this.btnExercise = new Guna.UI2.WinForms.Guna2Button();
-            this.panelSubMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnResult = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMark = new Guna.UI2.WinForms.Guna2Button();
-            this.btnListExam = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCreateExam = new Guna.UI2.WinForms.Guna2Button();
             this.btnExamManager = new Guna.UI2.WinForms.Guna2Button();
             this.btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
@@ -59,7 +52,6 @@ namespace Exam_Preparation_System
             this.panelSlideBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSubMenuStudent.SuspendLayout();
-            this.panelSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +86,6 @@ namespace Exam_Preparation_System
             this.panelMenu.Controls.Add(this.btnLogOut);
             this.panelMenu.Controls.Add(this.btnChart);
             this.panelMenu.Controls.Add(this.panelSubMenuStudent);
-            this.panelMenu.Controls.Add(this.panelSubMenu);
             this.panelMenu.Controls.Add(this.btnExamManager);
             this.panelMenu.Controls.Add(this.btnWarehouse);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -165,7 +156,7 @@ namespace Exam_Preparation_System
             this.btnChart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnChart.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnChart.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnChart.Location = new System.Drawing.Point(0, 383);
+            this.btnChart.Location = new System.Drawing.Point(0, 201);
             this.btnChart.Name = "btnChart";
             this.btnChart.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnChart.ShadowDecoration.Parent = this.btnChart;
@@ -179,14 +170,12 @@ namespace Exam_Preparation_System
             // panelSubMenuStudent
             // 
             this.panelSubMenuStudent.Controls.Add(this.btnViewResult);
-            this.panelSubMenuStudent.Controls.Add(this.btnJoinExam);
-            this.panelSubMenuStudent.Controls.Add(this.btnRegister);
             this.panelSubMenuStudent.Controls.Add(this.btnExercise);
             this.panelSubMenuStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuStudent.Location = new System.Drawing.Point(0, 259);
+            this.panelSubMenuStudent.Location = new System.Drawing.Point(0, 135);
             this.panelSubMenuStudent.Name = "panelSubMenuStudent";
             this.panelSubMenuStudent.ShadowDecoration.Parent = this.panelSubMenuStudent;
-            this.panelSubMenuStudent.Size = new System.Drawing.Size(210, 124);
+            this.panelSubMenuStudent.Size = new System.Drawing.Size(210, 66);
             this.panelSubMenuStudent.TabIndex = 5;
             // 
             // btnViewResult
@@ -214,7 +203,7 @@ namespace Exam_Preparation_System
             this.btnViewResult.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnViewResult.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnViewResult.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnViewResult.Location = new System.Drawing.Point(0, 90);
+            this.btnViewResult.Location = new System.Drawing.Point(0, 30);
             this.btnViewResult.Name = "btnViewResult";
             this.btnViewResult.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnViewResult.ShadowDecoration.Parent = this.btnViewResult;
@@ -224,78 +213,6 @@ namespace Exam_Preparation_System
             this.btnViewResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnViewResult.TextOffset = new System.Drawing.Point(30, 0);
             this.btnViewResult.Click += new System.EventHandler(this.btnViewResult_Click);
-            // 
-            // btnJoinExam
-            // 
-            this.btnJoinExam.BackColor = System.Drawing.Color.Transparent;
-            this.btnJoinExam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnJoinExam.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnJoinExam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnJoinExam.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnJoinExam.CheckedState.Parent = this.btnJoinExam;
-            this.btnJoinExam.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJoinExam.CustomImages.Parent = this.btnJoinExam;
-            this.btnJoinExam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnJoinExam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnJoinExam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnJoinExam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnJoinExam.DisabledState.Parent = this.btnJoinExam;
-            this.btnJoinExam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJoinExam.FillColor = System.Drawing.Color.White;
-            this.btnJoinExam.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnJoinExam.ForeColor = System.Drawing.Color.Black;
-            this.btnJoinExam.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnJoinExam.HoverState.Parent = this.btnJoinExam;
-            this.btnJoinExam.Image = global::Exam_Preparation_System.Properties.Resources.blue_dot;
-            this.btnJoinExam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJoinExam.ImageOffset = new System.Drawing.Point(35, 0);
-            this.btnJoinExam.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnJoinExam.Location = new System.Drawing.Point(0, 60);
-            this.btnJoinExam.Name = "btnJoinExam";
-            this.btnJoinExam.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnJoinExam.ShadowDecoration.Parent = this.btnJoinExam;
-            this.btnJoinExam.Size = new System.Drawing.Size(210, 30);
-            this.btnJoinExam.TabIndex = 6;
-            this.btnJoinExam.Text = "Tham gia thi";
-            this.btnJoinExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJoinExam.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnJoinExam.Click += new System.EventHandler(this.btnJoinExam_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegister.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRegister.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRegister.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnRegister.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRegister.CheckedState.Parent = this.btnRegister;
-            this.btnRegister.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRegister.CustomImages.Parent = this.btnRegister;
-            this.btnRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRegister.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRegister.DisabledState.Parent = this.btnRegister;
-            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegister.FillColor = System.Drawing.Color.White;
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnRegister.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnRegister.HoverState.Parent = this.btnRegister;
-            this.btnRegister.Image = global::Exam_Preparation_System.Properties.Resources.orange_dot;
-            this.btnRegister.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRegister.ImageOffset = new System.Drawing.Point(35, 0);
-            this.btnRegister.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnRegister.Location = new System.Drawing.Point(0, 30);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnRegister.ShadowDecoration.Parent = this.btnRegister;
-            this.btnRegister.Size = new System.Drawing.Size(210, 30);
-            this.btnRegister.TabIndex = 5;
-            this.btnRegister.Text = "Đăng ký thi";
-            this.btnRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRegister.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnExercise
             // 
@@ -332,163 +249,6 @@ namespace Exam_Preparation_System
             this.btnExercise.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExercise.TextOffset = new System.Drawing.Point(30, 0);
             this.btnExercise.Click += new System.EventHandler(this.btnExercise_Click);
-            // 
-            // panelSubMenu
-            // 
-            this.panelSubMenu.Controls.Add(this.btnResult);
-            this.panelSubMenu.Controls.Add(this.btnMark);
-            this.panelSubMenu.Controls.Add(this.btnListExam);
-            this.panelSubMenu.Controls.Add(this.btnCreateExam);
-            this.panelSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenu.Location = new System.Drawing.Point(0, 135);
-            this.panelSubMenu.Name = "panelSubMenu";
-            this.panelSubMenu.ShadowDecoration.Parent = this.panelSubMenu;
-            this.panelSubMenu.Size = new System.Drawing.Size(210, 124);
-            this.panelSubMenu.TabIndex = 4;
-            // 
-            // btnResult
-            // 
-            this.btnResult.BackColor = System.Drawing.Color.Transparent;
-            this.btnResult.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnResult.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnResult.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnResult.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnResult.CheckedState.Parent = this.btnResult;
-            this.btnResult.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnResult.CustomImages.Parent = this.btnResult;
-            this.btnResult.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnResult.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnResult.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnResult.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnResult.DisabledState.Parent = this.btnResult;
-            this.btnResult.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnResult.FillColor = System.Drawing.Color.White;
-            this.btnResult.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnResult.ForeColor = System.Drawing.Color.Black;
-            this.btnResult.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnResult.HoverState.Parent = this.btnResult;
-            this.btnResult.Image = global::Exam_Preparation_System.Properties.Resources.green_dot;
-            this.btnResult.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnResult.ImageOffset = new System.Drawing.Point(35, 0);
-            this.btnResult.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnResult.Location = new System.Drawing.Point(0, 90);
-            this.btnResult.Name = "btnResult";
-            this.btnResult.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnResult.ShadowDecoration.Parent = this.btnResult;
-            this.btnResult.Size = new System.Drawing.Size(210, 30);
-            this.btnResult.TabIndex = 7;
-            this.btnResult.Text = "Xuất bảng điểm";
-            this.btnResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnResult.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
-            // 
-            // btnMark
-            // 
-            this.btnMark.BackColor = System.Drawing.Color.Transparent;
-            this.btnMark.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnMark.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnMark.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnMark.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnMark.CheckedState.Parent = this.btnMark;
-            this.btnMark.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMark.CustomImages.Parent = this.btnMark;
-            this.btnMark.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMark.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMark.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMark.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMark.DisabledState.Parent = this.btnMark;
-            this.btnMark.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMark.FillColor = System.Drawing.Color.White;
-            this.btnMark.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnMark.ForeColor = System.Drawing.Color.Black;
-            this.btnMark.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnMark.HoverState.Parent = this.btnMark;
-            this.btnMark.Image = global::Exam_Preparation_System.Properties.Resources.blue_dot;
-            this.btnMark.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMark.ImageOffset = new System.Drawing.Point(35, 0);
-            this.btnMark.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnMark.Location = new System.Drawing.Point(0, 60);
-            this.btnMark.Name = "btnMark";
-            this.btnMark.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnMark.ShadowDecoration.Parent = this.btnMark;
-            this.btnMark.Size = new System.Drawing.Size(210, 30);
-            this.btnMark.TabIndex = 6;
-            this.btnMark.Text = "Chấm thi";
-            this.btnMark.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMark.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnMark.Click += new System.EventHandler(this.btnMark_Click);
-            // 
-            // btnListExam
-            // 
-            this.btnListExam.BackColor = System.Drawing.Color.Transparent;
-            this.btnListExam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnListExam.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnListExam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnListExam.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnListExam.CheckedState.Parent = this.btnListExam;
-            this.btnListExam.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListExam.CustomImages.Parent = this.btnListExam;
-            this.btnListExam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnListExam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnListExam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnListExam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnListExam.DisabledState.Parent = this.btnListExam;
-            this.btnListExam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListExam.FillColor = System.Drawing.Color.White;
-            this.btnListExam.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnListExam.ForeColor = System.Drawing.Color.Black;
-            this.btnListExam.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnListExam.HoverState.Parent = this.btnListExam;
-            this.btnListExam.Image = global::Exam_Preparation_System.Properties.Resources.orange_dot;
-            this.btnListExam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListExam.ImageOffset = new System.Drawing.Point(35, 0);
-            this.btnListExam.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnListExam.Location = new System.Drawing.Point(0, 30);
-            this.btnListExam.Name = "btnListExam";
-            this.btnListExam.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnListExam.ShadowDecoration.Parent = this.btnListExam;
-            this.btnListExam.Size = new System.Drawing.Size(210, 30);
-            this.btnListExam.TabIndex = 5;
-            this.btnListExam.Text = "Danh sách thi";
-            this.btnListExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnListExam.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnListExam.Click += new System.EventHandler(this.btnListExam_Click);
-            // 
-            // btnCreateExam
-            // 
-            this.btnCreateExam.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreateExam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCreateExam.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCreateExam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnCreateExam.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCreateExam.CheckedState.Parent = this.btnCreateExam;
-            this.btnCreateExam.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreateExam.CustomImages.Parent = this.btnCreateExam;
-            this.btnCreateExam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateExam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreateExam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreateExam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreateExam.DisabledState.Parent = this.btnCreateExam;
-            this.btnCreateExam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCreateExam.FillColor = System.Drawing.Color.White;
-            this.btnCreateExam.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCreateExam.ForeColor = System.Drawing.Color.Black;
-            this.btnCreateExam.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnCreateExam.HoverState.Parent = this.btnCreateExam;
-            this.btnCreateExam.Image = global::Exam_Preparation_System.Properties.Resources.red_dot;
-            this.btnCreateExam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreateExam.ImageOffset = new System.Drawing.Point(35, 0);
-            this.btnCreateExam.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCreateExam.Location = new System.Drawing.Point(0, 0);
-            this.btnCreateExam.Name = "btnCreateExam";
-            this.btnCreateExam.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnCreateExam.ShadowDecoration.Parent = this.btnCreateExam;
-            this.btnCreateExam.Size = new System.Drawing.Size(210, 30);
-            this.btnCreateExam.TabIndex = 4;
-            this.btnCreateExam.Text = "Tổ chức thi";
-            this.btnCreateExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreateExam.TextOffset = new System.Drawing.Point(30, 0);
-            this.btnCreateExam.Click += new System.EventHandler(this.btnCreateExam_Click);
             // 
             // btnExamManager
             // 
@@ -557,7 +317,7 @@ namespace Exam_Preparation_System
             this.btnWarehouse.ShadowDecoration.Parent = this.btnWarehouse;
             this.btnWarehouse.Size = new System.Drawing.Size(210, 45);
             this.btnWarehouse.TabIndex = 2;
-            this.btnWarehouse.Text = "Kho đề";
+            this.btnWarehouse.Text = "Kho câu hỏi";
             this.btnWarehouse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWarehouse.TextOffset = new System.Drawing.Point(10, 0);
             this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
@@ -708,7 +468,6 @@ namespace Exam_Preparation_System
             this.panelSlideBar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelSubMenuStudent.ResumeLayout(false);
-            this.panelSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
             this.ResumeLayout(false);
@@ -728,16 +487,9 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2Panel panelMenu;
         private Guna.UI2.WinForms.Guna2Button btnWarehouse;
         private Guna.UI2.WinForms.Guna2Button btnExamManager;
-        private Guna.UI2.WinForms.Guna2Panel panelSubMenu;
-        private Guna.UI2.WinForms.Guna2Button btnCreateExam;
-        private Guna.UI2.WinForms.Guna2Button btnResult;
-        private Guna.UI2.WinForms.Guna2Button btnMark;
-        private Guna.UI2.WinForms.Guna2Button btnListExam;
         private Guna.UI2.WinForms.Guna2Button btnChart;
         private Guna.UI2.WinForms.Guna2Panel panelSubMenuStudent;
         private Guna.UI2.WinForms.Guna2Button btnViewResult;
-        private Guna.UI2.WinForms.Guna2Button btnJoinExam;
-        private Guna.UI2.WinForms.Guna2Button btnRegister;
         private Guna.UI2.WinForms.Guna2Button btnExercise;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnProfile;

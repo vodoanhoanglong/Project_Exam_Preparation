@@ -15,9 +15,10 @@ namespace Exam_Preparation_System
     public partial class FormExamPreparation : Form
     {
         private ContextDB context = Program.context;
-        private List<string> result = new List<string>();
         private int examID, totalSeconds;
         private bool checkTimeEnd = false;
+        private List<int> yourChoice = new List<int>();
+        private List<string> result = new List<string>();
         public FormExamPreparation(int examID)
         {
             InitializeComponent();
@@ -84,7 +85,7 @@ namespace Exam_Preparation_System
 
                 lblQuestion.BackColor = System.Drawing.Color.Transparent;
                 lblQuestion.Dock = DockStyle.Top;
-                lblQuestion.Name = question.QuestionID.ToString();
+                lblQuestion.Name = "lblQuestion" + question.QuestionID.ToString();
                 lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0))); ;
                 lblQuestion.Size = new System.Drawing.Size(86, 15);
                 lblQuestion.Text = noQ++ + ". " + question.Contents.ToString();
@@ -98,7 +99,7 @@ namespace Exam_Preparation_System
                     radio.BackColor = System.Drawing.Color.White;
                     radio.CheckedColor = System.Drawing.Color.MediumSlateBlue;
                     radio.MinimumSize = new System.Drawing.Size(0, 21);
-                    radio.Name = "radio" + queryAnswer.ToList()[i].AnswersID.ToString();
+                    radio.Name = queryAnswer.ToList()[i].AnswersID.ToString();
                     radio.Padding = new System.Windows.Forms.Padding(10, 15, 0, 0);
                     radio.Size = new System.Drawing.Size(105, 21);
                     radio.Dock = DockStyle.Top;
@@ -142,7 +143,10 @@ namespace Exam_Preparation_System
                     {
                         RadioButton radio = (RadioButton)control;
                         if (radio.Checked == true)
+                        {
                             correctQuantity = checkPoint(radio.Text, index++) ? ++correctQuantity : correctQuantity;
+                            yourChoice.Add(Convert.ToInt32(radio.Name));
+                        }    
                         else
                             count++;
                     }

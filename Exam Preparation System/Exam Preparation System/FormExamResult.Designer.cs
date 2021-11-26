@@ -37,6 +37,8 @@ namespace Exam_Preparation_System
             this.lblCodeExam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSubject = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblPoint = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnBack = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // ShadowForm
@@ -60,7 +62,7 @@ namespace Exam_Preparation_System
             this.progressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.progressBar.InnerMargin = 2;
             this.progressBar.InnerWidth = -1;
-            this.progressBar.Location = new System.Drawing.Point(262, 143);
+            this.progressBar.Location = new System.Drawing.Point(298, 109);
             this.progressBar.MarqueeAnimationSpeed = 2000;
             this.progressBar.Name = "progressBar";
             this.progressBar.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
@@ -69,7 +71,7 @@ namespace Exam_Preparation_System
             this.progressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
             this.progressBar.ProgressWidth = 10;
             this.progressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.progressBar.Size = new System.Drawing.Size(245, 211);
+            this.progressBar.Size = new System.Drawing.Size(194, 185);
             this.progressBar.StartAngle = 270;
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -87,7 +89,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(252, 385);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(263, 300);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(264, 27);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -102,6 +104,7 @@ namespace Exam_Preparation_System
             this.lblCodeExam.Name = "lblCodeExam";
             this.lblCodeExam.Size = new System.Drawing.Size(3, 2);
             this.lblCodeExam.TabIndex = 2;
+            this.lblCodeExam.Text = null;
             // 
             // lblSubject
             // 
@@ -112,6 +115,7 @@ namespace Exam_Preparation_System
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(3, 2);
             this.lblSubject.TabIndex = 3;
+            this.lblSubject.Text = null;
             // 
             // lblFullName
             // 
@@ -124,12 +128,47 @@ namespace Exam_Preparation_System
             this.lblFullName.TabIndex = 4;
             this.lblFullName.Text = "Họ tên thí sinh:  ";
             // 
+            // lblPoint
+            // 
+            this.lblPoint.BackColor = System.Drawing.Color.Transparent;
+            this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
+            this.lblPoint.Location = new System.Drawing.Point(671, 6);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(88, 27);
+            this.lblPoint.TabIndex = 5;
+            this.lblPoint.Text = "Điểm thi: ";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BorderRadius = 10;
+            this.btnBack.CheckedState.Parent = this.btnBack;
+            this.btnBack.CustomImages.Parent = this.btnBack;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.DisabledState.Parent = this.btnBack;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.HoverState.Parent = this.btnBack;
+            this.btnBack.Location = new System.Drawing.Point(320, 374);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.ShadowDecoration.Parent = this.btnBack;
+            this.btnBack.Size = new System.Drawing.Size(136, 32);
+            this.btnBack.TabIndex = 17;
+            this.btnBack.Text = "Trở về ";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // FormExamResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblPoint);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.lblCodeExam);
@@ -153,5 +192,7 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSubject;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCodeExam;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPoint;
+        private Guna.UI2.WinForms.Guna2GradientButton btnBack;
     }
 }

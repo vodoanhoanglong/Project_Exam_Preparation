@@ -322,7 +322,7 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormViewExam";
-            this.Text = "FormViewExam";
+            this.Text = "Luyện thi";
             this.Load += new System.EventHandler(this.FormViewExam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContests)).EndInit();
             this.ResumeLayout(false);

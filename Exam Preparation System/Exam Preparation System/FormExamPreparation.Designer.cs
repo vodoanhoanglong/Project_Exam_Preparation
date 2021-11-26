@@ -101,7 +101,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.HoverState.Parent = this.txtTimeExam;
             this.txtTimeExam.Location = new System.Drawing.Point(1025, 3);
-            this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeExam.MaxLength = 8;
             this.txtTimeExam.Name = "txtTimeExam";
             this.txtTimeExam.PasswordChar = '\0';
@@ -162,7 +162,7 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.pnlExamContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormExamPreparation";
-            this.Text = "FormExamPreparation";
+            this.Text = "Luyện thi";
             this.Load += new System.EventHandler(this.FormExamPreparation_Load);
             this.pnlExamContainer.ResumeLayout(false);
             this.ResumeLayout(false);
