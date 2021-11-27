@@ -209,7 +209,7 @@ namespace Exam_Preparation_System
             this.btnViewResult.ShadowDecoration.Parent = this.btnViewResult;
             this.btnViewResult.Size = new System.Drawing.Size(210, 30);
             this.btnViewResult.TabIndex = 7;
-            this.btnViewResult.Text = "Xem kết quả";
+            this.btnViewResult.Text = "Lịch sử luyện thi";
             this.btnViewResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnViewResult.TextOffset = new System.Drawing.Point(30, 0);
             this.btnViewResult.Click += new System.EventHandler(this.btnViewResult_Click);

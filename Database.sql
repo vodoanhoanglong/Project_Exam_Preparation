@@ -45,16 +45,20 @@ CREATE TABLE LISTQUESTION(
 	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
 );
 
+
+
 CREATE TABLE EXAMRESULTS(
+	ExamResultID varchar(14),
 	UserID varchar(10),
 	ExamQuestionID INT,
 	ExamDate datetime default GetDate(),
 	Points float not null,
-	TimeComplete time not null,
-	Primary key(UserID, ExamQuestionID),
+	TimeComplete varchar(8) not null,
+	Primary key(ExamResultID, UserID, ExamQuestionID),
 	foreign key(UserID) references USERS(UserID),
 	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
 );
+
 
 CREATE TABLE ANSWERS(
 	AnswersID int identity(1,1) primary key,
@@ -155,6 +159,5 @@ INSERT [dbo].[ANSWERS] ([AnswersID], [AnswersContent], [isCorrect], [QuestionID]
 GO
 SET IDENTITY_INSERT [dbo].[ANSWERS] OFF
 GO
-
 
 

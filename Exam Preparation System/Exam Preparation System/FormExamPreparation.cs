@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace Exam_Preparation_System
     public partial class FormExamPreparation : Form
     {
         private ContextDB context = Program.context;
-        private int examID, totalSeconds;
+        private int examID, totalSeconds, secondDefault;
         private bool checkTimeEnd = false;
         private List<int> yourChoice = new List<int>();
         private List<string> result = new List<string>();
@@ -31,15 +32,20 @@ namespace Exam_Preparation_System
             timer.Enabled = true;
         }
 
+        private string convertTimeToString(int totalSeconds)
+        {
+            int hours = totalSeconds / 3600;
+            int minutes = (totalSeconds - (hours * 3600)) / 60;
+            int seconds = totalSeconds - (hours * 3600) - (minutes * 60);
+            return string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
+        }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             if (totalSeconds > 0)
             {
                 totalSeconds--;
-                int hours = totalSeconds / 3600;
-                int minutes = (totalSeconds - (hours * 3600)) / 60;
-                int seconds = totalSeconds - (hours * 3600) - (minutes * 60) ;
-                txtTimeExam.Text = string.Format("{0}:{1}:{2}", hours.ToString().PadLeft(2, '0'), minutes.ToString().PadLeft(2, '0'), seconds.ToString().PadLeft(2, '0'));
+                txtTimeExam.Text = convertTimeToString(totalSeconds);
             }
             else
             {
@@ -64,7 +70,7 @@ namespace Exam_Preparation_System
             h = Convert.ToInt32(splitTime[0]);
             m = Convert.ToInt32(splitTime[1]);
             s = Convert.ToInt32(splitTime[2]);
-            totalSeconds = (h * 3600) + (m * 60) + s;
+            secondDefault = totalSeconds = (h * 3600) + (m * 60) + s;
 
             queryQuestion.ForEach(question =>
             {
@@ -178,8 +184,34 @@ namespace Exam_Preparation_System
         private void showResultDialog(int totalCorrect, int totalQuestion)
         {
             timer.Stop();
+            saveResult(totalCorrect, totalQuestion);
             FormExamResult resultDialog = new FormExamResult(totalCorrect, totalQuestion, lblCodeExam.Text, lblSubject.Text);
             resultDialog.ShowDialog();
+        }
+
+        private void saveResult(int totalCorrect, int totalQuestion)
+        {
+            int h, m, s, timeCompleted;
+            string[] splitTime = txtTimeExam.Text.Split(':');
+
+            var currDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
+            var currDateParse = DateTime.ParseExact(currDate, "yyyy-MM-dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
+
+            double point = (10 * totalCorrect) / totalQuestion;
+            h = Convert.ToInt32(splitTime[0]);
+            m = Convert.ToInt32(splitTime[1]);
+            s = Convert.ToInt32(splitTime[2]);
+            timeCompleted = secondDefault - (h * 3600) - (m * 60) - s;
+
+            EXAMRESULT examResult = new EXAMRESULT();
+            examResult.ExamResultID = DateTime.Now.ToString("yyyyMMddHHmmss");
+            examResult.ExamQuestionID = examID;
+            examResult.UserID = FormLogin.info.UserID;
+            examResult.ExamDate = currDateParse;
+            examResult.Points = Math.Round(point, 1);
+            examResult.TimeComplete = convertTimeToString(timeCompleted);
+            context.EXAMRESULTS.Add(examResult);
+            context.SaveChanges();
         }
     }
 }

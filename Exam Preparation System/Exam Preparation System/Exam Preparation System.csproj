@@ -125,6 +125,12 @@
     <Compile Include="FormViewExam.Designer.cs">
       <DependentUpon>FormViewExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewHistory.Designer.cs">
+      <DependentUpon>FormViewHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewExam.resx">
       <DependentUpon>FormViewExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewHistory.resx">
+      <DependentUpon>FormViewHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWarehouse.resx">
       <DependentUpon>FormWarehouse.cs</DependentUpon>
@@ -274,5 +283,6 @@
   <ItemGroup>
     <None Include="Resources\Profile.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

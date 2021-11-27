@@ -11,11 +11,16 @@ namespace Exam_Preparation_System.Models
     {
         [Key]
         [Column(Order = 0)]
+        [StringLength(14)]
+        public string ExamResultID { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
         [StringLength(10)]
         public string UserID { get; set; }
 
         [Key]
-        [Column(Order = 1)]
+        [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ExamQuestionID { get; set; }
 
@@ -23,7 +28,9 @@ namespace Exam_Preparation_System.Models
 
         public double Points { get; set; }
 
-        public TimeSpan TimeComplete { get; set; }
+        [Required]
+        [StringLength(8)]
+        public string TimeComplete { get; set; }
 
         public virtual EXAMQUESTION EXAMQUESTION { get; set; }
 

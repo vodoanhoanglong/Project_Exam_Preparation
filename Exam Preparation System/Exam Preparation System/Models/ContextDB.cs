@@ -37,7 +37,15 @@ namespace Exam_Preparation_System.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<EXAMRESULT>()
+                .Property(e => e.ExamResultID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<EXAMRESULT>()
                 .Property(e => e.UserID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<EXAMRESULT>()
+                .Property(e => e.TimeComplete)
                 .IsUnicode(false);
 
             modelBuilder.Entity<QUESTION>()

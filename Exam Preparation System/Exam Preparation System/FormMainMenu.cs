@@ -200,6 +200,7 @@ namespace Exam_Preparation_System
         private void btnViewResult_Click(object sender, EventArgs e)
         {
             panelSubMenuStudent.Visible = false;
+            openChildForm(new FormViewHistory());
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
