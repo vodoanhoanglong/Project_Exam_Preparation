@@ -26,6 +26,8 @@ namespace Exam_Preparation_System.Models
 
         public DateTime? ExamDate { get; set; }
 
+        public int QuantityCorrect { get; set; }
+
         public double Points { get; set; }
 
         [Required]

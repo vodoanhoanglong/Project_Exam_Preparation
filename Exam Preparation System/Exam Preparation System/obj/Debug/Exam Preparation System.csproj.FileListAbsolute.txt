@@ -39,3 +39,4 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\Circ
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\WinFormAnimation.dll
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.xml
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamResult.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewHistory.resources

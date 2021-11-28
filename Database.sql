@@ -52,6 +52,7 @@ CREATE TABLE EXAMRESULTS(
 	UserID varchar(10),
 	ExamQuestionID INT,
 	ExamDate datetime default GetDate(),
+	QuantityCorrect int not null,
 	Points float not null,
 	TimeComplete varchar(8) not null,
 	Primary key(ExamResultID, UserID, ExamQuestionID),

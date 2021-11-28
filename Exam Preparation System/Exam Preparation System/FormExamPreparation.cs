@@ -193,22 +193,22 @@ namespace Exam_Preparation_System
         {
             int h, m, s, timeCompleted;
             string[] splitTime = txtTimeExam.Text.Split(':');
-
-            var currDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
-            var currDateParse = DateTime.ParseExact(currDate, "yyyy-MM-dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
-
-            double point = (10 * totalCorrect) / totalQuestion;
             h = Convert.ToInt32(splitTime[0]);
             m = Convert.ToInt32(splitTime[1]);
             s = Convert.ToInt32(splitTime[2]);
             timeCompleted = secondDefault - (h * 3600) - (m * 60) - s;
+            double points = (10 * totalCorrect) / totalQuestion;
+
+            var currDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff");
+            var currDateParse = DateTime.ParseExact(currDate, "yyyy-MM-dd HH:mm:ss:fff", CultureInfo.InvariantCulture);
 
             EXAMRESULT examResult = new EXAMRESULT();
             examResult.ExamResultID = DateTime.Now.ToString("yyyyMMddHHmmss");
             examResult.ExamQuestionID = examID;
             examResult.UserID = FormLogin.info.UserID;
             examResult.ExamDate = currDateParse;
-            examResult.Points = Math.Round(point, 1);
+            examResult.QuantityCorrect = totalCorrect;
+            examResult.Points = Math.Round(points, 1);
             examResult.TimeComplete = convertTimeToString(timeCompleted);
             context.EXAMRESULTS.Add(examResult);
             context.SaveChanges();
