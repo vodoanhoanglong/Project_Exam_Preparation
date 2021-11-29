@@ -40,3 +40,14 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\WinF
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.xml
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamResult.resources
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewHistory.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.dll
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.pdb
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.xml
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.WinForms.dll
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.Wpf.dll
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.WinForms.pdb
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.WinForms.xml
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.Wpf.pdb
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.Wpf.xml
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormStatisticalOfUser.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormStatisticalOfAdmin.resources

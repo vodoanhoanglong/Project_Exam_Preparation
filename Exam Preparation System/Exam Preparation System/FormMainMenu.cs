@@ -46,7 +46,6 @@ namespace Exam_Preparation_System
             panelSubMenuStudent.Visible = false;
             if (FormLogin.info.UserID != admin)
             {
-                btnChart.Visible = false;
                 btnWarehouse.Visible = false;
                 btnExamManager.Text = "Thi trực tuyến";
             }
@@ -173,6 +172,9 @@ namespace Exam_Preparation_System
         private void btnChart_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color4);
+            if (FormLogin.info.UserID != admin)
+                openChildForm(new FormStatisticalOfUser());
+            else openChildForm(new FormStatisticalOfAdmin());
         }
 
         // Drag Form with pannel
