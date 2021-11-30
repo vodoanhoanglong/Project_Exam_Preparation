@@ -44,7 +44,7 @@ namespace Exam_Preparation_System
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlBox = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -383,19 +383,20 @@ namespace Exam_Preparation_System
             this.guna2ControlBox2.Size = new System.Drawing.Size(60, 35);
             this.guna2ControlBox2.TabIndex = 6;
             // 
-            // guna2ControlBox1
+            // controlBox
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1363, -1);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 35);
-            this.guna2ControlBox1.TabIndex = 5;
+            this.controlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.controlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlBox.HoverState.FillColor = System.Drawing.Color.Red;
+            this.controlBox.HoverState.Parent = this.controlBox;
+            this.controlBox.IconColor = System.Drawing.Color.Black;
+            this.controlBox.Location = new System.Drawing.Point(1363, -1);
+            this.controlBox.Name = "controlBox";
+            this.controlBox.ShadowDecoration.Parent = this.controlBox;
+            this.controlBox.Size = new System.Drawing.Size(60, 35);
+            this.controlBox.TabIndex = 5;
+            this.controlBox.Click += new System.EventHandler(this.controlBox_Click);
             // 
             // panelContent
             // 
@@ -460,7 +461,7 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.guna2ControlBox2);
-            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.controlBox);
             this.Controls.Add(this.panelSlideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMenu";
@@ -483,7 +484,7 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox controlBox;
         private Guna.UI2.WinForms.Guna2Panel panelMenu;
         private Guna.UI2.WinForms.Guna2Button btnWarehouse;
         private Guna.UI2.WinForms.Guna2Button btnExamManager;

@@ -17,7 +17,7 @@ namespace Exam_Preparation_System
     {
         public static FormMainMenu instance;
 
-        private const string admin = "60510710671";
+        private const string admin = "6051071067";
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
@@ -216,6 +216,11 @@ namespace Exam_Preparation_System
             panelSubMenuStudent.Visible = false;
             iconCurrChildForm.Image = userIcon;
             openChildForm(new FormProfile());
+        }
+
+        private void controlBox_Click(object sender, EventArgs e)
+        {
+            FormLogin.instance.Close();
         }
     }
 }

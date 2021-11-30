@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,12 +57,14 @@ namespace Exam_Preparation_System
             return true;
         }
 
+
+
         private void gbtnLogin_Click(object sender, EventArgs e)
         {
             if (gtxtUserName.Text == "" || gtxtPassword.Text == "")
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
-            else if(!checkAccount())
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai");   
+            else if (!checkAccount())
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai");
             else
             {
                 FormMainMenu menu = new FormMainMenu();

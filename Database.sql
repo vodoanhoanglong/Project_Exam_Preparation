@@ -55,6 +55,7 @@ CREATE TABLE EXAMRESULTS(
 	QuantityCorrect int not null,
 	Points float not null,
 	TimeComplete varchar(8) not null,
+
 	Primary key(ExamResultID, UserID, ExamQuestionID),
 	foreign key(UserID) references USERS(UserID),
 	foreign key(ExamQuestionID) references EXAMQUESTIONS(ExamQuestionID)
