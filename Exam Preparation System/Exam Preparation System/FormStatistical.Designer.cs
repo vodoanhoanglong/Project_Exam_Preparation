@@ -1,7 +1,7 @@
 ﻿
 namespace Exam_Preparation_System
 {
-    partial class FormStatisticalOfAdmin
+    partial class FormStatistical
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,26 @@ namespace Exam_Preparation_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.cartesianChart = new LiveCharts.WinForms.CartesianChart();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             this.cmbExamID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.chart = new Guna.Charts.WinForms.GunaChart();
             this.SuspendLayout();
-            // 
-            // cartesianChart
-            // 
-            this.cartesianChart.Location = new System.Drawing.Point(113, 190);
-            this.cartesianChart.Name = "cartesianChart";
-            this.cartesianChart.Size = new System.Drawing.Size(959, 541);
-            this.cartesianChart.TabIndex = 0;
-            this.cartesianChart.Text = "cartesianChart";
             // 
             // cmbExamID
             // 
@@ -58,7 +66,7 @@ namespace Exam_Preparation_System
             this.cmbExamID.HoverState.Parent = this.cmbExamID;
             this.cmbExamID.ItemHeight = 30;
             this.cmbExamID.ItemsAppearance.Parent = this.cmbExamID;
-            this.cmbExamID.Location = new System.Drawing.Point(437, 31);
+            this.cmbExamID.Location = new System.Drawing.Point(514, 82);
             this.cmbExamID.Name = "cmbExamID";
             this.cmbExamID.ShadowDecoration.Parent = this.cmbExamID;
             this.cmbExamID.Size = new System.Drawing.Size(326, 36);
@@ -69,23 +77,69 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(280, 35);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(358, 86);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(137, 27);
             this.guna2HtmlLabel1.TabIndex = 13;
             this.guna2HtmlLabel1.Text = "Lọc theo mã đề";
             // 
-            // FormStatisticalOfAdmin
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(403, 12);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(409, 27);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "Thống kê số lượng người thi thử trong tuần";
+            // 
+            // chart
+            // 
+            this.chart.BackColor = System.Drawing.Color.White;
+            chartFont1.FontName = "Arial";
+            this.chart.Legend.LabelFont = chartFont1;
+            this.chart.Location = new System.Drawing.Point(95, 169);
+            this.chart.Name = "chart";
+            this.chart.Size = new System.Drawing.Size(1007, 513);
+            this.chart.TabIndex = 15;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.chart.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            this.chart.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.chart.Tooltips.TitleFont = chartFont4;
+            this.chart.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            this.chart.XAxes.Ticks = tick1;
+            this.chart.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            this.chart.YAxes.Ticks = tick2;
+            this.chart.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            this.chart.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            this.chart.ZAxes.Ticks = tick3;
+            // 
+            // FormStatistical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1173, 770);
+            this.Controls.Add(this.chart);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.cmbExamID);
-            this.Controls.Add(this.cartesianChart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormStatisticalOfAdmin";
+            this.Name = "FormStatistical";
             this.Text = "Thống kê số lượng thi";
             this.Load += new System.EventHandler(this.FormStatisticalOfAdmin_Load);
             this.ResumeLayout(false);
@@ -94,9 +148,9 @@ namespace Exam_Preparation_System
         }
 
         #endregion
-
-        private LiveCharts.WinForms.CartesianChart cartesianChart;
         private Guna.UI2.WinForms.Guna2ComboBox cmbExamID;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
+        private Guna.Charts.WinForms.GunaChart chart;
     }
 }

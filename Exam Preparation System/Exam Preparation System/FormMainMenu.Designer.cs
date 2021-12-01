@@ -34,26 +34,27 @@ namespace Exam_Preparation_System
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelSubMenuStudent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlBox = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.iconCurrChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRanking = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnChart = new Guna.UI2.WinForms.Guna2Button();
-            this.panelSubMenuStudent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnViewResult = new Guna.UI2.WinForms.Guna2Button();
             this.btnExercise = new Guna.UI2.WinForms.Guna2Button();
             this.btnExamManager = new Guna.UI2.WinForms.Guna2Button();
             this.btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.controlBox = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
-            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.iconCurrChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelSlideBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSubMenuStudent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ShadowForm
@@ -83,6 +84,7 @@ namespace Exam_Preparation_System
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.btnRanking);
             this.panelMenu.Controls.Add(this.btnLogOut);
             this.panelMenu.Controls.Add(this.btnChart);
             this.panelMenu.Controls.Add(this.panelSubMenuStudent);
@@ -94,6 +96,133 @@ namespace Exam_Preparation_System
             this.panelMenu.ShadowDecoration.Parent = this.panelMenu;
             this.panelMenu.Size = new System.Drawing.Size(210, 707);
             this.panelMenu.TabIndex = 2;
+            // 
+            // panelSubMenuStudent
+            // 
+            this.panelSubMenuStudent.Controls.Add(this.btnViewResult);
+            this.panelSubMenuStudent.Controls.Add(this.btnExercise);
+            this.panelSubMenuStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuStudent.Location = new System.Drawing.Point(0, 135);
+            this.panelSubMenuStudent.Name = "panelSubMenuStudent";
+            this.panelSubMenuStudent.ShadowDecoration.Parent = this.panelSubMenuStudent;
+            this.panelSubMenuStudent.Size = new System.Drawing.Size(210, 66);
+            this.panelSubMenuStudent.TabIndex = 5;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1303, -1);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 35);
+            this.guna2ControlBox2.TabIndex = 6;
+            // 
+            // controlBox
+            // 
+            this.controlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.controlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlBox.HoverState.FillColor = System.Drawing.Color.Red;
+            this.controlBox.HoverState.Parent = this.controlBox;
+            this.controlBox.IconColor = System.Drawing.Color.Black;
+            this.controlBox.Location = new System.Drawing.Point(1363, -1);
+            this.controlBox.Name = "controlBox";
+            this.controlBox.ShadowDecoration.Parent = this.controlBox;
+            this.controlBox.Size = new System.Drawing.Size(60, 35);
+            this.controlBox.TabIndex = 5;
+            this.controlBox.Click += new System.EventHandler(this.controlBox_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(223, 40);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.ShadowDecoration.Parent = this.panelContent;
+            this.panelContent.Size = new System.Drawing.Size(1189, 809);
+            this.panelContent.TabIndex = 9;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(280, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(37, 22);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Title";
+            // 
+            // iconCurrChildForm
+            // 
+            this.iconCurrChildForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.iconCurrChildForm.ImageRotate = 0F;
+            this.iconCurrChildForm.Location = new System.Drawing.Point(232, 3);
+            this.iconCurrChildForm.Name = "iconCurrChildForm";
+            this.iconCurrChildForm.ShadowDecoration.Parent = this.iconCurrChildForm;
+            this.iconCurrChildForm.Size = new System.Drawing.Size(40, 33);
+            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconCurrChildForm.TabIndex = 12;
+            this.iconCurrChildForm.TabStop = false;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.CheckedState.Parent = this.btnProfile;
+            this.btnProfile.CustomImages.Parent = this.btnProfile;
+            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProfile.DisabledState.Parent = this.btnProfile;
+            this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnProfile.ForeColor = System.Drawing.Color.White;
+            this.btnProfile.HoverState.Parent = this.btnProfile;
+            this.btnProfile.Image = global::Exam_Preparation_System.Properties.Resources.user;
+            this.btnProfile.ImageSize = new System.Drawing.Size(37, 37);
+            this.btnProfile.Location = new System.Drawing.Point(1243, -1);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
+            this.btnProfile.Size = new System.Drawing.Size(60, 35);
+            this.btnProfile.TabIndex = 8;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // btnRanking
+            // 
+            this.btnRanking.BackColor = System.Drawing.Color.Transparent;
+            this.btnRanking.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRanking.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRanking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.btnRanking.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRanking.CheckedState.Parent = this.btnRanking;
+            this.btnRanking.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRanking.CustomImages.Parent = this.btnRanking;
+            this.btnRanking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRanking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRanking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRanking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRanking.DisabledState.Parent = this.btnRanking;
+            this.btnRanking.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRanking.FillColor = System.Drawing.Color.White;
+            this.btnRanking.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRanking.ForeColor = System.Drawing.Color.Black;
+            this.btnRanking.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.btnRanking.HoverState.Parent = this.btnRanking;
+            this.btnRanking.Image = global::Exam_Preparation_System.Properties.Resources.cup;
+            this.btnRanking.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRanking.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btnRanking.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRanking.Location = new System.Drawing.Point(0, 246);
+            this.btnRanking.Name = "btnRanking";
+            this.btnRanking.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.btnRanking.ShadowDecoration.Parent = this.btnRanking;
+            this.btnRanking.Size = new System.Drawing.Size(210, 45);
+            this.btnRanking.TabIndex = 8;
+            this.btnRanking.Text = "Bảng xếp hạng";
+            this.btnRanking.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRanking.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnRanking.Click += new System.EventHandler(this.btnRanking_Click);
             // 
             // btnLogOut
             // 
@@ -166,17 +295,6 @@ namespace Exam_Preparation_System
             this.btnChart.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnChart.TextOffset = new System.Drawing.Point(10, 0);
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
-            // 
-            // panelSubMenuStudent
-            // 
-            this.panelSubMenuStudent.Controls.Add(this.btnViewResult);
-            this.panelSubMenuStudent.Controls.Add(this.btnExercise);
-            this.panelSubMenuStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuStudent.Location = new System.Drawing.Point(0, 135);
-            this.panelSubMenuStudent.Name = "panelSubMenuStudent";
-            this.panelSubMenuStudent.ShadowDecoration.Parent = this.panelSubMenuStudent;
-            this.panelSubMenuStudent.Size = new System.Drawing.Size(210, 66);
-            this.panelSubMenuStudent.TabIndex = 5;
             // 
             // btnViewResult
             // 
@@ -370,86 +488,6 @@ namespace Exam_Preparation_System
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1303, -1);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 35);
-            this.guna2ControlBox2.TabIndex = 6;
-            // 
-            // controlBox
-            // 
-            this.controlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.controlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlBox.HoverState.FillColor = System.Drawing.Color.Red;
-            this.controlBox.HoverState.Parent = this.controlBox;
-            this.controlBox.IconColor = System.Drawing.Color.Black;
-            this.controlBox.Location = new System.Drawing.Point(1363, -1);
-            this.controlBox.Name = "controlBox";
-            this.controlBox.ShadowDecoration.Parent = this.controlBox;
-            this.controlBox.Size = new System.Drawing.Size(60, 35);
-            this.controlBox.TabIndex = 5;
-            this.controlBox.Click += new System.EventHandler(this.controlBox_Click);
-            // 
-            // panelContent
-            // 
-            this.panelContent.Location = new System.Drawing.Point(223, 40);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.ShadowDecoration.Parent = this.panelContent;
-            this.panelContent.Size = new System.Drawing.Size(1189, 809);
-            this.panelContent.TabIndex = 9;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.CheckedState.Parent = this.btnProfile;
-            this.btnProfile.CustomImages.Parent = this.btnProfile;
-            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProfile.DisabledState.Parent = this.btnProfile;
-            this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.HoverState.Parent = this.btnProfile;
-            this.btnProfile.Image = global::Exam_Preparation_System.Properties.Resources.user;
-            this.btnProfile.ImageSize = new System.Drawing.Size(37, 37);
-            this.btnProfile.Location = new System.Drawing.Point(1243, -1);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
-            this.btnProfile.Size = new System.Drawing.Size(60, 35);
-            this.btnProfile.TabIndex = 8;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(280, 8);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(37, 22);
-            this.lblTitle.TabIndex = 11;
-            this.lblTitle.Text = "Title";
-            // 
-            // iconCurrChildForm
-            // 
-            this.iconCurrChildForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.iconCurrChildForm.ImageRotate = 0F;
-            this.iconCurrChildForm.Location = new System.Drawing.Point(232, 3);
-            this.iconCurrChildForm.Name = "iconCurrChildForm";
-            this.iconCurrChildForm.ShadowDecoration.Parent = this.iconCurrChildForm;
-            this.iconCurrChildForm.Size = new System.Drawing.Size(40, 33);
-            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconCurrChildForm.TabIndex = 12;
-            this.iconCurrChildForm.TabStop = false;
-            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,8 +507,8 @@ namespace Exam_Preparation_System
             this.panelSlideBar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelSubMenuStudent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,5 +535,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2Panel panelContent;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Guna.UI2.WinForms.Guna2PictureBox iconCurrChildForm;
+        private Guna.UI2.WinForms.Guna2Button btnRanking;
     }
 }

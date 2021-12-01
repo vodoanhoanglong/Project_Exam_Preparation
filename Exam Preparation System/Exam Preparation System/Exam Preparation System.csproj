@@ -42,6 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.2.0, Culture=neutral, PublicKeyToken=4cb9ae78886bbe24, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.2\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.2.4, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -80,6 +83,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chart\ConfigChart.cs" />
+    <Compile Include="Chart\Pie.cs" />
+    <Compile Include="Chart\SplineArea.cs" />
     <Compile Include="FormCreateExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,17 +140,17 @@
     <Compile Include="FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStatisticalOfAdmin.cs">
+    <Compile Include="FormStatistical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStatisticalOfAdmin.Designer.cs">
-      <DependentUpon>FormStatisticalOfAdmin.cs</DependentUpon>
+    <Compile Include="FormStatistical.Designer.cs">
+      <DependentUpon>FormStatistical.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStatisticalOfUser.cs">
+    <Compile Include="FormRanking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStatisticalOfUser.Designer.cs">
-      <DependentUpon>FormStatisticalOfUser.cs</DependentUpon>
+    <Compile Include="FormRanking.Designer.cs">
+      <DependentUpon>FormRanking.cs</DependentUpon>
     </Compile>
     <Compile Include="FormViewExam.cs">
       <SubType>Form</SubType>
@@ -204,11 +210,11 @@
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStatisticalOfAdmin.resx">
-      <DependentUpon>FormStatisticalOfAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FormStatistical.resx">
+      <DependentUpon>FormStatistical.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStatisticalOfUser.resx">
-      <DependentUpon>FormStatisticalOfUser.cs</DependentUpon>
+    <EmbeddedResource Include="FormRanking.resx">
+      <DependentUpon>FormRanking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewExam.resx">
       <DependentUpon>FormViewExam.cs</DependentUpon>
@@ -316,6 +322,14 @@
   <ItemGroup>
     <None Include="Resources\Profile.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cup_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cup.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

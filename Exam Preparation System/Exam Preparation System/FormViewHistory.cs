@@ -1,4 +1,8 @@
-﻿using Exam_Preparation_System.Models;
+﻿using Chart;
+using Config;
+using Exam_Preparation_System.Models;
+using LiveCharts;
+using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +18,7 @@ namespace Exam_Preparation_System
     public partial class FormViewHistory : Form
     {
         ContextDB context = Program.context;
+        private int totalQuestion, totalCorrect, totalWrong;
         public FormViewHistory()
         {
             InitializeComponent();
@@ -44,7 +49,9 @@ namespace Exam_Preparation_System
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.DataSource = table;
+
             loadData();
+            loadChart();
         }
 
         private void loadData()
@@ -117,5 +124,22 @@ namespace Exam_Preparation_System
                 e.Handled = true;
         }
 
+        private void loadChart()
+        {
+            int[] arr = new int[3];
+            var query = context.EXAMRESULTS.Where(x => x.UserID == FormLogin.info.UserID);
+            totalQuestion = query.Select(x => x.EXAMQUESTION.Quantity).AsEnumerable().Sum();
+            totalCorrect = query.Select(x => x.QuantityCorrect).AsEnumerable().Sum();
+            totalWrong = totalQuestion - totalCorrect;
+
+            arr[0] = totalQuestion;
+            arr[1] = totalCorrect;
+            arr[2] = totalWrong;
+
+            chart.Datasets.Clear();
+            chart.ApplyConfig(ConfigChart.Config(), Color.FromArgb(239, 242, 249));
+            Pie.data = arr;
+            Pie.loadChart(chart);
+        }
     }
 }

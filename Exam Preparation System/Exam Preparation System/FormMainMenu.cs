@@ -26,11 +26,13 @@ namespace Exam_Preparation_System
         private System.Drawing.Bitmap warehouse = global::Exam_Preparation_System.Properties.Resources.warehouse;
         private System.Drawing.Bitmap exam = global::Exam_Preparation_System.Properties.Resources.exam;
         private System.Drawing.Bitmap lineChart = global::Exam_Preparation_System.Properties.Resources.line_chart;
+        private System.Drawing.Bitmap cup = global::Exam_Preparation_System.Properties.Resources.cup;
 
         private System.Drawing.Bitmap homeColor = global::Exam_Preparation_System.Properties.Resources.home_color;
         private System.Drawing.Bitmap warehouseColor = global::Exam_Preparation_System.Properties.Resources.warehouse_color;
         private System.Drawing.Bitmap examColor = global::Exam_Preparation_System.Properties.Resources.exam_color;
         private System.Drawing.Bitmap lineChartColor = global::Exam_Preparation_System.Properties.Resources.line_chart_color;
+        private System.Drawing.Bitmap cupColor = global::Exam_Preparation_System.Properties.Resources.cup_color;
 
         private System.Drawing.Bitmap userIcon = global::Exam_Preparation_System.Properties.Resources.user;
         public FormMainMenu()
@@ -47,8 +49,10 @@ namespace Exam_Preparation_System
             if (FormLogin.info.UserID != admin)
             {
                 btnWarehouse.Visible = false;
+                btnChart.Visible = false;
                 btnExamManager.Text = "Thi trực tuyến";
             }
+            else btnRanking.Visible = false;
 
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
@@ -92,6 +96,7 @@ namespace Exam_Preparation_System
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(24, 161, 251);
+            public static Color color5 = Color.FromArgb(255, 215, 39);
         }
 
         private void setColorImage(string name)
@@ -107,6 +112,9 @@ namespace Exam_Preparation_System
                     break;
                 case "btnExamManager":
                     currBtn.Image = checkColor ? examColor : exam;
+                    break;
+                case "btnRanking":
+                    currBtn.Image = checkColor ? cupColor : cup;
                     break;
                 default:
                     currBtn.Image = checkColor ? lineChartColor : lineChart;
@@ -172,17 +180,21 @@ namespace Exam_Preparation_System
         private void btnChart_Click(object sender, EventArgs e)
         {
             activateButton(sender, RGBColors.color4);
-            if (FormLogin.info.UserID != admin)
-                openChildForm(new FormStatisticalOfUser());
-            else openChildForm(new FormStatisticalOfAdmin());
+            openChildForm(new FormStatistical());
+        }
+
+        private void btnRanking_Click(object sender, EventArgs e)
+        {
+            activateButton(sender, RGBColors.color5);
+            openChildForm(new FormRanking());
         }
 
         // Drag Form with pannel
-/*        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        /*        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+                private extern static void ReleaseCapture();
 
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);*/
+                [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+                private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);*/
 
 
         /*private void panelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -222,5 +234,6 @@ namespace Exam_Preparation_System
         {
             FormLogin.instance.Close();
         }
+
     }
 }

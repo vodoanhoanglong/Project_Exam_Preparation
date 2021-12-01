@@ -49,5 +49,6 @@ D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\Live
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.WinForms.xml
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.Wpf.pdb
 D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\LiveCharts.Wpf.xml
-D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormStatisticalOfUser.resources
-D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormStatisticalOfAdmin.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormStatistical.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormRanking.resources
+D:\PTTKHT Project\Exam Preparation System\Exam Preparation System\bin\Debug\Guna.Charts.WinForms.dll
