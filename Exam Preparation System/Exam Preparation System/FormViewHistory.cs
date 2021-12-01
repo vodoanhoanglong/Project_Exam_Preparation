@@ -55,9 +55,10 @@ namespace Exam_Preparation_System
         private void loadData()
         {
             int subID = (int)cmbSubject.SelectedValue;
-            var query = from er in context.EXAMRESULTS
-                        where er.UserID == FormLogin.info.UserID
-                        select new
+            var query = context.EXAMRESULTS.Where(x => x.UserID == FormLogin.info.UserID)
+                        .OrderByDescending(x => x.ExamDate)
+                        .AsEnumerable()
+                        .Select(er => new
                         {   er.EXAMQUESTION.ExamQuestionID,
                             er.EXAMQUESTION.Quantity,
                             er.EXAMQUESTION.ExecutionTime,
@@ -65,18 +66,21 @@ namespace Exam_Preparation_System
                             er.EXAMQUESTION.SUBJECT.SubName,
                             er.QuantityCorrect,
                             er.Points,
-                            er.ExamDate,
+                            ExamDate = er.ExamDate.GetValueOrDefault().ToString("dd/MM/yyyy"),
                             filterBySub = er.EXAMQUESTION.SubjectID
-                        };
-            dgvHistory.DataSource = subID == -1 ? query.ToList() : query.Where(x => x.filterBySub == subID).ToList();
+                        });
+            dgvHistory.DataSource = subID == -1 
+                ? query.ToList() 
+                : query.Where(x => x.filterBySub == subID).ToList();
         }
 
         private void loadDataByID()
         {
             int examID = Convert.ToInt32(txtExamID.Text);
-            var query = from er in context.EXAMRESULTS
-                        where er.ExamQuestionID == examID
-                        select new
+            var query = context.EXAMRESULTS.Where(x => x.ExamQuestionID == examID)
+                        .OrderByDescending(x => x.ExamDate)
+                        .AsEnumerable()
+                        .Select(er => new 
                         {
                             er.EXAMQUESTION.ExamQuestionID,
                             er.EXAMQUESTION.Quantity,
@@ -85,8 +89,8 @@ namespace Exam_Preparation_System
                             er.EXAMQUESTION.SUBJECT.SubName,
                             er.QuantityCorrect,
                             er.Points,
-                            er.ExamDate,
-                        };
+                            ExamDate = er.ExamDate.GetValueOrDefault().ToString("dd/MM/yyyy"),
+                        });
             dgvHistory.DataSource = query.ToList();
         }
 

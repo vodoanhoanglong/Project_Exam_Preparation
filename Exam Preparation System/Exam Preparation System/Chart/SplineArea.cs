@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Windows;
 using Guna.Charts.WinForms;
 
 namespace Chart
@@ -14,14 +15,18 @@ namespace Chart
             //Chart configuration 
             chart.YAxes.GridLines.Display = false;
 
-            string[] dayOfWeek = { "Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun" };
+            List<string> dayOfWeek = new List<string>();
+            int index = 6;
+
+            while (index >= 0)
+                dayOfWeek.Add(DateTime.Today.AddDays(-index--).DayOfWeek.ToString()); 
 
             //Create a new dataset 
             var dataset = new Guna.Charts.WinForms.GunaSplineAreaDataset();
             dataset.PointRadius = 3;
             dataset.PointStyle = PointStyle.Circle;
 
-            for (int i = 0; i < dayOfWeek.Length; i++)
+            for (int i = 0; i < dayOfWeek.Count; i++)
                 dataset.DataPoints.Add(dayOfWeek[i], data[i]);
 
             //Add a new dataset to a chart.Datasets
