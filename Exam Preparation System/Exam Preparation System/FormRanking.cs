@@ -1,6 +1,4 @@
 ﻿using Exam_Preparation_System.Models;
-using LiveCharts;
-using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
