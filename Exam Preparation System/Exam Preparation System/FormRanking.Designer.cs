@@ -35,7 +35,7 @@ namespace Exam_Preparation_System
             this.shapeTwo = new Guna.UI2.WinForms.Guna2Shapes();
             this.shapeThree = new Guna.UI2.WinForms.Guna2Shapes();
             this.shapeOne = new Guna.UI2.WinForms.Guna2Shapes();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ptbCrown = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel30 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -73,7 +73,7 @@ namespace Exam_Preparation_System
             this.cmbExamID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.transition = new Guna.UI2.WinForms.Guna2Transition();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCrown)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,18 +123,18 @@ namespace Exam_Preparation_System
             this.shapeOne.Text = "guna2Shapes3";
             this.shapeOne.Zoom = 100;
             // 
-            // guna2PictureBox1
+            // ptbCrown
             // 
-            this.transition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = global::Exam_Preparation_System.Properties.Resources.crown;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(544, 70);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(149, 72);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 3;
-            this.guna2PictureBox1.TabStop = false;
+            this.transition.SetDecoration(this.ptbCrown, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ptbCrown.Image = global::Exam_Preparation_System.Properties.Resources.crown;
+            this.ptbCrown.ImageRotate = 0F;
+            this.ptbCrown.Location = new System.Drawing.Point(544, 70);
+            this.ptbCrown.Name = "ptbCrown";
+            this.ptbCrown.ShadowDecoration.Parent = this.ptbCrown;
+            this.ptbCrown.Size = new System.Drawing.Size(149, 72);
+            this.ptbCrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbCrown.TabIndex = 3;
+            this.ptbCrown.TabStop = false;
             // 
             // guna2ShadowPanel1
             // 
@@ -362,6 +362,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(41, 78);
             this.guna2HtmlLabel1.TabIndex = 5;
             this.guna2HtmlLabel1.Text = "2";
+            this.guna2HtmlLabel1.Visible = false;
             // 
             // guna2HtmlLabel2
             // 
@@ -374,6 +375,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(41, 78);
             this.guna2HtmlLabel2.TabIndex = 6;
             this.guna2HtmlLabel2.Text = "1";
+            this.guna2HtmlLabel2.Visible = false;
             // 
             // guna2HtmlLabel3
             // 
@@ -386,6 +388,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(41, 78);
             this.guna2HtmlLabel3.TabIndex = 7;
             this.guna2HtmlLabel3.Text = "3";
+            this.guna2HtmlLabel3.Visible = false;
             // 
             // guna2HtmlLabel4
             // 
@@ -434,6 +437,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(181, 22);
             this.guna2HtmlLabel7.TabIndex = 11;
             this.guna2HtmlLabel7.Text = "Thời gian thi: 00:00:10";
+            this.guna2HtmlLabel7.Visible = false;
             // 
             // guna2HtmlLabel8
             // 
@@ -446,6 +450,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(135, 22);
             this.guna2HtmlLabel8.TabIndex = 12;
             this.guna2HtmlLabel8.Text = "Câu đúng: 50/50";
+            this.guna2HtmlLabel8.Visible = false;
             // 
             // guna2HtmlLabel9
             // 
@@ -458,6 +463,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(135, 22);
             this.guna2HtmlLabel9.TabIndex = 13;
             this.guna2HtmlLabel9.Text = "Câu đúng: 50/50";
+            this.guna2HtmlLabel9.Visible = false;
             // 
             // guna2HtmlLabel10
             // 
@@ -470,6 +476,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(181, 22);
             this.guna2HtmlLabel10.TabIndex = 14;
             this.guna2HtmlLabel10.Text = "Thời gian thi: 00:00:10";
+            this.guna2HtmlLabel10.Visible = false;
             // 
             // guna2HtmlLabel11
             // 
@@ -482,6 +489,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(181, 22);
             this.guna2HtmlLabel11.TabIndex = 16;
             this.guna2HtmlLabel11.Text = "Thời gian thi: 00:00:10";
+            this.guna2HtmlLabel11.Visible = false;
             // 
             // guna2HtmlLabel12
             // 
@@ -494,6 +502,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel12.Size = new System.Drawing.Size(135, 22);
             this.guna2HtmlLabel12.TabIndex = 15;
             this.guna2HtmlLabel12.Text = "Câu đúng: 50/50";
+            this.guna2HtmlLabel12.Visible = false;
             // 
             // guna2HtmlLabel25
             // 
@@ -573,11 +582,11 @@ namespace Exam_Preparation_System
             // 
             // transition
             // 
-            this.transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide;
+            this.transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.transition.Cursor = null;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
+            animation1.LeafCoeff = 1F;
             animation1.MaxTime = 1F;
             animation1.MinTime = 0F;
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
@@ -591,6 +600,7 @@ namespace Exam_Preparation_System
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.transition.DefaultAnimation = animation1;
+            this.transition.TimeStep = 0F;
             // 
             // FormRanking
             // 
@@ -616,7 +626,7 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.ptbCrown);
             this.Controls.Add(this.shapeOne);
             this.Controls.Add(this.shapeThree);
             this.Controls.Add(this.shapeTwo);
@@ -625,7 +635,7 @@ namespace Exam_Preparation_System
             this.Name = "FormRanking";
             this.Text = "Bảng xếp hạng";
             this.Load += new System.EventHandler(this.FormStatistical_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCrown)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -638,7 +648,7 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2Shapes shapeTwo;
         private Guna.UI2.WinForms.Guna2Shapes shapeThree;
         private Guna.UI2.WinForms.Guna2Shapes shapeOne;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbCrown;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel30;

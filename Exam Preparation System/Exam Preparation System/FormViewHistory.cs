@@ -25,6 +25,7 @@ namespace Exam_Preparation_System
         private void FormViewHistory_Load(object sender, EventArgs e)
         {
             dgvHistory.AutoGenerateColumns = false;
+            dgvHistory.Columns["ExamDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
             DataTable table = new DataTable();
             table.Columns.Add("SubjectID", typeof(int));
@@ -57,20 +58,20 @@ namespace Exam_Preparation_System
             int subID = (int)cmbSubject.SelectedValue;
             var query = context.EXAMRESULTS.Where(x => x.UserID == FormLogin.info.UserID)
                         .OrderByDescending(x => x.ExamDate)
-                        .AsEnumerable()
                         .Select(er => new
-                        {   er.EXAMQUESTION.ExamQuestionID,
+                        {   
+                            er.EXAMQUESTION.ExamQuestionID,
                             er.EXAMQUESTION.Quantity,
                             er.EXAMQUESTION.ExecutionTime,
                             er.TimeComplete,
                             er.EXAMQUESTION.SUBJECT.SubName,
                             er.QuantityCorrect,
                             er.Points,
-                            ExamDate = er.ExamDate.GetValueOrDefault().ToString("dd/MM/yyyy"),
+                            er.ExamDate,
                             filterBySub = er.EXAMQUESTION.SubjectID
                         });
-            dgvHistory.DataSource = subID == -1 
-                ? query.ToList() 
+            dgvHistory.DataSource = subID == -1
+                ? query.ToList()
                 : query.Where(x => x.filterBySub == subID).ToList();
         }
 
@@ -79,7 +80,6 @@ namespace Exam_Preparation_System
             int examID = Convert.ToInt32(txtExamID.Text);
             var query = context.EXAMRESULTS.Where(x => x.ExamQuestionID == examID)
                         .OrderByDescending(x => x.ExamDate)
-                        .AsEnumerable()
                         .Select(er => new 
                         {
                             er.EXAMQUESTION.ExamQuestionID,
@@ -89,7 +89,7 @@ namespace Exam_Preparation_System
                             er.EXAMQUESTION.SUBJECT.SubName,
                             er.QuantityCorrect,
                             er.Points,
-                            ExamDate = er.ExamDate.GetValueOrDefault().ToString("dd/MM/yyyy"),
+                            er.ExamDate,
                         });
             dgvHistory.DataSource = query.ToList();
         }

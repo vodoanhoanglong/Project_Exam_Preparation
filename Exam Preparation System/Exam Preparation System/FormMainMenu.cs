@@ -78,8 +78,9 @@ namespace Exam_Preparation_System
         public void openChildForm(Form childForm)
         {
             if (currChildForm != null)
-                currChildForm.Close();
+                currChildForm.Close();  
             currChildForm = childForm;
+            lblTitle.Text = childForm.Text;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -87,7 +88,6 @@ namespace Exam_Preparation_System
             panelContent.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
         }
 
         private struct RGBColors

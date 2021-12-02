@@ -33,7 +33,6 @@ namespace Exam_Preparation_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -49,15 +48,8 @@ namespace Exam_Preparation_System
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHistory = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeCompleted = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.point = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtExamID = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -65,6 +57,14 @@ namespace Exam_Preparation_System
             this.btnReset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.chart = new Guna.Charts.WinForms.GunaChart();
+            this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeCompleted = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExamDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.point = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +99,7 @@ namespace Exam_Preparation_System
             this.ExcuteTime,
             this.timeCompleted,
             this.SubName,
-            this.CreateDate,
+            this.ExamDate,
             this.point});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -147,73 +147,6 @@ namespace Exam_Preparation_System
             this.dgvHistory.ThemeStyle.RowsStyle.Height = 22;
             this.dgvHistory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHistory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // ExamID
-            // 
-            this.ExamID.DataPropertyName = "ExamQuestionID";
-            this.ExamID.FillWeight = 41.40887F;
-            this.ExamID.HeaderText = "Mã đề";
-            this.ExamID.Name = "ExamID";
-            this.ExamID.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 84.64045F;
-            this.Quantity.HeaderText = "Số câu hỏi";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // QuantityCorrect
-            // 
-            this.QuantityCorrect.DataPropertyName = "QuantityCorrect";
-            this.QuantityCorrect.FillWeight = 88.27848F;
-            this.QuantityCorrect.HeaderText = "Số câu đúng";
-            this.QuantityCorrect.Name = "QuantityCorrect";
-            this.QuantityCorrect.ReadOnly = true;
-            // 
-            // ExcuteTime
-            // 
-            this.ExcuteTime.DataPropertyName = "ExecutionTime";
-            this.ExcuteTime.FillWeight = 127.3452F;
-            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
-            this.ExcuteTime.Name = "ExcuteTime";
-            this.ExcuteTime.ReadOnly = true;
-            // 
-            // timeCompleted
-            // 
-            this.timeCompleted.DataPropertyName = "TimeComplete";
-            this.timeCompleted.FillWeight = 138.3493F;
-            this.timeCompleted.HeaderText = "Thời gian hoàn thành";
-            this.timeCompleted.Name = "timeCompleted";
-            this.timeCompleted.ReadOnly = true;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.FillWeight = 191.3521F;
-            this.SubName.HeaderText = "Môn";
-            this.SubName.Name = "SubName";
-            this.SubName.ReadOnly = true;
-            // 
-            // CreateDate
-            // 
-            this.CreateDate.DataPropertyName = "ExamDate";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
-            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CreateDate.FillWeight = 158.0014F;
-            this.CreateDate.HeaderText = "Ngày thi";
-            this.CreateDate.Name = "CreateDate";
-            this.CreateDate.ReadOnly = true;
-            // 
-            // point
-            // 
-            this.point.DataPropertyName = "Points";
-            this.point.FillWeight = 40.16722F;
-            this.point.HeaderText = "Điểm";
-            this.point.Name = "point";
-            this.point.ReadOnly = true;
             // 
             // btnSearch
             // 
@@ -364,6 +297,73 @@ namespace Exam_Preparation_System
             tick3.Font = chartFont8;
             this.chart.ZAxes.Ticks = tick3;
             // 
+            // ExamID
+            // 
+            this.ExamID.DataPropertyName = "ExamQuestionID";
+            this.ExamID.FillWeight = 41.40887F;
+            this.ExamID.HeaderText = "Mã đề";
+            this.ExamID.Name = "ExamID";
+            this.ExamID.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 84.64045F;
+            this.Quantity.HeaderText = "Số câu hỏi";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // QuantityCorrect
+            // 
+            this.QuantityCorrect.DataPropertyName = "QuantityCorrect";
+            this.QuantityCorrect.FillWeight = 88.27848F;
+            this.QuantityCorrect.HeaderText = "Số câu đúng";
+            this.QuantityCorrect.Name = "QuantityCorrect";
+            this.QuantityCorrect.ReadOnly = true;
+            // 
+            // ExcuteTime
+            // 
+            this.ExcuteTime.DataPropertyName = "ExecutionTime";
+            this.ExcuteTime.FillWeight = 127.3452F;
+            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
+            this.ExcuteTime.Name = "ExcuteTime";
+            this.ExcuteTime.ReadOnly = true;
+            // 
+            // timeCompleted
+            // 
+            this.timeCompleted.DataPropertyName = "TimeComplete";
+            this.timeCompleted.FillWeight = 138.3493F;
+            this.timeCompleted.HeaderText = "Thời gian hoàn thành";
+            this.timeCompleted.Name = "timeCompleted";
+            this.timeCompleted.ReadOnly = true;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.FillWeight = 191.3521F;
+            this.SubName.HeaderText = "Môn";
+            this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
+            // 
+            // ExamDate
+            // 
+            this.ExamDate.DataPropertyName = "ExamDate";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
+            this.ExamDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ExamDate.FillWeight = 158.0014F;
+            this.ExamDate.HeaderText = "Ngày thi";
+            this.ExamDate.Name = "ExamDate";
+            this.ExamDate.ReadOnly = true;
+            // 
+            // point
+            // 
+            this.point.DataPropertyName = "Points";
+            this.point.FillWeight = 40.16722F;
+            this.point.HeaderText = "Điểm";
+            this.point.Name = "point";
+            this.point.ReadOnly = true;
+            // 
             // FormViewHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,14 +397,14 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientButton btnReset;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
+        private Guna.Charts.WinForms.GunaChart chart;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExamID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityCorrect;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExcuteTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeCompleted;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CreateDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExamDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn point;
-        private Guna.Charts.WinForms.GunaChart chart;
     }
 }
