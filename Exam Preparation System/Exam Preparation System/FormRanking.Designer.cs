@@ -30,7 +30,7 @@ namespace Exam_Preparation_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRanking));
             this.shapeTwo = new Guna.UI2.WinForms.Guna2Shapes();
             this.shapeThree = new Guna.UI2.WinForms.Guna2Shapes();
@@ -574,6 +574,7 @@ namespace Exam_Preparation_System
             this.cmbExamID.ShadowDecoration.Parent = this.cmbExamID;
             this.cmbExamID.Size = new System.Drawing.Size(162, 36);
             this.cmbExamID.TabIndex = 20;
+            this.cmbExamID.SelectedIndexChanged += new System.EventHandler(this.cmbExamID_SelectedIndexChanged);
             // 
             // Elipse
             // 
@@ -584,22 +585,22 @@ namespace Exam_Preparation_System
             // 
             this.transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.transition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 1F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.transition.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 1F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.transition.DefaultAnimation = animation4;
             this.transition.TimeStep = 0F;
             // 
             // FormRanking

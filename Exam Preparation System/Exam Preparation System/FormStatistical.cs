@@ -48,8 +48,6 @@ namespace Exam_Preparation_System
             cmbExamID.DisplayMember = "ExamID";
             cmbExamID.DataSource = table;
 
-            loadData();
-
         }
 
         private void loadData()

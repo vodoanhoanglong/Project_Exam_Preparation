@@ -45,7 +45,6 @@ namespace Exam_Preparation_System
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.DataSource = table;
 
-            loadData();
         }
 
         private void loadData()

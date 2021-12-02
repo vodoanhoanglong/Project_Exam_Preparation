@@ -24,6 +24,7 @@ namespace Exam_Preparation_System.Models
 
         [Required]
         [StringLength(50)]
+        [Column(TypeName = "NVARCHAR")]
         public string FullName { get; set; }
 
         [Column(TypeName = "date")]
