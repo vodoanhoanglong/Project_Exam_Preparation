@@ -30,7 +30,7 @@ namespace Exam_Preparation_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRanking));
             this.shapeTwo = new Guna.UI2.WinForms.Guna2Shapes();
             this.shapeThree = new Guna.UI2.WinForms.Guna2Shapes();
@@ -38,41 +38,41 @@ namespace Exam_Preparation_System
             this.ptbCrown = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2HtmlLabel31 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel30 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel29 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel28 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMyFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFullName5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFullName4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMyTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMyQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMyUserID = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMyRank = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblQuantity5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUserID5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblQuantity4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUserID4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel26 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel27 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUserID1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUserID3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblUserID2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblQuantity2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblQuantity1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblQuantity3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFullName3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel32 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbExamID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.transition = new Guna.UI2.WinForms.Guna2Transition();
+            this.lblFullName2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFullName1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCrown)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -140,21 +140,21 @@ namespace Exam_Preparation_System
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel31);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel30);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel29);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel28);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel21);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel22);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel23);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel24);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel17);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel18);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel19);
+            this.guna2ShadowPanel1.Controls.Add(this.lblMyFullName);
+            this.guna2ShadowPanel1.Controls.Add(this.lblFullName5);
+            this.guna2ShadowPanel1.Controls.Add(this.lblFullName4);
+            this.guna2ShadowPanel1.Controls.Add(this.lblMyTime);
+            this.guna2ShadowPanel1.Controls.Add(this.lblMyQuantity);
+            this.guna2ShadowPanel1.Controls.Add(this.lblMyUserID);
+            this.guna2ShadowPanel1.Controls.Add(this.lblMyRank);
+            this.guna2ShadowPanel1.Controls.Add(this.lblTime5);
+            this.guna2ShadowPanel1.Controls.Add(this.lblQuantity5);
+            this.guna2ShadowPanel1.Controls.Add(this.lblUserID5);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel20);
             this.guna2ShadowPanel1.Controls.Add(this.guna2Separator2);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel16);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel15);
-            this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel14);
+            this.guna2ShadowPanel1.Controls.Add(this.lblTime4);
+            this.guna2ShadowPanel1.Controls.Add(this.lblQuantity4);
+            this.guna2ShadowPanel1.Controls.Add(this.lblUserID4);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel13);
             this.transition.SetDecoration(this.guna2ShadowPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
@@ -176,115 +176,106 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel31.TabIndex = 32;
             this.guna2HtmlLabel31.Text = "Hạng của tôi";
             // 
-            // guna2HtmlLabel30
+            // lblMyFullName
             // 
-            this.guna2HtmlLabel30.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel30, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel30.Location = new System.Drawing.Point(172, 213);
-            this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
-            this.guna2HtmlLabel30.Size = new System.Drawing.Size(93, 22);
-            this.guna2HtmlLabel30.TabIndex = 31;
-            this.guna2HtmlLabel30.Text = "Con chó nhà";
+            this.lblMyFullName.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblMyFullName, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMyFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMyFullName.Location = new System.Drawing.Point(172, 213);
+            this.lblMyFullName.Name = "lblMyFullName";
+            this.lblMyFullName.Size = new System.Drawing.Size(3, 2);
+            this.lblMyFullName.TabIndex = 31;
             // 
-            // guna2HtmlLabel29
+            // lblFullName5
             // 
-            this.guna2HtmlLabel29.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel29, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(172, 103);
-            this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(136, 22);
-            this.guna2HtmlLabel29.TabIndex = 30;
-            this.guna2HtmlLabel29.Text = "Con chó hạnh fuck";
+            this.lblFullName5.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblFullName5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFullName5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName5.Location = new System.Drawing.Point(172, 103);
+            this.lblFullName5.Name = "lblFullName5";
+            this.lblFullName5.Size = new System.Drawing.Size(3, 2);
+            this.lblFullName5.TabIndex = 30;
             // 
-            // guna2HtmlLabel28
+            // lblFullName4
             // 
-            this.guna2HtmlLabel28.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel28, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(173, 31);
-            this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(114, 22);
-            this.guna2HtmlLabel28.TabIndex = 29;
-            this.guna2HtmlLabel28.Text = "Con chó cu đơn";
+            this.lblFullName4.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblFullName4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFullName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName4.Location = new System.Drawing.Point(173, 31);
+            this.lblFullName4.Name = "lblFullName4";
+            this.lblFullName4.Size = new System.Drawing.Size(3, 2);
+            this.lblFullName4.TabIndex = 29;
             // 
-            // guna2HtmlLabel21
+            // lblMyTime
             // 
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel21, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(849, 213);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(158, 22);
-            this.guna2HtmlLabel21.TabIndex = 26;
-            this.guna2HtmlLabel21.Text = "Thời gian thi: 00:00:10";
+            this.lblMyTime.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblMyTime, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMyTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMyTime.Location = new System.Drawing.Point(849, 213);
+            this.lblMyTime.Name = "lblMyTime";
+            this.lblMyTime.Size = new System.Drawing.Size(3, 2);
+            this.lblMyTime.TabIndex = 26;
             // 
-            // guna2HtmlLabel22
+            // lblMyQuantity
             // 
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel22, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(650, 216);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(120, 22);
-            this.guna2HtmlLabel22.TabIndex = 28;
-            this.guna2HtmlLabel22.Text = "Câu đúng: 50/50";
+            this.lblMyQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblMyQuantity, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMyQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMyQuantity.Location = new System.Drawing.Point(650, 216);
+            this.lblMyQuantity.Name = "lblMyQuantity";
+            this.lblMyQuantity.Size = new System.Drawing.Size(3, 2);
+            this.lblMyQuantity.TabIndex = 28;
             // 
-            // guna2HtmlLabel23
+            // lblMyUserID
             // 
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel23, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(437, 216);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(93, 22);
-            this.guna2HtmlLabel23.TabIndex = 27;
-            this.guna2HtmlLabel23.Text = "6051071083";
+            this.lblMyUserID.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblMyUserID, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMyUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMyUserID.Location = new System.Drawing.Point(437, 216);
+            this.lblMyUserID.Name = "lblMyUserID";
+            this.lblMyUserID.Size = new System.Drawing.Size(3, 2);
+            this.lblMyUserID.TabIndex = 27;
             // 
-            // guna2HtmlLabel24
+            // lblMyRank
             // 
-            this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel24, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(51, 205);
-            this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(63, 33);
-            this.guna2HtmlLabel24.TabIndex = 25;
-            this.guna2HtmlLabel24.Text = "1000";
+            this.lblMyRank.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblMyRank, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblMyRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMyRank.Location = new System.Drawing.Point(51, 205);
+            this.lblMyRank.Name = "lblMyRank";
+            this.lblMyRank.Size = new System.Drawing.Size(285, 33);
+            this.lblMyRank.TabIndex = 25;
+            this.lblMyRank.Text = "Bạn chưa thi mã đề này";
             // 
-            // guna2HtmlLabel17
+            // lblTime5
             // 
-            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel17, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(849, 111);
-            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(158, 22);
-            this.guna2HtmlLabel17.TabIndex = 21;
-            this.guna2HtmlLabel17.Text = "Thời gian thi: 00:00:10";
+            this.lblTime5.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblTime5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime5.Location = new System.Drawing.Point(849, 111);
+            this.lblTime5.Name = "lblTime5";
+            this.lblTime5.Size = new System.Drawing.Size(3, 2);
+            this.lblTime5.TabIndex = 21;
             // 
-            // guna2HtmlLabel18
+            // lblQuantity5
             // 
-            this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel18, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(650, 114);
-            this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            this.guna2HtmlLabel18.Size = new System.Drawing.Size(120, 22);
-            this.guna2HtmlLabel18.TabIndex = 23;
-            this.guna2HtmlLabel18.Text = "Câu đúng: 50/50";
+            this.lblQuantity5.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblQuantity5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblQuantity5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity5.Location = new System.Drawing.Point(650, 114);
+            this.lblQuantity5.Name = "lblQuantity5";
+            this.lblQuantity5.Size = new System.Drawing.Size(3, 2);
+            this.lblQuantity5.TabIndex = 23;
             // 
-            // guna2HtmlLabel19
+            // lblUserID5
             // 
-            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel19, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(437, 114);
-            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(93, 22);
-            this.guna2HtmlLabel19.TabIndex = 22;
-            this.guna2HtmlLabel19.Text = "6051071083";
+            this.lblUserID5.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblUserID5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblUserID5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID5.Location = new System.Drawing.Point(437, 114);
+            this.lblUserID5.Name = "lblUserID5";
+            this.lblUserID5.Size = new System.Drawing.Size(3, 2);
+            this.lblUserID5.TabIndex = 22;
             // 
             // guna2HtmlLabel20
             // 
@@ -307,38 +298,35 @@ namespace Exam_Preparation_System
             this.guna2Separator2.Size = new System.Drawing.Size(954, 10);
             this.guna2Separator2.TabIndex = 19;
             // 
-            // guna2HtmlLabel16
+            // lblTime4
             // 
-            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel16, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(849, 31);
-            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(158, 22);
-            this.guna2HtmlLabel16.TabIndex = 17;
-            this.guna2HtmlLabel16.Text = "Thời gian thi: 00:00:10";
+            this.lblTime4.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblTime4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime4.Location = new System.Drawing.Point(849, 31);
+            this.lblTime4.Name = "lblTime4";
+            this.lblTime4.Size = new System.Drawing.Size(3, 2);
+            this.lblTime4.TabIndex = 17;
             // 
-            // guna2HtmlLabel15
+            // lblQuantity4
             // 
-            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel15, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(650, 34);
-            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(120, 22);
-            this.guna2HtmlLabel15.TabIndex = 18;
-            this.guna2HtmlLabel15.Text = "Câu đúng: 50/50";
+            this.lblQuantity4.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblQuantity4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblQuantity4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity4.Location = new System.Drawing.Point(650, 34);
+            this.lblQuantity4.Name = "lblQuantity4";
+            this.lblQuantity4.Size = new System.Drawing.Size(3, 2);
+            this.lblQuantity4.TabIndex = 18;
             // 
-            // guna2HtmlLabel14
+            // lblUserID4
             // 
-            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel14, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(437, 34);
-            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(93, 22);
-            this.guna2HtmlLabel14.TabIndex = 17;
-            this.guna2HtmlLabel14.Text = "6051071083";
+            this.lblUserID4.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblUserID4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblUserID4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID4.Location = new System.Drawing.Point(437, 34);
+            this.lblUserID4.Name = "lblUserID4";
+            this.lblUserID4.Size = new System.Drawing.Size(3, 2);
+            this.lblUserID4.TabIndex = 17;
             // 
             // guna2HtmlLabel13
             // 
@@ -390,155 +378,121 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel3.Text = "3";
             this.guna2HtmlLabel3.Visible = false;
             // 
-            // guna2HtmlLabel4
+            // lblUserID1
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(535, 198);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(163, 33);
-            this.guna2HtmlLabel4.TabIndex = 8;
-            this.guna2HtmlLabel4.Text = "6051071067";
+            this.lblUserID1.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblUserID1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblUserID1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblUserID1.Location = new System.Drawing.Point(535, 198);
+            this.lblUserID1.Name = "lblUserID1";
+            this.lblUserID1.Size = new System.Drawing.Size(3, 2);
+            this.lblUserID1.TabIndex = 8;
             // 
-            // guna2HtmlLabel5
+            // lblUserID3
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(837, 351);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(163, 33);
-            this.guna2HtmlLabel5.TabIndex = 9;
-            this.guna2HtmlLabel5.Text = "6051071034";
+            this.lblUserID3.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblUserID3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblUserID3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblUserID3.Location = new System.Drawing.Point(837, 351);
+            this.lblUserID3.Name = "lblUserID3";
+            this.lblUserID3.Size = new System.Drawing.Size(3, 2);
+            this.lblUserID3.TabIndex = 9;
             // 
-            // guna2HtmlLabel6
+            // lblUserID2
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(226, 273);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(163, 33);
-            this.guna2HtmlLabel6.TabIndex = 10;
-            this.guna2HtmlLabel6.Text = "6051071083";
+            this.lblUserID2.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblUserID2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblUserID2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblUserID2.Location = new System.Drawing.Point(226, 273);
+            this.lblUserID2.Name = "lblUserID2";
+            this.lblUserID2.Size = new System.Drawing.Size(3, 2);
+            this.lblUserID2.TabIndex = 10;
             // 
-            // guna2HtmlLabel7
+            // lblTime2
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.transition.SetDecoration(this.guna2HtmlLabel7, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(221, 463);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(181, 22);
-            this.guna2HtmlLabel7.TabIndex = 11;
-            this.guna2HtmlLabel7.Text = "Thời gian thi: 00:00:10";
-            this.guna2HtmlLabel7.Visible = false;
+            this.lblTime2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.transition.SetDecoration(this.lblTime2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime2.ForeColor = System.Drawing.Color.Black;
+            this.lblTime2.Location = new System.Drawing.Point(221, 463);
+            this.lblTime2.Name = "lblTime2";
+            this.lblTime2.Size = new System.Drawing.Size(3, 2);
+            this.lblTime2.TabIndex = 11;
+            this.lblTime2.Visible = false;
             // 
-            // guna2HtmlLabel8
+            // lblQuantity2
             // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.transition.SetDecoration(this.guna2HtmlLabel8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(243, 435);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(135, 22);
-            this.guna2HtmlLabel8.TabIndex = 12;
-            this.guna2HtmlLabel8.Text = "Câu đúng: 50/50";
-            this.guna2HtmlLabel8.Visible = false;
+            this.lblQuantity2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.transition.SetDecoration(this.lblQuantity2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblQuantity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity2.ForeColor = System.Drawing.Color.Black;
+            this.lblQuantity2.Location = new System.Drawing.Point(243, 435);
+            this.lblQuantity2.Name = "lblQuantity2";
+            this.lblQuantity2.Size = new System.Drawing.Size(3, 2);
+            this.lblQuantity2.TabIndex = 12;
+            this.lblQuantity2.Visible = false;
             // 
-            // guna2HtmlLabel9
+            // lblQuantity1
             // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.transition.SetDecoration(this.guna2HtmlLabel9, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(555, 366);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(135, 22);
-            this.guna2HtmlLabel9.TabIndex = 13;
-            this.guna2HtmlLabel9.Text = "Câu đúng: 50/50";
-            this.guna2HtmlLabel9.Visible = false;
+            this.lblQuantity1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.transition.SetDecoration(this.lblQuantity1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblQuantity1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity1.ForeColor = System.Drawing.Color.Black;
+            this.lblQuantity1.Location = new System.Drawing.Point(555, 366);
+            this.lblQuantity1.Name = "lblQuantity1";
+            this.lblQuantity1.Size = new System.Drawing.Size(3, 2);
+            this.lblQuantity1.TabIndex = 13;
+            this.lblQuantity1.Visible = false;
             // 
-            // guna2HtmlLabel10
+            // lblTime1
             // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.transition.SetDecoration(this.guna2HtmlLabel10, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(535, 394);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(181, 22);
-            this.guna2HtmlLabel10.TabIndex = 14;
-            this.guna2HtmlLabel10.Text = "Thời gian thi: 00:00:10";
-            this.guna2HtmlLabel10.Visible = false;
+            this.lblTime1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.transition.SetDecoration(this.lblTime1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime1.ForeColor = System.Drawing.Color.Black;
+            this.lblTime1.Location = new System.Drawing.Point(535, 394);
+            this.lblTime1.Name = "lblTime1";
+            this.lblTime1.Size = new System.Drawing.Size(3, 2);
+            this.lblTime1.TabIndex = 14;
+            this.lblTime1.Visible = false;
             // 
-            // guna2HtmlLabel11
+            // lblTime3
             // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.transition.SetDecoration(this.guna2HtmlLabel11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(832, 502);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(181, 22);
-            this.guna2HtmlLabel11.TabIndex = 16;
-            this.guna2HtmlLabel11.Text = "Thời gian thi: 00:00:10";
-            this.guna2HtmlLabel11.Visible = false;
+            this.lblTime3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.transition.SetDecoration(this.lblTime3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime3.ForeColor = System.Drawing.Color.Black;
+            this.lblTime3.Location = new System.Drawing.Point(832, 502);
+            this.lblTime3.Name = "lblTime3";
+            this.lblTime3.Size = new System.Drawing.Size(3, 2);
+            this.lblTime3.TabIndex = 16;
+            this.lblTime3.Visible = false;
             // 
-            // guna2HtmlLabel12
+            // lblQuantity3
             // 
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.transition.SetDecoration(this.guna2HtmlLabel12, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(853, 474);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(135, 22);
-            this.guna2HtmlLabel12.TabIndex = 15;
-            this.guna2HtmlLabel12.Text = "Câu đúng: 50/50";
-            this.guna2HtmlLabel12.Visible = false;
+            this.lblQuantity3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.transition.SetDecoration(this.lblQuantity3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblQuantity3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity3.ForeColor = System.Drawing.Color.Black;
+            this.lblQuantity3.Location = new System.Drawing.Point(853, 474);
+            this.lblQuantity3.Name = "lblQuantity3";
+            this.lblQuantity3.Size = new System.Drawing.Size(3, 2);
+            this.lblQuantity3.TabIndex = 15;
+            this.lblQuantity3.Visible = false;
             // 
-            // guna2HtmlLabel25
+            // lblFullName3
             // 
-            this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel25, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel25.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(200, 234);
-            this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(235, 33);
-            this.guna2HtmlLabel25.TabIndex = 17;
-            this.guna2HtmlLabel25.Text = "Con chó xóm dưới";
-            // 
-            // guna2HtmlLabel26
-            // 
-            this.guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel26, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel26.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(508, 159);
-            this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
-            this.guna2HtmlLabel26.Size = new System.Drawing.Size(231, 33);
-            this.guna2HtmlLabel26.TabIndex = 18;
-            this.guna2HtmlLabel26.Text = "Con chó xóm trên";
-            // 
-            // guna2HtmlLabel27
-            // 
-            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
-            this.transition.SetDecoration(this.guna2HtmlLabel27, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel27.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(800, 312);
-            this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(255, 33);
-            this.guna2HtmlLabel27.TabIndex = 19;
-            this.guna2HtmlLabel27.Text = "Con chó lang thang";
+            this.lblFullName3.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblFullName3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFullName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFullName3.Location = new System.Drawing.Point(800, 312);
+            this.lblFullName3.Name = "lblFullName3";
+            this.lblFullName3.Size = new System.Drawing.Size(3, 2);
+            this.lblFullName3.TabIndex = 19;
             // 
             // guna2HtmlLabel32
             // 
@@ -585,23 +539,45 @@ namespace Exam_Preparation_System
             // 
             this.transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.transition.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 1F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.transition.DefaultAnimation = animation4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.transition.DefaultAnimation = animation1;
             this.transition.TimeStep = 0F;
+            // 
+            // lblFullName2
+            // 
+            this.lblFullName2.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblFullName2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFullName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFullName2.Location = new System.Drawing.Point(200, 234);
+            this.lblFullName2.Name = "lblFullName2";
+            this.lblFullName2.Size = new System.Drawing.Size(3, 2);
+            this.lblFullName2.TabIndex = 17;
+            // 
+            // lblFullName1
+            // 
+            this.lblFullName1.BackColor = System.Drawing.Color.Transparent;
+            this.transition.SetDecoration(this.lblFullName1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblFullName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblFullName1.Location = new System.Drawing.Point(508, 159);
+            this.lblFullName1.Name = "lblFullName1";
+            this.lblFullName1.Size = new System.Drawing.Size(3, 2);
+            this.lblFullName1.TabIndex = 18;
             // 
             // FormRanking
             // 
@@ -611,18 +587,18 @@ namespace Exam_Preparation_System
             this.ClientSize = new System.Drawing.Size(1189, 809);
             this.Controls.Add(this.guna2HtmlLabel32);
             this.Controls.Add(this.cmbExamID);
-            this.Controls.Add(this.guna2HtmlLabel27);
-            this.Controls.Add(this.guna2HtmlLabel26);
-            this.Controls.Add(this.guna2HtmlLabel25);
-            this.Controls.Add(this.guna2HtmlLabel11);
-            this.Controls.Add(this.guna2HtmlLabel12);
-            this.Controls.Add(this.guna2HtmlLabel10);
-            this.Controls.Add(this.guna2HtmlLabel9);
-            this.Controls.Add(this.guna2HtmlLabel8);
-            this.Controls.Add(this.guna2HtmlLabel7);
-            this.Controls.Add(this.guna2HtmlLabel6);
-            this.Controls.Add(this.guna2HtmlLabel5);
-            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.lblFullName3);
+            this.Controls.Add(this.lblFullName1);
+            this.Controls.Add(this.lblFullName2);
+            this.Controls.Add(this.lblTime3);
+            this.Controls.Add(this.lblQuantity3);
+            this.Controls.Add(this.lblTime1);
+            this.Controls.Add(this.lblQuantity1);
+            this.Controls.Add(this.lblQuantity2);
+            this.Controls.Add(this.lblTime2);
+            this.Controls.Add(this.lblUserID2);
+            this.Controls.Add(this.lblUserID3);
+            this.Controls.Add(this.lblUserID1);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
@@ -652,40 +628,40 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2PictureBox ptbCrown;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel31;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel30;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMyFullName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMyTime;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMyQuantity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMyUserID;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMyRank;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel26;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel32;
         private Guna.UI2.WinForms.Guna2ComboBox cmbExamID;
         private Guna.UI2.WinForms.Guna2Elipse Elipse;
         private Guna.UI2.WinForms.Guna2Transition transition;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName2;
     }
 }

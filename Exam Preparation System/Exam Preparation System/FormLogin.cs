@@ -42,7 +42,7 @@ namespace Exam_Preparation_System
         }
 
         private Boolean checkAccount()
-        {   
+        {
             try
             {
                 USER user = context.USERS.Where(u => u.UserID == gtxtUserName.Text && u.Password == gtxtPassword.Text).FirstOrDefault();
@@ -52,6 +52,7 @@ namespace Exam_Preparation_System
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return false;
             }
             return true;

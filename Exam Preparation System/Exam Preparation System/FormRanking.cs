@@ -1,4 +1,5 @@
 ﻿using Exam_Preparation_System.Models;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,7 @@ namespace Exam_Preparation_System
     public partial class FormRanking : Form
     {
         private ContextDB context = Program.context;
-        private List<TopRanking> listRanking = new List<TopRanking>();
-        private string currUsesID = null;
+
         public FormRanking()
         {
             InitializeComponent();
@@ -38,16 +38,16 @@ namespace Exam_Preparation_System
             transition.ShowSync(ptbCrown);
             transition.ShowSync(shapeOne);
             guna2HtmlLabel1.Visible = true;
-            guna2HtmlLabel9.Visible = true;
-            guna2HtmlLabel10.Visible = true;
+            lblQuantity1.Visible = true;
+            lblTime1.Visible = true;
             transition.ShowSync(shapeTwo);
             guna2HtmlLabel2.Visible = true;
-            guna2HtmlLabel7.Visible = true;
-            guna2HtmlLabel8.Visible = true;
+            lblTime2.Visible = true;
+            lblQuantity2.Visible = true;
             transition.ShowSync(shapeThree);
             guna2HtmlLabel3.Visible = true;
-            guna2HtmlLabel11.Visible = true;
-            guna2HtmlLabel12.Visible = true;
+            lblTime3.Visible = true;
+            lblQuantity3.Visible = true;
 
         }
 
@@ -79,8 +79,57 @@ namespace Exam_Preparation_System
                 + calculatorTime(totalTime, timeComplete);
         }
 
+        private void setLabel(Guna2HtmlLabel fullName, Guna2HtmlLabel userID, Guna2HtmlLabel quantity, Guna2HtmlLabel time, 
+            TopRanking val = null)
+        {
+            bool check = val == null;
+            fullName.Text = check ? "" : val.FullName;
+            userID.Text = check ? "" : val.UserID;
+            quantity.Text = check ? "" :
+                "Câu đúng: " + val.QuantityCorrect.ToString() + "/" + val.Quantity.ToString();
+            time.Text = check ? "" :
+                "Thời gian thi: " + val.TimeComplete;    
+        }
+
+        private void setTopRanking(int index, TopRanking val, int isMySelf = 0)
+        {
+            switch(index)
+            {
+                case 1:
+                    setLabel(lblFullName1, lblUserID1, lblQuantity1, lblTime1, val);
+                    break;
+                case 2:
+                    setLabel(lblFullName2, lblUserID2, lblQuantity2, lblTime2, val);
+                    break;
+                case 3:
+                    setLabel(lblFullName3, lblUserID3, lblQuantity3, lblTime3, val);
+                    break;
+                case 4:
+                    setLabel(lblFullName4, lblUserID4, lblQuantity4, lblTime4, val);
+                    break;
+                case 5:
+                    setLabel(lblFullName5, lblUserID5, lblQuantity5, lblTime5, val);
+                    break;
+                default:
+                    lblMyRank.Text = val == null ? "Bạn chưa thi mã đề này" : isMySelf.ToString();
+                    setLabel(lblMyFullName, lblMyUserID, lblMyQuantity, lblMyTime, val);
+                    break;
+            }
+        }
+
+        private void resetTopRanking()
+        {
+            setLabel(lblFullName1, lblUserID1, lblQuantity1, lblTime1);
+            setLabel(lblFullName2, lblUserID2, lblQuantity2, lblTime2);
+            setLabel(lblFullName3, lblUserID3, lblQuantity3, lblTime3);
+            setLabel(lblFullName4, lblUserID4, lblQuantity4, lblTime4);
+            setLabel(lblFullName5, lblUserID5, lblQuantity5, lblTime5);
+        }
+
         private void loadData()
         {
+            List<TopRanking> listRanking = new List<TopRanking>();
+            string currUsesID = null;
             int examID = Convert.ToInt32(cmbExamID.SelectedValue);
             // error null exception must join two table before
             var result =  from er in context.EXAMRESULTS 
@@ -96,6 +145,10 @@ namespace Exam_Preparation_System
                          er.EXAMQUESTION.Quantity, 
                          er.QuantityCorrect 
                      };
+
+            if (result.Count() == 0)
+                resetTopRanking();   
+
             // error is gone
             var query = result
                 .OrderBy(x => x.UserID)
@@ -109,7 +162,7 @@ namespace Exam_Preparation_System
                     x.QuantityCorrect,
                     calculatorCriteria(x.Quantity, x.QuantityCorrect, x.ExecutionTime, x.TimeComplete)
                 ));
-
+           
             query.ToList().ForEach(x =>
             {
                 if (currUsesID != x.UserID)
@@ -118,9 +171,14 @@ namespace Exam_Preparation_System
                 var max = query.Where(z => z.UserID == currUsesID).Max(z => z.Criteria);
                 listRanking.Add(query.Where(z => z.UserID == currUsesID).First(z => z.Criteria == max));
             });
-            
+
+            int index = 1;
             listRanking.Sort((obj1, obj2) => obj2.Criteria.CompareTo(obj1.Criteria));
-            listRanking.Take(5).ToList().ForEach(x => MessageBox.Show(x.FullName + "\n" + x.Criteria.ToString()));
+            listRanking.Take(5).ToList().ForEach(x => setTopRanking(index++, x));
+
+            int myRank = listRanking.FindIndex(x => x.UserID == FormLogin.info.UserID) + 1;
+            TopRanking myVal = listRanking.Find(x => x.UserID == FormLogin.info.UserID);
+            setTopRanking(0, myVal, myRank);
         }
 
         private void cmbExamID_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,8 +188,6 @@ namespace Exam_Preparation_System
     }
     public class TopRanking
     {
-        
-
         public TopRanking(string userID, string fullName, string timeComplete, int quantity, int quantityCorrect, double criteria)
         {
             UserID = userID;

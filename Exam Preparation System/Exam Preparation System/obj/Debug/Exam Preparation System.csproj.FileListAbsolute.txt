@@ -55,7 +55,6 @@ D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparat
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.xml
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.xml
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.SqlServer.xml
-D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormCreateExam.resources
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditContest.resources
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditQuestion.resources
@@ -75,3 +74,4 @@ D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparat
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.CoreCompileInputs.cache
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.exe
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.pdb
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache
