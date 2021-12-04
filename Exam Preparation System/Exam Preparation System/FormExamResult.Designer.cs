@@ -39,6 +39,7 @@ namespace Exam_Preparation_System
             this.lblFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPoint = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBack = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnViewAnswer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // ShadowForm
@@ -153,7 +154,7 @@ namespace Exam_Preparation_System
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(320, 374);
+            this.btnBack.Location = new System.Drawing.Point(404, 373);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
             this.btnBack.Size = new System.Drawing.Size(136, 32);
@@ -161,12 +162,35 @@ namespace Exam_Preparation_System
             this.btnBack.Text = "Trở về ";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnViewAnswer
+            // 
+            this.btnViewAnswer.BorderRadius = 10;
+            this.btnViewAnswer.CheckedState.Parent = this.btnViewAnswer;
+            this.btnViewAnswer.CustomImages.Parent = this.btnViewAnswer;
+            this.btnViewAnswer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewAnswer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewAnswer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewAnswer.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewAnswer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewAnswer.DisabledState.Parent = this.btnViewAnswer;
+            this.btnViewAnswer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnViewAnswer.ForeColor = System.Drawing.Color.White;
+            this.btnViewAnswer.HoverState.Parent = this.btnViewAnswer;
+            this.btnViewAnswer.Location = new System.Drawing.Point(234, 373);
+            this.btnViewAnswer.Name = "btnViewAnswer";
+            this.btnViewAnswer.ShadowDecoration.Parent = this.btnViewAnswer;
+            this.btnViewAnswer.Size = new System.Drawing.Size(136, 32);
+            this.btnViewAnswer.TabIndex = 18;
+            this.btnViewAnswer.Text = "Xem đáp án";
+            this.btnViewAnswer.Click += new System.EventHandler(this.btnViewAnswer_Click);
+            // 
             // FormExamResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnViewAnswer);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblPoint);
             this.Controls.Add(this.lblFullName);
@@ -194,5 +218,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCodeExam;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPoint;
         private Guna.UI2.WinForms.Guna2GradientButton btnBack;
+        private Guna.UI2.WinForms.Guna2GradientButton btnViewAnswer;
     }
 }

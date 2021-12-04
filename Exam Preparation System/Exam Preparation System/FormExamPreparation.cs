@@ -157,7 +157,10 @@ namespace Exam_Preparation_System
                             count++;
                     }
                     if (count == 4)
+                    {
                         noChoice += control is Guna.UI2.WinForms.Guna2HtmlLabel ? control.Text.Split('.')[0] + " " : null;
+                        yourChoice.Add(-1);
+                    }    
                 });
                 if (count == 4)
                     index++;
@@ -185,7 +188,7 @@ namespace Exam_Preparation_System
         {
             timer.Stop();
             saveResult(totalCorrect, totalQuestion);
-            FormExamResult resultDialog = new FormExamResult(totalCorrect, totalQuestion, lblCodeExam.Text, lblSubject.Text);
+            FormExamResult resultDialog = new FormExamResult(totalCorrect, totalQuestion, lblCodeExam.Text, lblSubject.Text, yourChoice);
             resultDialog.ShowDialog();
         }
 

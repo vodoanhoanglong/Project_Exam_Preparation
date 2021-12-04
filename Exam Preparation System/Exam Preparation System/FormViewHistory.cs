@@ -139,8 +139,8 @@ namespace Exam_Preparation_System
 
             chart.Datasets.Clear();
             chart.ApplyConfig(ConfigChart.Config(), Color.FromArgb(239, 242, 249));
-            Pie.data = arr;
-            Pie.loadChart(chart);
+            Radar.data = arr;
+            Radar.loadChart(chart);
         }
     }
 }

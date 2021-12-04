@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chart\ConfigChart.cs" />
-    <Compile Include="Chart\Pie.cs" />
+    <Compile Include="Chart\Radar.cs" />
     <Compile Include="Chart\SplineArea.cs" />
     <Compile Include="FormCreateExam.cs">
       <SubType>Form</SubType>
@@ -143,6 +143,12 @@
     <Compile Include="FormRanking.Designer.cs">
       <DependentUpon>FormRanking.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewAnswer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewAnswer.Designer.cs">
+      <DependentUpon>FormViewAnswer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormViewExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRanking.resx">
       <DependentUpon>FormRanking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewAnswer.resx">
+      <DependentUpon>FormViewAnswer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewExam.resx">
       <DependentUpon>FormViewExam.cs</DependentUpon>

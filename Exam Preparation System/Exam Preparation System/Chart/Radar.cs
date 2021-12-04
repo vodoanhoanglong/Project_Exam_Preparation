@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows;
 using Guna.Charts.WinForms;
 
 namespace Chart
 {
-    class Pie
+    class Radar
     {
         public static int[] data;
         public static void loadChart(Guna.Charts.WinForms.GunaChart chart)
@@ -17,7 +18,14 @@ namespace Chart
             chart.YAxes.Display = false;
 
             //Create a new dataset 
-            var dataset = new Guna.Charts.WinForms.GunaPieDataset();
+            var dataset = new Guna.Charts.WinForms.GunaRadarDataset();
+            dataset.Label = "Số câu hỏi";
+            dataset.BorderWidth = 2;
+            dataset.PointBorderWidth = 1;
+
+            dataset.PointStyle = PointStyle.Circle;
+           
+
             for (int i = 0; i < labels.Length; i++)
                 dataset.DataPoints.Add(labels[i], data[i]);
 
@@ -27,5 +35,6 @@ namespace Chart
             //An update was made to re-render the chart
             chart.Update();
         }
+
     }
 }
