@@ -13,11 +13,14 @@ namespace Exam_Preparation_System
     public partial class FormExamResult : Form
     {
         private List<int> yourChoice;
+        private int totalCorrect, totalQuestion, examID;
         public FormExamResult(int totalCorrect, int totalQuestion, string codeExam, string subjectExam, List<int> yourChoice)
         {
             InitializeComponent();
-
             this.yourChoice = yourChoice;
+            this.totalCorrect = totalCorrect;
+            this.totalQuestion = totalQuestion;
+
             double point = (10 * totalCorrect) / totalQuestion;
 
             lblCodeExam.Text += codeExam;
@@ -28,6 +31,8 @@ namespace Exam_Preparation_System
             progressBar.Value = totalCorrect;
             progressBar.Maximum = totalQuestion;
             progressBar.Text = totalCorrect.ToString() + "/" + totalQuestion.ToString();
+
+            this.examID = Convert.ToInt32(lblCodeExam.Text.Split(' ')[2]);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -38,7 +43,7 @@ namespace Exam_Preparation_System
 
         private void btnViewAnswer_Click(object sender, EventArgs e)
         {
-            FormMainMenu.instance.openChildForm(new FormViewAnswer(yourChoice, Convert.ToInt32(lblCodeExam.Text.Split(' ')[2])));
+            FormMainMenu.instance.openChildForm(new FormViewAnswer(yourChoice, examID, totalCorrect, totalQuestion));
             this.Close();
         }
     }

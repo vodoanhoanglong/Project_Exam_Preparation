@@ -157,13 +157,13 @@ namespace Exam_Preparation_System
                             count++;
                     }
                     if (count == 4)
-                    {
-                        noChoice += control is Guna.UI2.WinForms.Guna2HtmlLabel ? control.Text.Split('.')[0] + " " : null;
-                        yourChoice.Add(-1);
-                    }    
+                        noChoice += control is Guna.UI2.WinForms.Guna2HtmlLabel ? control.Text.Split('.')[0] + " " : null;  
                 });
                 if (count == 4)
+                {
+                    yourChoice.Add(-1);
                     index++;
+                }
             });
 
              
