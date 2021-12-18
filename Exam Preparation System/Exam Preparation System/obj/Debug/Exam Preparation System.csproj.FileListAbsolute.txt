@@ -76,3 +76,38 @@ D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparat
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.pdb
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache
 D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewAnswer.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\Exam Preparation System.exe.config
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\Exam Preparation System.exe
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\Exam Preparation System.pdb
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.dll
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.dll
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\Guna.Charts.WinForms.dll
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\Guna.UI2.dll
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\WinFormAnimation.dll
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\CircularProgressBar.xml
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.xml
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.AssemblyReference.cache
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.SuggestedBindingRedirects.cache
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormCreateExam.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditContest.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormEditQuestion.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamPreparation.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormExamResult.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormHome.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormLogin.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormMainMenu.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormProfile.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormStatistical.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormRanking.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewAnswer.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewExam.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormViewHistory.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.FormWarehouse.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.Properties.Resources.resources
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.GenerateResource.cache
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.CoreCompileInputs.cache
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.CopyComplete
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.exe
+D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.pdb

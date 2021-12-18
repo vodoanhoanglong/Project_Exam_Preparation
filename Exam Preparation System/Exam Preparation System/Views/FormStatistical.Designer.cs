@@ -66,7 +66,7 @@ namespace Exam_Preparation_System
             this.cmbExamID.HoverState.Parent = this.cmbExamID;
             this.cmbExamID.ItemHeight = 30;
             this.cmbExamID.ItemsAppearance.Parent = this.cmbExamID;
-            this.cmbExamID.Location = new System.Drawing.Point(514, 82);
+            this.cmbExamID.Location = new System.Drawing.Point(155, 51);
             this.cmbExamID.Name = "cmbExamID";
             this.cmbExamID.ShadowDecoration.Parent = this.cmbExamID;
             this.cmbExamID.Size = new System.Drawing.Size(326, 36);
@@ -77,7 +77,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(358, 86);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 54);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(137, 27);
             this.guna2HtmlLabel1.TabIndex = 13;
@@ -86,10 +86,10 @@ namespace Exam_Preparation_System
             // lblTitle
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(403, 12);
+            this.lblTitle.Font = new System.Drawing.Font("SVN-Neutraface 2", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(337, 12);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(409, 27);
+            this.lblTitle.Size = new System.Drawing.Size(513, 32);
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Thống kê số lượng người thi thử trong tuần";
             // 
@@ -98,9 +98,9 @@ namespace Exam_Preparation_System
             this.chart.BackColor = System.Drawing.Color.White;
             chartFont1.FontName = "Arial";
             this.chart.Legend.LabelFont = chartFont1;
-            this.chart.Location = new System.Drawing.Point(95, 169);
+            this.chart.Location = new System.Drawing.Point(-1, 102);
             this.chart.Name = "chart";
-            this.chart.Size = new System.Drawing.Size(1007, 513);
+            this.chart.Size = new System.Drawing.Size(1199, 513);
             this.chart.TabIndex = 15;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -133,7 +133,7 @@ namespace Exam_Preparation_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1173, 770);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.guna2HtmlLabel1);

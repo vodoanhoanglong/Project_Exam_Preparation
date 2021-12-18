@@ -76,12 +76,12 @@ namespace Exam_Preparation_System
             this.guna2ShadowPanel1.Controls.Add(this.btnEditPass);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.Radius = 20;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1198, 897);
+            this.guna2ShadowPanel1.ShadowShift = 0;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1200, 614);
             this.guna2ShadowPanel1.TabIndex = 1;
             // 
             // PanelEditPass
@@ -97,10 +97,12 @@ namespace Exam_Preparation_System
             this.PanelEditPass.Controls.Add(this.guna2HtmlLabel7);
             this.PanelEditPass.Controls.Add(this.guna2PictureBox2);
             this.PanelEditPass.FillColor = System.Drawing.Color.White;
-            this.PanelEditPass.Location = new System.Drawing.Point(280, 114);
+            this.PanelEditPass.Location = new System.Drawing.Point(306, 57);
             this.PanelEditPass.Name = "PanelEditPass";
+            this.PanelEditPass.Radius = 5;
             this.PanelEditPass.ShadowColor = System.Drawing.Color.Black;
-            this.PanelEditPass.Size = new System.Drawing.Size(625, 540);
+            this.PanelEditPass.ShadowShift = 4;
+            this.PanelEditPass.Size = new System.Drawing.Size(625, 491);
             this.PanelEditPass.TabIndex = 22;
             // 
             // btnExit
@@ -117,7 +119,7 @@ namespace Exam_Preparation_System
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Location = new System.Drawing.Point(361, 465);
+            this.btnExit.Location = new System.Drawing.Point(362, 380);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(216, 38);
@@ -140,7 +142,7 @@ namespace Exam_Preparation_System
             this.btnDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
             this.btnDoiMatKhau.HoverState.Parent = this.btnDoiMatKhau;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(100, 465);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(56, 380);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.ShadowDecoration.Parent = this.btnDoiMatKhau;
             this.btnDoiMatKhau.Size = new System.Drawing.Size(216, 38);
@@ -150,8 +152,7 @@ namespace Exam_Preparation_System
             // 
             // txtNhaplaiPassWord
             // 
-            this.txtNhaplaiPassWord.BorderRadius = 10;
-            this.txtNhaplaiPassWord.BorderThickness = 2;
+            this.txtNhaplaiPassWord.BorderRadius = 4;
             this.txtNhaplaiPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhaplaiPassWord.DefaultText = "";
             this.txtNhaplaiPassWord.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -164,7 +165,7 @@ namespace Exam_Preparation_System
             this.txtNhaplaiPassWord.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhaplaiPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhaplaiPassWord.HoverState.Parent = this.txtNhaplaiPassWord;
-            this.txtNhaplaiPassWord.Location = new System.Drawing.Point(231, 383);
+            this.txtNhaplaiPassWord.Location = new System.Drawing.Point(231, 281);
             this.txtNhaplaiPassWord.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNhaplaiPassWord.Name = "txtNhaplaiPassWord";
             this.txtNhaplaiPassWord.PasswordChar = '\0';
@@ -178,7 +179,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(44, 388);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(44, 283);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(164, 27);
             this.guna2HtmlLabel9.TabIndex = 28;
@@ -186,8 +187,7 @@ namespace Exam_Preparation_System
             // 
             // txtPassWordMoi
             // 
-            this.txtPassWordMoi.BorderRadius = 10;
-            this.txtPassWordMoi.BorderThickness = 2;
+            this.txtPassWordMoi.BorderRadius = 4;
             this.txtPassWordMoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassWordMoi.DefaultText = "";
             this.txtPassWordMoi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -200,7 +200,7 @@ namespace Exam_Preparation_System
             this.txtPassWordMoi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWordMoi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassWordMoi.HoverState.Parent = this.txtPassWordMoi;
-            this.txtPassWordMoi.Location = new System.Drawing.Point(231, 311);
+            this.txtPassWordMoi.Location = new System.Drawing.Point(231, 228);
             this.txtPassWordMoi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassWordMoi.Name = "txtPassWordMoi";
             this.txtPassWordMoi.PasswordChar = '\0';
@@ -214,7 +214,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(44, 316);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(44, 234);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(126, 27);
             this.guna2HtmlLabel8.TabIndex = 26;
@@ -222,8 +222,7 @@ namespace Exam_Preparation_System
             // 
             // txtPasswordCu
             // 
-            this.txtPasswordCu.BorderRadius = 10;
-            this.txtPasswordCu.BorderThickness = 2;
+            this.txtPasswordCu.BorderRadius = 4;
             this.txtPasswordCu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPasswordCu.DefaultText = "";
             this.txtPasswordCu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -237,7 +236,7 @@ namespace Exam_Preparation_System
             this.txtPasswordCu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswordCu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPasswordCu.HoverState.Parent = this.txtPasswordCu;
-            this.txtPasswordCu.Location = new System.Drawing.Point(231, 241);
+            this.txtPasswordCu.Location = new System.Drawing.Point(231, 173);
             this.txtPasswordCu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPasswordCu.Name = "txtPasswordCu";
             this.txtPasswordCu.PasswordChar = '\0';
@@ -251,7 +250,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(44, 241);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(44, 173);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(113, 27);
             this.guna2HtmlLabel7.TabIndex = 24;
@@ -261,18 +260,17 @@ namespace Exam_Preparation_System
             // 
             this.guna2PictureBox2.Image = global::Exam_Preparation_System.Properties.Resources.password;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(231, 29);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(245, 14);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(203, 177);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(170, 127);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 23;
             this.guna2PictureBox2.TabStop = false;
             // 
             // txtBirthDay
             // 
-            this.txtBirthDay.BorderRadius = 10;
-            this.txtBirthDay.BorderThickness = 2;
+            this.txtBirthDay.BorderRadius = 4;
             this.txtBirthDay.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBirthDay.DefaultText = "";
             this.txtBirthDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -286,7 +284,7 @@ namespace Exam_Preparation_System
             this.txtBirthDay.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthDay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBirthDay.HoverState.Parent = this.txtBirthDay;
-            this.txtBirthDay.Location = new System.Drawing.Point(433, 429);
+            this.txtBirthDay.Location = new System.Drawing.Point(456, 321);
             this.txtBirthDay.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtBirthDay.Name = "txtBirthDay";
             this.txtBirthDay.PasswordChar = '\0';
@@ -300,7 +298,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2PictureBox1.Image = global::Exam_Preparation_System.Properties.Resources.Profile;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(498, 33);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(517, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(203, 177);
@@ -310,8 +308,7 @@ namespace Exam_Preparation_System
             // 
             // txtFullName
             // 
-            this.txtFullName.BorderRadius = 10;
-            this.txtFullName.BorderThickness = 2;
+            this.txtFullName.BorderRadius = 4;
             this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullName.DefaultText = "";
             this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -325,7 +322,7 @@ namespace Exam_Preparation_System
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFullName.HoverState.Parent = this.txtFullName;
-            this.txtFullName.Location = new System.Drawing.Point(433, 341);
+            this.txtFullName.Location = new System.Drawing.Point(456, 275);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
@@ -337,8 +334,7 @@ namespace Exam_Preparation_System
             // 
             // txtPhone
             // 
-            this.txtPhone.BorderRadius = 10;
-            this.txtPhone.BorderThickness = 2;
+            this.txtPhone.BorderRadius = 4;
             this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhone.DefaultText = "";
             this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -352,7 +348,7 @@ namespace Exam_Preparation_System
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhone.HoverState.Parent = this.txtPhone;
-            this.txtPhone.Location = new System.Drawing.Point(433, 602);
+            this.txtPhone.Location = new System.Drawing.Point(456, 421);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PasswordChar = '\0';
@@ -364,8 +360,7 @@ namespace Exam_Preparation_System
             // 
             // txtSex
             // 
-            this.txtSex.BorderRadius = 10;
-            this.txtSex.BorderThickness = 2;
+            this.txtSex.BorderRadius = 4;
             this.txtSex.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSex.DefaultText = "";
             this.txtSex.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -379,7 +374,7 @@ namespace Exam_Preparation_System
             this.txtSex.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSex.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSex.HoverState.Parent = this.txtSex;
-            this.txtSex.Location = new System.Drawing.Point(433, 516);
+            this.txtSex.Location = new System.Drawing.Point(456, 367);
             this.txtSex.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSex.Name = "txtSex";
             this.txtSex.PasswordChar = '\0';
@@ -393,17 +388,17 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(309, 607);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(328, 425);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(39, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(120, 27);
             this.guna2HtmlLabel6.TabIndex = 13;
-            this.guna2HtmlLabel6.Text = "SĐT";
+            this.guna2HtmlLabel6.Text = "Số điện thoại";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(309, 521);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(328, 376);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(79, 27);
             this.guna2HtmlLabel5.TabIndex = 12;
@@ -411,8 +406,7 @@ namespace Exam_Preparation_System
             // 
             // txtUserID
             // 
-            this.txtUserID.BorderRadius = 10;
-            this.txtUserID.BorderThickness = 2;
+            this.txtUserID.BorderRadius = 4;
             this.txtUserID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserID.DefaultText = "";
             this.txtUserID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -426,7 +420,7 @@ namespace Exam_Preparation_System
             this.txtUserID.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserID.HoverState.Parent = this.txtUserID;
-            this.txtUserID.Location = new System.Drawing.Point(433, 251);
+            this.txtUserID.Location = new System.Drawing.Point(456, 223);
             this.txtUserID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.PasswordChar = '\0';
@@ -440,7 +434,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(309, 434);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(328, 333);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(91, 27);
             this.guna2HtmlLabel2.TabIndex = 11;
@@ -450,7 +444,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(309, 256);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(328, 223);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(56, 27);
             this.guna2HtmlLabel1.TabIndex = 10;
@@ -470,7 +464,7 @@ namespace Exam_Preparation_System
             this.btnEditPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPass.ForeColor = System.Drawing.Color.White;
             this.btnEditPass.HoverState.Parent = this.btnEditPass;
-            this.btnEditPass.Location = new System.Drawing.Point(580, 691);
+            this.btnEditPass.Location = new System.Drawing.Point(517, 499);
             this.btnEditPass.Name = "btnEditPass";
             this.btnEditPass.ShadowDecoration.Parent = this.btnEditPass;
             this.btnEditPass.Size = new System.Drawing.Size(216, 38);
@@ -482,11 +476,11 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(309, 346);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(328, 278);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(64, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(89, 27);
             this.guna2HtmlLabel4.TabIndex = 4;
-            this.guna2HtmlLabel4.Text = "Họ tên";
+            this.guna2HtmlLabel4.Text = "Họ và tên";
             // 
             // guna2HtmlLabel3
             // 
@@ -503,7 +497,7 @@ namespace Exam_Preparation_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1198, 897);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProfile";

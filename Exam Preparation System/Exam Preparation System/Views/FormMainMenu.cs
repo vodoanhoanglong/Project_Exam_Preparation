@@ -90,7 +90,7 @@ namespace Exam_Preparation_System
             childForm.Show();
         }
 
-        private struct RGBColors
+        public struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(249, 118, 176);
@@ -124,7 +124,7 @@ namespace Exam_Preparation_System
 
        
 
-        private void activateButton(object senderBtn, Color color)
+        public void activateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {

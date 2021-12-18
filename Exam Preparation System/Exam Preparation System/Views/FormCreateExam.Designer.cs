@@ -33,15 +33,22 @@ namespace Exam_Preparation_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnDeleteExamQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.gbExamQuetion = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvListContests = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddExamQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnRandomQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -55,13 +62,6 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ShadowPanel1.SuspendLayout();
             this.gbExamQuetion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContests)).BeginInit();
@@ -84,11 +84,11 @@ namespace Exam_Preparation_System
             this.guna2ShadowPanel1.Controls.Add(this.cmbSubject);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(26, 31);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(1, 1);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1151, 735);
+            this.guna2ShadowPanel1.ShadowShift = 0;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1200, 613);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
             // btnDeleteExamQuestion
@@ -105,7 +105,7 @@ namespace Exam_Preparation_System
             this.btnDeleteExamQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteExamQuestion.ForeColor = System.Drawing.Color.White;
             this.btnDeleteExamQuestion.HoverState.Parent = this.btnDeleteExamQuestion;
-            this.btnDeleteExamQuestion.Location = new System.Drawing.Point(1006, 364);
+            this.btnDeleteExamQuestion.Location = new System.Drawing.Point(1087, 254);
             this.btnDeleteExamQuestion.Name = "btnDeleteExamQuestion";
             this.btnDeleteExamQuestion.ShadowDecoration.Parent = this.btnDeleteExamQuestion;
             this.btnDeleteExamQuestion.Size = new System.Drawing.Size(102, 41);
@@ -123,10 +123,10 @@ namespace Exam_Preparation_System
             this.gbExamQuetion.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gbExamQuetion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.gbExamQuetion.ForeColor = System.Drawing.Color.Black;
-            this.gbExamQuetion.Location = new System.Drawing.Point(26, 409);
+            this.gbExamQuetion.Location = new System.Drawing.Point(0, 301);
             this.gbExamQuetion.Name = "gbExamQuetion";
             this.gbExamQuetion.ShadowDecoration.Parent = this.gbExamQuetion;
-            this.gbExamQuetion.Size = new System.Drawing.Size(1105, 309);
+            this.gbExamQuetion.Size = new System.Drawing.Size(1200, 312);
             this.gbExamQuetion.TabIndex = 9;
             this.gbExamQuetion.Text = "Danh sách đề thi";
             // 
@@ -172,7 +172,7 @@ namespace Exam_Preparation_System
             this.dgvListContests.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListContests.EnableHeadersVisualStyles = false;
             this.dgvListContests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListContests.Location = new System.Drawing.Point(3, 39);
+            this.dgvListContests.Location = new System.Drawing.Point(3, 40);
             this.dgvListContests.Name = "dgvListContests";
             this.dgvListContests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -185,7 +185,7 @@ namespace Exam_Preparation_System
             this.dgvListContests.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListContests.RowHeadersVisible = false;
             this.dgvListContests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListContests.Size = new System.Drawing.Size(1099, 267);
+            this.dgvListContests.Size = new System.Drawing.Size(1194, 269);
             this.dgvListContests.TabIndex = 8;
             this.dgvListContests.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListContests.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,6 +210,68 @@ namespace Exam_Preparation_System
             this.dgvListContests.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListContests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListContests_CellContentClick);
             // 
+            // ExamID
+            // 
+            this.ExamID.DataPropertyName = "ExamQuestionID";
+            this.ExamID.FillWeight = 113.9086F;
+            this.ExamID.HeaderText = "Mã đề thi";
+            this.ExamID.Name = "ExamID";
+            this.ExamID.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 113.9086F;
+            this.Quantity.HeaderText = "Số lượng câu hỏi";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // ExcuteTime
+            // 
+            this.ExcuteTime.DataPropertyName = "ExecutionTime";
+            this.ExcuteTime.FillWeight = 113.9086F;
+            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
+            this.ExcuteTime.Name = "ExcuteTime";
+            this.ExcuteTime.ReadOnly = true;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.FillWeight = 113.9086F;
+            this.SubName.HeaderText = "Môn";
+            this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
+            // 
+            // CreateDate
+            // 
+            this.CreateDate.DataPropertyName = "CreateDate";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
+            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CreateDate.FillWeight = 113.9086F;
+            this.CreateDate.HeaderText = "Ngày tạo";
+            this.CreateDate.Name = "CreateDate";
+            this.CreateDate.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.FillWeight = 30.45685F;
+            this.Details.HeaderText = "Chi tiết";
+            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "...";
+            this.Details.UseColumnTextForLinkValue = true;
+            // 
+            // SubjectID
+            // 
+            this.SubjectID.DataPropertyName = "SubjectID";
+            this.SubjectID.HeaderText = "SubjectID";
+            this.SubjectID.Name = "SubjectID";
+            this.SubjectID.ReadOnly = true;
+            this.SubjectID.Visible = false;
+            // 
             // btnAddExamQuestion
             // 
             this.btnAddExamQuestion.BorderRadius = 10;
@@ -224,7 +286,7 @@ namespace Exam_Preparation_System
             this.btnAddExamQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAddExamQuestion.ForeColor = System.Drawing.Color.White;
             this.btnAddExamQuestion.HoverState.Parent = this.btnAddExamQuestion;
-            this.btnAddExamQuestion.Location = new System.Drawing.Point(890, 364);
+            this.btnAddExamQuestion.Location = new System.Drawing.Point(971, 254);
             this.btnAddExamQuestion.Name = "btnAddExamQuestion";
             this.btnAddExamQuestion.ShadowDecoration.Parent = this.btnAddExamQuestion;
             this.btnAddExamQuestion.Size = new System.Drawing.Size(93, 41);
@@ -246,10 +308,10 @@ namespace Exam_Preparation_System
             this.btnRandomQuestion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnRandomQuestion.ForeColor = System.Drawing.Color.White;
             this.btnRandomQuestion.HoverState.Parent = this.btnRandomQuestion;
-            this.btnRandomQuestion.Location = new System.Drawing.Point(972, 77);
+            this.btnRandomQuestion.Location = new System.Drawing.Point(1042, 13);
             this.btnRandomQuestion.Name = "btnRandomQuestion";
             this.btnRandomQuestion.ShadowDecoration.Parent = this.btnRandomQuestion;
-            this.btnRandomQuestion.Size = new System.Drawing.Size(136, 32);
+            this.btnRandomQuestion.Size = new System.Drawing.Size(136, 36);
             this.btnRandomQuestion.TabIndex = 8;
             this.btnRandomQuestion.Text = "Trộn câu hỏi";
             this.btnRandomQuestion.Click += new System.EventHandler(this.btnRandomQuestion_Click);
@@ -293,7 +355,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvQuestion.EnableHeadersVisualStyles = false;
             this.dgvQuestion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvQuestion.Location = new System.Drawing.Point(29, 116);
+            this.dgvQuestion.Location = new System.Drawing.Point(0, 66);
             this.dgvQuestion.Name = "dgvQuestion";
             this.dgvQuestion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -306,7 +368,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvQuestion.RowHeadersVisible = false;
             this.dgvQuestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestion.Size = new System.Drawing.Size(1079, 240);
+            this.dgvQuestion.Size = new System.Drawing.Size(1197, 182);
             this.dgvQuestion.TabIndex = 7;
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -375,7 +437,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.txtTimeExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.HoverState.Parent = this.txtTimeExam;
-            this.txtTimeExam.Location = new System.Drawing.Point(670, 26);
+            this.txtTimeExam.Location = new System.Drawing.Point(834, 12);
             this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimeExam.MaxLength = 8;
             this.txtTimeExam.Name = "txtTimeExam";
@@ -384,7 +446,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.SelectedText = "";
             this.txtTimeExam.SelectionStart = 8;
             this.txtTimeExam.ShadowDecoration.Parent = this.txtTimeExam;
-            this.txtTimeExam.Size = new System.Drawing.Size(103, 36);
+            this.txtTimeExam.Size = new System.Drawing.Size(103, 35);
             this.txtTimeExam.TabIndex = 5;
             this.txtTimeExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTimeExam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimeExam_KeyPress);
@@ -392,12 +454,12 @@ namespace Exam_Preparation_System
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(487, 30);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Myriad Pro Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(738, 18);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(167, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(81, 25);
             this.guna2HtmlLabel3.TabIndex = 4;
-            this.guna2HtmlLabel3.Text = "Thời lượng cuộc thi";
+            this.guna2HtmlLabel3.Text = "Thời gian";
             // 
             // nudQuantity
             // 
@@ -409,7 +471,7 @@ namespace Exam_Preparation_System
             this.nudQuantity.FocusedState.Parent = this.nudQuantity;
             this.nudQuantity.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudQuantity.ForeColor = System.Drawing.Color.Black;
-            this.nudQuantity.Location = new System.Drawing.Point(972, 25);
+            this.nudQuantity.Location = new System.Drawing.Point(595, 11);
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.ShadowDecoration.Parent = this.nudQuantity;
@@ -420,10 +482,10 @@ namespace Exam_Preparation_System
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(803, 32);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Myriad Pro Light", 14.25F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(446, 18);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(149, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(142, 25);
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Số lượng câu hỏi";
             // 
@@ -443,7 +505,7 @@ namespace Exam_Preparation_System
             this.cmbSubject.HoverState.Parent = this.cmbSubject;
             this.cmbSubject.ItemHeight = 30;
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(136, 27);
+            this.cmbSubject.Location = new System.Drawing.Point(114, 13);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
             this.cmbSubject.Size = new System.Drawing.Size(326, 36);
@@ -453,81 +515,19 @@ namespace Exam_Preparation_System
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(29, 27);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Myriad Pro Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(13, 23);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(67, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(68, 25);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Môn thi";
-            // 
-            // ExamID
-            // 
-            this.ExamID.DataPropertyName = "ExamQuestionID";
-            this.ExamID.FillWeight = 113.9086F;
-            this.ExamID.HeaderText = "Mã đề thi";
-            this.ExamID.Name = "ExamID";
-            this.ExamID.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 113.9086F;
-            this.Quantity.HeaderText = "Số lượng câu hỏi";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // ExcuteTime
-            // 
-            this.ExcuteTime.DataPropertyName = "ExecutionTime";
-            this.ExcuteTime.FillWeight = 113.9086F;
-            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
-            this.ExcuteTime.Name = "ExcuteTime";
-            this.ExcuteTime.ReadOnly = true;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.FillWeight = 113.9086F;
-            this.SubName.HeaderText = "Môn";
-            this.SubName.Name = "SubName";
-            this.SubName.ReadOnly = true;
-            // 
-            // CreateDate
-            // 
-            this.CreateDate.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
-            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CreateDate.FillWeight = 113.9086F;
-            this.CreateDate.HeaderText = "Ngày tạo";
-            this.CreateDate.Name = "CreateDate";
-            this.CreateDate.ReadOnly = true;
-            // 
-            // Details
-            // 
-            this.Details.FillWeight = 30.45685F;
-            this.Details.HeaderText = "Chi tiết";
-            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.Details.Name = "Details";
-            this.Details.ReadOnly = true;
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.Text = "...";
-            this.Details.UseColumnTextForLinkValue = true;
-            // 
-            // SubjectID
-            // 
-            this.SubjectID.DataPropertyName = "SubjectID";
-            this.SubjectID.HeaderText = "SubjectID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
             // 
             // FormCreateExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1189, 809);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCreateExam";

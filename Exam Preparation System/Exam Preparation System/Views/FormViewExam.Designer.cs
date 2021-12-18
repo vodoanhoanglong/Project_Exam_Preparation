@@ -54,12 +54,12 @@ namespace Exam_Preparation_System
             // lblTitle
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(492, 26);
+            this.lblTitle.Font = new System.Drawing.Font("SVN-Neutraface 2", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(477, 12);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(114, 27);
+            this.lblTitle.Size = new System.Drawing.Size(174, 40);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Chọn đề thi";
+            this.lblTitle.Text = "Chọn Đề Bài";
             // 
             // dgvListContests
             // 
@@ -103,7 +103,7 @@ namespace Exam_Preparation_System
             this.dgvListContests.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListContests.EnableHeadersVisualStyles = false;
             this.dgvListContests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvListContests.Location = new System.Drawing.Point(31, 339);
+            this.dgvListContests.Location = new System.Drawing.Point(1, 119);
             this.dgvListContests.Name = "dgvListContests";
             this.dgvListContests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -116,7 +116,7 @@ namespace Exam_Preparation_System
             this.dgvListContests.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListContests.RowHeadersVisible = false;
             this.dgvListContests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListContests.Size = new System.Drawing.Size(1124, 442);
+            this.dgvListContests.Size = new System.Drawing.Size(1199, 497);
             this.dgvListContests.TabIndex = 9;
             this.dgvListContests.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvListContests.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,40 +206,38 @@ namespace Exam_Preparation_System
             // cmbSubject
             // 
             this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSubject.BorderRadius = 10;
+            this.cmbSubject.BorderRadius = 4;
             this.cmbSubject.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.cmbSubject.BorderThickness = 2;
             this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSubject.FocusedState.Parent = this.cmbSubject;
-            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSubject.HoverState.Parent = this.cmbSubject;
             this.cmbSubject.ItemHeight = 30;
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(492, 153);
+            this.cmbSubject.Location = new System.Drawing.Point(124, 77);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
-            this.cmbSubject.Size = new System.Drawing.Size(326, 36);
+            this.cmbSubject.Size = new System.Drawing.Size(231, 36);
             this.cmbSubject.TabIndex = 11;
             this.cmbSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSubject_SelectedIndexChanged);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(284, 153);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Myriad Pro Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1, 83);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(121, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(117, 25);
             this.guna2HtmlLabel1.TabIndex = 10;
             this.guna2HtmlLabel1.Text = "Lọc theo môn";
             // 
             // txtExamID
             // 
-            this.txtExamID.BorderRadius = 10;
-            this.txtExamID.BorderThickness = 2;
+            this.txtExamID.BorderRadius = 4;
             this.txtExamID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtExamID.DefaultText = "";
             this.txtExamID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -252,19 +250,19 @@ namespace Exam_Preparation_System
             this.txtExamID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExamID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExamID.HoverState.Parent = this.txtExamID;
-            this.txtExamID.Location = new System.Drawing.Point(492, 222);
+            this.txtExamID.Location = new System.Drawing.Point(604, 81);
             this.txtExamID.Name = "txtExamID";
             this.txtExamID.PasswordChar = '\0';
             this.txtExamID.PlaceholderText = "Tìm kiếm theo Mã đề";
             this.txtExamID.SelectedText = "";
             this.txtExamID.ShadowDecoration.Parent = this.txtExamID;
-            this.txtExamID.Size = new System.Drawing.Size(326, 36);
+            this.txtExamID.Size = new System.Drawing.Size(326, 32);
             this.txtExamID.TabIndex = 13;
             this.txtExamID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExamID_KeyPress);
             // 
             // btnSearch
             // 
-            this.btnSearch.BorderRadius = 10;
+            this.btnSearch.BorderRadius = 5;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
             this.btnSearch.CustomImages.Parent = this.btnSearch;
             this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -276,7 +274,7 @@ namespace Exam_Preparation_System
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(864, 226);
+            this.btnSearch.Location = new System.Drawing.Point(936, 81);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
             this.btnSearch.Size = new System.Drawing.Size(136, 32);
@@ -286,7 +284,7 @@ namespace Exam_Preparation_System
             // 
             // btnReset
             // 
-            this.btnReset.BorderRadius = 10;
+            this.btnReset.BorderRadius = 5;
             this.btnReset.CheckedState.Parent = this.btnReset;
             this.btnReset.CustomImages.Parent = this.btnReset;
             this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -298,7 +296,7 @@ namespace Exam_Preparation_System
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Location = new System.Drawing.Point(1045, 301);
+            this.btnReset.Location = new System.Drawing.Point(1078, 81);
             this.btnReset.Name = "btnReset";
             this.btnReset.ShadowDecoration.Parent = this.btnReset;
             this.btnReset.Size = new System.Drawing.Size(110, 32);
@@ -312,7 +310,7 @@ namespace Exam_Preparation_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1189, 809);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtExamID);

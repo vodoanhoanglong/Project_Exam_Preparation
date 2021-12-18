@@ -46,20 +46,21 @@ namespace Exam_Preparation_System
             this.pnlExamContainer.BackColor = System.Drawing.Color.Transparent;
             this.pnlExamContainer.Controls.Add(this.pnlExam);
             this.pnlExamContainer.FillColor = System.Drawing.Color.White;
-            this.pnlExamContainer.Location = new System.Drawing.Point(1, 130);
+            this.pnlExamContainer.Location = new System.Drawing.Point(0, 130);
             this.pnlExamContainer.Name = "pnlExamContainer";
-            this.pnlExamContainer.Radius = 5;
+            this.pnlExamContainer.Radius = 3;
             this.pnlExamContainer.ShadowColor = System.Drawing.Color.Black;
-            this.pnlExamContainer.Size = new System.Drawing.Size(1171, 677);
+            this.pnlExamContainer.ShadowShift = 0;
+            this.pnlExamContainer.Size = new System.Drawing.Size(1200, 482);
             this.pnlExamContainer.TabIndex = 0;
             // 
             // pnlExam
             // 
             this.pnlExam.AutoScroll = true;
-            this.pnlExam.Location = new System.Drawing.Point(12, 9);
+            this.pnlExam.Location = new System.Drawing.Point(0, 0);
             this.pnlExam.Name = "pnlExam";
             this.pnlExam.ShadowDecoration.Parent = this.pnlExam;
-            this.pnlExam.Size = new System.Drawing.Size(1148, 658);
+            this.pnlExam.Size = new System.Drawing.Size(1201, 482);
             this.pnlExam.TabIndex = 0;
             // 
             // btnFinished
@@ -86,8 +87,8 @@ namespace Exam_Preparation_System
             // 
             // txtTimeExam
             // 
-            this.txtTimeExam.BorderRadius = 10;
-            this.txtTimeExam.BorderThickness = 2;
+            this.txtTimeExam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtTimeExam.BorderRadius = 4;
             this.txtTimeExam.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTimeExam.DefaultText = "00:00:00";
             this.txtTimeExam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -98,13 +99,15 @@ namespace Exam_Preparation_System
             this.txtTimeExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.FocusedState.Parent = this.txtTimeExam;
             this.txtTimeExam.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.txtTimeExam.ForeColor = System.Drawing.Color.DimGray;
             this.txtTimeExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.HoverState.Parent = this.txtTimeExam;
-            this.txtTimeExam.Location = new System.Drawing.Point(1025, 3);
+            this.txtTimeExam.Location = new System.Drawing.Point(1025, 14);
             this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeExam.MaxLength = 8;
             this.txtTimeExam.Name = "txtTimeExam";
             this.txtTimeExam.PasswordChar = '\0';
+            this.txtTimeExam.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtTimeExam.PlaceholderText = "";
             this.txtTimeExam.SelectedText = "";
             this.txtTimeExam.SelectionStart = 8;
@@ -121,18 +124,18 @@ namespace Exam_Preparation_System
             // lblCodeExam
             // 
             this.lblCodeExam.BackColor = System.Drawing.Color.Transparent;
-            this.lblCodeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeExam.Location = new System.Drawing.Point(507, 12);
+            this.lblCodeExam.Font = new System.Drawing.Font("SVN-Neutraface 2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeExam.Location = new System.Drawing.Point(532, 12);
             this.lblCodeExam.Name = "lblCodeExam";
-            this.lblCodeExam.Size = new System.Drawing.Size(63, 27);
+            this.lblCodeExam.Size = new System.Drawing.Size(96, 36);
             this.lblCodeExam.TabIndex = 17;
-            this.lblCodeExam.Text = "Mã đề ";
+            this.lblCodeExam.Text = "Bài Làm";
             // 
             // lblSubject
             // 
             this.lblSubject.BackColor = System.Drawing.Color.Transparent;
             this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.Location = new System.Drawing.Point(13, 41);
+            this.lblSubject.Location = new System.Drawing.Point(12, 78);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(67, 22);
             this.lblSubject.TabIndex = 18;
@@ -142,7 +145,7 @@ namespace Exam_Preparation_System
             // 
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(13, 78);
+            this.lblFullName.Location = new System.Drawing.Point(12, 41);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(125, 22);
             this.lblFullName.TabIndex = 19;
@@ -153,7 +156,7 @@ namespace Exam_Preparation_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1173, 809);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.lblCodeExam);

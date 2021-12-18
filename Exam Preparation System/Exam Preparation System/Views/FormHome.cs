@@ -19,5 +19,13 @@ namespace Exam_Preparation_System
             InitializeComponent();
            
         }
+
+        private void btn_gettingstarted_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FormMainMenu.instance.activateButton(FormMainMenu.instance.btnExamManager, FormMainMenu.RGBColors.color3);
+            FormMainMenu.instance.openChildForm(new FormViewExam());
+
+        }
     }
 }

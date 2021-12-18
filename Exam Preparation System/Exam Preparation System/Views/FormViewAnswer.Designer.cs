@@ -43,31 +43,31 @@ namespace Exam_Preparation_System
             this.pnlExamContainer.BackColor = System.Drawing.Color.Transparent;
             this.pnlExamContainer.Controls.Add(this.pnlExam);
             this.pnlExamContainer.FillColor = System.Drawing.Color.White;
-            this.pnlExamContainer.Location = new System.Drawing.Point(1, 61);
+            this.pnlExamContainer.Location = new System.Drawing.Point(1, 89);
             this.pnlExamContainer.Name = "pnlExamContainer";
-            this.pnlExamContainer.Radius = 5;
             this.pnlExamContainer.ShadowColor = System.Drawing.Color.Black;
-            this.pnlExamContainer.Size = new System.Drawing.Size(1152, 702);
+            this.pnlExamContainer.ShadowShift = 0;
+            this.pnlExamContainer.Size = new System.Drawing.Size(1201, 525);
             this.pnlExamContainer.TabIndex = 1;
             // 
             // pnlExam
             // 
             this.pnlExam.AutoScroll = true;
-            this.pnlExam.Location = new System.Drawing.Point(12, 9);
+            this.pnlExam.Location = new System.Drawing.Point(0, 3);
             this.pnlExam.Name = "pnlExam";
             this.pnlExam.ShadowDecoration.Parent = this.pnlExam;
-            this.pnlExam.Size = new System.Drawing.Size(1148, 688);
+            this.pnlExam.Size = new System.Drawing.Size(1198, 522);
             this.pnlExam.TabIndex = 0;
             // 
             // lblTitle
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(534, 3);
+            this.lblTitle.Font = new System.Drawing.Font("SVN-Neutraface 2", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(498, 12);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(72, 27);
+            this.lblTitle.Size = new System.Drawing.Size(185, 32);
             this.lblTitle.TabIndex = 18;
-            this.lblTitle.Text = "Đáp án";
+            this.lblTitle.Text = "Tra Cứu Kết Quả";
             // 
             // btnBack
             // 
@@ -83,7 +83,7 @@ namespace Exam_Preparation_System
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(1009, 12);
+            this.btnBack.Location = new System.Drawing.Point(1052, 51);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
             this.btnBack.Size = new System.Drawing.Size(136, 32);
@@ -95,7 +95,7 @@ namespace Exam_Preparation_System
             // 
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(12, 3);
+            this.lblFullName.Location = new System.Drawing.Point(12, 33);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(125, 22);
             this.lblFullName.TabIndex = 20;
@@ -105,7 +105,7 @@ namespace Exam_Preparation_System
             // 
             this.lblCorrectQuantity.BackColor = System.Drawing.Color.Transparent;
             this.lblCorrectQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorrectQuantity.Location = new System.Drawing.Point(12, 33);
+            this.lblCorrectQuantity.Location = new System.Drawing.Point(12, 61);
             this.lblCorrectQuantity.Name = "lblCorrectQuantity";
             this.lblCorrectQuantity.Size = new System.Drawing.Size(109, 22);
             this.lblCorrectQuantity.TabIndex = 21;
@@ -116,7 +116,7 @@ namespace Exam_Preparation_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1157, 770);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.lblCorrectQuantity);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.btnBack);

@@ -34,27 +34,27 @@ namespace Exam_Preparation_System
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelSubMenuStudent = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.controlBox = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.iconCurrChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnRanking = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnChart = new Guna.UI2.WinForms.Guna2Button();
+            this.panelSubMenuStudent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnViewResult = new Guna.UI2.WinForms.Guna2Button();
             this.btnExercise = new Guna.UI2.WinForms.Guna2Button();
             this.btnExamManager = new Guna.UI2.WinForms.Guna2Button();
             this.btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.controlBox = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.iconCurrChildForm = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelSubMenuStudent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // ShadowForm
@@ -65,7 +65,7 @@ namespace Exam_Preparation_System
             // 
             // Elipse
             // 
-            this.Elipse.BorderRadius = 20;
+            this.Elipse.BorderRadius = 4;
             this.Elipse.TargetControl = this;
             // 
             // panelSlideBar
@@ -76,10 +76,10 @@ namespace Exam_Preparation_System
             this.panelSlideBar.FillColor = System.Drawing.Color.White;
             this.panelSlideBar.Location = new System.Drawing.Point(-20, -4);
             this.panelSlideBar.Name = "panelSlideBar";
-            this.panelSlideBar.Radius = 5;
             this.panelSlideBar.ShadowColor = System.Drawing.Color.Gray;
             this.panelSlideBar.ShadowDepth = 30;
-            this.panelSlideBar.Size = new System.Drawing.Size(236, 865);
+            this.panelSlideBar.ShadowShift = 3;
+            this.panelSlideBar.Size = new System.Drawing.Size(236, 654);
             this.panelSlideBar.TabIndex = 1;
             // 
             // panelMenu
@@ -91,102 +91,11 @@ namespace Exam_Preparation_System
             this.panelMenu.Controls.Add(this.btnExamManager);
             this.panelMenu.Controls.Add(this.btnWarehouse);
             this.panelMenu.Controls.Add(this.btnHome);
-            this.panelMenu.Location = new System.Drawing.Point(20, 146);
+            this.panelMenu.Location = new System.Drawing.Point(20, 121);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.ShadowDecoration.Parent = this.panelMenu;
-            this.panelMenu.Size = new System.Drawing.Size(210, 707);
+            this.panelMenu.Size = new System.Drawing.Size(213, 521);
             this.panelMenu.TabIndex = 2;
-            // 
-            // panelSubMenuStudent
-            // 
-            this.panelSubMenuStudent.Controls.Add(this.btnViewResult);
-            this.panelSubMenuStudent.Controls.Add(this.btnExercise);
-            this.panelSubMenuStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuStudent.Location = new System.Drawing.Point(0, 135);
-            this.panelSubMenuStudent.Name = "panelSubMenuStudent";
-            this.panelSubMenuStudent.ShadowDecoration.Parent = this.panelSubMenuStudent;
-            this.panelSubMenuStudent.Size = new System.Drawing.Size(210, 66);
-            this.panelSubMenuStudent.TabIndex = 5;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1303, -1);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 35);
-            this.guna2ControlBox2.TabIndex = 6;
-            // 
-            // controlBox
-            // 
-            this.controlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.controlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlBox.HoverState.FillColor = System.Drawing.Color.Red;
-            this.controlBox.HoverState.Parent = this.controlBox;
-            this.controlBox.IconColor = System.Drawing.Color.Black;
-            this.controlBox.Location = new System.Drawing.Point(1363, -1);
-            this.controlBox.Name = "controlBox";
-            this.controlBox.ShadowDecoration.Parent = this.controlBox;
-            this.controlBox.Size = new System.Drawing.Size(60, 35);
-            this.controlBox.TabIndex = 5;
-            this.controlBox.Click += new System.EventHandler(this.controlBox_Click);
-            // 
-            // panelContent
-            // 
-            this.panelContent.Location = new System.Drawing.Point(223, 40);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.ShadowDecoration.Parent = this.panelContent;
-            this.panelContent.Size = new System.Drawing.Size(1189, 809);
-            this.panelContent.TabIndex = 9;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(280, 8);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(37, 22);
-            this.lblTitle.TabIndex = 11;
-            this.lblTitle.Text = "Title";
-            // 
-            // iconCurrChildForm
-            // 
-            this.iconCurrChildForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.iconCurrChildForm.ImageRotate = 0F;
-            this.iconCurrChildForm.Location = new System.Drawing.Point(232, 3);
-            this.iconCurrChildForm.Name = "iconCurrChildForm";
-            this.iconCurrChildForm.ShadowDecoration.Parent = this.iconCurrChildForm;
-            this.iconCurrChildForm.Size = new System.Drawing.Size(40, 33);
-            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconCurrChildForm.TabIndex = 12;
-            this.iconCurrChildForm.TabStop = false;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.CheckedState.Parent = this.btnProfile;
-            this.btnProfile.CustomImages.Parent = this.btnProfile;
-            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProfile.DisabledState.Parent = this.btnProfile;
-            this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.HoverState.Parent = this.btnProfile;
-            this.btnProfile.Image = global::Exam_Preparation_System.Properties.Resources.user;
-            this.btnProfile.ImageSize = new System.Drawing.Size(37, 37);
-            this.btnProfile.Location = new System.Drawing.Point(1243, -1);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
-            this.btnProfile.Size = new System.Drawing.Size(60, 35);
-            this.btnProfile.TabIndex = 8;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnRanking
             // 
@@ -217,7 +126,7 @@ namespace Exam_Preparation_System
             this.btnRanking.Name = "btnRanking";
             this.btnRanking.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnRanking.ShadowDecoration.Parent = this.btnRanking;
-            this.btnRanking.Size = new System.Drawing.Size(210, 45);
+            this.btnRanking.Size = new System.Drawing.Size(213, 45);
             this.btnRanking.TabIndex = 8;
             this.btnRanking.Text = "Bảng xếp hạng";
             this.btnRanking.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -249,11 +158,11 @@ namespace Exam_Preparation_System
             this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogOut.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 662);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 476);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnLogOut.ShadowDecoration.Parent = this.btnLogOut;
-            this.btnLogOut.Size = new System.Drawing.Size(210, 45);
+            this.btnLogOut.Size = new System.Drawing.Size(213, 45);
             this.btnLogOut.TabIndex = 7;
             this.btnLogOut.Text = "Đăng xuất";
             this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -289,12 +198,23 @@ namespace Exam_Preparation_System
             this.btnChart.Name = "btnChart";
             this.btnChart.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnChart.ShadowDecoration.Parent = this.btnChart;
-            this.btnChart.Size = new System.Drawing.Size(210, 45);
+            this.btnChart.Size = new System.Drawing.Size(213, 45);
             this.btnChart.TabIndex = 6;
             this.btnChart.Text = "Phổ điểm";
             this.btnChart.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnChart.TextOffset = new System.Drawing.Point(10, 0);
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
+            // panelSubMenuStudent
+            // 
+            this.panelSubMenuStudent.Controls.Add(this.btnViewResult);
+            this.panelSubMenuStudent.Controls.Add(this.btnExercise);
+            this.panelSubMenuStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuStudent.Location = new System.Drawing.Point(0, 135);
+            this.panelSubMenuStudent.Name = "panelSubMenuStudent";
+            this.panelSubMenuStudent.ShadowDecoration.Parent = this.panelSubMenuStudent;
+            this.panelSubMenuStudent.Size = new System.Drawing.Size(213, 66);
+            this.panelSubMenuStudent.TabIndex = 5;
             // 
             // btnViewResult
             // 
@@ -325,7 +245,7 @@ namespace Exam_Preparation_System
             this.btnViewResult.Name = "btnViewResult";
             this.btnViewResult.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnViewResult.ShadowDecoration.Parent = this.btnViewResult;
-            this.btnViewResult.Size = new System.Drawing.Size(210, 30);
+            this.btnViewResult.Size = new System.Drawing.Size(213, 30);
             this.btnViewResult.TabIndex = 7;
             this.btnViewResult.Text = "Lịch sử luyện thi";
             this.btnViewResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -361,7 +281,7 @@ namespace Exam_Preparation_System
             this.btnExercise.Name = "btnExercise";
             this.btnExercise.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnExercise.ShadowDecoration.Parent = this.btnExercise;
-            this.btnExercise.Size = new System.Drawing.Size(210, 30);
+            this.btnExercise.Size = new System.Drawing.Size(213, 30);
             this.btnExercise.TabIndex = 4;
             this.btnExercise.Text = "Luyện thi";
             this.btnExercise.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -397,7 +317,7 @@ namespace Exam_Preparation_System
             this.btnExamManager.Name = "btnExamManager";
             this.btnExamManager.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnExamManager.ShadowDecoration.Parent = this.btnExamManager;
-            this.btnExamManager.Size = new System.Drawing.Size(210, 45);
+            this.btnExamManager.Size = new System.Drawing.Size(213, 45);
             this.btnExamManager.TabIndex = 3;
             this.btnExamManager.Text = "Thi trực tuyến";
             this.btnExamManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -433,7 +353,7 @@ namespace Exam_Preparation_System
             this.btnWarehouse.Name = "btnWarehouse";
             this.btnWarehouse.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnWarehouse.ShadowDecoration.Parent = this.btnWarehouse;
-            this.btnWarehouse.Size = new System.Drawing.Size(210, 45);
+            this.btnWarehouse.Size = new System.Drawing.Size(213, 45);
             this.btnWarehouse.TabIndex = 2;
             this.btnWarehouse.Text = "Kho câu hỏi";
             this.btnWarehouse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -469,7 +389,7 @@ namespace Exam_Preparation_System
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnHome.ShadowDecoration.Parent = this.btnHome;
-            this.btnHome.Size = new System.Drawing.Size(210, 45);
+            this.btnHome.Size = new System.Drawing.Size(213, 45);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Trang chủ";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -488,12 +408,92 @@ namespace Exam_Preparation_System
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1303, -1);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 35);
+            this.guna2ControlBox2.TabIndex = 6;
+            // 
+            // controlBox
+            // 
+            this.controlBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.controlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlBox.HoverState.FillColor = System.Drawing.Color.Red;
+            this.controlBox.HoverState.Parent = this.controlBox;
+            this.controlBox.IconColor = System.Drawing.Color.Black;
+            this.controlBox.Location = new System.Drawing.Point(1363, -1);
+            this.controlBox.Name = "controlBox";
+            this.controlBox.ShadowDecoration.Parent = this.controlBox;
+            this.controlBox.Size = new System.Drawing.Size(60, 35);
+            this.controlBox.TabIndex = 5;
+            this.controlBox.Click += new System.EventHandler(this.controlBox_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(222, 36);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.ShadowDecoration.Parent = this.panelContent;
+            this.panelContent.Size = new System.Drawing.Size(1200, 614);
+            this.panelContent.TabIndex = 9;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("SVN-Neutraface 2", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(275, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(38, 20);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Title";
+            // 
+            // iconCurrChildForm
+            // 
+            this.iconCurrChildForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.iconCurrChildForm.ImageRotate = 0F;
+            this.iconCurrChildForm.Location = new System.Drawing.Point(233, 4);
+            this.iconCurrChildForm.Name = "iconCurrChildForm";
+            this.iconCurrChildForm.ShadowDecoration.Parent = this.iconCurrChildForm;
+            this.iconCurrChildForm.Size = new System.Drawing.Size(25, 25);
+            this.iconCurrChildForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconCurrChildForm.TabIndex = 12;
+            this.iconCurrChildForm.TabStop = false;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.CheckedState.Parent = this.btnProfile;
+            this.btnProfile.CustomImages.Parent = this.btnProfile;
+            this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProfile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProfile.DisabledState.Parent = this.btnProfile;
+            this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
+            this.btnProfile.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnProfile.ForeColor = System.Drawing.Color.White;
+            this.btnProfile.HoverState.Parent = this.btnProfile;
+            this.btnProfile.Image = global::Exam_Preparation_System.Properties.Resources.user;
+            this.btnProfile.ImageSize = new System.Drawing.Size(37, 37);
+            this.btnProfile.Location = new System.Drawing.Point(1243, -1);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
+            this.btnProfile.Size = new System.Drawing.Size(60, 35);
+            this.btnProfile.TabIndex = 8;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1424, 861);
+            this.ClientSize = new System.Drawing.Size(1424, 650);
             this.Controls.Add(this.iconCurrChildForm);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panelContent);
@@ -507,8 +507,8 @@ namespace Exam_Preparation_System
             this.panelSlideBar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelSubMenuStudent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrChildForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,7 +525,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2ControlBox controlBox;
         private Guna.UI2.WinForms.Guna2Panel panelMenu;
         private Guna.UI2.WinForms.Guna2Button btnWarehouse;
-        private Guna.UI2.WinForms.Guna2Button btnExamManager;
         private Guna.UI2.WinForms.Guna2Button btnChart;
         private Guna.UI2.WinForms.Guna2Panel panelSubMenuStudent;
         private Guna.UI2.WinForms.Guna2Button btnViewResult;
@@ -536,5 +535,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
         private Guna.UI2.WinForms.Guna2PictureBox iconCurrChildForm;
         private Guna.UI2.WinForms.Guna2Button btnRanking;
+        public Guna.UI2.WinForms.Guna2Button btnExamManager;
     }
 }

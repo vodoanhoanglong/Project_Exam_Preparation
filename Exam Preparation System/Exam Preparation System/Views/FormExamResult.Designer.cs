@@ -63,7 +63,7 @@ namespace Exam_Preparation_System
             this.progressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.progressBar.InnerMargin = 2;
             this.progressBar.InnerWidth = -1;
-            this.progressBar.Location = new System.Drawing.Point(298, 109);
+            this.progressBar.Location = new System.Drawing.Point(298, 39);
             this.progressBar.MarqueeAnimationSpeed = 2000;
             this.progressBar.Name = "progressBar";
             this.progressBar.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(26)))), ((int)(((byte)(43)))));
@@ -90,7 +90,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(263, 300);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(263, 283);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(264, 27);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -123,7 +123,7 @@ namespace Exam_Preparation_System
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblFullName.Location = new System.Drawing.Point(12, 73);
+            this.lblFullName.Location = new System.Drawing.Point(322, 250);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(148, 27);
             this.lblFullName.TabIndex = 4;
@@ -134,7 +134,7 @@ namespace Exam_Preparation_System
             this.lblPoint.BackColor = System.Drawing.Color.Transparent;
             this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblPoint.Location = new System.Drawing.Point(671, 6);
+            this.lblPoint.Location = new System.Drawing.Point(298, 316);
             this.lblPoint.Name = "lblPoint";
             this.lblPoint.Size = new System.Drawing.Size(88, 27);
             this.lblPoint.TabIndex = 5;
@@ -154,7 +154,7 @@ namespace Exam_Preparation_System
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.HoverState.Parent = this.btnBack;
-            this.btnBack.Location = new System.Drawing.Point(404, 373);
+            this.btnBack.Location = new System.Drawing.Point(404, 356);
             this.btnBack.Name = "btnBack";
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
             this.btnBack.Size = new System.Drawing.Size(136, 32);
@@ -176,7 +176,7 @@ namespace Exam_Preparation_System
             this.btnViewAnswer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnViewAnswer.ForeColor = System.Drawing.Color.White;
             this.btnViewAnswer.HoverState.Parent = this.btnViewAnswer;
-            this.btnViewAnswer.Location = new System.Drawing.Point(234, 373);
+            this.btnViewAnswer.Location = new System.Drawing.Point(234, 356);
             this.btnViewAnswer.Name = "btnViewAnswer";
             this.btnViewAnswer.ShadowDecoration.Parent = this.btnViewAnswer;
             this.btnViewAnswer.Size = new System.Drawing.Size(136, 32);

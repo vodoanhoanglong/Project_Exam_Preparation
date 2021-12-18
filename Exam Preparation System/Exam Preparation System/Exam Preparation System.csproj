@@ -77,94 +77,94 @@
     <Compile Include="Chart\ConfigChart.cs" />
     <Compile Include="Chart\Radar.cs" />
     <Compile Include="Chart\SplineArea.cs" />
-    <Compile Include="FormCreateExam.cs">
+    <Compile Include="Views\FormCreateExam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreateExam.Designer.cs">
+    <Compile Include="Views\FormCreateExam.Designer.cs">
       <DependentUpon>FormCreateExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditContest.cs">
+    <Compile Include="Views\FormEditContest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditContest.Designer.cs">
+    <Compile Include="Views\FormEditContest.Designer.cs">
       <DependentUpon>FormEditContest.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditQuestion.cs">
+    <Compile Include="Views\FormEditQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditQuestion.Designer.cs">
+    <Compile Include="Views\FormEditQuestion.Designer.cs">
       <DependentUpon>FormEditQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormExamPreparation.cs">
+    <Compile Include="Views\FormExamPreparation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormExamPreparation.Designer.cs">
+    <Compile Include="Views\FormExamPreparation.Designer.cs">
       <DependentUpon>FormExamPreparation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormExamResult.cs">
+    <Compile Include="Views\FormExamResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormExamResult.Designer.cs">
+    <Compile Include="Views\FormExamResult.Designer.cs">
       <DependentUpon>FormExamResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHome.cs">
+    <Compile Include="Views\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHome.Designer.cs">
+    <Compile Include="Views\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Views\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.designer.cs">
+    <Compile Include="Views\FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMainMenu.cs">
+    <Compile Include="Views\FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMainMenu.Designer.cs">
+    <Compile Include="Views\FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProfile.cs">
+    <Compile Include="Views\FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProfile.Designer.cs">
+    <Compile Include="Views\FormProfile.Designer.cs">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStatistical.cs">
+    <Compile Include="Views\FormStatistical.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStatistical.Designer.cs">
+    <Compile Include="Views\FormStatistical.Designer.cs">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRanking.cs">
+    <Compile Include="Views\FormRanking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRanking.Designer.cs">
+    <Compile Include="Views\FormRanking.Designer.cs">
       <DependentUpon>FormRanking.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormViewAnswer.cs">
+    <Compile Include="Views\FormViewAnswer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormViewAnswer.Designer.cs">
+    <Compile Include="Views\FormViewAnswer.Designer.cs">
       <DependentUpon>FormViewAnswer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormViewExam.cs">
+    <Compile Include="Views\FormViewExam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormViewExam.Designer.cs">
+    <Compile Include="Views\FormViewExam.Designer.cs">
       <DependentUpon>FormViewExam.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormViewHistory.cs">
+    <Compile Include="Views\FormViewHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormViewHistory.Designer.cs">
+    <Compile Include="Views\FormViewHistory.Designer.cs">
       <DependentUpon>FormViewHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormWarehouse.cs">
+    <Compile Include="Views\FormWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormWarehouse.Designer.cs">
+    <Compile Include="Views\FormWarehouse.Designer.cs">
       <DependentUpon>FormWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ANSWER.cs" />
@@ -177,52 +177,52 @@
     <Compile Include="Models\USER.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RJRadioButton.cs">
+    <Compile Include="Views\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="FormCreateExam.resx">
+    <EmbeddedResource Include="Views\FormCreateExam.resx">
       <DependentUpon>FormCreateExam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditContest.resx">
+    <EmbeddedResource Include="Views\FormEditContest.resx">
       <DependentUpon>FormEditContest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditQuestion.resx">
+    <EmbeddedResource Include="Views\FormEditQuestion.resx">
       <DependentUpon>FormEditQuestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormExamPreparation.resx">
+    <EmbeddedResource Include="Views\FormExamPreparation.resx">
       <DependentUpon>FormExamPreparation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormExamResult.resx">
+    <EmbeddedResource Include="Views\FormExamResult.resx">
       <DependentUpon>FormExamResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHome.resx">
+    <EmbeddedResource Include="Views\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMainMenu.resx">
+    <EmbeddedResource Include="Views\FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProfile.resx">
+    <EmbeddedResource Include="Views\FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStatistical.resx">
+    <EmbeddedResource Include="Views\FormStatistical.resx">
       <DependentUpon>FormStatistical.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRanking.resx">
+    <EmbeddedResource Include="Views\FormRanking.resx">
       <DependentUpon>FormRanking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormViewAnswer.resx">
+    <EmbeddedResource Include="Views\FormViewAnswer.resx">
       <DependentUpon>FormViewAnswer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormViewExam.resx">
+    <EmbeddedResource Include="Views\FormViewExam.resx">
       <DependentUpon>FormViewExam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormViewHistory.resx">
+    <EmbeddedResource Include="Views\FormViewHistory.resx">
       <DependentUpon>FormViewHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormWarehouse.resx">
+    <EmbeddedResource Include="Views\FormWarehouse.resx">
       <DependentUpon>FormWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -331,5 +331,9 @@
   <ItemGroup>
     <None Include="Resources\cup.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Illustration 1.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

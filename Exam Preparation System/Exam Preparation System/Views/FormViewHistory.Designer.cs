@@ -64,6 +64,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnReset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chart = new Guna.Charts.WinForms.GunaChart();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +111,7 @@ namespace Exam_Preparation_System
             this.dgvHistory.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHistory.EnableHeadersVisualStyles = false;
             this.dgvHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvHistory.Location = new System.Drawing.Point(12, 452);
+            this.dgvHistory.Location = new System.Drawing.Point(-1, 224);
             this.dgvHistory.Name = "dgvHistory";
             this.dgvHistory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -123,7 +124,7 @@ namespace Exam_Preparation_System
             this.dgvHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHistory.RowHeadersVisible = false;
             this.dgvHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistory.Size = new System.Drawing.Size(1165, 345);
+            this.dgvHistory.Size = new System.Drawing.Size(1200, 391);
             this.dgvHistory.TabIndex = 10;
             this.dgvHistory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvHistory.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,7 +229,7 @@ namespace Exam_Preparation_System
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(377, 154);
+            this.btnSearch.Location = new System.Drawing.Point(355, 186);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
             this.btnSearch.Size = new System.Drawing.Size(136, 32);
@@ -252,13 +253,13 @@ namespace Exam_Preparation_System
             this.txtExamID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExamID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExamID.HoverState.Parent = this.txtExamID;
-            this.txtExamID.Location = new System.Drawing.Point(21, 154);
+            this.txtExamID.Location = new System.Drawing.Point(12, 186);
             this.txtExamID.Name = "txtExamID";
             this.txtExamID.PasswordChar = '\0';
             this.txtExamID.PlaceholderText = "Tìm kiếm theo Mã đề";
             this.txtExamID.SelectedText = "";
             this.txtExamID.ShadowDecoration.Parent = this.txtExamID;
-            this.txtExamID.Size = new System.Drawing.Size(326, 36);
+            this.txtExamID.Size = new System.Drawing.Size(329, 32);
             this.txtExamID.TabIndex = 17;
             this.txtExamID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExamID_KeyPress);
             // 
@@ -278,22 +279,22 @@ namespace Exam_Preparation_System
             this.cmbSubject.HoverState.Parent = this.cmbSubject;
             this.cmbSubject.ItemHeight = 30;
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(171, 70);
+            this.cmbSubject.Location = new System.Drawing.Point(103, 144);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
-            this.cmbSubject.Size = new System.Drawing.Size(326, 36);
+            this.cmbSubject.Size = new System.Drawing.Size(238, 36);
             this.cmbSubject.TabIndex = 16;
             this.cmbSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSubject_SelectedIndexChanged);
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 70);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Myriad Pro Light", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 148);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(121, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(81, 26);
             this.guna2HtmlLabel1.TabIndex = 15;
-            this.guna2HtmlLabel1.Text = "Lọc theo môn";
+            this.guna2HtmlLabel1.Text = "Lọc Môn:";
             // 
             // btnReset
             // 
@@ -309,7 +310,7 @@ namespace Exam_Preparation_System
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Location = new System.Drawing.Point(403, 414);
+            this.btnReset.Location = new System.Drawing.Point(535, 186);
             this.btnReset.Name = "btnReset";
             this.btnReset.ShadowDecoration.Parent = this.btnReset;
             this.btnReset.Size = new System.Drawing.Size(110, 32);
@@ -323,9 +324,9 @@ namespace Exam_Preparation_System
             this.chart.BackColor = System.Drawing.Color.White;
             chartFont1.FontName = "Arial";
             this.chart.Legend.LabelFont = chartFont1;
-            this.chart.Location = new System.Drawing.Point(519, 12);
+            this.chart.Location = new System.Drawing.Point(665, 0);
             this.chart.Name = "chart";
-            this.chart.Size = new System.Drawing.Size(658, 434);
+            this.chart.Size = new System.Drawing.Size(534, 218);
             this.chart.TabIndex = 21;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -353,12 +354,23 @@ namespace Exam_Preparation_System
             tick3.Font = chartFont8;
             this.chart.ZAxes.Ticks = tick3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SVN-Neutraface 2", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(276, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 41);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Lịch Sử Làm Bài";
+            // 
             // FormViewHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(1189, 809);
+            this.ClientSize = new System.Drawing.Size(1200, 614);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
@@ -393,5 +405,6 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn SubName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExamDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn point;
+        private System.Windows.Forms.Label label1;
     }
 }

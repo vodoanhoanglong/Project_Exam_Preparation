@@ -45,6 +45,8 @@ namespace Exam_Preparation_System
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.DataSource = table;
 
+
+            btnReset.Visible = true;
         }
 
         private void loadData()
@@ -75,7 +77,7 @@ namespace Exam_Preparation_System
         private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtExamID.Text = "";
-            btnReset.Visible = false;
+            btnReset.Enabled = false;
             loadData();
         }
 
@@ -85,7 +87,7 @@ namespace Exam_Preparation_System
                 MessageBox.Show("Vui lòng nhập mã đề");
             else
             {
-                btnReset.Visible = true;
+                btnReset.Enabled = true;
                 loadDataByID();
             }    
         }
@@ -101,7 +103,7 @@ namespace Exam_Preparation_System
             cmbSubject.SelectedValue = -1;
             txtExamID.Text = "";
             loadData();
-            btnReset.Visible = false;
+            btnReset.Enabled = false;
         }
 
         private void dgvListContests_CellContentClick(object sender, DataGridViewCellEventArgs e)
