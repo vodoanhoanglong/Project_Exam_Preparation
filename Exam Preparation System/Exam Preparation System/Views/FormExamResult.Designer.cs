@@ -34,12 +34,11 @@ namespace Exam_Preparation_System
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.progressBar = new CircularProgressBar.CircularProgressBar();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblCodeExam = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblSubject = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblFullName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPoint = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnBack = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnViewAnswer = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lblCodeExam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // ShadowForm
@@ -90,44 +89,22 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(263, 283);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(255, 276);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(264, 27);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Số câu đúng / Tổng số câu";
-            // 
-            // lblCodeExam
-            // 
-            this.lblCodeExam.BackColor = System.Drawing.Color.Transparent;
-            this.lblCodeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeExam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblCodeExam.Location = new System.Drawing.Point(12, 6);
-            this.lblCodeExam.Name = "lblCodeExam";
-            this.lblCodeExam.Size = new System.Drawing.Size(3, 2);
-            this.lblCodeExam.TabIndex = 2;
-            this.lblCodeExam.Text = null;
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblSubject.Location = new System.Drawing.Point(12, 39);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(3, 2);
-            this.lblSubject.TabIndex = 3;
-            this.lblSubject.Text = null;
             // 
             // lblFullName
             // 
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblFullName.Location = new System.Drawing.Point(322, 250);
+            this.lblFullName.Location = new System.Drawing.Point(298, 240);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(148, 27);
+            this.lblFullName.Size = new System.Drawing.Size(41, 27);
             this.lblFullName.TabIndex = 4;
-            this.lblFullName.Text = "Họ tên thí sinh:  ";
+            this.lblFullName.Text = "Tên";
             // 
             // lblPoint
             // 
@@ -184,6 +161,16 @@ namespace Exam_Preparation_System
             this.btnViewAnswer.Text = "Xem đáp án";
             this.btnViewAnswer.Click += new System.EventHandler(this.btnViewAnswer_Click);
             // 
+            // lblCodeExam
+            // 
+            this.lblCodeExam.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodeExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeExam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
+            this.lblCodeExam.Location = new System.Drawing.Point(12, 6);
+            this.lblCodeExam.Name = "lblCodeExam";
+            this.lblCodeExam.Size = new System.Drawing.Size(3, 2);
+            this.lblCodeExam.TabIndex = 2;
+            // 
             // FormExamResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +181,6 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblPoint);
             this.Controls.Add(this.lblFullName);
-            this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.lblCodeExam);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.progressBar);
@@ -214,10 +200,9 @@ namespace Exam_Preparation_System
         private CircularProgressBar.CircularProgressBar progressBar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblSubject;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblCodeExam;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPoint;
         private Guna.UI2.WinForms.Guna2GradientButton btnBack;
         private Guna.UI2.WinForms.Guna2GradientButton btnViewAnswer;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCodeExam;
     }
 }

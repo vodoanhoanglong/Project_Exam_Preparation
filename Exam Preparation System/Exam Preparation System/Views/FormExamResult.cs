@@ -14,7 +14,7 @@ namespace Exam_Preparation_System
     {
         private List<int> yourChoice;
         private int totalCorrect, totalQuestion, examID;
-        public FormExamResult(int totalCorrect, int totalQuestion, string codeExam, string subjectExam, List<int> yourChoice)
+        public FormExamResult(int totalCorrect, int totalQuestion, string codeExam, List<int> yourChoice)
         {
             InitializeComponent();
             this.yourChoice = yourChoice;
@@ -23,16 +23,14 @@ namespace Exam_Preparation_System
 
             double point = (10 * totalCorrect) / totalQuestion;
 
-            lblCodeExam.Text += codeExam;
-            lblSubject.Text += subjectExam;
+            lblCodeExam.Text = codeExam;
             lblFullName.Text += FormLogin.info.FullName;
             lblPoint.Text += Math.Round(point, 1).ToString();
 
             progressBar.Value = totalCorrect;
             progressBar.Maximum = totalQuestion;
             progressBar.Text = totalCorrect.ToString() + "/" + totalQuestion.ToString();
-
-            this.examID = Convert.ToInt32(lblCodeExam.Text.Split(' ')[2]);
+            this.examID = Convert.ToInt32(codeExam.Split(' ')[2]);
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -127,9 +127,9 @@ namespace Exam_Preparation_System
             this.lblCodeExam.Font = new System.Drawing.Font("SVN-Neutraface 2", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodeExam.Location = new System.Drawing.Point(532, 12);
             this.lblCodeExam.Name = "lblCodeExam";
-            this.lblCodeExam.Size = new System.Drawing.Size(96, 36);
+            this.lblCodeExam.Size = new System.Drawing.Size(76, 36);
             this.lblCodeExam.TabIndex = 17;
-            this.lblCodeExam.Text = "Bài Làm";
+            this.lblCodeExam.Text = "Mã đề ";
             // 
             // lblSubject
             // 

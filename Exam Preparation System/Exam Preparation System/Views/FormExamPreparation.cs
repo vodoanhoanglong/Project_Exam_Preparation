@@ -188,7 +188,7 @@ namespace Exam_Preparation_System
         {
             timer.Stop();
             saveResult(totalCorrect, totalQuestion);
-            FormExamResult resultDialog = new FormExamResult(totalCorrect, totalQuestion, lblCodeExam.Text, lblSubject.Text, yourChoice);
+            FormExamResult resultDialog = new FormExamResult(totalCorrect, totalQuestion, lblCodeExam.Text, yourChoice);
             resultDialog.ShowDialog();
         }
 
