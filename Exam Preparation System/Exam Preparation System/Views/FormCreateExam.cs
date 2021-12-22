@@ -63,14 +63,23 @@ namespace Exam_Preparation_System
                 Random random = new Random();
 
                 int quantity = (int)nudQuantity.Value;
-                int seed = random.Next();
-                var q = (from question in context.QUESTIONS
-                         join answer in context.ANSWERS on question.QuestionID equals answer.QuestionID
-                         where question.SubjectID == (int)cmbSubject.SelectedValue && answer.isCorrect == true
-                         select new { questionID = question.QuestionID, subject = question.SUBJECT.SubName, question = question.Contents, answer = answer.AnswersContent })
-                         .OrderBy(s => (~(s.questionID & seed)) & (s.questionID | seed)).Take(quantity);
+                int subID = (int)cmbSubject.SelectedValue;
+                var rnd = random.NextDouble();
+                var question = context.QUESTIONS
+                    .Where(x => x.SubjectID == subID)
+                    .Select(x => new
+                    {
+                        questionID = x.QuestionID, 
+                        subject = x.SUBJECT.SubName, 
+                        question = x.Contents,
+                        answer = x.ANSWERS
+                        .FirstOrDefault(a => a.QuestionID == x.QuestionID
+                        && a.isCorrect)
+                    })
+                    .OrderBy(p => SqlFunctions.Checksum(p.questionID * rnd))
+                    .Take(quantity);
 
-                dgvQuestion.DataSource = q.ToList();
+                dgvQuestion.DataSource = question.ToList();
             }
         }
 

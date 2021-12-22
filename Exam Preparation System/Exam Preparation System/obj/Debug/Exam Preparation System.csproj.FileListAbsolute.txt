@@ -146,3 +146,5 @@ D:\New folder\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Ex
 D:\New folder\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.exe
 D:\New folder\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.pdb
 D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.Views.PreLoadingOverlay.resources
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam_Preparation_System.Views.PreLoadingOverlay.resources
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\obj\Debug\Exam Preparation System.csproj.CopyComplete
