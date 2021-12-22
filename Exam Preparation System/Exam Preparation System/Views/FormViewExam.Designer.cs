@@ -213,12 +213,12 @@ namespace Exam_Preparation_System
             this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cmbSubject.FocusedState.Parent = this.cmbSubject;
-            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbSubject.HoverState.Parent = this.cmbSubject;
             this.cmbSubject.ItemHeight = 30;
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(124, 77);
+            this.cmbSubject.Location = new System.Drawing.Point(132, 77);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
             this.cmbSubject.Size = new System.Drawing.Size(231, 36);
@@ -228,10 +228,10 @@ namespace Exam_Preparation_System
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Myriad Pro Light", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(1, 83);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(117, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(125, 27);
             this.guna2HtmlLabel1.TabIndex = 10;
             this.guna2HtmlLabel1.Text = "Lọc theo môn";
             // 

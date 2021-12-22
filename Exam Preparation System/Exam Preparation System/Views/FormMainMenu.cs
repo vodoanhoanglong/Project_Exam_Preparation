@@ -17,7 +17,7 @@ namespace Exam_Preparation_System
     {
         public static FormMainMenu instance;
 
-        private const string admin = "60510710671";
+        private const string admin = "6051071012";
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
@@ -27,14 +27,13 @@ namespace Exam_Preparation_System
         private System.Drawing.Bitmap exam = global::Exam_Preparation_System.Properties.Resources.exam;
         private System.Drawing.Bitmap lineChart = global::Exam_Preparation_System.Properties.Resources.line_chart;
         private System.Drawing.Bitmap cup = global::Exam_Preparation_System.Properties.Resources.cup;
-
         private System.Drawing.Bitmap homeColor = global::Exam_Preparation_System.Properties.Resources.home_color;
         private System.Drawing.Bitmap warehouseColor = global::Exam_Preparation_System.Properties.Resources.warehouse_color;
         private System.Drawing.Bitmap examColor = global::Exam_Preparation_System.Properties.Resources.exam_color;
         private System.Drawing.Bitmap lineChartColor = global::Exam_Preparation_System.Properties.Resources.line_chart_color;
         private System.Drawing.Bitmap cupColor = global::Exam_Preparation_System.Properties.Resources.cup_color;
-
         private System.Drawing.Bitmap userIcon = global::Exam_Preparation_System.Properties.Resources.user;
+
         public FormMainMenu()
         {
             InitializeComponent();
@@ -99,40 +98,14 @@ namespace Exam_Preparation_System
             public static Color color5 = Color.FromArgb(255, 215, 39);
         }
 
-        private void setColorImage(string name)
-        {
-            bool checkColor = currBtn.ForeColor.ToArgb().Equals(Color.Black.ToArgb());
-            switch (name)
-            {
-                case "btnHome":
-                    currBtn.Image = checkColor ? homeColor : home;
-                    break;
-                case "btnWarehouse":
-                    currBtn.Image = checkColor ? warehouseColor : warehouse;
-                    break;
-                case "btnExamManager":
-                    currBtn.Image = checkColor ? examColor : exam;
-                    break;
-                case "btnRanking":
-                    currBtn.Image = checkColor ? cupColor : cup;
-                    break;
-                default:
-                    currBtn.Image = checkColor ? lineChartColor : lineChart;
-                    break;
-            }
-        }
-
-       
-
         public void activateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
             {
                 disableButton();
                 currBtn = (Guna2Button)senderBtn;
-                if (currBtn.Text == "Thi trực tuyến")
-                    lblTitle.Text = "Thi trực tuyến";
-                setColorImage(currBtn.Name);
+                if (currBtn.Text == "Luyện tập")
+                    lblTitle.Text = "Luyện tập";
                 currBtn.FillColor = Color.FromArgb(239, 242, 249);
                 currBtn.ForeColor = color;
                 iconCurrChildForm.Image = currBtn.Image;
@@ -149,7 +122,6 @@ namespace Exam_Preparation_System
         {
             if (currBtn != null)
             {
-                setColorImage(currBtn.Name);
                 currBtn.FillColor = Color.White;
                 currBtn.ForeColor = Color.Black;
                 panelSubMenuStudent.Visible = false;
@@ -188,23 +160,6 @@ namespace Exam_Preparation_System
             activateButton(sender, RGBColors.color5);
             openChildForm(new FormRanking());
         }
-
-        // Drag Form with pannel
-        /*        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-                private extern static void ReleaseCapture();
-
-                [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-                private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);*/
-
-
-        /*private void panelHeader_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }*/
-
-
-
         private void btnExercise_Click(object sender, EventArgs e)
         {
             panelSubMenuStudent.Visible = false;

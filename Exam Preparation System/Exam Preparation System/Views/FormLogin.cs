@@ -1,4 +1,5 @@
 ﻿using Exam_Preparation_System.Models;
+using Exam_Preparation_System.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,6 @@ namespace Exam_Preparation_System
     {
         public static Form instance;
         public static USER info;
-        ContextDB context = new ContextDB();
         public FormLogin()
         {
             InitializeComponent();
@@ -38,39 +38,21 @@ namespace Exam_Preparation_System
         {
             gtxtUserName.MaxLength = 10;
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-                e.Handled = true;   
+                e.Handled = true;
         }
-
-        private Boolean checkAccount()
-        {
-            try
-            {
-                USER user = context.USERS.Where(u => u.UserID == gtxtUserName.Text && u.Password == gtxtPassword.Text).FirstOrDefault();
-                if (user == null)
-                    return false;
-                info = user;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
-            return true;
-        }
-
 
 
         private void gbtnLogin_Click(object sender, EventArgs e)
         {
+            
             if (gtxtUserName.Text == "" || gtxtPassword.Text == "")
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
-            else if (!checkAccount())
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai");
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
-                FormMainMenu menu = new FormMainMenu();
-                menu.Show();
-                this.Visible = false;
+                PreLoadingOverlay overlay = new PreLoadingOverlay(gtxtUserName.Text, gtxtPassword.Text);
+                overlay.ShowDialog();
             }
         }
     }

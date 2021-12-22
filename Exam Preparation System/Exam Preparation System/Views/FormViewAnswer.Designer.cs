@@ -53,7 +53,7 @@ namespace Exam_Preparation_System
             // pnlExam
             // 
             this.pnlExam.AutoScroll = true;
-            this.pnlExam.Location = new System.Drawing.Point(0, 3);
+            this.pnlExam.Location = new System.Drawing.Point(0, 2);
             this.pnlExam.Name = "pnlExam";
             this.pnlExam.ShadowDecoration.Parent = this.pnlExam;
             this.pnlExam.Size = new System.Drawing.Size(1198, 522);
@@ -94,20 +94,20 @@ namespace Exam_Preparation_System
             // lblFullName
             // 
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
-            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.Location = new System.Drawing.Point(12, 33);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(125, 22);
+            this.lblFullName.Size = new System.Drawing.Size(119, 23);
             this.lblFullName.TabIndex = 20;
             this.lblFullName.Text = "Họ tên thí sinh: ";
             // 
             // lblCorrectQuantity
             // 
             this.lblCorrectQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.lblCorrectQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorrectQuantity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorrectQuantity.Location = new System.Drawing.Point(12, 61);
             this.lblCorrectQuantity.Name = "lblCorrectQuantity";
-            this.lblCorrectQuantity.Size = new System.Drawing.Size(109, 22);
+            this.lblCorrectQuantity.Size = new System.Drawing.Size(101, 23);
             this.lblCorrectQuantity.TabIndex = 21;
             this.lblCorrectQuantity.Text = "Số câu đúng: ";
             // 

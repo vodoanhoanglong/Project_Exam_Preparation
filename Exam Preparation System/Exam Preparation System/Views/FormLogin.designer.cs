@@ -141,9 +141,9 @@ namespace Exam_Preparation_System
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(598, 325);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Show Password";
+            this.label1.Text = "Hiện mật khẩu";
             // 
             // gbtnLogin
             // 
@@ -168,7 +168,7 @@ namespace Exam_Preparation_System
             this.gbtnLogin.ShadowDecoration.Parent = this.gbtnLogin;
             this.gbtnLogin.Size = new System.Drawing.Size(243, 35);
             this.gbtnLogin.TabIndex = 7;
-            this.gbtnLogin.Text = "LOGIN";
+            this.gbtnLogin.Text = "Đăng Nhập";
             this.gbtnLogin.Click += new System.EventHandler(this.gbtnLogin_Click);
             // 
             // guna2PictureBox2
@@ -208,7 +208,7 @@ namespace Exam_Preparation_System
             this.gtxtUserName.Location = new System.Drawing.Point(549, 201);
             this.gtxtUserName.Name = "gtxtUserName";
             this.gtxtUserName.PasswordChar = '\0';
-            this.gtxtUserName.PlaceholderText = "UserName";
+            this.gtxtUserName.PlaceholderText = "Mã đăng nhập";
             this.gtxtUserName.SelectedText = "";
             this.gtxtUserName.ShadowDecoration.Parent = this.gtxtUserName;
             this.gtxtUserName.Size = new System.Drawing.Size(243, 36);
@@ -240,7 +240,7 @@ namespace Exam_Preparation_System
             this.gtxtPassword.Location = new System.Drawing.Point(549, 259);
             this.gtxtPassword.Name = "gtxtPassword";
             this.gtxtPassword.PasswordChar = '\0';
-            this.gtxtPassword.PlaceholderText = "Password";
+            this.gtxtPassword.PlaceholderText = "Mật khẩu";
             this.gtxtPassword.SelectedText = "";
             this.gtxtPassword.ShadowDecoration.Parent = this.gtxtPassword;
             this.gtxtPassword.Size = new System.Drawing.Size(243, 36);

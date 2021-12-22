@@ -82,10 +82,10 @@ namespace Exam_Preparation_System
             this.cmbSubject.HoverState.Parent = this.cmbSubject;
             this.cmbSubject.ItemHeight = 30;
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(128, 136);
+            this.cmbSubject.Location = new System.Drawing.Point(105, 44);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
-            this.cmbSubject.Size = new System.Drawing.Size(498, 36);
+            this.cmbSubject.Size = new System.Drawing.Size(521, 36);
             this.cmbSubject.TabIndex = 0;
             // 
             // txtQuestion
@@ -103,7 +103,7 @@ namespace Exam_Preparation_System
             this.txtQuestion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtQuestion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuestion.HoverState.Parent = this.txtQuestion;
-            this.txtQuestion.Location = new System.Drawing.Point(128, 17);
+            this.txtQuestion.Location = new System.Drawing.Point(105, 90);
             this.txtQuestion.Multiline = true;
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.PasswordChar = '\0';
@@ -111,7 +111,7 @@ namespace Exam_Preparation_System
             this.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtQuestion.SelectedText = "";
             this.txtQuestion.ShadowDecoration.Parent = this.txtQuestion;
-            this.txtQuestion.Size = new System.Drawing.Size(498, 113);
+            this.txtQuestion.Size = new System.Drawing.Size(521, 113);
             this.txtQuestion.TabIndex = 3;
             // 
             // gbAnswer
@@ -126,7 +126,7 @@ namespace Exam_Preparation_System
             this.gbAnswer.Location = new System.Drawing.Point(632, 3);
             this.gbAnswer.Name = "gbAnswer";
             this.gbAnswer.ShadowDecoration.Parent = this.gbAnswer;
-            this.gbAnswer.Size = new System.Drawing.Size(549, 296);
+            this.gbAnswer.Size = new System.Drawing.Size(562, 296);
             this.gbAnswer.TabIndex = 4;
             this.gbAnswer.Text = "Câu trả lời";
             // 
@@ -144,7 +144,7 @@ namespace Exam_Preparation_System
             this.btnDeleteAnswer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteAnswer.ForeColor = System.Drawing.Color.White;
             this.btnDeleteAnswer.HoverState.Parent = this.btnDeleteAnswer;
-            this.btnDeleteAnswer.Location = new System.Drawing.Point(464, 87);
+            this.btnDeleteAnswer.Location = new System.Drawing.Point(485, 87);
             this.btnDeleteAnswer.Name = "btnDeleteAnswer";
             this.btnDeleteAnswer.ShadowDecoration.Parent = this.btnDeleteAnswer;
             this.btnDeleteAnswer.Size = new System.Drawing.Size(65, 31);
@@ -166,7 +166,7 @@ namespace Exam_Preparation_System
             this.btnAddAnswer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAddAnswer.ForeColor = System.Drawing.Color.White;
             this.btnAddAnswer.HoverState.Parent = this.btnAddAnswer;
-            this.btnAddAnswer.Location = new System.Drawing.Point(376, 87);
+            this.btnAddAnswer.Location = new System.Drawing.Point(396, 87);
             this.btnAddAnswer.Name = "btnAddAnswer";
             this.btnAddAnswer.ShadowDecoration.Parent = this.btnAddAnswer;
             this.btnAddAnswer.Size = new System.Drawing.Size(65, 31);
@@ -205,7 +205,7 @@ namespace Exam_Preparation_System
             this.txtAnswer.PlaceholderText = "";
             this.txtAnswer.SelectedText = "";
             this.txtAnswer.ShadowDecoration.Parent = this.txtAnswer;
-            this.txtAnswer.Size = new System.Drawing.Size(395, 36);
+            this.txtAnswer.Size = new System.Drawing.Size(416, 36);
             this.txtAnswer.TabIndex = 1;
             // 
             // dgvAnswer
@@ -267,7 +267,7 @@ namespace Exam_Preparation_System
             this.dgvAnswer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAnswer.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvAnswer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAnswer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvAnswer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Silver;
             this.dgvAnswer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvAnswer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dgvAnswer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -328,7 +328,7 @@ namespace Exam_Preparation_System
             this.btnDeleteQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteQuestion.ForeColor = System.Drawing.Color.White;
             this.btnDeleteQuestion.HoverState.Parent = this.btnDeleteQuestion;
-            this.btnDeleteQuestion.Location = new System.Drawing.Point(558, 178);
+            this.btnDeleteQuestion.Location = new System.Drawing.Point(561, 233);
             this.btnDeleteQuestion.Name = "btnDeleteQuestion";
             this.btnDeleteQuestion.ShadowDecoration.Parent = this.btnDeleteQuestion;
             this.btnDeleteQuestion.Size = new System.Drawing.Size(65, 31);
@@ -350,7 +350,7 @@ namespace Exam_Preparation_System
             this.btnAddQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
             this.btnAddQuestion.HoverState.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Location = new System.Drawing.Point(468, 178);
+            this.btnAddQuestion.Location = new System.Drawing.Point(486, 233);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.ShadowDecoration.Parent = this.btnAddQuestion;
             this.btnAddQuestion.Size = new System.Drawing.Size(65, 31);
@@ -362,7 +362,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(8, 17);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(17, 127);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(71, 27);
             this.guna2HtmlLabel5.TabIndex = 5;
@@ -372,7 +372,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(8, 145);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(17, 46);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(42, 27);
             this.guna2HtmlLabel4.TabIndex = 4;
@@ -439,7 +439,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvQuestion.EnableHeadersVisualStyles = false;
             this.dgvQuestion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvQuestion.Location = new System.Drawing.Point(-2, 277);
+            this.dgvQuestion.Location = new System.Drawing.Point(0, 277);
             this.dgvQuestion.Name = "dgvQuestion";
             this.dgvQuestion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -452,7 +452,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvQuestion.RowHeadersVisible = false;
             this.dgvQuestion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestion.Size = new System.Drawing.Size(1199, 338);
+            this.dgvQuestion.Size = new System.Drawing.Size(1200, 338);
             this.dgvQuestion.TabIndex = 1;
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -461,7 +461,7 @@ namespace Exam_Preparation_System
             this.dgvQuestion.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQuestion.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvQuestion.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvQuestion.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvQuestion.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Silver;
             this.dgvQuestion.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvQuestion.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvQuestion.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;

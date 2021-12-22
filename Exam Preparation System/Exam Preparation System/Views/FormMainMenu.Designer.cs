@@ -104,6 +104,7 @@ namespace Exam_Preparation_System
             this.btnRanking.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnRanking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnRanking.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRanking.CheckedState.Image = global::Exam_Preparation_System.Properties.Resources.cup_color;
             this.btnRanking.CheckedState.Parent = this.btnRanking;
             this.btnRanking.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRanking.CustomImages.Parent = this.btnRanking;
@@ -176,6 +177,7 @@ namespace Exam_Preparation_System
             this.btnChart.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnChart.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnChart.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnChart.CheckedState.Image = global::Exam_Preparation_System.Properties.Resources.line_chart_color;
             this.btnChart.CheckedState.Parent = this.btnChart;
             this.btnChart.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnChart.CustomImages.Parent = this.btnChart;
@@ -200,7 +202,7 @@ namespace Exam_Preparation_System
             this.btnChart.ShadowDecoration.Parent = this.btnChart;
             this.btnChart.Size = new System.Drawing.Size(213, 45);
             this.btnChart.TabIndex = 6;
-            this.btnChart.Text = "Phổ điểm";
+            this.btnChart.Text = "Thống kê";
             this.btnChart.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnChart.TextOffset = new System.Drawing.Point(10, 0);
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
@@ -247,7 +249,7 @@ namespace Exam_Preparation_System
             this.btnViewResult.ShadowDecoration.Parent = this.btnViewResult;
             this.btnViewResult.Size = new System.Drawing.Size(213, 30);
             this.btnViewResult.TabIndex = 7;
-            this.btnViewResult.Text = "Lịch sử luyện thi";
+            this.btnViewResult.Text = "Lịch sử";
             this.btnViewResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnViewResult.TextOffset = new System.Drawing.Point(30, 0);
             this.btnViewResult.Click += new System.EventHandler(this.btnViewResult_Click);
@@ -283,7 +285,7 @@ namespace Exam_Preparation_System
             this.btnExercise.ShadowDecoration.Parent = this.btnExercise;
             this.btnExercise.Size = new System.Drawing.Size(213, 30);
             this.btnExercise.TabIndex = 4;
-            this.btnExercise.Text = "Luyện thi";
+            this.btnExercise.Text = "Làm bài";
             this.btnExercise.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExercise.TextOffset = new System.Drawing.Point(30, 0);
             this.btnExercise.Click += new System.EventHandler(this.btnExercise_Click);
@@ -295,6 +297,7 @@ namespace Exam_Preparation_System
             this.btnExamManager.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnExamManager.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnExamManager.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExamManager.CheckedState.Image = global::Exam_Preparation_System.Properties.Resources.exam_color;
             this.btnExamManager.CheckedState.Parent = this.btnExamManager;
             this.btnExamManager.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExamManager.CustomImages.Parent = this.btnExamManager;
@@ -319,7 +322,7 @@ namespace Exam_Preparation_System
             this.btnExamManager.ShadowDecoration.Parent = this.btnExamManager;
             this.btnExamManager.Size = new System.Drawing.Size(213, 45);
             this.btnExamManager.TabIndex = 3;
-            this.btnExamManager.Text = "Thi trực tuyến";
+            this.btnExamManager.Text = "Luyện tập";
             this.btnExamManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnExamManager.TextOffset = new System.Drawing.Point(10, 0);
             this.btnExamManager.Click += new System.EventHandler(this.btnExamManager_Click);
@@ -331,6 +334,7 @@ namespace Exam_Preparation_System
             this.btnWarehouse.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnWarehouse.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnWarehouse.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnWarehouse.CheckedState.Image = global::Exam_Preparation_System.Properties.Resources.warehouse_color;
             this.btnWarehouse.CheckedState.Parent = this.btnWarehouse;
             this.btnWarehouse.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWarehouse.CustomImages.Parent = this.btnWarehouse;
@@ -367,6 +371,7 @@ namespace Exam_Preparation_System
             this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnHome.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.btnHome.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnHome.CheckedState.Image = global::Exam_Preparation_System.Properties.Resources.home_color;
             this.btnHome.CheckedState.Parent = this.btnHome;
             this.btnHome.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.CustomImages.Parent = this.btnHome;
