@@ -65,7 +65,7 @@ namespace Exam_Preparation_System
             // 
             // btnFinished
             // 
-            this.btnFinished.BorderRadius = 10;
+            this.btnFinished.BorderRadius = 5;
             this.btnFinished.CheckedState.Parent = this.btnFinished;
             this.btnFinished.CustomImages.Parent = this.btnFinished;
             this.btnFinished.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -77,10 +77,10 @@ namespace Exam_Preparation_System
             this.btnFinished.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnFinished.ForeColor = System.Drawing.Color.White;
             this.btnFinished.HoverState.Parent = this.btnFinished;
-            this.btnFinished.Location = new System.Drawing.Point(1025, 78);
+            this.btnFinished.Location = new System.Drawing.Point(1052, 89);
             this.btnFinished.Name = "btnFinished";
             this.btnFinished.ShadowDecoration.Parent = this.btnFinished;
-            this.btnFinished.Size = new System.Drawing.Size(136, 32);
+            this.btnFinished.Size = new System.Drawing.Size(135, 35);
             this.btnFinished.TabIndex = 15;
             this.btnFinished.Text = "Nộp bài";
             this.btnFinished.Click += new System.EventHandler(this.btnFinished_Click);
@@ -102,7 +102,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.ForeColor = System.Drawing.Color.DimGray;
             this.txtTimeExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimeExam.HoverState.Parent = this.txtTimeExam;
-            this.txtTimeExam.Location = new System.Drawing.Point(1025, 14);
+            this.txtTimeExam.Location = new System.Drawing.Point(1052, 47);
             this.txtTimeExam.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeExam.MaxLength = 8;
             this.txtTimeExam.Name = "txtTimeExam";
@@ -112,7 +112,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.SelectedText = "";
             this.txtTimeExam.SelectionStart = 8;
             this.txtTimeExam.ShadowDecoration.Parent = this.txtTimeExam;
-            this.txtTimeExam.Size = new System.Drawing.Size(136, 49);
+            this.txtTimeExam.Size = new System.Drawing.Size(135, 35);
             this.txtTimeExam.TabIndex = 16;
             this.txtTimeExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -134,22 +134,22 @@ namespace Exam_Preparation_System
             // lblSubject
             // 
             this.lblSubject.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubject.Location = new System.Drawing.Point(12, 78);
+            this.lblSubject.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubject.Location = new System.Drawing.Point(12, 101);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(67, 22);
+            this.lblSubject.Size = new System.Drawing.Size(100, 23);
             this.lblSubject.TabIndex = 18;
-            this.lblSubject.Text = "Môn thi: ";
+            this.lblSubject.Text = "Bài làm môn :  ";
             // 
             // lblFullName
             // 
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
-            this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(12, 41);
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(12, 72);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(125, 22);
+            this.lblFullName.Size = new System.Drawing.Size(80, 23);
             this.lblFullName.TabIndex = 19;
-            this.lblFullName.Text = "Họ tên thí sinh: ";
+            this.lblFullName.Text = "Họ và Tên:  ";
             // 
             // FormExamPreparation
             // 

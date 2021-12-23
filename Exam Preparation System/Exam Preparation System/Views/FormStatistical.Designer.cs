@@ -89,9 +89,9 @@ namespace Exam_Preparation_System
             this.lblTitle.Font = new System.Drawing.Font("SVN-Neutraface 2", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(337, 12);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(513, 32);
+            this.lblTitle.Size = new System.Drawing.Size(531, 32);
             this.lblTitle.TabIndex = 14;
-            this.lblTitle.Text = "Thống kê số lượng người thi thử trong tuần";
+            this.lblTitle.Text = "Thống kê số lượng người tham gia trong tuần";
             // 
             // chart
             // 

@@ -27,30 +27,31 @@ namespace Exam_Preparation_System
 
         private void loadData()
         {
-            var query = from q in context.QUESTIONS
-                        join l in context.LISTQUESTIONs on q.QuestionID equals l.QuestionID
-                        join a in context.ANSWERS on q.QuestionID equals a.QuestionID
-                        where a.isCorrect == true && l.ExamQuestionID == examID
-                        group new { q, a } by new { q.QuestionID, q.Contents, a.AnswersContent, q.SUBJECT.SubName }
-                        into gr
-                        select new
-                        {
-                            QuestionID = gr.Key.QuestionID,
-                            Question = gr.Key.Contents,
-                            AnswerCorrect = gr.Key.AnswersContent,
-                            SubjectName = gr.Key.SubName
-                        };
-            var queryExam = context.EXAMQUESTIONS.Find(examID);
+            /* need to repair */
 
-            nudQuantity.Value = queryExam.Quantity;
-            txtTimeExam.Text = queryExam.ExecutionTime;
+            //var query = from q in context.QUESTIONS
+            //            join l in context.LISTQUESTIONs on q.QuestionID equals l.QuestionID
+            //            join a in context.ANSWERS on q.QuestionID equals a.QuestionID
+            //            where a.isCorrect == true && l.ExamQuestionID == examID
+            //            group new { q, a } by new { q.QuestionID, q.Contents, a.AnswersContent, q.SUBJECT.SubName }
+            //            into gr
+            //            select new
+            //            {
+            //                QuestionID = gr.Key.QuestionID,
+            //                Question = gr.Key.Contents,
+            //                AnswerCorrect = gr.Key.AnswersContent,
+            //                SubjectName = gr.Key.SubName
+            //            };
+            //var queryExam = context.EXAMQUESTIONS.Find(examID);
 
+            //nudQuantity.Value = query.Quantity;
+            //txtTimeExam.Text = query.ExecutionTime;
             cmbSubject.DataSource = subject;
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.SelectedValue = subjectID;
 
-            dgvQuestion.DataSource = query.ToList();
+            //dgvQuestion.DataSource = query;
         }
 
         private void FormEditContest_Load(object sender, EventArgs e)
@@ -62,25 +63,7 @@ namespace Exam_Preparation_System
 
         private void btnRandomQuestion_Click(object sender, EventArgs e)
         {
-            var currQuantity = context.QUESTIONS.Where(s => s.SubjectID == (int)cmbSubject.SelectedValue).Count();
-            if (nudQuantity.Value == 0)
-                MessageBox.Show("Số lượng câu hỏi phải lớn hơn 0");
-            else if (nudQuantity.Value > currQuantity)
-                MessageBox.Show("Số lượng câu hỏi trong kho không đủ");
-            else
-            {
-                Random random = new Random();
-
-                int quantity = (int)nudQuantity.Value;
-                int seed = random.Next();
-                var q = (from question in context.QUESTIONS
-                         join answer in context.ANSWERS on question.QuestionID equals answer.QuestionID
-                         where question.SubjectID == (int)cmbSubject.SelectedValue && answer.isCorrect == true
-                         select new { questionID = question.QuestionID, subject = question.SUBJECT.SubName, question = question.Contents, answer = answer.AnswersContent })
-                         .OrderBy(s => (~(s.questionID & seed)) & (s.questionID | seed)).Take(quantity);
-
-                dgvQuestion.DataSource = q.ToList();
-            }
+            FormCreateExam.instance.randomQuestion(dgvQuestion, (int)nudQuantity.Value, (int)cmbSubject.SelectedValue);
         }
 
         private void cmbSubject_SelectionChangeCommitted(object sender, EventArgs e)
@@ -125,7 +108,7 @@ namespace Exam_Preparation_System
                 FormCreateExam.instance.loadData();
                 MessageBox.Show("Cập nhật thành công");
                 this.Close();
-            }    
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -133,6 +116,6 @@ namespace Exam_Preparation_System
             this.Close();
         }
 
-        
+
     }
 }

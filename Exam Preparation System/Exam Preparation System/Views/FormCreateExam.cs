@@ -51,36 +51,40 @@ namespace Exam_Preparation_System
             loadData();
         }
 
-        private void btnRandomQuestion_Click(object sender, EventArgs e)
+        public void randomQuestion(DataGridView table, int quantity, int subjectID)
         {
-            var currQuantity = context.QUESTIONS.Where(s => s.SubjectID == (int)cmbSubject.SelectedValue).Count();
-            if (nudQuantity.Value == 0)
+            var currQuantity = context.QUESTIONS.Where(s => s.SubjectID == subjectID).Count();
+            if (quantity == 0)
                 MessageBox.Show("Số lượng câu hỏi phải lớn hơn 0");
-            else if (nudQuantity.Value > currQuantity)
+            else if (quantity > currQuantity)
                 MessageBox.Show("Số lượng câu hỏi trong kho không đủ");
             else
             {
                 Random random = new Random();
 
-                int quantity = (int)nudQuantity.Value;
-                int subID = (int)cmbSubject.SelectedValue;
                 var rnd = random.NextDouble();
                 var question = context.QUESTIONS
-                    .Where(x => x.SubjectID == subID)
+                    .Where(x => x.SubjectID == subjectID)
                     .Select(x => new
                     {
-                        questionID = x.QuestionID, 
-                        subject = x.SUBJECT.SubName, 
+                        questionID = x.QuestionID,
+                        subject = x.SUBJECT.SubName,
                         question = x.Contents,
                         answer = x.ANSWERS
                         .FirstOrDefault(a => a.QuestionID == x.QuestionID
-                        && a.isCorrect)
+                        && a.isCorrect).AnswersContent
                     })
                     .OrderBy(p => SqlFunctions.Checksum(p.questionID * rnd))
                     .Take(quantity);
 
-                dgvQuestion.DataSource = question.ToList();
+                table.DataSource = question.ToList();
             }
+            
+        }
+
+        private void btnRandomQuestion_Click(object sender, EventArgs e)
+        {
+            randomQuestion(instance.dgvQuestion, (int)instance.nudQuantity.Value,(int)instance.cmbSubject.SelectedValue);
         }
 
         private void resetInput()

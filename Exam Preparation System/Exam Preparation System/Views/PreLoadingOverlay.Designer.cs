@@ -69,6 +69,7 @@
             this.circularProgressBar.SuperscriptText = "";
             this.circularProgressBar.TabIndex = 0;
             this.circularProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar.Value = 68;
             // 
             // timer1
             // 
@@ -87,7 +88,7 @@
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PreLoadingOverlay";
-            this.Opacity = 0.7D;
+            this.Opacity = 0.5D;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);

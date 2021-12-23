@@ -23,7 +23,7 @@ namespace Exam_Preparation_System
         private void btn_gettingstarted_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FormMainMenu.instance.activateButton(FormMainMenu.instance.btnExamManager, FormMainMenu.RGBColors.color3);
+            FormMainMenu.instance.activateButton(FormMainMenu.instance.btnExamManager);
             FormMainMenu.instance.openChildForm(new FormViewExam());
 
         }

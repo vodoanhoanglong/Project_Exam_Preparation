@@ -17,22 +17,12 @@ namespace Exam_Preparation_System
     {
         public static FormMainMenu instance;
 
-        private const string admin = "6051071067";
+        private const string admin = "6051071012";
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
 
-        private System.Drawing.Bitmap home = global::Exam_Preparation_System.Properties.Resources.home;
-        private System.Drawing.Bitmap warehouse = global::Exam_Preparation_System.Properties.Resources.warehouse;
-        private System.Drawing.Bitmap exam = global::Exam_Preparation_System.Properties.Resources.exam;
-        private System.Drawing.Bitmap lineChart = global::Exam_Preparation_System.Properties.Resources.line_chart;
-        private System.Drawing.Bitmap cup = global::Exam_Preparation_System.Properties.Resources.cup;
-        private System.Drawing.Bitmap homeColor = global::Exam_Preparation_System.Properties.Resources.home_color;
-        private System.Drawing.Bitmap warehouseColor = global::Exam_Preparation_System.Properties.Resources.warehouse_color;
-        private System.Drawing.Bitmap examColor = global::Exam_Preparation_System.Properties.Resources.exam_color;
-        private System.Drawing.Bitmap lineChartColor = global::Exam_Preparation_System.Properties.Resources.line_chart_color;
-        private System.Drawing.Bitmap cupColor = global::Exam_Preparation_System.Properties.Resources.cup_color;
-        private System.Drawing.Bitmap userIcon = global::Exam_Preparation_System.Properties.Resources.user;
+        private Bitmap userIcon = Properties.Resources.user;
 
         public FormMainMenu()
         {
@@ -61,23 +51,22 @@ namespace Exam_Preparation_System
             openChildForm(new FormHome());
 
             currBtn = btnHome;
-            leftBorderBtn.BackColor = RGBColors.color1;
             leftBorderBtn.Location = new Point(0, currBtn.Location.Y);
             leftBorderBtn.Size = new Size(5, 45);
+            leftBorderBtn.BackColor = currBtn.CheckedState.ForeColor;
             leftBorderBtn.Visible = true;
             leftBorderBtn.BringToFront();
 
-            currBtn.Image = homeColor;
             currBtn.FillColor = Color.FromArgb(239, 242, 249);
-            currBtn.ForeColor = RGBColors.color1;
-            iconCurrChildForm.Image = currBtn.Image;
+            currBtn.Checked = true;
+            iconCurrChildForm.Image = currBtn.CheckedState.Image;
         }
 
 
         public void openChildForm(Form childForm)
         {
             if (currChildForm != null)
-                currChildForm.Close();  
+                currChildForm.Close();
             currChildForm = childForm;
             lblTitle.Text = childForm.Text;
             childForm.TopLevel = false;
@@ -89,16 +78,7 @@ namespace Exam_Preparation_System
             childForm.Show();
         }
 
-        public struct RGBColors
-        {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(24, 161, 251);
-            public static Color color5 = Color.FromArgb(255, 215, 39);
-        }
-
-        public void activateButton(object senderBtn, Color color)
+        public void activateButton(object senderBtn)
         {
             if (senderBtn != null)
             {
@@ -107,12 +87,12 @@ namespace Exam_Preparation_System
                 if (currBtn.Text == "Luyện tập")
                     lblTitle.Text = "Luyện tập";
                 currBtn.FillColor = Color.FromArgb(239, 242, 249);
-                currBtn.ForeColor = color;
-                iconCurrChildForm.Image = currBtn.Image;
+                currBtn.Checked = true;
+                iconCurrChildForm.Image = currBtn.CheckedState.Image;
 
-                leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currBtn.Location.Y);
-                leftBorderBtn.Size = new Size(5,45);
+                leftBorderBtn.Size = new Size(5, 45);
+                leftBorderBtn.BackColor = currBtn.CheckedState.ForeColor;
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
             }
@@ -124,26 +104,28 @@ namespace Exam_Preparation_System
             {
                 currBtn.FillColor = Color.White;
                 currBtn.ForeColor = Color.Black;
+                currBtn.Checked = false;
                 panelSubMenuStudent.Visible = false;
+
             }
         }
 
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color1);
+            activateButton(sender);
             openChildForm(new FormHome());
         }
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color2);
+            activateButton(sender);
             openChildForm(new FormWarehouse());
         }
 
         private void btnExamManager_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color3);
+            activateButton(sender);
             if (FormLogin.info.UserID != admin)
                 panelSubMenuStudent.Visible = true;
             else openChildForm(new FormCreateExam());
@@ -151,13 +133,13 @@ namespace Exam_Preparation_System
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color4);
+            activateButton(sender);
             openChildForm(new FormStatistical());
         }
 
         private void btnRanking_Click(object sender, EventArgs e)
         {
-            activateButton(sender, RGBColors.color5);
+            activateButton(sender);
             openChildForm(new FormRanking());
         }
         private void btnExercise_Click(object sender, EventArgs e)

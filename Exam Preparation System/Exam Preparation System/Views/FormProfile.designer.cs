@@ -97,7 +97,7 @@ namespace Exam_Preparation_System
             this.PanelEditPass.Controls.Add(this.guna2HtmlLabel7);
             this.PanelEditPass.Controls.Add(this.guna2PictureBox2);
             this.PanelEditPass.FillColor = System.Drawing.Color.White;
-            this.PanelEditPass.Location = new System.Drawing.Point(306, 57);
+            this.PanelEditPass.Location = new System.Drawing.Point(297, 47);
             this.PanelEditPass.Name = "PanelEditPass";
             this.PanelEditPass.Radius = 5;
             this.PanelEditPass.ShadowColor = System.Drawing.Color.Black;
@@ -260,7 +260,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2PictureBox2.Image = global::Exam_Preparation_System.Properties.Resources.password;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(245, 14);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(244, 31);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(170, 127);

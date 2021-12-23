@@ -36,6 +36,7 @@
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -52,10 +53,13 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -77,6 +81,11 @@
     <Compile Include="Chart\ConfigChart.cs" />
     <Compile Include="Chart\Radar.cs" />
     <Compile Include="Chart\SplineArea.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormCreateExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,11 +254,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -284,16 +288,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\warehouse.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exam.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red-dot.png" />
@@ -308,24 +303,6 @@
     <None Include="Resources\green-dot.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\line-chart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home-color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\warehouse-color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exam-color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\line-chart-color.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\password.png" />
   </ItemGroup>
   <ItemGroup>
@@ -335,12 +312,18 @@
     <None Include="Resources\crown.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cup_color.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cup.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\take-exam-color.png" />
+    <None Include="Resources\take-exam.png" />
+    <None Include="Resources\ranking-color.png" />
+    <None Include="Resources\ranking.png" />
+    <None Include="Resources\Signout.png" />
+    <None Include="Resources\warehouse-color.png" />
+    <None Include="Resources\warehouse.png" />
+    <None Include="Resources\Logout.png" />
+    <None Include="Resources\chart-color.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\home-color.png" />
     <Content Include="Resources\Illustration 1.png" />
   </ItemGroup>
   <ItemGroup />
