@@ -62,7 +62,6 @@ namespace Exam_Preparation_System
             this.txtExamID = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnReset = new Guna.UI2.WinForms.Guna2GradientButton();
             this.chart = new Guna.Charts.WinForms.GunaChart();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
@@ -307,31 +306,6 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1.TabIndex = 15;
             this.guna2HtmlLabel1.Text = "Lọc Môn:";
             // 
-            // btnReset
-            // 
-            this.btnReset.Animated = true;
-            this.btnReset.BorderRadius = 10;
-            this.btnReset.CheckedState.Parent = this.btnReset;
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.CustomImages.Parent = this.btnReset;
-            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReset.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReset.DisabledState.Parent = this.btnReset;
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Location = new System.Drawing.Point(535, 186);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.ShadowDecoration.Parent = this.btnReset;
-            this.btnReset.Size = new System.Drawing.Size(110, 32);
-            this.btnReset.TabIndex = 19;
-            this.btnReset.Text = "Đặt lại";
-            this.btnReset.Visible = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
             // chart
             // 
             this.chart.BackColor = System.Drawing.Color.White;
@@ -385,7 +359,6 @@ namespace Exam_Preparation_System
             this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtExamID);
             this.Controls.Add(this.cmbSubject);
@@ -408,7 +381,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2TextBox txtExamID;
         private Guna.UI2.WinForms.Guna2ComboBox cmbSubject;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnReset;
         private Guna.Charts.WinForms.GunaChart chart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExamID;

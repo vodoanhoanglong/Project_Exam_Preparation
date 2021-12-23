@@ -14,6 +14,7 @@ namespace Exam_Preparation_System
     public partial class FormViewExam : Form
     {
         private ContextDB context = Program.context;
+        private string currKey = "";
         public FormViewExam()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Exam_Preparation_System
         private void FormViewExam_Load(object sender, EventArgs e)
         {
             dgvListContests.AutoGenerateColumns = false;
+            dgvListContests.Columns["CreateDate"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
 
             DataTable table = new DataTable();
             table.Columns.Add("SubjectID", typeof(int));
@@ -44,41 +46,38 @@ namespace Exam_Preparation_System
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.DataSource = table;
-
-
-            btnReset.Visible = true;
         }
 
-        private void loadData()
+        private void loadData(int subID = -1)
         {
-            int subID = (int)cmbSubject.SelectedValue;
-            var query = from lq in context.LISTQUESTIONs
-                        group lq by lq.ExamQuestionID into lqs
-                        join eq in context.EXAMQUESTIONS
-                        on lqs.FirstOrDefault().ExamQuestionID equals eq.ExamQuestionID
-                        select new
-                        { eq.ExamQuestionID, eq.Quantity, eq.ExecutionTime, eq.SubjectID, eq.SUBJECT.SubName, CreateDate = lqs.FirstOrDefault().CreateDate };
-            dgvListContests.DataSource = subID == -1 ? query.ToList() : query.Where(x => x.SubjectID == subID).ToList();
-        }
+            var query = !currKey.Equals("")
+                ? context.EXAMQUESTIONS
+                .AsEnumerable()
+                .Where(x => x.ExamQuestionID == Convert.ToInt32(currKey))
+                : subID == -1 ?
+                context.EXAMQUESTIONS
+                : context.EXAMQUESTIONS.Where(x => x.SubjectID == subID);
 
-        private void loadDataByID()
-        {
-            int examID = Convert.ToInt32(txtExamID.Text);
-            var query = from lq in context.LISTQUESTIONs
-                        group lq by lq.ExamQuestionID into lqs
-                        join eq in context.EXAMQUESTIONS
-                        on lqs.FirstOrDefault().ExamQuestionID equals eq.ExamQuestionID
-                        where lqs.FirstOrDefault().ExamQuestionID == examID
-                        select new
-                        { eq.ExamQuestionID, eq.Quantity, eq.ExecutionTime, eq.SubjectID, eq.SUBJECT.SubName, CreateDate = lqs.FirstOrDefault().CreateDate };
-            dgvListContests.DataSource = query.ToList();
+            dgvListContests.DataSource = query
+            .Select(x => new
+            {
+                x.ExamQuestionID,
+                x.Quantity,
+                x.ExecutionTime,
+                x.SubjectID,
+                x.SUBJECT.SubName,
+                x.LISTQUESTIONs
+                        .FirstOrDefault(ele => ele.ExamQuestionID == x.ExamQuestionID)
+                        .CreateDate
+            })
+            .ToList();
         }
 
         private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtExamID.Text = "";
-            btnReset.Enabled = false;
-            loadData();
+            if (currKey.Equals(""))
+                txtExamID.Text = "";
+            loadData((int)cmbSubject.SelectedValue);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -87,8 +86,11 @@ namespace Exam_Preparation_System
                 MessageBox.Show("Vui lòng nhập mã đề");
             else
             {
-                btnReset.Enabled = true;
-                loadDataByID();
+                currKey = txtExamID.Text;
+                if (cmbSubject.SelectedIndex != 0)
+                    cmbSubject.SelectedIndex = 0;
+                else loadData();
+                currKey = "";
             }    
         }
 
@@ -96,14 +98,6 @@ namespace Exam_Preparation_System
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            cmbSubject.SelectedValue = -1;
-            txtExamID.Text = "";
-            loadData();
-            btnReset.Enabled = false;
         }
 
         private void dgvListContests_CellContentClick(object sender, DataGridViewCellEventArgs e)

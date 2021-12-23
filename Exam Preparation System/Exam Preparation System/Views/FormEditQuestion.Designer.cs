@@ -30,18 +30,15 @@ namespace Exam_Preparation_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbAnswer = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvAnswer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.AnswerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnEditQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -50,6 +47,9 @@ namespace Exam_Preparation_System
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AnswerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnswer)).BeginInit();
             this.SuspendLayout();
@@ -102,51 +102,51 @@ namespace Exam_Preparation_System
             // 
             this.dgvAnswer.AllowUserToAddRows = false;
             this.dgvAnswer.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvAnswer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAnswer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAnswer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnswer.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAnswer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvAnswer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvAnswer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAnswer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAnswer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAnswer.ColumnHeadersHeight = 20;
             this.dgvAnswer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Answer,
             this.Correct,
             this.AnswerID});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAnswer.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAnswer.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAnswer.EnableHeadersVisualStyles = false;
             this.dgvAnswer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAnswer.Location = new System.Drawing.Point(0, 38);
             this.dgvAnswer.Name = "dgvAnswer";
             this.dgvAnswer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAnswer.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAnswer.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAnswer.RowHeadersVisible = false;
             this.dgvAnswer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAnswer.Size = new System.Drawing.Size(1020, 171);
@@ -173,28 +173,6 @@ namespace Exam_Preparation_System
             this.dgvAnswer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAnswer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAnswer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnswer_CellContentClick);
-            // 
-            // Answer
-            // 
-            this.Answer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Answer.DividerWidth = 1;
-            this.Answer.FillWeight = 222.5611F;
-            this.Answer.HeaderText = "Câu trả lời";
-            this.Answer.Name = "Answer";
-            // 
-            // Correct
-            // 
-            this.Correct.FillWeight = 39.98104F;
-            this.Correct.HeaderText = "Đáp án đúng";
-            this.Correct.MinimumWidth = 10;
-            this.Correct.Name = "Correct";
-            // 
-            // AnswerID
-            // 
-            this.AnswerID.HeaderText = "ID";
-            this.AnswerID.Name = "AnswerID";
-            this.AnswerID.ReadOnly = true;
-            this.AnswerID.Visible = false;
             // 
             // txtQuestion
             // 
@@ -333,6 +311,30 @@ namespace Exam_Preparation_System
             // 
             this.Elipse.BorderRadius = 4;
             this.Elipse.TargetControl = this;
+            // 
+            // Answer
+            // 
+            this.Answer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Answer.DataPropertyName = "AnswersContent";
+            this.Answer.DividerWidth = 1;
+            this.Answer.FillWeight = 222.5611F;
+            this.Answer.HeaderText = "Câu trả lời";
+            this.Answer.Name = "Answer";
+            // 
+            // Correct
+            // 
+            this.Correct.DataPropertyName = "isCorrect";
+            this.Correct.FillWeight = 39.98104F;
+            this.Correct.HeaderText = "Đáp án đúng";
+            this.Correct.MinimumWidth = 10;
+            this.Correct.Name = "Correct";
+            // 
+            // AnswerID
+            // 
+            this.AnswerID.DataPropertyName = "AnswerID";
+            this.AnswerID.HeaderText = "ID";
+            this.AnswerID.Name = "AnswerID";
+            this.AnswerID.Visible = false;
             // 
             // FormEditQuestion
             // 

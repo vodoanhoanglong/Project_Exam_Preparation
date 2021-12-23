@@ -28,9 +28,8 @@ namespace Exam_Preparation_System
 
         private void FormEditQuestion_Load(object sender, EventArgs e)
         {
-            var query = from answer in context.ANSWERS
-                        where answer.QuestionID == questionID
-                        select new { answer.AnswersContent, answer.isCorrect, answer.AnswersID };
+            var query = context.ANSWERS.Where(x => x.QuestionID == this.questionID);
+                
 
             cmbSubject.DataSource = subject;
             cmbSubject.ValueMember = "SubjectID";
@@ -38,6 +37,7 @@ namespace Exam_Preparation_System
             cmbSubject.SelectedValue = subjectID;
 
             txtQuestion.Text = contentQuestion;
+
 
             query.ToList().ForEach(x =>
             {

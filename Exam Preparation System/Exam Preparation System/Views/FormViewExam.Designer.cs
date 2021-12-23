@@ -36,6 +36,10 @@ namespace Exam_Preparation_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvListContests = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtExamID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
             this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExcuteTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +47,6 @@ namespace Exam_Preparation_System
             this.CreateDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtExamID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnReset = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListContests)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,68 +140,6 @@ namespace Exam_Preparation_System
             this.dgvListContests.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvListContests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListContests_CellContentClick);
             // 
-            // ExamID
-            // 
-            this.ExamID.DataPropertyName = "ExamQuestionID";
-            this.ExamID.FillWeight = 113.9086F;
-            this.ExamID.HeaderText = "Mã đề thi";
-            this.ExamID.Name = "ExamID";
-            this.ExamID.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.FillWeight = 113.9086F;
-            this.Quantity.HeaderText = "Số lượng câu hỏi";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // ExcuteTime
-            // 
-            this.ExcuteTime.DataPropertyName = "ExecutionTime";
-            this.ExcuteTime.FillWeight = 113.9086F;
-            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
-            this.ExcuteTime.Name = "ExcuteTime";
-            this.ExcuteTime.ReadOnly = true;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.FillWeight = 113.9086F;
-            this.SubName.HeaderText = "Môn";
-            this.SubName.Name = "SubName";
-            this.SubName.ReadOnly = true;
-            // 
-            // CreateDate
-            // 
-            this.CreateDate.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy hh:mm:ss";
-            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CreateDate.FillWeight = 113.9086F;
-            this.CreateDate.HeaderText = "Ngày tạo";
-            this.CreateDate.Name = "CreateDate";
-            this.CreateDate.ReadOnly = true;
-            // 
-            // Details
-            // 
-            this.Details.FillWeight = 30.45685F;
-            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Details.HeaderText = "Chọn";
-            this.Details.Name = "Details";
-            this.Details.ReadOnly = true;
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.Text = "Thi thử";
-            this.Details.UseColumnTextForButtonValue = true;
-            // 
-            // SubjectID
-            // 
-            this.SubjectID.DataPropertyName = "SubjectID";
-            this.SubjectID.HeaderText = "SubjectID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
-            // 
             // cmbSubject
             // 
             this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
@@ -251,7 +188,7 @@ namespace Exam_Preparation_System
             this.txtExamID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtExamID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExamID.HoverState.Parent = this.txtExamID;
-            this.txtExamID.Location = new System.Drawing.Point(604, 81);
+            this.txtExamID.Location = new System.Drawing.Point(727, 81);
             this.txtExamID.Name = "txtExamID";
             this.txtExamID.PasswordChar = '\0';
             this.txtExamID.PlaceholderText = "Tìm kiếm theo Mã đề";
@@ -277,7 +214,7 @@ namespace Exam_Preparation_System
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Parent = this.btnSearch;
-            this.btnSearch.Location = new System.Drawing.Point(936, 81);
+            this.btnSearch.Location = new System.Drawing.Point(1059, 81);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
             this.btnSearch.Size = new System.Drawing.Size(136, 32);
@@ -285,30 +222,67 @@ namespace Exam_Preparation_System
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnReset
+            // ExamID
             // 
-            this.btnReset.Animated = true;
-            this.btnReset.BorderRadius = 5;
-            this.btnReset.CheckedState.Parent = this.btnReset;
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.CustomImages.Parent = this.btnReset;
-            this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReset.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReset.DisabledState.Parent = this.btnReset;
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.HoverState.Parent = this.btnReset;
-            this.btnReset.Location = new System.Drawing.Point(1078, 81);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.ShadowDecoration.Parent = this.btnReset;
-            this.btnReset.Size = new System.Drawing.Size(110, 32);
-            this.btnReset.TabIndex = 15;
-            this.btnReset.Text = "Đặt lại";
-            this.btnReset.Visible = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.ExamID.DataPropertyName = "ExamQuestionID";
+            this.ExamID.FillWeight = 113.9086F;
+            this.ExamID.HeaderText = "Mã đề thi";
+            this.ExamID.Name = "ExamID";
+            this.ExamID.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.FillWeight = 113.9086F;
+            this.Quantity.HeaderText = "Số lượng câu hỏi";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // ExcuteTime
+            // 
+            this.ExcuteTime.DataPropertyName = "ExecutionTime";
+            this.ExcuteTime.FillWeight = 113.9086F;
+            this.ExcuteTime.HeaderText = "Thời lượng cuộc thi";
+            this.ExcuteTime.Name = "ExcuteTime";
+            this.ExcuteTime.ReadOnly = true;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.FillWeight = 113.9086F;
+            this.SubName.HeaderText = "Môn";
+            this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
+            // 
+            // CreateDate
+            // 
+            this.CreateDate.DataPropertyName = "CreateDate";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy HH:mm:ss";
+            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CreateDate.FillWeight = 113.9086F;
+            this.CreateDate.HeaderText = "Ngày tạo";
+            this.CreateDate.Name = "CreateDate";
+            this.CreateDate.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.FillWeight = 30.45685F;
+            this.Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Details.HeaderText = "Chọn";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "Thi thử";
+            this.Details.UseColumnTextForButtonValue = true;
+            // 
+            // SubjectID
+            // 
+            this.SubjectID.DataPropertyName = "SubjectID";
+            this.SubjectID.HeaderText = "SubjectID";
+            this.SubjectID.Name = "SubjectID";
+            this.SubjectID.ReadOnly = true;
+            this.SubjectID.Visible = false;
             // 
             // FormViewExam
             // 
@@ -316,7 +290,6 @@ namespace Exam_Preparation_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(242)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1200, 614);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtExamID);
             this.Controls.Add(this.cmbSubject);
@@ -340,6 +313,7 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2ComboBox cmbSubject;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtExamID;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExamID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExcuteTime;
@@ -347,7 +321,5 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn CreateDate;
         private System.Windows.Forms.DataGridViewButtonColumn Details;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSearch;
-        private Guna.UI2.WinForms.Guna2GradientButton btnReset;
     }
 }

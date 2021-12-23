@@ -40,16 +40,10 @@ namespace Exam_Preparation_System
             this.gbAnswer = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmb_filterSubject = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSearchQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,6 +60,12 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAnswer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestion)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -76,9 +76,9 @@ namespace Exam_Preparation_System
             // 
             this.gbAnswer.Controls.Add(this.guna2HtmlLabel7);
             this.gbAnswer.Controls.Add(this.guna2HtmlLabel6);
-            this.gbAnswer.Controls.Add(this.cmb_filterSubject);
+            this.gbAnswer.Controls.Add(this.cmbFilter);
             this.gbAnswer.Controls.Add(this.btnSearchQuestion);
-            this.gbAnswer.Controls.Add(this.guna2TextBox1);
+            this.gbAnswer.Controls.Add(this.txtSearch);
             this.gbAnswer.Controls.Add(this.dgvQuestion);
             this.gbAnswer.Controls.Add(this.btnDeleteQuestion);
             this.gbAnswer.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,25 +112,26 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel6.TabIndex = 13;
             this.guna2HtmlLabel6.Text = "Môn";
             // 
-            // cmb_filterSubject
+            // cmbFilter
             // 
-            this.cmb_filterSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_filterSubject.BorderRadius = 4;
-            this.cmb_filterSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_filterSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_filterSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_filterSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_filterSubject.FocusedState.Parent = this.cmb_filterSubject;
-            this.cmb_filterSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_filterSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmb_filterSubject.HoverState.Parent = this.cmb_filterSubject;
-            this.cmb_filterSubject.ItemHeight = 30;
-            this.cmb_filterSubject.ItemsAppearance.Parent = this.cmb_filterSubject;
-            this.cmb_filterSubject.Location = new System.Drawing.Point(45, 46);
-            this.cmb_filterSubject.Name = "cmb_filterSubject";
-            this.cmb_filterSubject.ShadowDecoration.Parent = this.cmb_filterSubject;
-            this.cmb_filterSubject.Size = new System.Drawing.Size(388, 36);
-            this.cmb_filterSubject.TabIndex = 12;
+            this.cmbFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFilter.BorderRadius = 4;
+            this.cmbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilter.FocusedState.Parent = this.cmbFilter;
+            this.cmbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbFilter.HoverState.Parent = this.cmbFilter;
+            this.cmbFilter.ItemHeight = 30;
+            this.cmbFilter.ItemsAppearance.Parent = this.cmbFilter;
+            this.cmbFilter.Location = new System.Drawing.Point(45, 46);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.ShadowDecoration.Parent = this.cmbFilter;
+            this.cmbFilter.Size = new System.Drawing.Size(388, 36);
+            this.cmbFilter.TabIndex = 12;
+            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedIndexChanged);
             // 
             // btnSearchQuestion
             // 
@@ -154,33 +155,34 @@ namespace Exam_Preparation_System
             this.btnSearchQuestion.Size = new System.Drawing.Size(87, 36);
             this.btnSearchQuestion.TabIndex = 11;
             this.btnSearchQuestion.Text = "Tìm kiếm";
+            this.btnSearchQuestion.Click += new System.EventHandler(this.btnSearchQuestion_Click);
             // 
-            // guna2TextBox1
+            // txtSearch
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderRadius = 4;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(532, 46);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.guna2TextBox1.PlaceholderText = "Tìm kiếm câu hỏi";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(450, 36);
-            this.guna2TextBox1.TabIndex = 10;
+            this.txtSearch.Animated = true;
+            this.txtSearch.BorderRadius = 4;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.Location = new System.Drawing.Point(532, 46);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "Tìm kiếm câu hỏi";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(450, 36);
+            this.txtSearch.TabIndex = 10;
             // 
             // dgvQuestion
             // 
@@ -260,55 +262,6 @@ namespace Exam_Preparation_System
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQuestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuestion_CellContentClick);
-            // 
-            // QuestionID
-            // 
-            this.QuestionID.DividerWidth = 1;
-            this.QuestionID.FillWeight = 25.75676F;
-            this.QuestionID.HeaderText = "ID";
-            this.QuestionID.Name = "QuestionID";
-            // 
-            // Question
-            // 
-            this.Question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Question.DividerWidth = 1;
-            this.Question.FillWeight = 209.1663F;
-            this.Question.HeaderText = "Nội dung câu hỏi";
-            this.Question.Name = "Question";
-            // 
-            // isCorrect
-            // 
-            this.isCorrect.DividerWidth = 1;
-            this.isCorrect.FillWeight = 124.9875F;
-            this.isCorrect.HeaderText = "Đáp án đúng";
-            this.isCorrect.Name = "isCorrect";
-            // 
-            // SubjectName
-            // 
-            this.SubjectName.DividerWidth = 1;
-            this.SubjectName.FillWeight = 94.07223F;
-            this.SubjectName.HeaderText = "Môn";
-            this.SubjectName.Name = "SubjectName";
-            this.SubjectName.ReadOnly = true;
-            // 
-            // Details
-            // 
-            this.Details.DividerWidth = 1;
-            this.Details.FillWeight = 33.7075F;
-            this.Details.HeaderText = "Chi tiết";
-            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.Details.Name = "Details";
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.Text = "...";
-            this.Details.UseColumnTextForLinkValue = true;
-            // 
-            // SubjectID
-            // 
-            this.SubjectID.DividerWidth = 1;
-            this.SubjectID.HeaderText = "SubjectID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
             // 
             // btnDeleteQuestion
             // 
@@ -408,6 +361,7 @@ namespace Exam_Preparation_System
             this.btnDeleteAnswer.Size = new System.Drawing.Size(87, 36);
             this.btnDeleteAnswer.TabIndex = 6;
             this.btnDeleteAnswer.Text = "Xóa";
+            this.btnDeleteAnswer.Click += new System.EventHandler(this.btnDeleteAnswer_Click);
             // 
             // dgvAnswer
             // 
@@ -482,6 +436,7 @@ namespace Exam_Preparation_System
             this.dgvAnswer.ThemeStyle.RowsStyle.Height = 22;
             this.dgvAnswer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAnswer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAnswer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnswer_CellContentClick);
             // 
             // Answer
             // 
@@ -516,9 +471,10 @@ namespace Exam_Preparation_System
             this.btnAddQuestion.Location = new System.Drawing.Point(77, 202);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.ShadowDecoration.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Size = new System.Drawing.Size(87, 36);
+            this.btnAddQuestion.Size = new System.Drawing.Size(103, 36);
             this.btnAddQuestion.TabIndex = 7;
-            this.btnAddQuestion.Text = "Thêm";
+            this.btnAddQuestion.Text = "Thêm câu hỏi";
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // btnAddAnswer
             // 
@@ -542,6 +498,7 @@ namespace Exam_Preparation_System
             this.btnAddAnswer.Size = new System.Drawing.Size(87, 36);
             this.btnAddAnswer.TabIndex = 4;
             this.btnAddAnswer.Text = "Thêm";
+            this.btnAddAnswer.Click += new System.EventHandler(this.btnAddAnswer_Click);
             // 
             // txtQuestion
             // 
@@ -637,6 +594,60 @@ namespace Exam_Preparation_System
             this.txtAnswer.Size = new System.Drawing.Size(450, 36);
             this.txtAnswer.TabIndex = 1;
             // 
+            // QuestionID
+            // 
+            this.QuestionID.DataPropertyName = "QuestionID";
+            this.QuestionID.DividerWidth = 1;
+            this.QuestionID.FillWeight = 25.75676F;
+            this.QuestionID.HeaderText = "ID";
+            this.QuestionID.Name = "QuestionID";
+            // 
+            // Question
+            // 
+            this.Question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Question.DataPropertyName = "Contents";
+            this.Question.DividerWidth = 1;
+            this.Question.FillWeight = 209.1663F;
+            this.Question.HeaderText = "Nội dung câu hỏi";
+            this.Question.Name = "Question";
+            // 
+            // isCorrect
+            // 
+            this.isCorrect.DataPropertyName = "AnswersContent";
+            this.isCorrect.DividerWidth = 1;
+            this.isCorrect.FillWeight = 124.9875F;
+            this.isCorrect.HeaderText = "Đáp án đúng";
+            this.isCorrect.Name = "isCorrect";
+            // 
+            // SubjectName
+            // 
+            this.SubjectName.DataPropertyName = "SubName";
+            this.SubjectName.DividerWidth = 1;
+            this.SubjectName.FillWeight = 94.07223F;
+            this.SubjectName.HeaderText = "Môn";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.DividerWidth = 1;
+            this.Details.FillWeight = 33.7075F;
+            this.Details.HeaderText = "Chi tiết";
+            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.Details.Name = "Details";
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "...";
+            this.Details.UseColumnTextForLinkValue = true;
+            // 
+            // SubjectID
+            // 
+            this.SubjectID.DataPropertyName = "SubjectID";
+            this.SubjectID.DividerWidth = 1;
+            this.SubjectID.HeaderText = "SubjectID";
+            this.SubjectID.Name = "SubjectID";
+            this.SubjectID.ReadOnly = true;
+            this.SubjectID.Visible = false;
+            // 
             // FormWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,14 +677,8 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQuestion;
         private Guna.UI2.WinForms.Guna2GradientButton btnDeleteQuestion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QuestionID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Question;
-        private System.Windows.Forms.DataGridViewTextBoxColumn isCorrect;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
-        private System.Windows.Forms.DataGridViewLinkColumn Details;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
         private Guna.UI2.WinForms.Guna2GradientButton btnSearchQuestion;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2GradientButton btnDeleteAnswer;
@@ -689,6 +694,12 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2TextBox txtAnswer;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_filterSubject;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuestionID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Question;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isCorrect;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
+        private System.Windows.Forms.DataGridViewLinkColumn Details;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
     }
 }

@@ -29,7 +29,6 @@ namespace Exam_Preparation_System
 
         public void loadData(int subID = -1)
         {
-            MessageBox.Show(currKey);
             var query = !currKey.Equals("")
                 ? context.EXAMQUESTIONS
                 .AsEnumerable()

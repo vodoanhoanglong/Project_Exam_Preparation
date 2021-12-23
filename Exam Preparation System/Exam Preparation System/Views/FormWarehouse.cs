@@ -17,6 +17,7 @@ namespace Exam_Preparation_System
         private List<SUBJECT> subject = null;
         private const int MaxRows = 4;
         public static FormWarehouse instance;
+        private string currKey = "";
         public FormWarehouse()
         {
             InitializeComponent();
@@ -29,18 +30,27 @@ namespace Exam_Preparation_System
             txtQuestion.Text = "";
             dgvAnswer.Rows.Clear();
             dgvAnswer.Refresh();
-
         }
 
-        public void loadData()
+        public void loadData(int subID = -1)
         {
-            // get data with correct answer
-            var query = from question in context.QUESTIONS
-                         join answer in context.ANSWERS on question.QuestionID equals answer.QuestionID
-                         where answer.isCorrect == true
-                         select new { questionID = question.QuestionID, subjectID = question.SUBJECT.SubjectID, subject = question.SUBJECT.SubName, question = question.Contents, answerCorrect = answer.AnswersContent };
+      
+            var query = !currKey.Equals("")
+                ? context.QUESTIONS
+                .Where(x => x.Contents.Contains(currKey))
+                : subID == -1 ?
+                context.QUESTIONS
+                : context.QUESTIONS.Where(x => x.SubjectID == subID);
 
-            dgvQuestion.DataSource = query.ToList();
+            dgvQuestion.DataSource = query.OrderByDescending(x => x.QuestionID)
+                .Select(x => new 
+                { 
+                    x.QuestionID,
+                    x.SubjectID,
+                    x.SUBJECT.SubName,
+                    x.Contents,
+                    x.ANSWERS.FirstOrDefault(ele => ele.isCorrect).AnswersContent
+                }).ToList();
         }
 
         private void FormWarehouse_Load(object sender, EventArgs e)
@@ -52,13 +62,27 @@ namespace Exam_Preparation_System
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
 
-            dgvQuestion.Columns["QuestionID"].DataPropertyName = "questionID";
-            dgvQuestion.Columns["SubjectName"].DataPropertyName = "subject";
-            dgvQuestion.Columns["Question"].DataPropertyName = "question";
-            dgvQuestion.Columns["isCorrect"].DataPropertyName = "answerCorrect";
-            dgvQuestion.Columns["SubjectID"].DataPropertyName = "subjectID";
+            DataTable table = new DataTable();
+            table.Columns.Add("SubjectID", typeof(int));
+            table.Columns.Add("SubName", typeof(string));
 
-            loadData();
+            subject.ForEach(x =>
+            {
+                var rowDT = table.NewRow();
+                rowDT["SubjectID"] = x.SubjectID;
+                rowDT["SubName"] = x.SubName;
+                table.Rows.Add(rowDT);
+            });
+
+            DataRow row = table.NewRow();
+            row["SubjectID"] = -1;
+            row["SubName"] = "Tất cả các môn";
+
+            table.Rows.InsertAt(row, 0);
+
+            cmbFilter.ValueMember = "SubjectID";
+            cmbFilter.DisplayMember = "SubName";
+            cmbFilter.DataSource = table;
         }
 
 
@@ -98,6 +122,8 @@ namespace Exam_Preparation_System
                 string contentQuestion = dgvQuestion.Rows[e.RowIndex].Cells[1].Value.ToString();
                 FormEditQuestion dialog = new FormEditQuestion(questionID, subjectID, contentQuestion, subject);
                 dialog.ShowDialog();
+                txtSearch.Text = "";
+                reload();
             }
         }
 
@@ -151,7 +177,9 @@ namespace Exam_Preparation_System
             {
                 saveData();
                 resetInput();
-                loadData();
+                txtSearch.Text = "";
+                reload();
+                MessageBox.Show("Thêm câu hỏi thành công");
             }
         }
 
@@ -167,7 +195,35 @@ namespace Exam_Preparation_System
                 context.QUESTIONS.Remove(delQuestion);
                 context.SaveChanges();
             }
-            loadData();
+            txtSearch.Text = "";
+            reload();
+        }
+
+        private void cmbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (currKey.Equals(""))
+                txtSearch.Text = "";
+            loadData((int)cmbFilter.SelectedValue);
+        }
+
+        private void btnSearchQuestion_Click(object sender, EventArgs e)
+        {
+            string key = txtSearch.Text;
+            if (key.Equals(""))
+                MessageBox.Show("Vui lòng nhập mã đề cần tìm");
+            else
+            {
+                currKey = key;
+                reload();
+                currKey = "";
+            }
+        }
+
+        private void reload()
+        {
+            if (cmbFilter.SelectedIndex != 0)
+                cmbFilter.SelectedIndex = 0;
+            else loadData();
         }
     }
 }

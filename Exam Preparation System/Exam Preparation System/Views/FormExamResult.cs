@@ -24,7 +24,7 @@ namespace Exam_Preparation_System
             double point = (10 * totalCorrect) / totalQuestion;
 
             lblCodeExam.Text = codeExam;
-            lblFullName.Text += FormLogin.info.FullName;
+            lblFullName.Text = FormLogin.info.FullName;
             lblPoint.Text += Math.Round(point, 1).ToString();
 
             progressBar.Value = totalCorrect;

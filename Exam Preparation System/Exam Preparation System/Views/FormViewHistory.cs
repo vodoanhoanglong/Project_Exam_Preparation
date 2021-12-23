@@ -17,6 +17,7 @@ namespace Exam_Preparation_System
     {
         ContextDB context = Program.context;
         private int totalQuestion, totalCorrect, totalWrong;
+        private string currKey = "";
         public FormViewHistory()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Exam_Preparation_System
         private void FormViewHistory_Load(object sender, EventArgs e)
         {
             dgvHistory.AutoGenerateColumns = false;
-            dgvHistory.Columns["ExamDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvHistory.Columns["ExamDate"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
 
             DataTable table = new DataTable();
             table.Columns.Add("SubjectID", typeof(int));
@@ -52,34 +53,21 @@ namespace Exam_Preparation_System
             loadChart();
         }
 
-        private void loadData()
+        private void loadData(int subID = -1)
         {
-            int subID = (int)cmbSubject.SelectedValue;
-            var query = context.EXAMRESULTS.Where(x => x.UserID == FormLogin.info.UserID)
-                        .OrderByDescending(x => x.ExamDate)
-                        .Select(er => new
-                        {   
-                            er.EXAMQUESTION.ExamQuestionID,
-                            er.EXAMQUESTION.Quantity,
-                            er.EXAMQUESTION.ExecutionTime,
-                            er.TimeComplete,
-                            er.EXAMQUESTION.SUBJECT.SubName,
-                            er.QuantityCorrect,
-                            er.Points,
-                            er.ExamDate,
-                            filterBySub = er.EXAMQUESTION.SubjectID
-                        });
-            dgvHistory.DataSource = subID == -1
-                ? query.ToList()
-                : query.Where(x => x.filterBySub == subID).ToList();
-        }
+            string userID = FormLogin.info.UserID;
+            var query = !currKey.Equals("")
+                ? context.EXAMRESULTS
+                .AsEnumerable()
+                .Where(x => x.UserID == userID 
+                && x.ExamQuestionID == Convert.ToInt32(currKey))
+                : subID == -1 ?
+                context.EXAMRESULTS.Where(x => x.UserID == userID)
+                : context.EXAMRESULTS.Where(x => x.UserID == userID
+                && x.EXAMQUESTION.SubjectID == subID);
 
-        private void loadDataByID()
-        {
-            int examID = Convert.ToInt32(txtExamID.Text);
-            var query = context.EXAMRESULTS.Where(x => x.ExamQuestionID == examID)
-                        .OrderByDescending(x => x.ExamDate)
-                        .Select(er => new 
+            dgvHistory.DataSource = query.OrderByDescending(x => x.ExamDate)
+                        .Select(er => new
                         {
                             er.EXAMQUESTION.ExamQuestionID,
                             er.EXAMQUESTION.Quantity,
@@ -89,15 +77,14 @@ namespace Exam_Preparation_System
                             er.QuantityCorrect,
                             er.Points,
                             er.ExamDate,
-                        });
-            dgvHistory.DataSource = query.ToList();
+                        }).ToList();
         }
 
         private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtExamID.Text = "";
-            btnReset.Visible = false;
-            loadData();
+            if (currKey.Equals(""))
+                txtExamID.Text = "";
+            loadData((int)cmbSubject.SelectedValue);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -106,18 +93,14 @@ namespace Exam_Preparation_System
                 MessageBox.Show("Vui lòng nhập mã đề");
             else
             {
-                btnReset.Visible = true;
-                loadDataByID();
+                currKey = txtExamID.Text;
+                if (cmbSubject.SelectedIndex != 0)
+                    cmbSubject.SelectedIndex = 0;
+                else loadData();
+                currKey = "";
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            cmbSubject.SelectedValue = -1;
-            txtExamID.Text = "";
-            loadData();
-            btnReset.Visible = false;
-        }
 
         private void txtExamID_KeyPress(object sender, KeyPressEventArgs e)
         {
