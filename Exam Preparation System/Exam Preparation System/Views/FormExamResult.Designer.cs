@@ -119,8 +119,10 @@ namespace Exam_Preparation_System
             // 
             // btnBack
             // 
+            this.btnBack.Animated = true;
             this.btnBack.BorderRadius = 10;
             this.btnBack.CheckedState.Parent = this.btnBack;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.CustomImages.Parent = this.btnBack;
             this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -141,8 +143,10 @@ namespace Exam_Preparation_System
             // 
             // btnViewAnswer
             // 
+            this.btnViewAnswer.Animated = true;
             this.btnViewAnswer.BorderRadius = 10;
             this.btnViewAnswer.CheckedState.Parent = this.btnViewAnswer;
+            this.btnViewAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAnswer.CustomImages.Parent = this.btnViewAnswer;
             this.btnViewAnswer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnViewAnswer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -170,6 +174,7 @@ namespace Exam_Preparation_System
             this.lblCodeExam.Name = "lblCodeExam";
             this.lblCodeExam.Size = new System.Drawing.Size(3, 2);
             this.lblCodeExam.TabIndex = 2;
+            this.lblCodeExam.Text = null;
             // 
             // FormExamResult
             // 

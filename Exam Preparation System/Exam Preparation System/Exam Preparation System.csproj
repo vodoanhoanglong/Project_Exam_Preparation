@@ -79,8 +79,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chart\ConfigChart.cs" />
+    <Compile Include="Chart\MixedBarAndLine.cs" />
     <Compile Include="Chart\Radar.cs" />
-    <Compile Include="Chart\SplineArea.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

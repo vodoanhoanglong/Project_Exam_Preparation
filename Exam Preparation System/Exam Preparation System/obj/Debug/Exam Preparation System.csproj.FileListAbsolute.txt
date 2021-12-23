@@ -154,3 +154,9 @@ D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Pre
 D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
 D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
 D:\Code\Cshaps\Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\DevExpress.Data.v21.2.dll
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\DevExpress.Data.v21.2.xml
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
+D:\PTTKHT Project\Project_Exam_Preparation\Exam Preparation System\Exam Preparation System\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll

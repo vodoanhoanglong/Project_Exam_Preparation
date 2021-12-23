@@ -25,33 +25,35 @@ namespace Exam_Preparation_System
             this.subject = subject;
         }
 
+        public void setNudQuantity(int quanity)
+        {
+            this.nudQuantity.Value = quanity;
+        }
+
         private void loadData()
         {
-            /* need to repair */
+            var query = context.LISTQUESTIONs
+                .Where(x => x.ExamQuestionID == this.examID)
+                .Select(x => new 
+                { 
+                    x.QuestionID,
+                    x.QUESTION.Contents,
+                    x.EXAMQUESTION.SUBJECT.SubName,
+                    x.QUESTION.ANSWERS.FirstOrDefault(ele => ele.isCorrect).AnswersContent,
+                    x.EXAMQUESTION.Quantity,
+                    x.EXAMQUESTION.ExecutionTime
+                })
+                .ToList();
 
-            //var query = from q in context.QUESTIONS
-            //            join l in context.LISTQUESTIONs on q.QuestionID equals l.QuestionID
-            //            join a in context.ANSWERS on q.QuestionID equals a.QuestionID
-            //            where a.isCorrect == true && l.ExamQuestionID == examID
-            //            group new { q, a } by new { q.QuestionID, q.Contents, a.AnswersContent, q.SUBJECT.SubName }
-            //            into gr
-            //            select new
-            //            {
-            //                QuestionID = gr.Key.QuestionID,
-            //                Question = gr.Key.Contents,
-            //                AnswerCorrect = gr.Key.AnswersContent,
-            //                SubjectName = gr.Key.SubName
-            //            };
-            //var queryExam = context.EXAMQUESTIONS.Find(examID);
-
-            //nudQuantity.Value = query.Quantity;
-            //txtTimeExam.Text = query.ExecutionTime;
             cmbSubject.DataSource = subject;
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.SelectedValue = subjectID;
 
-            //dgvQuestion.DataSource = query;
+            nudQuantity.Value = query[0].Quantity;
+            txtTimeExam.Text = query[0].ExecutionTime;
+
+            dgvQuestion.DataSource = query;
         }
 
         private void FormEditContest_Load(object sender, EventArgs e)
@@ -63,7 +65,9 @@ namespace Exam_Preparation_System
 
         private void btnRandomQuestion_Click(object sender, EventArgs e)
         {
-            FormCreateExam.instance.randomQuestion(dgvQuestion, (int)nudQuantity.Value, (int)cmbSubject.SelectedValue);
+            FormCreateExam.instance.randomQuestion(this.dgvQuestion,
+                (int)this.nudQuantity.Value,
+                (int)this.cmbSubject.SelectedValue);
         }
 
         private void cmbSubject_SelectionChangeCommitted(object sender, EventArgs e)

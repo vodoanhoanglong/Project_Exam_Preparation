@@ -16,6 +16,7 @@ namespace Exam_Preparation_System
     public partial class FormCreateExam : Form
     {
         ContextDB context = Program.context;
+        private string currKey = "";
         private List<SUBJECT> subject = null;
         public static FormCreateExam instance = null;
         public FormCreateExam()
@@ -26,15 +27,38 @@ namespace Exam_Preparation_System
                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
         }
 
-        public void loadData()
+        public void loadData(int subID = -1)
         {
-            var query = from lq in context.LISTQUESTIONs
-                        group lq by lq.ExamQuestionID into lqs
-                        join eq in context.EXAMQUESTIONS
-                        on lqs.FirstOrDefault().ExamQuestionID equals eq.ExamQuestionID    
-                        select new 
-                        { eq.ExamQuestionID, eq.Quantity, eq.ExecutionTime, eq.SubjectID ,eq.SUBJECT.SubName, CreateDate = lqs.FirstOrDefault().CreateDate };
-            dgvListContests.DataSource = query.ToList();
+            MessageBox.Show(currKey);
+            var query = !currKey.Equals("")
+                ? context.EXAMQUESTIONS
+                .AsEnumerable()
+                .Where(x => x.ExamQuestionID == Convert.ToInt32(currKey))
+                : subID == -1 ? 
+                context.EXAMQUESTIONS
+                : context.EXAMQUESTIONS.Where(x => x.SubjectID == subID);
+
+            dgvListContests.DataSource = query
+            .Select(x => new
+            {
+                x.ExamQuestionID,
+                x.Quantity,
+                x.ExecutionTime,
+                x.SubjectID,
+                x.SUBJECT.SubName,
+                x.LISTQUESTIONs
+                        .FirstOrDefault(ele => ele.ExamQuestionID == x.ExamQuestionID)
+                        .CreateDate
+            })
+            .OrderByDescending(x => x.ExamQuestionID)
+            .ToList();
+        }
+
+        private void cmbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (currKey.Equals(""))
+                txtSearch.Text = "";
+            loadData((int)cmbFilter.SelectedValue);
         }
 
         private void FormCreateExam_Load(object sender, EventArgs e)
@@ -46,9 +70,29 @@ namespace Exam_Preparation_System
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
 
-            dgvListContests.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+            DataTable table = new DataTable();
+            table.Columns.Add("SubjectID", typeof(int));
+            table.Columns.Add("SubName", typeof(string));
 
-            loadData();
+            subject.ForEach(x =>
+            {
+                var rowDT = table.NewRow();
+                rowDT["SubjectID"] = x.SubjectID;
+                rowDT["SubName"] = x.SubName;
+                table.Rows.Add(rowDT);
+            });
+
+            DataRow row = table.NewRow();
+            row["SubjectID"] = -1;
+            row["SubName"] = "Tất cả các môn";
+
+            table.Rows.InsertAt(row, 0);
+
+            cmbFilter.ValueMember = "SubjectID";
+            cmbFilter.DisplayMember = "SubName";
+            cmbFilter.DataSource = table;
+
+            dgvListContests.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
         }
 
         public void randomQuestion(DataGridView table, int quantity, int subjectID)
@@ -67,14 +111,14 @@ namespace Exam_Preparation_System
                     .Where(x => x.SubjectID == subjectID)
                     .Select(x => new
                     {
-                        questionID = x.QuestionID,
-                        subject = x.SUBJECT.SubName,
-                        question = x.Contents,
-                        answer = x.ANSWERS
+                        x.QuestionID,
+                        x.SUBJECT.SubName,
+                        x.Contents,
+                        x.ANSWERS
                         .FirstOrDefault(a => a.QuestionID == x.QuestionID
                         && a.isCorrect).AnswersContent
                     })
-                    .OrderBy(p => SqlFunctions.Checksum(p.questionID * rnd))
+                    .OrderBy(p => SqlFunctions.Checksum(p.QuestionID * rnd))
                     .Take(quantity);
 
                 table.DataSource = question.ToList();
@@ -84,7 +128,8 @@ namespace Exam_Preparation_System
 
         private void btnRandomQuestion_Click(object sender, EventArgs e)
         {
-            randomQuestion(instance.dgvQuestion, (int)instance.nudQuantity.Value,(int)instance.cmbSubject.SelectedValue);
+            randomQuestion(instance.dgvQuestion, (int)instance.nudQuantity.Value,
+                (int)instance.cmbSubject.SelectedValue);
         }
 
         private void resetInput()
@@ -169,6 +214,21 @@ namespace Exam_Preparation_System
                 context.SaveChanges();
             }
             loadData();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string key = txtSearch.Text;
+            if (key.Equals(""))
+                MessageBox.Show("Vui lòng nhập mã đề cần tìm");
+            else
+            {
+                currKey = key;
+                if (cmbFilter.SelectedIndex != 0)
+                    cmbFilter.SelectedIndex = 0;
+                else loadData();
+                currKey = "";
+            }    
         }
     }
 }

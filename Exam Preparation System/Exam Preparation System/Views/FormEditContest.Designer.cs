@@ -37,6 +37,10 @@ namespace Exam_Preparation_System
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnswersContent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRandomQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -49,10 +53,6 @@ namespace Exam_Preparation_System
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblExamID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AnswersContent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,6 @@ namespace Exam_Preparation_System
             this.dgvQuestion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuestion.BackgroundColor = System.Drawing.Color.White;
             this.dgvQuestion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvQuestion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvQuestion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -144,6 +143,42 @@ namespace Exam_Preparation_System
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // QuestionID
+            // 
+            this.QuestionID.DataPropertyName = "QuestionID";
+            this.QuestionID.DividerWidth = 1;
+            this.QuestionID.FillWeight = 21.55428F;
+            this.QuestionID.HeaderText = "ID";
+            this.QuestionID.Name = "QuestionID";
+            this.QuestionID.ReadOnly = true;
+            // 
+            // Question
+            // 
+            this.Question.DataPropertyName = "Contents";
+            this.Question.DividerWidth = 1;
+            this.Question.FillWeight = 220.0623F;
+            this.Question.HeaderText = "Nội dung câu hỏi";
+            this.Question.Name = "Question";
+            this.Question.ReadOnly = true;
+            // 
+            // AnswersContent
+            // 
+            this.AnswersContent.DataPropertyName = "AnswersContent";
+            this.AnswersContent.DividerWidth = 1;
+            this.AnswersContent.FillWeight = 102.9112F;
+            this.AnswersContent.HeaderText = "Đáp án";
+            this.AnswersContent.Name = "AnswersContent";
+            this.AnswersContent.ReadOnly = true;
+            // 
+            // SubjectName
+            // 
+            this.SubjectName.DataPropertyName = "SubName";
+            this.SubjectName.DividerWidth = 1;
+            this.SubjectName.FillWeight = 80.09148F;
+            this.SubjectName.HeaderText = "Môn";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
+            // 
             // cmbSubject
             // 
             this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
@@ -179,8 +214,10 @@ namespace Exam_Preparation_System
             // 
             // btnRandomQuestion
             // 
+            this.btnRandomQuestion.Animated = true;
             this.btnRandomQuestion.BorderRadius = 5;
             this.btnRandomQuestion.CheckedState.Parent = this.btnRandomQuestion;
+            this.btnRandomQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRandomQuestion.CustomImages.Parent = this.btnRandomQuestion;
             this.btnRandomQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRandomQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -201,6 +238,7 @@ namespace Exam_Preparation_System
             // 
             // txtTimeExam
             // 
+            this.txtTimeExam.Animated = true;
             this.txtTimeExam.BorderRadius = 4;
             this.txtTimeExam.BorderThickness = 2;
             this.txtTimeExam.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -296,8 +334,10 @@ namespace Exam_Preparation_System
             // 
             // btnCancel
             // 
+            this.btnCancel.Animated = true;
             this.btnCancel.BorderRadius = 5;
             this.btnCancel.CheckedState.Parent = this.btnCancel;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.CustomImages.Parent = this.btnCancel;
             this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -328,8 +368,10 @@ namespace Exam_Preparation_System
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Animated = true;
             this.btnUpdate.BorderRadius = 5;
             this.btnUpdate.CheckedState.Parent = this.btnUpdate;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.CustomImages.Parent = this.btnUpdate;
             this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -347,42 +389,6 @@ namespace Exam_Preparation_System
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // QuestionID
-            // 
-            this.QuestionID.DataPropertyName = "QuestionID";
-            this.QuestionID.DividerWidth = 1;
-            this.QuestionID.FillWeight = 21.55428F;
-            this.QuestionID.HeaderText = "ID";
-            this.QuestionID.Name = "QuestionID";
-            this.QuestionID.ReadOnly = true;
-            // 
-            // Question
-            // 
-            this.Question.DataPropertyName = "Contents";
-            this.Question.DividerWidth = 1;
-            this.Question.FillWeight = 220.0623F;
-            this.Question.HeaderText = "Nội dung câu hỏi";
-            this.Question.Name = "Question";
-            this.Question.ReadOnly = true;
-            // 
-            // AnswersContent
-            // 
-            this.AnswersContent.DataPropertyName = "AnswersContent";
-            this.AnswersContent.DividerWidth = 1;
-            this.AnswersContent.FillWeight = 102.9112F;
-            this.AnswersContent.HeaderText = "Đáp án";
-            this.AnswersContent.Name = "AnswersContent";
-            this.AnswersContent.ReadOnly = true;
-            // 
-            // SubjectName
-            // 
-            this.SubjectName.DataPropertyName = "SubName";
-            this.SubjectName.DividerWidth = 1;
-            this.SubjectName.FillWeight = 80.09148F;
-            this.SubjectName.HeaderText = "Môn";
-            this.SubjectName.Name = "SubjectName";
-            this.SubjectName.ReadOnly = true;
             // 
             // FormEditContest
             // 

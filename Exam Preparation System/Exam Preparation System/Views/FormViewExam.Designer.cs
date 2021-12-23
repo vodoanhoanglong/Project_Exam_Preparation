@@ -237,8 +237,9 @@ namespace Exam_Preparation_System
             // 
             // txtExamID
             // 
+            this.txtExamID.Animated = true;
             this.txtExamID.BorderRadius = 4;
-            this.txtExamID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExamID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtExamID.DefaultText = "";
             this.txtExamID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtExamID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -262,8 +263,10 @@ namespace Exam_Preparation_System
             // 
             // btnSearch
             // 
+            this.btnSearch.Animated = true;
             this.btnSearch.BorderRadius = 5;
             this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.CustomImages.Parent = this.btnSearch;
             this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -284,8 +287,10 @@ namespace Exam_Preparation_System
             // 
             // btnReset
             // 
+            this.btnReset.Animated = true;
             this.btnReset.BorderRadius = 5;
             this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.CustomImages.Parent = this.btnReset;
             this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

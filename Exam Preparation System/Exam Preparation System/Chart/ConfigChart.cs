@@ -16,8 +16,8 @@ namespace Config
             var chartFont = new Guna.Charts.WinForms.ChartFont()
             {
                 FontName = "Segoe UI",
-                Size = 10,
-                Style = Guna.Charts.WinForms.ChartFontStyle.Normal
+                Size = 12,
+                Style = Guna.Charts.WinForms.ChartFontStyle.Bold
             };
 
             config.Title.ForeColor = foreColor;

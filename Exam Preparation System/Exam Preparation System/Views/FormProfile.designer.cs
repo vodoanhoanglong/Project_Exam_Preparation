@@ -107,8 +107,10 @@ namespace Exam_Preparation_System
             // 
             // btnExit
             // 
+            this.btnExit.Animated = true;
             this.btnExit.BorderRadius = 10;
             this.btnExit.CheckedState.Parent = this.btnExit;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.CustomImages.Parent = this.btnExit;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -130,8 +132,10 @@ namespace Exam_Preparation_System
             // 
             // btnDoiMatKhau
             // 
+            this.btnDoiMatKhau.Animated = true;
             this.btnDoiMatKhau.BorderRadius = 10;
             this.btnDoiMatKhau.CheckedState.Parent = this.btnDoiMatKhau;
+            this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoiMatKhau.CustomImages.Parent = this.btnDoiMatKhau;
             this.btnDoiMatKhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDoiMatKhau.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -152,6 +156,7 @@ namespace Exam_Preparation_System
             // 
             // txtNhaplaiPassWord
             // 
+            this.txtNhaplaiPassWord.Animated = true;
             this.txtNhaplaiPassWord.BorderRadius = 4;
             this.txtNhaplaiPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhaplaiPassWord.DefaultText = "";
@@ -187,6 +192,7 @@ namespace Exam_Preparation_System
             // 
             // txtPassWordMoi
             // 
+            this.txtPassWordMoi.Animated = true;
             this.txtPassWordMoi.BorderRadius = 4;
             this.txtPassWordMoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassWordMoi.DefaultText = "";
@@ -222,6 +228,7 @@ namespace Exam_Preparation_System
             // 
             // txtPasswordCu
             // 
+            this.txtPasswordCu.Animated = true;
             this.txtPasswordCu.BorderRadius = 4;
             this.txtPasswordCu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPasswordCu.DefaultText = "";
@@ -452,8 +459,10 @@ namespace Exam_Preparation_System
             // 
             // btnEditPass
             // 
+            this.btnEditPass.Animated = true;
             this.btnEditPass.BorderRadius = 10;
             this.btnEditPass.CheckedState.Parent = this.btnEditPass;
+            this.btnEditPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditPass.CustomImages.Parent = this.btnEditPass;
             this.btnEditPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

@@ -39,6 +39,9 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbAnswer = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dgvAnswer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AnswerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnEditQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -47,9 +50,6 @@ namespace Exam_Preparation_System
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Answer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correct = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.AnswerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnswer)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +111,7 @@ namespace Exam_Preparation_System
             this.dgvAnswer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnswer.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAnswer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvAnswer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvAnswer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvAnswer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -174,8 +174,31 @@ namespace Exam_Preparation_System
             this.dgvAnswer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAnswer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnswer_CellContentClick);
             // 
+            // Answer
+            // 
+            this.Answer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Answer.DividerWidth = 1;
+            this.Answer.FillWeight = 222.5611F;
+            this.Answer.HeaderText = "Câu trả lời";
+            this.Answer.Name = "Answer";
+            // 
+            // Correct
+            // 
+            this.Correct.FillWeight = 39.98104F;
+            this.Correct.HeaderText = "Đáp án đúng";
+            this.Correct.MinimumWidth = 10;
+            this.Correct.Name = "Correct";
+            // 
+            // AnswerID
+            // 
+            this.AnswerID.HeaderText = "ID";
+            this.AnswerID.Name = "AnswerID";
+            this.AnswerID.ReadOnly = true;
+            this.AnswerID.Visible = false;
+            // 
             // txtQuestion
             // 
+            this.txtQuestion.Animated = true;
             this.txtQuestion.BorderRadius = 4;
             this.txtQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQuestion.DefaultText = "";
@@ -227,8 +250,10 @@ namespace Exam_Preparation_System
             // 
             // btnEditQuestion
             // 
+            this.btnEditQuestion.Animated = true;
             this.btnEditQuestion.BorderRadius = 5;
             this.btnEditQuestion.CheckedState.Parent = this.btnEditQuestion;
+            this.btnEditQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditQuestion.CustomImages.Parent = this.btnEditQuestion;
             this.btnEditQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -249,8 +274,10 @@ namespace Exam_Preparation_System
             // 
             // btnExit
             // 
+            this.btnExit.Animated = true;
             this.btnExit.BorderRadius = 5;
             this.btnExit.CheckedState.Parent = this.btnExit;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.CustomImages.Parent = this.btnExit;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -306,28 +333,6 @@ namespace Exam_Preparation_System
             // 
             this.Elipse.BorderRadius = 4;
             this.Elipse.TargetControl = this;
-            // 
-            // Answer
-            // 
-            this.Answer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Answer.DividerWidth = 1;
-            this.Answer.FillWeight = 222.5611F;
-            this.Answer.HeaderText = "Câu trả lời";
-            this.Answer.Name = "Answer";
-            // 
-            // Correct
-            // 
-            this.Correct.FillWeight = 39.98104F;
-            this.Correct.HeaderText = "Đáp án đúng";
-            this.Correct.MinimumWidth = 10;
-            this.Correct.Name = "Correct";
-            // 
-            // AnswerID
-            // 
-            this.AnswerID.HeaderText = "ID";
-            this.AnswerID.Name = "AnswerID";
-            this.AnswerID.ReadOnly = true;
-            this.AnswerID.Visible = false;
             // 
             // FormEditQuestion
             // 

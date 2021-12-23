@@ -73,6 +73,7 @@ namespace Exam_Preparation_System
             this.btn_gettingstarted.BackColor = System.Drawing.Color.Transparent;
             this.btn_gettingstarted.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btn_gettingstarted.CheckedState.Parent = this.btn_gettingstarted;
+            this.btn_gettingstarted.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_gettingstarted.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_gettingstarted.HoverState.ImageSize = new System.Drawing.Size(240, 55);
             this.btn_gettingstarted.HoverState.Parent = this.btn_gettingstarted;

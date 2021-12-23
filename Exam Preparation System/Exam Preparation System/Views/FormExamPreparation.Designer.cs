@@ -65,8 +65,10 @@ namespace Exam_Preparation_System
             // 
             // btnFinished
             // 
+            this.btnFinished.Animated = true;
             this.btnFinished.BorderRadius = 5;
             this.btnFinished.CheckedState.Parent = this.btnFinished;
+            this.btnFinished.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFinished.CustomImages.Parent = this.btnFinished;
             this.btnFinished.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFinished.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -109,6 +111,7 @@ namespace Exam_Preparation_System
             this.txtTimeExam.PasswordChar = '\0';
             this.txtTimeExam.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtTimeExam.PlaceholderText = "";
+            this.txtTimeExam.ReadOnly = true;
             this.txtTimeExam.SelectedText = "";
             this.txtTimeExam.SelectionStart = 8;
             this.txtTimeExam.ShadowDecoration.Parent = this.txtTimeExam;

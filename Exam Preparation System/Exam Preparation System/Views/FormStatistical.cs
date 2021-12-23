@@ -1,5 +1,6 @@
 ﻿using Chart;
 using Config;
+using Exam_Preparation_System.Chart;
 using Exam_Preparation_System.Models;
 using System;
 using System.Collections;
@@ -53,32 +54,40 @@ namespace Exam_Preparation_System
         private void loadData()
         {
             int examID = Convert.ToInt32(cmbExamID.SelectedValue);
-            int total, day = 5;
+            int total, day = 6;
+            double correctPercent, totalPoint;
             List<int> arr = new List<int>();
-            DateTime endDate = DateTime.Now.Date;
-            DateTime startDate = DateTime.Today.AddDays(-6).Date;
-            var query = context.EXAMRESULTS
-                .Where(x => DbFunctions.TruncateTime(x.ExamDate) >= startDate && DbFunctions.TruncateTime(x.ExamDate) <= endDate);
-            /*.GroupBy(
-             p => DbFunctions.TruncateTime(p.ExamDate),
-             p => p.ExamResultID,
-            (key, g) => new { ExamDate = key, ExamResultID = g.ToList() });*/
-            if (examID != -1)
-                query = query.Where(x => x.ExamQuestionID == examID);
+            List<double> arrPercent = new List<double>();
+            DateTime startDate = DateTime.Today.AddDays(-day).Date;
+            var query = examID != -1 ?
+                context.EXAMRESULTS.Where(x => x.ExamQuestionID == examID)
+                : context.EXAMRESULTS;
+
             while (day >= 0)
             {
-                total = query.Where(x => DbFunctions.TruncateTime(x.ExamDate) == startDate).ToList().Count;
-                arr.Add(total);
                 startDate = DateTime.Today.AddDays(-day--).Date;
-            };
+                query = query.Where(x => DbFunctions.TruncateTime(x.ExamDate) == startDate);
+                total = query.ToList().Count;
 
-            total = query.Where(x => DbFunctions.TruncateTime(x.ExamDate) == endDate).ToList().Count;
-            arr.Add(total);
+                totalPoint = query
+                    .AsEnumerable()
+                    .Sum(x => checkNaN(x.Points));
+
+                correctPercent = (total * totalPoint / Math.Pow(total, 2) * 10);
+                arrPercent.Add(Math.Round(checkNaN(correctPercent), 2));
+                arr.Add(total);
+            };
 
             chart.Datasets.Clear();
             chart.ApplyConfig(ConfigChart.Config(), System.Drawing.Color.FromArgb(239, 242, 249));
-            SplineArea.data = arr;
-            SplineArea.loadChart(chart);
+            MixedBarAndLine.data = arr;
+            MixedBarAndLine.percent = arrPercent;
+            MixedBarAndLine.loadChart(chart);
+        }
+
+        private double checkNaN(double value)
+        {
+            return double.IsNaN(value) ? 0 : value;
         }
 
         private void cmbExamID_SelectedIndexChanged(object sender, EventArgs e)

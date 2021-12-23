@@ -71,8 +71,10 @@ namespace Exam_Preparation_System
             // 
             // btnBack
             // 
+            this.btnBack.Animated = true;
             this.btnBack.BorderRadius = 5;
             this.btnBack.CheckedState.Parent = this.btnBack;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.CustomImages.Parent = this.btnBack;
             this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

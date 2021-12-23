@@ -151,6 +151,7 @@ namespace Exam_Preparation_System
             this.gbtnLogin.AutoRoundedCorners = true;
             this.gbtnLogin.BorderRadius = 16;
             this.gbtnLogin.CheckedState.Parent = this.gbtnLogin;
+            this.gbtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gbtnLogin.CustomImages.Parent = this.gbtnLogin;
             this.gbtnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.gbtnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
