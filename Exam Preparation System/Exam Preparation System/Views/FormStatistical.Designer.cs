@@ -140,7 +140,7 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.cmbExamID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormStatistical";
-            this.Text = "Thống kê số lượng thi";
+            this.Text = "Thống kê số lượng làm bài";
             this.Load += new System.EventHandler(this.FormStatisticalOfAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

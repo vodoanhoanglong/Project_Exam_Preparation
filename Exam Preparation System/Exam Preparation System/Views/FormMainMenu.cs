@@ -39,7 +39,7 @@ namespace Exam_Preparation_System
             {
                 btnWarehouse.Visible = false;
                 btnChart.Visible = false;
-                btnExamManager.Text = "Thi trực tuyến";
+                btnExamManager.Text = "Luyện tập";
             }
             else btnRanking.Visible = false;
 

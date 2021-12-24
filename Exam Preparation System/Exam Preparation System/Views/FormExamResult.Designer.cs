@@ -97,25 +97,30 @@ namespace Exam_Preparation_System
             // 
             // lblFullName
             // 
+            this.lblFullName.AutoSize = false;
             this.lblFullName.BackColor = System.Drawing.Color.Transparent;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblFullName.Location = new System.Drawing.Point(298, 240);
+            this.lblFullName.Location = new System.Drawing.Point(234, 243);
+            this.lblFullName.MaximumSize = new System.Drawing.Size(306, 30);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(41, 27);
+            this.lblFullName.Size = new System.Drawing.Size(306, 27);
             this.lblFullName.TabIndex = 4;
-            this.lblFullName.Text = "Tên";
+            this.lblFullName.Text = "Ho ten";
+            this.lblFullName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPoint
             // 
+            this.lblPoint.AutoSize = false;
             this.lblPoint.BackColor = System.Drawing.Color.Transparent;
             this.lblPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
-            this.lblPoint.Location = new System.Drawing.Point(298, 316);
+            this.lblPoint.Location = new System.Drawing.Point(255, 309);
             this.lblPoint.Name = "lblPoint";
-            this.lblPoint.Size = new System.Drawing.Size(88, 27);
+            this.lblPoint.Size = new System.Drawing.Size(264, 27);
             this.lblPoint.TabIndex = 5;
             this.lblPoint.Text = "Điểm thi: ";
+            this.lblPoint.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnBack
             // 

@@ -1,6 +1,7 @@
 ﻿using Guna.Charts.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Exam_Preparation_System.Chart
                 dayOfWeek.Add(DateTime.Today.AddDays(-index--).DayOfWeek.ToString());
 
             //Chart configuration 
+            chart.Misc.BarCornerRadius = 10;
             chart.YAxes.GridLines.Display = false;
 
             //Create new barDataset
@@ -31,8 +33,8 @@ namespace Exam_Preparation_System.Chart
                 barDataset.DataPoints.Add(dayOfWeek[i], percent[i]);
 
             //Create new areaDataset
-            var lineDataset = new Guna.Charts.WinForms.GunaLineDataset();
-            lineDataset.FillColor = System.Drawing.Color.Red;
+            var lineDataset = new Guna.Charts.WinForms.GunaSplineDataset();
+            lineDataset.FillColor = Color.FromArgb(84, 193, 254);
             lineDataset.Label = "Số thí sinh tham gia";
             lineDataset.BorderColor = lineDataset.FillColor;
             lineDataset.PointRadius = 5;

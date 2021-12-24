@@ -44,6 +44,12 @@ namespace Exam_Preparation_System
             this.btnSearchQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDeleteQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -60,12 +66,6 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAnswer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.SubjectID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestion)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -262,6 +262,60 @@ namespace Exam_Preparation_System
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvQuestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuestion_CellContentClick);
+            // 
+            // QuestionID
+            // 
+            this.QuestionID.DataPropertyName = "QuestionID";
+            this.QuestionID.DividerWidth = 1;
+            this.QuestionID.FillWeight = 25.75676F;
+            this.QuestionID.HeaderText = "ID";
+            this.QuestionID.Name = "QuestionID";
+            // 
+            // Question
+            // 
+            this.Question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Question.DataPropertyName = "Contents";
+            this.Question.DividerWidth = 1;
+            this.Question.FillWeight = 209.1663F;
+            this.Question.HeaderText = "Nội dung câu hỏi";
+            this.Question.Name = "Question";
+            // 
+            // isCorrect
+            // 
+            this.isCorrect.DataPropertyName = "AnswersContent";
+            this.isCorrect.DividerWidth = 1;
+            this.isCorrect.FillWeight = 124.9875F;
+            this.isCorrect.HeaderText = "Đáp án đúng";
+            this.isCorrect.Name = "isCorrect";
+            // 
+            // SubjectName
+            // 
+            this.SubjectName.DataPropertyName = "SubName";
+            this.SubjectName.DividerWidth = 1;
+            this.SubjectName.FillWeight = 94.07223F;
+            this.SubjectName.HeaderText = "Môn";
+            this.SubjectName.Name = "SubjectName";
+            this.SubjectName.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.DividerWidth = 1;
+            this.Details.FillWeight = 33.7075F;
+            this.Details.HeaderText = "Chi tiết";
+            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.Details.Name = "Details";
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.Text = "...";
+            this.Details.UseColumnTextForLinkValue = true;
+            // 
+            // SubjectID
+            // 
+            this.SubjectID.DataPropertyName = "SubjectID";
+            this.SubjectID.DividerWidth = 1;
+            this.SubjectID.HeaderText = "SubjectID";
+            this.SubjectID.Name = "SubjectID";
+            this.SubjectID.ReadOnly = true;
+            this.SubjectID.Visible = false;
             // 
             // btnDeleteQuestion
             // 
@@ -594,60 +648,6 @@ namespace Exam_Preparation_System
             this.txtAnswer.Size = new System.Drawing.Size(450, 36);
             this.txtAnswer.TabIndex = 1;
             // 
-            // QuestionID
-            // 
-            this.QuestionID.DataPropertyName = "QuestionID";
-            this.QuestionID.DividerWidth = 1;
-            this.QuestionID.FillWeight = 25.75676F;
-            this.QuestionID.HeaderText = "ID";
-            this.QuestionID.Name = "QuestionID";
-            // 
-            // Question
-            // 
-            this.Question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Question.DataPropertyName = "Contents";
-            this.Question.DividerWidth = 1;
-            this.Question.FillWeight = 209.1663F;
-            this.Question.HeaderText = "Nội dung câu hỏi";
-            this.Question.Name = "Question";
-            // 
-            // isCorrect
-            // 
-            this.isCorrect.DataPropertyName = "AnswersContent";
-            this.isCorrect.DividerWidth = 1;
-            this.isCorrect.FillWeight = 124.9875F;
-            this.isCorrect.HeaderText = "Đáp án đúng";
-            this.isCorrect.Name = "isCorrect";
-            // 
-            // SubjectName
-            // 
-            this.SubjectName.DataPropertyName = "SubName";
-            this.SubjectName.DividerWidth = 1;
-            this.SubjectName.FillWeight = 94.07223F;
-            this.SubjectName.HeaderText = "Môn";
-            this.SubjectName.Name = "SubjectName";
-            this.SubjectName.ReadOnly = true;
-            // 
-            // Details
-            // 
-            this.Details.DividerWidth = 1;
-            this.Details.FillWeight = 33.7075F;
-            this.Details.HeaderText = "Chi tiết";
-            this.Details.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.Details.Name = "Details";
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.Text = "...";
-            this.Details.UseColumnTextForLinkValue = true;
-            // 
-            // SubjectID
-            // 
-            this.SubjectID.DataPropertyName = "SubjectID";
-            this.SubjectID.DividerWidth = 1;
-            this.SubjectID.HeaderText = "SubjectID";
-            this.SubjectID.Name = "SubjectID";
-            this.SubjectID.ReadOnly = true;
-            this.SubjectID.Visible = false;
-            // 
             // FormWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,7 +659,7 @@ namespace Exam_Preparation_System
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormWarehouse";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.Text = "Kho đề";
+            this.Text = "Kho câu hỏi";
             this.Load += new System.EventHandler(this.FormWarehouse_Load);
             this.gbAnswer.ResumeLayout(false);
             this.gbAnswer.PerformLayout();
