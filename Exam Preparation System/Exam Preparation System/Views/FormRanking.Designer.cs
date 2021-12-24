@@ -30,7 +30,7 @@ namespace Exam_Preparation_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRanking));
             this.shapeTwo = new Guna.UI2.WinForms.Guna2Shapes();
             this.shapeThree = new Guna.UI2.WinForms.Guna2Shapes();
@@ -83,13 +83,13 @@ namespace Exam_Preparation_System
             this.shapeTwo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.transition.SetDecoration(this.shapeTwo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shapeTwo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.shapeTwo.Location = new System.Drawing.Point(208, 214);
+            this.shapeTwo.Location = new System.Drawing.Point(103, 214);
             this.shapeTwo.Name = "shapeTwo";
             this.shapeTwo.PolygonSkip = 1;
             this.shapeTwo.Rotate = 0F;
             this.shapeTwo.RoundedRadius = 2;
             this.shapeTwo.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded;
-            this.shapeTwo.Size = new System.Drawing.Size(224, 174);
+            this.shapeTwo.Size = new System.Drawing.Size(321, 174);
             this.shapeTwo.TabIndex = 0;
             this.shapeTwo.Text = "guna2Shapes1";
             this.shapeTwo.Zoom = 100;
@@ -99,13 +99,13 @@ namespace Exam_Preparation_System
             this.shapeThree.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.transition.SetDecoration(this.shapeThree, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shapeThree.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.shapeThree.Location = new System.Drawing.Point(824, 258);
+            this.shapeThree.Location = new System.Drawing.Point(805, 261);
             this.shapeThree.Name = "shapeThree";
             this.shapeThree.PolygonSkip = 1;
             this.shapeThree.Rotate = 0F;
             this.shapeThree.RoundedRadius = 2;
             this.shapeThree.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded;
-            this.shapeThree.Size = new System.Drawing.Size(235, 130);
+            this.shapeThree.Size = new System.Drawing.Size(303, 130);
             this.shapeThree.TabIndex = 1;
             this.shapeThree.Text = "guna2Shapes2";
             this.shapeThree.Zoom = 100;
@@ -116,13 +116,13 @@ namespace Exam_Preparation_System
             this.shapeOne.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.transition.SetDecoration(this.shapeOne, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shapeOne.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.shapeOne.Location = new System.Drawing.Point(501, 158);
+            this.shapeOne.Location = new System.Drawing.Point(430, 158);
             this.shapeOne.Name = "shapeOne";
             this.shapeOne.PolygonSkip = 1;
             this.shapeOne.Rotate = 0F;
             this.shapeOne.RoundedRadius = 2;
             this.shapeOne.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded;
-            this.shapeOne.Size = new System.Drawing.Size(277, 230);
+            this.shapeOne.Size = new System.Drawing.Size(369, 230);
             this.shapeOne.TabIndex = 2;
             this.shapeOne.Text = "guna2Shapes3";
             this.shapeOne.Zoom = 100;
@@ -132,7 +132,7 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.ptbCrown, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ptbCrown.Image = global::Exam_Preparation_System.Properties.Resources.crown;
             this.ptbCrown.ImageRotate = 0F;
-            this.ptbCrown.Location = new System.Drawing.Point(562, 25);
+            this.ptbCrown.Location = new System.Drawing.Point(530, 20);
             this.ptbCrown.Name = "ptbCrown";
             this.ptbCrown.ShadowDecoration.Parent = this.ptbCrown;
             this.ptbCrown.Size = new System.Drawing.Size(149, 72);
@@ -200,6 +200,7 @@ namespace Exam_Preparation_System
             this.lblMyFullName.Name = "lblMyFullName";
             this.lblMyFullName.Size = new System.Drawing.Size(191, 23);
             this.lblMyFullName.TabIndex = 31;
+            this.lblMyFullName.Text = null;
             // 
             // lblFullName5
             // 
@@ -211,6 +212,7 @@ namespace Exam_Preparation_System
             this.lblFullName5.Name = "lblFullName5";
             this.lblFullName5.Size = new System.Drawing.Size(287, 27);
             this.lblFullName5.TabIndex = 30;
+            this.lblFullName5.Text = null;
             this.lblFullName5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblFullName4
@@ -223,6 +225,7 @@ namespace Exam_Preparation_System
             this.lblFullName4.Name = "lblFullName4";
             this.lblFullName4.Size = new System.Drawing.Size(281, 27);
             this.lblFullName4.TabIndex = 29;
+            this.lblFullName4.Text = null;
             this.lblFullName4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblMyTime
@@ -246,8 +249,9 @@ namespace Exam_Preparation_System
             this.lblMyQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMyQuantity.Location = new System.Drawing.Point(706, 155);
             this.lblMyQuantity.Name = "lblMyQuantity";
-            this.lblMyQuantity.Size = new System.Drawing.Size(120, 23);
+            this.lblMyQuantity.Size = new System.Drawing.Size(137, 23);
             this.lblMyQuantity.TabIndex = 28;
+            this.lblMyQuantity.Text = null;
             this.lblMyQuantity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblMyUserID
@@ -260,6 +264,7 @@ namespace Exam_Preparation_System
             this.lblMyUserID.Name = "lblMyUserID";
             this.lblMyUserID.Size = new System.Drawing.Size(216, 23);
             this.lblMyUserID.TabIndex = 27;
+            this.lblMyUserID.Text = null;
             this.lblMyUserID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblMyRank
@@ -285,6 +290,7 @@ namespace Exam_Preparation_System
             this.lblTime5.Name = "lblTime5";
             this.lblTime5.Size = new System.Drawing.Size(205, 27);
             this.lblTime5.TabIndex = 21;
+            this.lblTime5.Text = null;
             this.lblTime5.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblQuantity5
@@ -295,8 +301,9 @@ namespace Exam_Preparation_System
             this.lblQuantity5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity5.Location = new System.Drawing.Point(706, 71);
             this.lblQuantity5.Name = "lblQuantity5";
-            this.lblQuantity5.Size = new System.Drawing.Size(120, 27);
+            this.lblQuantity5.Size = new System.Drawing.Size(137, 27);
             this.lblQuantity5.TabIndex = 23;
+            this.lblQuantity5.Text = null;
             this.lblQuantity5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblUserID5
@@ -309,6 +316,7 @@ namespace Exam_Preparation_System
             this.lblUserID5.Name = "lblUserID5";
             this.lblUserID5.Size = new System.Drawing.Size(216, 27);
             this.lblUserID5.TabIndex = 22;
+            this.lblUserID5.Text = null;
             this.lblUserID5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2HtmlLabel20
@@ -342,6 +350,7 @@ namespace Exam_Preparation_System
             this.lblTime4.Name = "lblTime4";
             this.lblTime4.Size = new System.Drawing.Size(205, 27);
             this.lblTime4.TabIndex = 17;
+            this.lblTime4.Text = null;
             this.lblTime4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblQuantity4
@@ -352,8 +361,9 @@ namespace Exam_Preparation_System
             this.lblQuantity4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity4.Location = new System.Drawing.Point(706, 16);
             this.lblQuantity4.Name = "lblQuantity4";
-            this.lblQuantity4.Size = new System.Drawing.Size(120, 27);
+            this.lblQuantity4.Size = new System.Drawing.Size(137, 27);
             this.lblQuantity4.TabIndex = 18;
+            this.lblQuantity4.Text = null;
             this.lblQuantity4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblUserID4
@@ -366,6 +376,7 @@ namespace Exam_Preparation_System
             this.lblUserID4.Name = "lblUserID4";
             this.lblUserID4.Size = new System.Drawing.Size(216, 27);
             this.lblUserID4.TabIndex = 17;
+            this.lblUserID4.Text = null;
             this.lblUserID4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2HtmlLabel13
@@ -385,7 +396,7 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("SVN-Neutraface 2", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(279, 214);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(218, 217);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(76, 54);
             this.guna2HtmlLabel1.TabIndex = 5;
@@ -398,7 +409,7 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("SVN-Neutraface 2", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(605, 158);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(579, 158);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 70);
             this.guna2HtmlLabel2.TabIndex = 6;
@@ -411,7 +422,7 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("SVN-Neutraface 2", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(906, 258);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(932, 261);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(65, 47);
             this.guna2HtmlLabel3.TabIndex = 7;
@@ -425,10 +436,11 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblUserID1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserID1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserID1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUserID1.Location = new System.Drawing.Point(504, 139);
+            this.lblUserID1.Location = new System.Drawing.Point(430, 139);
             this.lblUserID1.Name = "lblUserID1";
-            this.lblUserID1.Size = new System.Drawing.Size(274, 17);
+            this.lblUserID1.Size = new System.Drawing.Size(369, 17);
             this.lblUserID1.TabIndex = 8;
+            this.lblUserID1.Text = null;
             this.lblUserID1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUserID3
@@ -438,10 +450,11 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblUserID3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserID3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserID3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUserID3.Location = new System.Drawing.Point(824, 234);
+            this.lblUserID3.Location = new System.Drawing.Point(805, 237);
             this.lblUserID3.Name = "lblUserID3";
-            this.lblUserID3.Size = new System.Drawing.Size(235, 21);
+            this.lblUserID3.Size = new System.Drawing.Size(303, 21);
             this.lblUserID3.TabIndex = 9;
+            this.lblUserID3.Text = null;
             this.lblUserID3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUserID2
@@ -451,10 +464,11 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblUserID2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblUserID2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserID2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUserID2.Location = new System.Drawing.Point(208, 194);
+            this.lblUserID2.Location = new System.Drawing.Point(103, 194);
             this.lblUserID2.Name = "lblUserID2";
-            this.lblUserID2.Size = new System.Drawing.Size(224, 17);
+            this.lblUserID2.Size = new System.Drawing.Size(321, 17);
             this.lblUserID2.TabIndex = 10;
+            this.lblUserID2.Text = null;
             this.lblUserID2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTime2
@@ -464,9 +478,9 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblTime2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblTime2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime2.ForeColor = System.Drawing.Color.Black;
-            this.lblTime2.Location = new System.Drawing.Point(208, 327);
+            this.lblTime2.Location = new System.Drawing.Point(103, 327);
             this.lblTime2.Name = "lblTime2";
-            this.lblTime2.Size = new System.Drawing.Size(218, 23);
+            this.lblTime2.Size = new System.Drawing.Size(315, 23);
             this.lblTime2.TabIndex = 11;
             this.lblTime2.Text = null;
             this.lblTime2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -479,9 +493,9 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblQuantity2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblQuantity2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity2.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantity2.Location = new System.Drawing.Point(208, 352);
+            this.lblQuantity2.Location = new System.Drawing.Point(103, 352);
             this.lblQuantity2.Name = "lblQuantity2";
-            this.lblQuantity2.Size = new System.Drawing.Size(224, 23);
+            this.lblQuantity2.Size = new System.Drawing.Size(321, 23);
             this.lblQuantity2.TabIndex = 12;
             this.lblQuantity2.Text = null;
             this.lblQuantity2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -494,9 +508,9 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblQuantity1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblQuantity1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity1.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantity1.Location = new System.Drawing.Point(501, 352);
+            this.lblQuantity1.Location = new System.Drawing.Point(430, 352);
             this.lblQuantity1.Name = "lblQuantity1";
-            this.lblQuantity1.Size = new System.Drawing.Size(277, 23);
+            this.lblQuantity1.Size = new System.Drawing.Size(369, 23);
             this.lblQuantity1.TabIndex = 13;
             this.lblQuantity1.Text = null;
             this.lblQuantity1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -509,9 +523,9 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblTime1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblTime1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime1.ForeColor = System.Drawing.Color.Black;
-            this.lblTime1.Location = new System.Drawing.Point(501, 327);
+            this.lblTime1.Location = new System.Drawing.Point(430, 323);
             this.lblTime1.Name = "lblTime1";
-            this.lblTime1.Size = new System.Drawing.Size(277, 23);
+            this.lblTime1.Size = new System.Drawing.Size(369, 23);
             this.lblTime1.TabIndex = 14;
             this.lblTime1.Text = null;
             this.lblTime1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -524,9 +538,9 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblTime3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblTime3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime3.ForeColor = System.Drawing.Color.Black;
-            this.lblTime3.Location = new System.Drawing.Point(824, 327);
+            this.lblTime3.Location = new System.Drawing.Point(805, 330);
             this.lblTime3.Name = "lblTime3";
-            this.lblTime3.Size = new System.Drawing.Size(235, 23);
+            this.lblTime3.Size = new System.Drawing.Size(303, 23);
             this.lblTime3.TabIndex = 16;
             this.lblTime3.Text = null;
             this.lblTime3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -539,9 +553,9 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblQuantity3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblQuantity3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity3.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantity3.Location = new System.Drawing.Point(824, 352);
+            this.lblQuantity3.Location = new System.Drawing.Point(805, 355);
             this.lblQuantity3.Name = "lblQuantity3";
-            this.lblQuantity3.Size = new System.Drawing.Size(235, 23);
+            this.lblQuantity3.Size = new System.Drawing.Size(303, 23);
             this.lblQuantity3.TabIndex = 15;
             this.lblQuantity3.Text = null;
             this.lblQuantity3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -554,10 +568,11 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblFullName3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullName3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFullName3.Location = new System.Drawing.Point(824, 194);
+            this.lblFullName3.Location = new System.Drawing.Point(805, 197);
             this.lblFullName3.Name = "lblFullName3";
-            this.lblFullName3.Size = new System.Drawing.Size(235, 39);
+            this.lblFullName3.Size = new System.Drawing.Size(303, 39);
             this.lblFullName3.TabIndex = 19;
+            this.lblFullName3.Text = null;
             this.lblFullName3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel32
@@ -605,22 +620,22 @@ namespace Exam_Preparation_System
             // 
             this.transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.transition.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 1F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.transition.DefaultAnimation = animation5;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 1F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.transition.DefaultAnimation = animation2;
             this.transition.TimeStep = 0F;
             // 
             // lblFullName2
@@ -630,10 +645,11 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblFullName2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullName2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFullName2.Location = new System.Drawing.Point(208, 149);
+            this.lblFullName2.Location = new System.Drawing.Point(103, 141);
             this.lblFullName2.Name = "lblFullName2";
-            this.lblFullName2.Size = new System.Drawing.Size(224, 47);
+            this.lblFullName2.Size = new System.Drawing.Size(321, 47);
             this.lblFullName2.TabIndex = 17;
+            this.lblFullName2.Text = null;
             this.lblFullName2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFullName1
@@ -643,10 +659,11 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblFullName1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblFullName1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFullName1.Location = new System.Drawing.Point(504, 97);
+            this.lblFullName1.Location = new System.Drawing.Point(430, 97);
             this.lblFullName1.Name = "lblFullName1";
-            this.lblFullName1.Size = new System.Drawing.Size(277, 39);
+            this.lblFullName1.Size = new System.Drawing.Size(369, 39);
             this.lblFullName1.TabIndex = 18;
+            this.lblFullName1.Text = null;
             this.lblFullName1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormRanking
