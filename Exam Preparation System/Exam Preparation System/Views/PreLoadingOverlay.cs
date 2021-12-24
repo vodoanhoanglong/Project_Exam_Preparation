@@ -33,13 +33,11 @@ namespace Exam_Preparation_System.Views
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            circularProgressBar.Value = 0;
         }
         public PreLoadingOverlay(string userName, string password)
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            circularProgressBar.Value = 0;
             this.UserName = userName;
             this.Password = password;  
         }
@@ -55,14 +53,11 @@ namespace Exam_Preparation_System.Views
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.circularProgressBar.Value += 10;
-            if(circularProgressBar.Value == 100)
-            {
                 if (!checkAccount(this.UserName,this.Password))
                 {
                     timer1.Enabled = false;
-                    this.Hide();
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Hide();         
                 }
                 else
                 {
@@ -71,9 +66,8 @@ namespace Exam_Preparation_System.Views
                     menu.Show();
                     this.Visible = false;
                     FormLogin.instance.Visible = false;
-                }
-                
-            }
+                }          
         }
+
     }
 }
