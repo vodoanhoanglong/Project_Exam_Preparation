@@ -17,7 +17,7 @@ namespace Exam_Preparation_System
     {
         public static FormMainMenu instance;
 
-        private const string admin = "6051071067";
+        private const string admin = "6051071012";
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;
