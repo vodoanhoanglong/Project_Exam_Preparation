@@ -24,8 +24,14 @@ namespace Exam_Preparation_System
         {
             Visible = false;
             FormMainMenu.instance.activateButton(FormMainMenu.instance.btnExamManager);
-            FormMainMenu.instance.openChildForm(new FormViewExam());
-
+            if (FormLogin.info.UserID == FormMainMenu.admin)
+            {
+                FormMainMenu.instance.openChildForm(new FormCreateExam());
+            }
+            else
+            {
+                FormMainMenu.instance.openChildForm(new FormViewExam());
+            }
         }
     }
 }

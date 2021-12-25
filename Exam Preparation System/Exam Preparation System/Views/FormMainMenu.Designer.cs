@@ -528,6 +528,7 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.controlBox);
             this.Controls.Add(this.panelSlideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
             this.panelSlideBar.ResumeLayout(false);
