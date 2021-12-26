@@ -46,15 +46,13 @@ namespace Exam_Preparation_System
             cmbSubject.ValueMember = "SubjectID";
             cmbSubject.DisplayMember = "SubName";
             cmbSubject.DataSource = table;
+
+            loadData();
         }
 
         private void loadData(int subID = -1)
         {
-            var query = !currKey.Equals("")
-                ? context.EXAMQUESTIONS
-                .AsEnumerable()
-                .Where(x => x.ExamQuestionID == Convert.ToInt32(currKey))
-                : subID == -1 ?
+            var query = subID == -1 ?
                 context.EXAMQUESTIONS
                 : context.EXAMQUESTIONS.Where(x => x.SubjectID == subID);
 
@@ -70,28 +68,33 @@ namespace Exam_Preparation_System
                         .FirstOrDefault(ele => ele.ExamQuestionID == x.ExamQuestionID)
                         .CreateDate
             })
+            .OrderByDescending(x => x.ExamQuestionID)
             .ToList();
         }
 
-        private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
+        private void loadDataByID()
         {
-            if (currKey.Equals(""))
-                txtExamID.Text = "";
-            loadData((int)cmbSubject.SelectedValue);
-        }
+            var data = !currKey.Equals("") ?
+                context.EXAMQUESTIONS
+                .AsEnumerable()
+                .Where(x => x.ExamQuestionID == Convert.ToInt32(currKey))
+                : context.EXAMQUESTIONS;
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtExamID.Text == "")
-                MessageBox.Show("Vui lòng nhập mã đề");
-            else
-            {
-                currKey = txtExamID.Text;
-                if (cmbSubject.SelectedIndex != 0)
-                    cmbSubject.SelectedIndex = 0;
-                else loadData();
-                currKey = "";
-            }    
+
+            dgvListContests.DataSource = data
+                .Select(x => new
+                {
+                    x.ExamQuestionID,
+                    x.Quantity,
+                    x.ExecutionTime,
+                    x.SubjectID,
+                    x.SUBJECT.SubName,
+                    x.LISTQUESTIONs
+                        .FirstOrDefault(ele => ele.ExamQuestionID == x.ExamQuestionID)
+                        .CreateDate
+                })
+                .OrderByDescending(x => x.ExamQuestionID)
+                .ToList();
         }
 
         private void txtExamID_KeyPress(object sender, KeyPressEventArgs e)
@@ -110,6 +113,20 @@ namespace Exam_Preparation_System
                 int examID = Convert.ToInt32(dgvListContests.Rows[e.RowIndex].Cells["ExamID"].Value);
                 FormMainMenu.instance.openChildForm(new FormExamPreparation(examID));
             }
+        }
+
+        private void txtExamID_KeyUp(object sender, KeyEventArgs e)
+        {
+            cmbSubject.SelectedIndex = 0;
+            currKey = txtExamID.Text;
+            loadDataByID();
+            currKey = "";
+        }
+
+        private void cmbSubject_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            txtExamID.Text = "";
+            loadData((int)cmbSubject.SelectedValue);
         }
     }
 }

@@ -29,11 +29,7 @@ namespace Exam_Preparation_System
 
         public void loadData(int subID = -1)
         {
-            var query = !currKey.Equals("")
-                ? context.EXAMQUESTIONS
-                .AsEnumerable()
-                .Where(x => x.ExamQuestionID == Convert.ToInt32(currKey))
-                : subID == -1 ? 
+            var query = subID == -1 ? 
                 context.EXAMQUESTIONS
                 : context.EXAMQUESTIONS.Where(x => x.SubjectID == subID);
 
@@ -53,11 +49,29 @@ namespace Exam_Preparation_System
             .ToList();
         }
 
-        private void cmbFilter_SelectedIndexChanged(object sender, EventArgs e)
+        private void loadDataByID()
         {
-            if (currKey.Equals(""))
-                txtSearch.Text = "";
-            loadData((int)cmbFilter.SelectedValue);
+            var data = !currKey.Equals("") ?
+                context.EXAMQUESTIONS
+                .AsEnumerable()
+                .Where(x => x.ExamQuestionID == Convert.ToInt32(currKey))
+                : context.EXAMQUESTIONS;
+
+
+            dgvListContests.DataSource = data
+                .Select(x => new
+                {
+                    x.ExamQuestionID,
+                    x.Quantity,
+                    x.ExecutionTime,
+                    x.SubjectID,
+                    x.SUBJECT.SubName,
+                    x.LISTQUESTIONs
+                        .FirstOrDefault(ele => ele.ExamQuestionID == x.ExamQuestionID)
+                        .CreateDate
+                })
+                .OrderByDescending(x => x.ExamQuestionID)
+                .ToList();
         }
 
         private void FormCreateExam_Load(object sender, EventArgs e)
@@ -92,6 +106,8 @@ namespace Exam_Preparation_System
             cmbFilter.DataSource = table;
 
             dgvListContests.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
+
+            loadData();
         }
 
         public void randomQuestion(DataGridView table, int quantity, int subjectID)
@@ -135,6 +151,8 @@ namespace Exam_Preparation_System
         {
             nudQuantity.Value = 0;
             txtTimeExam.Text = "00:00:00";
+            txtSearch.Text = "";
+            cmbFilter.SelectedIndex = 0;
             dgvQuestion.DataSource = null;
         }
 
@@ -209,25 +227,33 @@ namespace Exam_Preparation_System
                 int examID = Convert.ToInt32(r.Cells["ExamID"].Value);
                 EXAMQUESTION delExamQuestion = context.EXAMQUESTIONS.Where(st => st.ExamQuestionID == examID).SingleOrDefault();
                 context.LISTQUESTIONs.Where(x => x.ExamQuestionID == examID).ToList().ForEach(item => context.LISTQUESTIONs.Remove(item));
+                context.EXAMRESULTS.Where(x => x.ExamQuestionID == examID).ToList().ForEach(item => context.EXAMRESULTS.Remove(item));
                 context.EXAMQUESTIONS.Remove(delExamQuestion);
                 context.SaveChanges();
             }
+            resetInput();
             loadData();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+
+        private void cmbFilter_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string key = txtSearch.Text;
-            if (key.Equals(""))
-                MessageBox.Show("Vui lòng nhập mã đề cần tìm");
-            else
-            {
-                currKey = key;
-                if (cmbFilter.SelectedIndex != 0)
-                    cmbFilter.SelectedIndex = 0;
-                else loadData();
-                currKey = "";
-            }    
+            txtSearch.Text = "";
+            loadData((int)cmbFilter.SelectedValue);
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            cmbFilter.SelectedIndex = 0;
+            currKey = txtSearch.Text;
+            loadDataByID();
+            currKey = "";
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

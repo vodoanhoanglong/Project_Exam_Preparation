@@ -38,10 +38,8 @@ namespace Exam_Preparation_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbAnswer = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnSearchQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
             this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,10 +60,10 @@ namespace Exam_Preparation_System
             this.btnAddQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddAnswer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtQuestion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAnswer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestion)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -74,10 +72,8 @@ namespace Exam_Preparation_System
             // 
             // gbAnswer
             // 
-            this.gbAnswer.Controls.Add(this.guna2HtmlLabel7);
             this.gbAnswer.Controls.Add(this.guna2HtmlLabel6);
             this.gbAnswer.Controls.Add(this.cmbFilter);
-            this.gbAnswer.Controls.Add(this.btnSearchQuestion);
             this.gbAnswer.Controls.Add(this.txtSearch);
             this.gbAnswer.Controls.Add(this.dgvQuestion);
             this.gbAnswer.Controls.Add(this.btnDeleteQuestion);
@@ -91,16 +87,6 @@ namespace Exam_Preparation_System
             this.gbAnswer.Text = "Kho câu hỏi";
             this.gbAnswer.TextOffset = new System.Drawing.Point(0, 5);
             this.gbAnswer.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(448, 55);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(65, 22);
-            this.guna2HtmlLabel7.TabIndex = 14;
-            this.guna2HtmlLabel7.Text = "Tìm kiếm";
             // 
             // guna2HtmlLabel6
             // 
@@ -131,31 +117,7 @@ namespace Exam_Preparation_System
             this.cmbFilter.ShadowDecoration.Parent = this.cmbFilter;
             this.cmbFilter.Size = new System.Drawing.Size(388, 36);
             this.cmbFilter.TabIndex = 12;
-            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedIndexChanged);
-            // 
-            // btnSearchQuestion
-            // 
-            this.btnSearchQuestion.Animated = true;
-            this.btnSearchQuestion.BorderRadius = 5;
-            this.btnSearchQuestion.CheckedState.Parent = this.btnSearchQuestion;
-            this.btnSearchQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchQuestion.CustomImages.Parent = this.btnSearchQuestion;
-            this.btnSearchQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchQuestion.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearchQuestion.DisabledState.Parent = this.btnSearchQuestion;
-            this.btnSearchQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSearchQuestion.ForeColor = System.Drawing.Color.White;
-            this.btnSearchQuestion.HoverState.Parent = this.btnSearchQuestion;
-            this.btnSearchQuestion.Location = new System.Drawing.Point(997, 46);
-            this.btnSearchQuestion.Name = "btnSearchQuestion";
-            this.btnSearchQuestion.ShadowDecoration.Parent = this.btnSearchQuestion;
-            this.btnSearchQuestion.Size = new System.Drawing.Size(87, 36);
-            this.btnSearchQuestion.TabIndex = 11;
-            this.btnSearchQuestion.Text = "Tìm kiếm";
-            this.btnSearchQuestion.Click += new System.EventHandler(this.btnSearchQuestion_Click);
+            this.cmbFilter.SelectionChangeCommitted += new System.EventHandler(this.cmbFilter_SelectionChangeCommitted);
             // 
             // txtSearch
             // 
@@ -174,7 +136,9 @@ namespace Exam_Preparation_System
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(532, 46);
+            this.txtSearch.IconRight = global::Exam_Preparation_System.Properties.Resources.search;
+            this.txtSearch.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtSearch.Location = new System.Drawing.Point(634, 46);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -183,6 +147,7 @@ namespace Exam_Preparation_System
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(450, 36);
             this.txtSearch.TabIndex = 10;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // dgvQuestion
             // 
@@ -363,13 +328,13 @@ namespace Exam_Preparation_System
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.cmbSubject);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GroupBox1.Controls.Add(this.btnDeleteAnswer);
             this.guna2GroupBox1.Controls.Add(this.dgvAnswer);
             this.guna2GroupBox1.Controls.Add(this.btnAddQuestion);
             this.guna2GroupBox1.Controls.Add(this.btnAddAnswer);
             this.guna2GroupBox1.Controls.Add(this.txtQuestion);
-            this.guna2GroupBox1.Controls.Add(this.cmbSubject);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.txtAnswer);
@@ -581,28 +546,6 @@ namespace Exam_Preparation_System
             this.txtQuestion.Size = new System.Drawing.Size(355, 110);
             this.txtQuestion.TabIndex = 3;
             // 
-            // cmbSubject
-            // 
-            this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSubject.BorderRadius = 4;
-            this.cmbSubject.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSubject.FocusedState.Parent = this.cmbSubject;
-            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbSubject.HoverState.Parent = this.cmbSubject;
-            this.cmbSubject.ItemHeight = 30;
-            this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(77, 44);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
-            this.cmbSubject.Size = new System.Drawing.Size(355, 36);
-            this.cmbSubject.Sorted = true;
-            this.cmbSubject.TabIndex = 0;
-            // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
@@ -648,6 +591,26 @@ namespace Exam_Preparation_System
             this.txtAnswer.Size = new System.Drawing.Size(450, 36);
             this.txtAnswer.TabIndex = 1;
             // 
+            // cmbSubject
+            // 
+            this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSubject.BorderRadius = 4;
+            this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSubject.FocusedState.Parent = this.cmbSubject;
+            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSubject.HoverState.Parent = this.cmbSubject;
+            this.cmbSubject.ItemHeight = 30;
+            this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
+            this.cmbSubject.Location = new System.Drawing.Point(77, 44);
+            this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
+            this.cmbSubject.Size = new System.Drawing.Size(355, 36);
+            this.cmbSubject.TabIndex = 14;
+            // 
             // FormWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -677,7 +640,6 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQuestion;
         private Guna.UI2.WinForms.Guna2GradientButton btnDeleteQuestion;
-        private Guna.UI2.WinForms.Guna2GradientButton btnSearchQuestion;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
@@ -688,11 +650,9 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2GradientButton btnAddQuestion;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddAnswer;
         private Guna.UI2.WinForms.Guna2TextBox txtQuestion;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbSubject;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtAnswer;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuestionID;
@@ -701,5 +661,6 @@ namespace Exam_Preparation_System
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectName;
         private System.Windows.Forms.DataGridViewLinkColumn Details;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubjectID;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSubject;
     }
 }

@@ -111,7 +111,7 @@ namespace Exam_Preparation_System
                     setLabel(lblFullName5, lblUserID5, lblQuantity5, lblTime5, val);
                     break;
                 default:
-                    lblMyRank.Text = val == null ? "Bạn chưa thi mã đề này" : isMySelf.ToString();
+                    lblMyRank.Text = val == null ? "Chưa thi" : isMySelf.ToString();
                     setLabel(lblMyFullName, lblMyUserID, lblMyQuantity, lblMyTime, val);
                     break;
             }

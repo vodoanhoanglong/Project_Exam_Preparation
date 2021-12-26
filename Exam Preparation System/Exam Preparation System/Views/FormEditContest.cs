@@ -34,8 +34,8 @@ namespace Exam_Preparation_System
         {
             var query = context.LISTQUESTIONs
                 .Where(x => x.ExamQuestionID == this.examID)
-                .Select(x => new 
-                { 
+                .Select(x => new
+                {
                     x.QuestionID,
                     x.QUESTION.Contents,
                     x.EXAMQUESTION.SUBJECT.SubName,

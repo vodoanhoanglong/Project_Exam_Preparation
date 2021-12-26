@@ -17,7 +17,7 @@ namespace Exam_Preparation_System
     {
         public static FormMainMenu instance;
 
-        public static string admin = "6051071012";
+        public static string admin = "6051071067";
         private Guna2Button currBtn;
         private Panel leftBorderBtn;
         private Form currChildForm;

@@ -312,6 +312,7 @@
     <None Include="Resources\crown.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\search.png" />
     <None Include="Resources\take-exam-color.png" />
     <None Include="Resources\take-exam.png" />
     <None Include="Resources\ranking-color.png" />
