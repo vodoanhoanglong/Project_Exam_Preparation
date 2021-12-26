@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,8 +31,9 @@ namespace Exam_Preparation_System
             progressBar.Value = totalCorrect;
             progressBar.Maximum = totalQuestion;
             progressBar.Text = totalCorrect.ToString() + "/" + totalQuestion.ToString();
-            this.examID = Convert.ToInt32(codeExam.Split(' ')[2]);
+            this.examID = Convert.ToInt32(codeExam.Split(' ')[2]);  
         }
+
 
         private void btnBack_Click(object sender, EventArgs e)
         {

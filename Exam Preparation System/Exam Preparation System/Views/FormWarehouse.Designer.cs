@@ -72,6 +72,9 @@ namespace Exam_Preparation_System
             // 
             // gbAnswer
             // 
+            this.gbAnswer.BackColor = System.Drawing.Color.Transparent;
+            this.gbAnswer.BorderRadius = 5;
+            this.gbAnswer.BorderThickness = 0;
             this.gbAnswer.Controls.Add(this.guna2HtmlLabel6);
             this.gbAnswer.Controls.Add(this.cmbFilter);
             this.gbAnswer.Controls.Add(this.txtSearch);
@@ -81,6 +84,10 @@ namespace Exam_Preparation_System
             this.gbAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.gbAnswer.Location = new System.Drawing.Point(2, 246);
             this.gbAnswer.Name = "gbAnswer";
+            this.gbAnswer.ShadowDecoration.BorderRadius = 15;
+            this.gbAnswer.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.gbAnswer.ShadowDecoration.Depth = 10;
+            this.gbAnswer.ShadowDecoration.Enabled = true;
             this.gbAnswer.ShadowDecoration.Parent = this.gbAnswer;
             this.gbAnswer.Size = new System.Drawing.Size(1195, 367);
             this.gbAnswer.TabIndex = 4;
@@ -101,7 +108,8 @@ namespace Exam_Preparation_System
             // cmbFilter
             // 
             this.cmbFilter.BackColor = System.Drawing.Color.Transparent;
-            this.cmbFilter.BorderRadius = 4;
+            this.cmbFilter.BorderRadius = 5;
+            this.cmbFilter.BorderThickness = 0;
             this.cmbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -114,6 +122,10 @@ namespace Exam_Preparation_System
             this.cmbFilter.ItemsAppearance.Parent = this.cmbFilter;
             this.cmbFilter.Location = new System.Drawing.Point(45, 46);
             this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.ShadowDecoration.BorderRadius = 15;
+            this.cmbFilter.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.cmbFilter.ShadowDecoration.Depth = 10;
+            this.cmbFilter.ShadowDecoration.Enabled = true;
             this.cmbFilter.ShadowDecoration.Parent = this.cmbFilter;
             this.cmbFilter.Size = new System.Drawing.Size(388, 36);
             this.cmbFilter.TabIndex = 12;
@@ -122,7 +134,9 @@ namespace Exam_Preparation_System
             // txtSearch
             // 
             this.txtSearch.Animated = true;
-            this.txtSearch.BorderRadius = 4;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderRadius = 5;
+            this.txtSearch.BorderThickness = 0;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -144,6 +158,10 @@ namespace Exam_Preparation_System
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtSearch.PlaceholderText = "Tìm kiếm câu hỏi";
             this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.BorderRadius = 15;
+            this.txtSearch.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtSearch.ShadowDecoration.Depth = 10;
+            this.txtSearch.ShadowDecoration.Enabled = true;
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(450, 36);
             this.txtSearch.TabIndex = 10;
@@ -285,6 +303,7 @@ namespace Exam_Preparation_System
             // btnDeleteQuestion
             // 
             this.btnDeleteQuestion.Animated = true;
+            this.btnDeleteQuestion.BackColor = System.Drawing.Color.Transparent;
             this.btnDeleteQuestion.BorderRadius = 5;
             this.btnDeleteQuestion.CheckedState.Parent = this.btnDeleteQuestion;
             this.btnDeleteQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -300,6 +319,10 @@ namespace Exam_Preparation_System
             this.btnDeleteQuestion.HoverState.Parent = this.btnDeleteQuestion;
             this.btnDeleteQuestion.Location = new System.Drawing.Point(1099, 46);
             this.btnDeleteQuestion.Name = "btnDeleteQuestion";
+            this.btnDeleteQuestion.ShadowDecoration.BorderRadius = 15;
+            this.btnDeleteQuestion.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnDeleteQuestion.ShadowDecoration.Depth = 10;
+            this.btnDeleteQuestion.ShadowDecoration.Enabled = true;
             this.btnDeleteQuestion.ShadowDecoration.Parent = this.btnDeleteQuestion;
             this.btnDeleteQuestion.Size = new System.Drawing.Size(87, 36);
             this.btnDeleteQuestion.TabIndex = 9;
@@ -351,7 +374,8 @@ namespace Exam_Preparation_System
             // cmbSubject
             // 
             this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSubject.BorderRadius = 4;
+            this.cmbSubject.BorderRadius = 5;
+            this.cmbSubject.BorderThickness = 0;
             this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -364,6 +388,10 @@ namespace Exam_Preparation_System
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
             this.cmbSubject.Location = new System.Drawing.Point(77, 44);
             this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.ShadowDecoration.BorderRadius = 15;
+            this.cmbSubject.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.cmbSubject.ShadowDecoration.Depth = 10;
+            this.cmbSubject.ShadowDecoration.Enabled = true;
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
             this.cmbSubject.Size = new System.Drawing.Size(355, 36);
             this.cmbSubject.TabIndex = 14;
@@ -381,6 +409,7 @@ namespace Exam_Preparation_System
             // btnDeleteAnswer
             // 
             this.btnDeleteAnswer.Animated = true;
+            this.btnDeleteAnswer.BackColor = System.Drawing.Color.Transparent;
             this.btnDeleteAnswer.BorderRadius = 5;
             this.btnDeleteAnswer.CheckedState.Parent = this.btnDeleteAnswer;
             this.btnDeleteAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -396,6 +425,10 @@ namespace Exam_Preparation_System
             this.btnDeleteAnswer.HoverState.Parent = this.btnDeleteAnswer;
             this.btnDeleteAnswer.Location = new System.Drawing.Point(1088, 44);
             this.btnDeleteAnswer.Name = "btnDeleteAnswer";
+            this.btnDeleteAnswer.ShadowDecoration.BorderRadius = 15;
+            this.btnDeleteAnswer.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnDeleteAnswer.ShadowDecoration.Depth = 10;
+            this.btnDeleteAnswer.ShadowDecoration.Enabled = true;
             this.btnDeleteAnswer.ShadowDecoration.Parent = this.btnDeleteAnswer;
             this.btnDeleteAnswer.Size = new System.Drawing.Size(87, 36);
             this.btnDeleteAnswer.TabIndex = 6;
@@ -494,6 +527,7 @@ namespace Exam_Preparation_System
             // btnAddQuestion
             // 
             this.btnAddQuestion.Animated = true;
+            this.btnAddQuestion.BackColor = System.Drawing.Color.Transparent;
             this.btnAddQuestion.BorderRadius = 5;
             this.btnAddQuestion.CheckedState.Parent = this.btnAddQuestion;
             this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -509,6 +543,10 @@ namespace Exam_Preparation_System
             this.btnAddQuestion.HoverState.Parent = this.btnAddQuestion;
             this.btnAddQuestion.Location = new System.Drawing.Point(77, 202);
             this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.ShadowDecoration.BorderRadius = 15;
+            this.btnAddQuestion.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnAddQuestion.ShadowDecoration.Depth = 10;
+            this.btnAddQuestion.ShadowDecoration.Enabled = true;
             this.btnAddQuestion.ShadowDecoration.Parent = this.btnAddQuestion;
             this.btnAddQuestion.Size = new System.Drawing.Size(103, 36);
             this.btnAddQuestion.TabIndex = 7;
@@ -518,6 +556,7 @@ namespace Exam_Preparation_System
             // btnAddAnswer
             // 
             this.btnAddAnswer.Animated = true;
+            this.btnAddAnswer.BackColor = System.Drawing.Color.Transparent;
             this.btnAddAnswer.BorderRadius = 5;
             this.btnAddAnswer.CheckedState.Parent = this.btnAddAnswer;
             this.btnAddAnswer.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -533,6 +572,10 @@ namespace Exam_Preparation_System
             this.btnAddAnswer.HoverState.Parent = this.btnAddAnswer;
             this.btnAddAnswer.Location = new System.Drawing.Point(995, 44);
             this.btnAddAnswer.Name = "btnAddAnswer";
+            this.btnAddAnswer.ShadowDecoration.BorderRadius = 15;
+            this.btnAddAnswer.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnAddAnswer.ShadowDecoration.Depth = 10;
+            this.btnAddAnswer.ShadowDecoration.Enabled = true;
             this.btnAddAnswer.ShadowDecoration.Parent = this.btnAddAnswer;
             this.btnAddAnswer.Size = new System.Drawing.Size(87, 36);
             this.btnAddAnswer.TabIndex = 4;
@@ -542,7 +585,9 @@ namespace Exam_Preparation_System
             // txtQuestion
             // 
             this.txtQuestion.Animated = true;
-            this.txtQuestion.BorderRadius = 4;
+            this.txtQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.txtQuestion.BorderRadius = 5;
+            this.txtQuestion.BorderThickness = 0;
             this.txtQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtQuestion.DefaultText = "";
             this.txtQuestion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -562,6 +607,10 @@ namespace Exam_Preparation_System
             this.txtQuestion.PlaceholderText = "Nội dung câu hỏi";
             this.txtQuestion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtQuestion.SelectedText = "";
+            this.txtQuestion.ShadowDecoration.BorderRadius = 15;
+            this.txtQuestion.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtQuestion.ShadowDecoration.Depth = 10;
+            this.txtQuestion.ShadowDecoration.Enabled = true;
             this.txtQuestion.ShadowDecoration.Parent = this.txtQuestion;
             this.txtQuestion.Size = new System.Drawing.Size(355, 110);
             this.txtQuestion.TabIndex = 3;
@@ -589,7 +638,9 @@ namespace Exam_Preparation_System
             // txtAnswer
             // 
             this.txtAnswer.Animated = true;
-            this.txtAnswer.BorderRadius = 4;
+            this.txtAnswer.BackColor = System.Drawing.Color.Transparent;
+            this.txtAnswer.BorderRadius = 5;
+            this.txtAnswer.BorderThickness = 0;
             this.txtAnswer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAnswer.DefaultText = "";
             this.txtAnswer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -607,6 +658,10 @@ namespace Exam_Preparation_System
             this.txtAnswer.PasswordChar = '\0';
             this.txtAnswer.PlaceholderText = "Thêm đáp án";
             this.txtAnswer.SelectedText = "";
+            this.txtAnswer.ShadowDecoration.BorderRadius = 15;
+            this.txtAnswer.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtAnswer.ShadowDecoration.Depth = 10;
+            this.txtAnswer.ShadowDecoration.Enabled = true;
             this.txtAnswer.ShadowDecoration.Parent = this.txtAnswer;
             this.txtAnswer.Size = new System.Drawing.Size(450, 36);
             this.txtAnswer.TabIndex = 1;

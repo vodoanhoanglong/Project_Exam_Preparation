@@ -48,8 +48,8 @@ namespace Exam_Preparation_System
             this.pnlExamContainer.FillColor = System.Drawing.Color.White;
             this.pnlExamContainer.Location = new System.Drawing.Point(0, 130);
             this.pnlExamContainer.Name = "pnlExamContainer";
-            this.pnlExamContainer.Radius = 3;
-            this.pnlExamContainer.ShadowColor = System.Drawing.Color.Black;
+            this.pnlExamContainer.Radius = 5;
+            this.pnlExamContainer.ShadowColor = System.Drawing.Color.Gray;
             this.pnlExamContainer.ShadowShift = 0;
             this.pnlExamContainer.Size = new System.Drawing.Size(1200, 482);
             this.pnlExamContainer.TabIndex = 0;
@@ -59,6 +59,9 @@ namespace Exam_Preparation_System
             this.pnlExam.AutoScroll = true;
             this.pnlExam.Location = new System.Drawing.Point(0, 0);
             this.pnlExam.Name = "pnlExam";
+            this.pnlExam.ShadowDecoration.BorderRadius = 15;
+            this.pnlExam.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.pnlExam.ShadowDecoration.Depth = 10;
             this.pnlExam.ShadowDecoration.Parent = this.pnlExam;
             this.pnlExam.Size = new System.Drawing.Size(1201, 482);
             this.pnlExam.TabIndex = 0;
@@ -66,6 +69,7 @@ namespace Exam_Preparation_System
             // btnFinished
             // 
             this.btnFinished.Animated = true;
+            this.btnFinished.BackColor = System.Drawing.Color.Transparent;
             this.btnFinished.BorderRadius = 5;
             this.btnFinished.CheckedState.Parent = this.btnFinished;
             this.btnFinished.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -81,6 +85,10 @@ namespace Exam_Preparation_System
             this.btnFinished.HoverState.Parent = this.btnFinished;
             this.btnFinished.Location = new System.Drawing.Point(1052, 89);
             this.btnFinished.Name = "btnFinished";
+            this.btnFinished.ShadowDecoration.BorderRadius = 15;
+            this.btnFinished.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnFinished.ShadowDecoration.Depth = 10;
+            this.btnFinished.ShadowDecoration.Enabled = true;
             this.btnFinished.ShadowDecoration.Parent = this.btnFinished;
             this.btnFinished.Size = new System.Drawing.Size(135, 35);
             this.btnFinished.TabIndex = 15;
@@ -89,8 +97,11 @@ namespace Exam_Preparation_System
             // 
             // txtTimeExam
             // 
+            this.txtTimeExam.Animated = true;
+            this.txtTimeExam.BackColor = System.Drawing.Color.Transparent;
             this.txtTimeExam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtTimeExam.BorderRadius = 4;
+            this.txtTimeExam.BorderRadius = 5;
+            this.txtTimeExam.BorderThickness = 0;
             this.txtTimeExam.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTimeExam.DefaultText = "00:00:00";
             this.txtTimeExam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -114,6 +125,10 @@ namespace Exam_Preparation_System
             this.txtTimeExam.ReadOnly = true;
             this.txtTimeExam.SelectedText = "";
             this.txtTimeExam.SelectionStart = 8;
+            this.txtTimeExam.ShadowDecoration.BorderRadius = 15;
+            this.txtTimeExam.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtTimeExam.ShadowDecoration.Depth = 10;
+            this.txtTimeExam.ShadowDecoration.Enabled = true;
             this.txtTimeExam.ShadowDecoration.Parent = this.txtTimeExam;
             this.txtTimeExam.Size = new System.Drawing.Size(135, 35);
             this.txtTimeExam.TabIndex = 16;

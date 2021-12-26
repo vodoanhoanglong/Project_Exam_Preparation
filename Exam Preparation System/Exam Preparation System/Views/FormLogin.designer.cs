@@ -124,7 +124,11 @@ namespace Exam_Preparation_System
             this.gtsShowPassword.CheckedState.Parent = this.gtsShowPassword;
             this.gtsShowPassword.Location = new System.Drawing.Point(549, 322);
             this.gtsShowPassword.Name = "gtsShowPassword";
+            this.gtsShowPassword.ShadowDecoration.BorderRadius = 20;
+            this.gtsShowPassword.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.gtsShowPassword.ShadowDecoration.Depth = 20;
             this.gtsShowPassword.ShadowDecoration.Parent = this.gtsShowPassword;
+            this.gtsShowPassword.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(6);
             this.gtsShowPassword.Size = new System.Drawing.Size(44, 20);
             this.gtsShowPassword.TabIndex = 4;
             this.gtsShowPassword.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -138,11 +142,11 @@ namespace Exam_Preparation_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(598, 325);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "Hiện mật khẩu";
             // 
@@ -150,6 +154,7 @@ namespace Exam_Preparation_System
             // 
             this.gbtnLogin.Animated = true;
             this.gbtnLogin.AutoRoundedCorners = true;
+            this.gbtnLogin.BackColor = System.Drawing.Color.Transparent;
             this.gbtnLogin.BorderRadius = 16;
             this.gbtnLogin.CheckedState.Parent = this.gbtnLogin;
             this.gbtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -167,6 +172,9 @@ namespace Exam_Preparation_System
             this.gbtnLogin.HoverState.Parent = this.gbtnLogin;
             this.gbtnLogin.Location = new System.Drawing.Point(549, 372);
             this.gbtnLogin.Name = "gbtnLogin";
+            this.gbtnLogin.ShadowDecoration.BorderRadius = 15;
+            this.gbtnLogin.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.gbtnLogin.ShadowDecoration.Depth = 20;
             this.gbtnLogin.ShadowDecoration.Parent = this.gbtnLogin;
             this.gbtnLogin.Size = new System.Drawing.Size(243, 35);
             this.gbtnLogin.TabIndex = 7;
@@ -179,6 +187,7 @@ namespace Exam_Preparation_System
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(600, 58);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(141, 110);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,6 +198,7 @@ namespace Exam_Preparation_System
             // 
             this.gtxtUserName.Animated = true;
             this.gtxtUserName.AutoRoundedCorners = true;
+            this.gtxtUserName.BackColor = System.Drawing.Color.Transparent;
             this.gtxtUserName.BorderColor = System.Drawing.Color.White;
             this.gtxtUserName.BorderRadius = 17;
             this.gtxtUserName.BorderThickness = 2;
@@ -202,7 +212,7 @@ namespace Exam_Preparation_System
             this.gtxtUserName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.gtxtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gtxtUserName.FocusedState.Parent = this.gtxtUserName;
-            this.gtxtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gtxtUserName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtxtUserName.ForeColor = System.Drawing.Color.White;
             this.gtxtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gtxtUserName.HoverState.Parent = this.gtxtUserName;
@@ -212,7 +222,11 @@ namespace Exam_Preparation_System
             this.gtxtUserName.PasswordChar = '\0';
             this.gtxtUserName.PlaceholderText = "Mã đăng nhập";
             this.gtxtUserName.SelectedText = "";
+            this.gtxtUserName.ShadowDecoration.BorderRadius = 15;
+            this.gtxtUserName.ShadowDecoration.Color = System.Drawing.Color.LightCyan;
+            this.gtxtUserName.ShadowDecoration.Depth = 10;
             this.gtxtUserName.ShadowDecoration.Parent = this.gtxtUserName;
+            this.gtxtUserName.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.gtxtUserName.Size = new System.Drawing.Size(243, 36);
             this.gtxtUserName.TabIndex = 2;
             this.gtxtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gtxtUserName_KeyPress);
@@ -221,6 +235,7 @@ namespace Exam_Preparation_System
             // 
             this.gtxtPassword.Animated = true;
             this.gtxtPassword.AutoRoundedCorners = true;
+            this.gtxtPassword.BackColor = System.Drawing.Color.Transparent;
             this.gtxtPassword.BorderColor = System.Drawing.Color.White;
             this.gtxtPassword.BorderRadius = 17;
             this.gtxtPassword.BorderThickness = 2;
@@ -234,7 +249,7 @@ namespace Exam_Preparation_System
             this.gtxtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.gtxtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gtxtPassword.FocusedState.Parent = this.gtxtPassword;
-            this.gtxtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gtxtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gtxtPassword.ForeColor = System.Drawing.Color.White;
             this.gtxtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gtxtPassword.HoverState.Parent = this.gtxtPassword;
@@ -244,7 +259,11 @@ namespace Exam_Preparation_System
             this.gtxtPassword.PasswordChar = '\0';
             this.gtxtPassword.PlaceholderText = "Mật khẩu";
             this.gtxtPassword.SelectedText = "";
+            this.gtxtPassword.ShadowDecoration.BorderRadius = 15;
+            this.gtxtPassword.ShadowDecoration.Color = System.Drawing.Color.LightCyan;
+            this.gtxtPassword.ShadowDecoration.Depth = 10;
             this.gtxtPassword.ShadowDecoration.Parent = this.gtxtPassword;
+            this.gtxtPassword.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.gtxtPassword.Size = new System.Drawing.Size(243, 36);
             this.gtxtPassword.TabIndex = 3;
             this.gtxtPassword.UseSystemPasswordChar = true;

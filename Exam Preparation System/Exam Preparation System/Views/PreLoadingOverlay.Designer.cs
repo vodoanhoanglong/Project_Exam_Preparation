@@ -52,6 +52,9 @@
             this.guna2ProgressIndicator1.Location = new System.Drawing.Point(340, 154);
             this.guna2ProgressIndicator1.Name = "guna2ProgressIndicator1";
             this.guna2ProgressIndicator1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2ProgressIndicator1.ShadowDecoration.BorderRadius = 15;
+            this.guna2ProgressIndicator1.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.guna2ProgressIndicator1.ShadowDecoration.Depth = 10;
             this.guna2ProgressIndicator1.ShadowDecoration.Parent = this.guna2ProgressIndicator1;
             this.guna2ProgressIndicator1.Size = new System.Drawing.Size(115, 110);
             this.guna2ProgressIndicator1.TabIndex = 2;

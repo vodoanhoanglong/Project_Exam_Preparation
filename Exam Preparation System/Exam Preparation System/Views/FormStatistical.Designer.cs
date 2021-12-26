@@ -53,9 +53,9 @@ namespace Exam_Preparation_System
             // cmbExamID
             // 
             this.cmbExamID.BackColor = System.Drawing.Color.Transparent;
-            this.cmbExamID.BorderRadius = 10;
+            this.cmbExamID.BorderRadius = 5;
             this.cmbExamID.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.cmbExamID.BorderThickness = 2;
+            this.cmbExamID.BorderThickness = 0;
             this.cmbExamID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbExamID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbExamID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -68,6 +68,10 @@ namespace Exam_Preparation_System
             this.cmbExamID.ItemsAppearance.Parent = this.cmbExamID;
             this.cmbExamID.Location = new System.Drawing.Point(155, 51);
             this.cmbExamID.Name = "cmbExamID";
+            this.cmbExamID.ShadowDecoration.BorderRadius = 15;
+            this.cmbExamID.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.cmbExamID.ShadowDecoration.Depth = 10;
+            this.cmbExamID.ShadowDecoration.Enabled = true;
             this.cmbExamID.ShadowDecoration.Parent = this.cmbExamID;
             this.cmbExamID.Size = new System.Drawing.Size(326, 36);
             this.cmbExamID.TabIndex = 12;

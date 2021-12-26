@@ -72,6 +72,7 @@ namespace Exam_Preparation_System
             // btnBack
             // 
             this.btnBack.Animated = true;
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BorderRadius = 5;
             this.btnBack.CheckedState.Parent = this.btnBack;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -87,6 +88,10 @@ namespace Exam_Preparation_System
             this.btnBack.HoverState.Parent = this.btnBack;
             this.btnBack.Location = new System.Drawing.Point(1052, 51);
             this.btnBack.Name = "btnBack";
+            this.btnBack.ShadowDecoration.BorderRadius = 15;
+            this.btnBack.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnBack.ShadowDecoration.Depth = 10;
+            this.btnBack.ShadowDecoration.Enabled = true;
             this.btnBack.ShadowDecoration.Parent = this.btnBack;
             this.btnBack.Size = new System.Drawing.Size(136, 32);
             this.btnBack.TabIndex = 19;

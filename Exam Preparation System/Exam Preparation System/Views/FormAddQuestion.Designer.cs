@@ -40,12 +40,12 @@ namespace Exam_Preparation_System.Views
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvQuestion = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.QuestionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isCorrect = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddQuestion = new Guna.UI2.WinForms.Guna2GradientButton();
             this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestion)).BeginInit();
             this.SuspendLayout();
@@ -173,61 +173,6 @@ namespace Exam_Preparation_System.Views
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvQuestion.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Animated = true;
-            this.txtSearch.BorderRadius = 4;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.Parent = this.txtSearch;
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.IconRight = global::Exam_Preparation_System.Properties.Resources.search;
-            this.txtSearch.IconRightOffset = new System.Drawing.Point(5, 0);
-            this.txtSearch.Location = new System.Drawing.Point(2, 69);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceholderText = "Tìm kiếm câu hỏi";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(450, 36);
-            this.txtSearch.TabIndex = 22;
-            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
-            // 
-            // btnAddQuestion
-            // 
-            this.btnAddQuestion.Animated = true;
-            this.btnAddQuestion.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddQuestion.BorderRadius = 5;
-            this.btnAddQuestion.CheckedState.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddQuestion.CustomImages.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddQuestion.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddQuestion.DisabledState.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
-            this.btnAddQuestion.HoverState.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Location = new System.Drawing.Point(753, 69);
-            this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.ShadowDecoration.Parent = this.btnAddQuestion;
-            this.btnAddQuestion.Size = new System.Drawing.Size(104, 36);
-            this.btnAddQuestion.TabIndex = 23;
-            this.btnAddQuestion.Text = "Thêm câu hỏi";
-            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
-            // 
             // QuestionID
             // 
             this.QuestionID.DataPropertyName = "QuestionID";
@@ -261,6 +206,70 @@ namespace Exam_Preparation_System.Views
             this.SubjectName.HeaderText = "Môn";
             this.SubjectName.Name = "SubjectName";
             this.SubjectName.ReadOnly = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Animated = true;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderRadius = 5;
+            this.txtSearch.BorderThickness = 0;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.IconRight = global::Exam_Preparation_System.Properties.Resources.search;
+            this.txtSearch.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtSearch.Location = new System.Drawing.Point(2, 69);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "Tìm kiếm câu hỏi";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.BorderRadius = 15;
+            this.txtSearch.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtSearch.ShadowDecoration.Depth = 10;
+            this.txtSearch.ShadowDecoration.Enabled = true;
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(450, 36);
+            this.txtSearch.TabIndex = 22;
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            // 
+            // btnAddQuestion
+            // 
+            this.btnAddQuestion.Animated = true;
+            this.btnAddQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddQuestion.BorderRadius = 5;
+            this.btnAddQuestion.CheckedState.Parent = this.btnAddQuestion;
+            this.btnAddQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddQuestion.CustomImages.Parent = this.btnAddQuestion;
+            this.btnAddQuestion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddQuestion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddQuestion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddQuestion.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddQuestion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddQuestion.DisabledState.Parent = this.btnAddQuestion;
+            this.btnAddQuestion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddQuestion.ForeColor = System.Drawing.Color.White;
+            this.btnAddQuestion.HoverState.Parent = this.btnAddQuestion;
+            this.btnAddQuestion.Location = new System.Drawing.Point(753, 69);
+            this.btnAddQuestion.Name = "btnAddQuestion";
+            this.btnAddQuestion.ShadowDecoration.BorderRadius = 15;
+            this.btnAddQuestion.ShadowDecoration.Depth = 10;
+            this.btnAddQuestion.ShadowDecoration.Enabled = true;
+            this.btnAddQuestion.ShadowDecoration.Parent = this.btnAddQuestion;
+            this.btnAddQuestion.Size = new System.Drawing.Size(104, 36);
+            this.btnAddQuestion.TabIndex = 23;
+            this.btnAddQuestion.Text = "Thêm câu hỏi";
+            this.btnAddQuestion.Click += new System.EventHandler(this.btnAddQuestion_Click);
             // 
             // DragControl
             // 

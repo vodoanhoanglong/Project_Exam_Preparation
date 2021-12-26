@@ -108,7 +108,7 @@ namespace Exam_Preparation_System
             // btnExit
             // 
             this.btnExit.Animated = true;
-            this.btnExit.BorderRadius = 10;
+            this.btnExit.BorderRadius = 5;
             this.btnExit.CheckedState.Parent = this.btnExit;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.CustomImages.Parent = this.btnExit;
@@ -123,6 +123,9 @@ namespace Exam_Preparation_System
             this.btnExit.HoverState.Parent = this.btnExit;
             this.btnExit.Location = new System.Drawing.Point(362, 380);
             this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.BorderRadius = 15;
+            this.btnExit.ShadowDecoration.Depth = 10;
+            this.btnExit.ShadowDecoration.Enabled = true;
             this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(216, 38);
             this.btnExit.TabIndex = 29;
@@ -133,7 +136,7 @@ namespace Exam_Preparation_System
             // btnDoiMatKhau
             // 
             this.btnDoiMatKhau.Animated = true;
-            this.btnDoiMatKhau.BorderRadius = 10;
+            this.btnDoiMatKhau.BorderRadius = 5;
             this.btnDoiMatKhau.CheckedState.Parent = this.btnDoiMatKhau;
             this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoiMatKhau.CustomImages.Parent = this.btnDoiMatKhau;
@@ -148,6 +151,9 @@ namespace Exam_Preparation_System
             this.btnDoiMatKhau.HoverState.Parent = this.btnDoiMatKhau;
             this.btnDoiMatKhau.Location = new System.Drawing.Point(56, 380);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.ShadowDecoration.BorderRadius = 15;
+            this.btnDoiMatKhau.ShadowDecoration.Depth = 10;
+            this.btnDoiMatKhau.ShadowDecoration.Enabled = true;
             this.btnDoiMatKhau.ShadowDecoration.Parent = this.btnDoiMatKhau;
             this.btnDoiMatKhau.Size = new System.Drawing.Size(216, 38);
             this.btnDoiMatKhau.TabIndex = 23;
@@ -157,7 +163,8 @@ namespace Exam_Preparation_System
             // txtNhaplaiPassWord
             // 
             this.txtNhaplaiPassWord.Animated = true;
-            this.txtNhaplaiPassWord.BorderRadius = 4;
+            this.txtNhaplaiPassWord.BorderRadius = 5;
+            this.txtNhaplaiPassWord.BorderThickness = 0;
             this.txtNhaplaiPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhaplaiPassWord.DefaultText = "";
             this.txtNhaplaiPassWord.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -176,6 +183,9 @@ namespace Exam_Preparation_System
             this.txtNhaplaiPassWord.PasswordChar = '\0';
             this.txtNhaplaiPassWord.PlaceholderText = "";
             this.txtNhaplaiPassWord.SelectedText = "";
+            this.txtNhaplaiPassWord.ShadowDecoration.BorderRadius = 10;
+            this.txtNhaplaiPassWord.ShadowDecoration.Depth = 10;
+            this.txtNhaplaiPassWord.ShadowDecoration.Enabled = true;
             this.txtNhaplaiPassWord.ShadowDecoration.Parent = this.txtNhaplaiPassWord;
             this.txtNhaplaiPassWord.Size = new System.Drawing.Size(363, 36);
             this.txtNhaplaiPassWord.TabIndex = 27;
@@ -193,7 +203,8 @@ namespace Exam_Preparation_System
             // txtPassWordMoi
             // 
             this.txtPassWordMoi.Animated = true;
-            this.txtPassWordMoi.BorderRadius = 4;
+            this.txtPassWordMoi.BorderRadius = 5;
+            this.txtPassWordMoi.BorderThickness = 0;
             this.txtPassWordMoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassWordMoi.DefaultText = "";
             this.txtPassWordMoi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -212,6 +223,9 @@ namespace Exam_Preparation_System
             this.txtPassWordMoi.PasswordChar = '\0';
             this.txtPassWordMoi.PlaceholderText = "";
             this.txtPassWordMoi.SelectedText = "";
+            this.txtPassWordMoi.ShadowDecoration.BorderRadius = 10;
+            this.txtPassWordMoi.ShadowDecoration.Depth = 10;
+            this.txtPassWordMoi.ShadowDecoration.Enabled = true;
             this.txtPassWordMoi.ShadowDecoration.Parent = this.txtPassWordMoi;
             this.txtPassWordMoi.Size = new System.Drawing.Size(363, 36);
             this.txtPassWordMoi.TabIndex = 25;
@@ -229,7 +243,8 @@ namespace Exam_Preparation_System
             // txtPasswordCu
             // 
             this.txtPasswordCu.Animated = true;
-            this.txtPasswordCu.BorderRadius = 4;
+            this.txtPasswordCu.BorderRadius = 5;
+            this.txtPasswordCu.BorderThickness = 0;
             this.txtPasswordCu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPasswordCu.DefaultText = "";
             this.txtPasswordCu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -249,6 +264,9 @@ namespace Exam_Preparation_System
             this.txtPasswordCu.PasswordChar = '\0';
             this.txtPasswordCu.PlaceholderText = "";
             this.txtPasswordCu.SelectedText = "";
+            this.txtPasswordCu.ShadowDecoration.BorderRadius = 10;
+            this.txtPasswordCu.ShadowDecoration.Depth = 10;
+            this.txtPasswordCu.ShadowDecoration.Enabled = true;
             this.txtPasswordCu.ShadowDecoration.Parent = this.txtPasswordCu;
             this.txtPasswordCu.Size = new System.Drawing.Size(363, 36);
             this.txtPasswordCu.TabIndex = 23;
@@ -277,7 +295,8 @@ namespace Exam_Preparation_System
             // 
             // txtBirthDay
             // 
-            this.txtBirthDay.BorderRadius = 4;
+            this.txtBirthDay.BorderRadius = 5;
+            this.txtBirthDay.BorderThickness = 0;
             this.txtBirthDay.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBirthDay.DefaultText = "";
             this.txtBirthDay.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -297,6 +316,10 @@ namespace Exam_Preparation_System
             this.txtBirthDay.PasswordChar = '\0';
             this.txtBirthDay.PlaceholderText = "";
             this.txtBirthDay.SelectedText = "";
+            this.txtBirthDay.ShadowDecoration.BorderRadius = 15;
+            this.txtBirthDay.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtBirthDay.ShadowDecoration.Depth = 10;
+            this.txtBirthDay.ShadowDecoration.Enabled = true;
             this.txtBirthDay.ShadowDecoration.Parent = this.txtBirthDay;
             this.txtBirthDay.Size = new System.Drawing.Size(363, 36);
             this.txtBirthDay.TabIndex = 21;
@@ -315,7 +338,8 @@ namespace Exam_Preparation_System
             // 
             // txtFullName
             // 
-            this.txtFullName.BorderRadius = 4;
+            this.txtFullName.BorderRadius = 5;
+            this.txtFullName.BorderThickness = 0;
             this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFullName.DefaultText = "";
             this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -335,13 +359,18 @@ namespace Exam_Preparation_System
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "";
             this.txtFullName.SelectedText = "";
+            this.txtFullName.ShadowDecoration.BorderRadius = 15;
+            this.txtFullName.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtFullName.ShadowDecoration.Depth = 10;
+            this.txtFullName.ShadowDecoration.Enabled = true;
             this.txtFullName.ShadowDecoration.Parent = this.txtFullName;
             this.txtFullName.Size = new System.Drawing.Size(363, 36);
             this.txtFullName.TabIndex = 18;
             // 
             // txtPhone
             // 
-            this.txtPhone.BorderRadius = 4;
+            this.txtPhone.BorderRadius = 5;
+            this.txtPhone.BorderThickness = 0;
             this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhone.DefaultText = "";
             this.txtPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -361,13 +390,18 @@ namespace Exam_Preparation_System
             this.txtPhone.PasswordChar = '\0';
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
+            this.txtPhone.ShadowDecoration.BorderRadius = 15;
+            this.txtPhone.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtPhone.ShadowDecoration.Depth = 10;
+            this.txtPhone.ShadowDecoration.Enabled = true;
             this.txtPhone.ShadowDecoration.Parent = this.txtPhone;
             this.txtPhone.Size = new System.Drawing.Size(363, 36);
             this.txtPhone.TabIndex = 17;
             // 
             // txtSex
             // 
-            this.txtSex.BorderRadius = 4;
+            this.txtSex.BorderRadius = 5;
+            this.txtSex.BorderThickness = 0;
             this.txtSex.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSex.DefaultText = "";
             this.txtSex.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -387,6 +421,10 @@ namespace Exam_Preparation_System
             this.txtSex.PasswordChar = '\0';
             this.txtSex.PlaceholderText = "";
             this.txtSex.SelectedText = "";
+            this.txtSex.ShadowDecoration.BorderRadius = 15;
+            this.txtSex.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtSex.ShadowDecoration.Depth = 10;
+            this.txtSex.ShadowDecoration.Enabled = true;
             this.txtSex.ShadowDecoration.Parent = this.txtSex;
             this.txtSex.Size = new System.Drawing.Size(363, 36);
             this.txtSex.TabIndex = 16;
@@ -413,7 +451,8 @@ namespace Exam_Preparation_System
             // 
             // txtUserID
             // 
-            this.txtUserID.BorderRadius = 4;
+            this.txtUserID.BorderRadius = 5;
+            this.txtUserID.BorderThickness = 0;
             this.txtUserID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserID.DefaultText = "";
             this.txtUserID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -433,6 +472,10 @@ namespace Exam_Preparation_System
             this.txtUserID.PasswordChar = '\0';
             this.txtUserID.PlaceholderText = "";
             this.txtUserID.SelectedText = "";
+            this.txtUserID.ShadowDecoration.BorderRadius = 15;
+            this.txtUserID.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtUserID.ShadowDecoration.Depth = 10;
+            this.txtUserID.ShadowDecoration.Enabled = true;
             this.txtUserID.ShadowDecoration.Parent = this.txtUserID;
             this.txtUserID.Size = new System.Drawing.Size(363, 36);
             this.txtUserID.TabIndex = 1;
@@ -460,7 +503,7 @@ namespace Exam_Preparation_System
             // btnEditPass
             // 
             this.btnEditPass.Animated = true;
-            this.btnEditPass.BorderRadius = 10;
+            this.btnEditPass.BorderRadius = 5;
             this.btnEditPass.CheckedState.Parent = this.btnEditPass;
             this.btnEditPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditPass.CustomImages.Parent = this.btnEditPass;
@@ -475,6 +518,10 @@ namespace Exam_Preparation_System
             this.btnEditPass.HoverState.Parent = this.btnEditPass;
             this.btnEditPass.Location = new System.Drawing.Point(517, 499);
             this.btnEditPass.Name = "btnEditPass";
+            this.btnEditPass.ShadowDecoration.BorderRadius = 15;
+            this.btnEditPass.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btnEditPass.ShadowDecoration.Depth = 10;
+            this.btnEditPass.ShadowDecoration.Enabled = true;
             this.btnEditPass.ShadowDecoration.Parent = this.btnEditPass;
             this.btnEditPass.Size = new System.Drawing.Size(216, 38);
             this.btnEditPass.TabIndex = 7;

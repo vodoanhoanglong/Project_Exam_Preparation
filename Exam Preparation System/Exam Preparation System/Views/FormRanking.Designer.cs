@@ -81,6 +81,7 @@ namespace Exam_Preparation_System
             // shapeTwo
             // 
             this.shapeTwo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.shapeTwo.BorderThickness = 5;
             this.transition.SetDecoration(this.shapeTwo, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shapeTwo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.shapeTwo.Location = new System.Drawing.Point(103, 214);
@@ -97,6 +98,7 @@ namespace Exam_Preparation_System
             // shapeThree
             // 
             this.shapeThree.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.shapeThree.BorderThickness = 5;
             this.transition.SetDecoration(this.shapeThree, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shapeThree.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.shapeThree.Location = new System.Drawing.Point(805, 261);
@@ -114,6 +116,7 @@ namespace Exam_Preparation_System
             // 
             this.shapeOne.BackColor = System.Drawing.Color.Transparent;
             this.shapeOne.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shapeOne.BorderThickness = 5;
             this.transition.SetDecoration(this.shapeOne, Guna.UI2.AnimatorNS.DecorationType.None);
             this.shapeOne.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.shapeOne.Location = new System.Drawing.Point(430, 158);
@@ -590,9 +593,9 @@ namespace Exam_Preparation_System
             // cmbExamID
             // 
             this.cmbExamID.BackColor = System.Drawing.Color.Transparent;
-            this.cmbExamID.BorderRadius = 10;
+            this.cmbExamID.BorderRadius = 5;
             this.cmbExamID.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.cmbExamID.BorderThickness = 2;
+            this.cmbExamID.BorderThickness = 0;
             this.transition.SetDecoration(this.cmbExamID, Guna.UI2.AnimatorNS.DecorationType.None);
             this.cmbExamID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbExamID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -606,6 +609,10 @@ namespace Exam_Preparation_System
             this.cmbExamID.ItemsAppearance.Parent = this.cmbExamID;
             this.cmbExamID.Location = new System.Drawing.Point(174, 20);
             this.cmbExamID.Name = "cmbExamID";
+            this.cmbExamID.ShadowDecoration.BorderRadius = 15;
+            this.cmbExamID.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.cmbExamID.ShadowDecoration.Depth = 10;
+            this.cmbExamID.ShadowDecoration.Enabled = true;
             this.cmbExamID.ShadowDecoration.Parent = this.cmbExamID;
             this.cmbExamID.Size = new System.Drawing.Size(162, 36);
             this.cmbExamID.TabIndex = 20;

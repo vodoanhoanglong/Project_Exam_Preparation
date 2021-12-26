@@ -102,6 +102,7 @@ namespace Exam_Preparation_System
                     RJRadioButton radio = new RJRadioButton();
 
                     radio.AutoSize = true;
+                    radio.Cursor = Cursors.Hand;
                     radio.BackColor = System.Drawing.Color.White;
                     radio.CheckedColor = System.Drawing.Color.MediumSlateBlue;
                     radio.MinimumSize = new System.Drawing.Size(0, 21);

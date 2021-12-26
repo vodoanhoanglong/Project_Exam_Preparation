@@ -29,11 +29,11 @@ namespace Exam_Preparation_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvListContests = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ExamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,25 +63,25 @@ namespace Exam_Preparation_System
             // 
             this.dgvListContests.AllowUserToAddRows = false;
             this.dgvListContests.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvListContests.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvListContests.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListContests.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListContests.BackgroundColor = System.Drawing.Color.White;
             this.dgvListContests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvListContests.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvListContests.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListContests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListContests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListContests.ColumnHeadersHeight = 20;
             this.dgvListContests.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ExamID,
@@ -91,27 +91,27 @@ namespace Exam_Preparation_System
             this.CreateDate,
             this.Details,
             this.SubjectID});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListContests.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListContests.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListContests.EnableHeadersVisualStyles = false;
             this.dgvListContests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvListContests.Location = new System.Drawing.Point(1, 119);
             this.dgvListContests.Name = "dgvListContests";
             this.dgvListContests.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListContests.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListContests.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListContests.RowHeadersVisible = false;
             this.dgvListContests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListContests.Size = new System.Drawing.Size(1199, 497);
@@ -174,9 +174,9 @@ namespace Exam_Preparation_System
             // CreateDate
             // 
             this.CreateDate.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle8.Format = "d";
-            dataGridViewCellStyle8.NullValue = "dd/MM/yyyy HH:mm:ss";
-            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "dd/MM/yyyy HH:mm:ss";
+            this.CreateDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.CreateDate.FillWeight = 113.9086F;
             this.CreateDate.HeaderText = "Ngày tạo";
             this.CreateDate.Name = "CreateDate";
@@ -204,8 +204,9 @@ namespace Exam_Preparation_System
             // cmbSubject
             // 
             this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSubject.BorderRadius = 4;
+            this.cmbSubject.BorderRadius = 5;
             this.cmbSubject.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.cmbSubject.BorderThickness = 0;
             this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -218,6 +219,10 @@ namespace Exam_Preparation_System
             this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
             this.cmbSubject.Location = new System.Drawing.Point(132, 77);
             this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.ShadowDecoration.BorderRadius = 15;
+            this.cmbSubject.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.cmbSubject.ShadowDecoration.Depth = 10;
+            this.cmbSubject.ShadowDecoration.Enabled = true;
             this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
             this.cmbSubject.Size = new System.Drawing.Size(231, 36);
             this.cmbSubject.TabIndex = 11;
@@ -236,7 +241,9 @@ namespace Exam_Preparation_System
             // txtExamID
             // 
             this.txtExamID.Animated = true;
-            this.txtExamID.BorderRadius = 4;
+            this.txtExamID.BackColor = System.Drawing.Color.Transparent;
+            this.txtExamID.BorderRadius = 5;
+            this.txtExamID.BorderThickness = 0;
             this.txtExamID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtExamID.DefaultText = "";
             this.txtExamID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -256,6 +263,10 @@ namespace Exam_Preparation_System
             this.txtExamID.PasswordChar = '\0';
             this.txtExamID.PlaceholderText = "Tìm kiếm theo Mã đề";
             this.txtExamID.SelectedText = "";
+            this.txtExamID.ShadowDecoration.BorderRadius = 15;
+            this.txtExamID.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.txtExamID.ShadowDecoration.Depth = 10;
+            this.txtExamID.ShadowDecoration.Enabled = true;
             this.txtExamID.ShadowDecoration.Parent = this.txtExamID;
             this.txtExamID.Size = new System.Drawing.Size(326, 32);
             this.txtExamID.TabIndex = 13;
