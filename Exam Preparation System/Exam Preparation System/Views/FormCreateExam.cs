@@ -1,4 +1,5 @@
 ﻿using Exam_Preparation_System.Models;
+using Exam_Preparation_System.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -136,7 +137,22 @@ namespace Exam_Preparation_System
                     .OrderBy(p => SqlFunctions.Checksum(p.QuestionID * rnd))
                     .Take(quantity);
 
-                table.DataSource = question.ToList();
+                DataTable ta = new DataTable();
+                ta.Columns.Add("QuestionID", typeof(int));
+                ta.Columns.Add("SubName", typeof(string));
+                ta.Columns.Add("Contents", typeof(string));
+                ta.Columns.Add("AnswersContent", typeof(string));
+                question.ToList().ForEach(x =>
+                {
+                    var rowDT = ta.NewRow();
+                    rowDT["QuestionID"] = x.QuestionID;
+                    rowDT["SubName"] = x.SubName;
+                    rowDT["Contents"] = x.Contents;
+                    rowDT["AnswersContent"] = x.AnswersContent;
+                    ta.Rows.Add(rowDT);
+                });
+
+                table.DataSource = ta;
             }
             
         }
@@ -254,6 +270,21 @@ namespace Exam_Preparation_System
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+            new FormAddQuestion((int)cmbSubject.SelectedValue,
+                dgvQuestion, nudQuantity).ShowDialog();
+        }
+
+        private void btnDeleteQuestion_Click(object sender, EventArgs e)
+        {
+            foreach (var r in dgvQuestion.SelectedRows
+                    .Cast<DataGridViewRow>()
+                    .Where(r => !r.IsNewRow))
+                dgvQuestion.Rows.Remove(r);
+            nudQuantity.Value = dgvQuestion.Rows.Count;
         }
     }
 }

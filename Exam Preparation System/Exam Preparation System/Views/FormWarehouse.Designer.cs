@@ -52,6 +52,7 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDeleteAnswer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dgvAnswer = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -63,7 +64,6 @@ namespace Exam_Preparation_System
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtAnswer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gbAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuestion)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -348,6 +348,26 @@ namespace Exam_Preparation_System
             this.guna2GroupBox1.Text = "Tạo mới câu hỏi";
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
             // 
+            // cmbSubject
+            // 
+            this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
+            this.cmbSubject.BorderRadius = 4;
+            this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbSubject.FocusedState.Parent = this.cmbSubject;
+            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbSubject.HoverState.Parent = this.cmbSubject;
+            this.cmbSubject.ItemHeight = 30;
+            this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
+            this.cmbSubject.Location = new System.Drawing.Point(77, 44);
+            this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
+            this.cmbSubject.Size = new System.Drawing.Size(355, 36);
+            this.cmbSubject.TabIndex = 14;
+            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -374,7 +394,7 @@ namespace Exam_Preparation_System
             this.btnDeleteAnswer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteAnswer.ForeColor = System.Drawing.Color.White;
             this.btnDeleteAnswer.HoverState.Parent = this.btnDeleteAnswer;
-            this.btnDeleteAnswer.Location = new System.Drawing.Point(1089, 52);
+            this.btnDeleteAnswer.Location = new System.Drawing.Point(1088, 44);
             this.btnDeleteAnswer.Name = "btnDeleteAnswer";
             this.btnDeleteAnswer.ShadowDecoration.Parent = this.btnDeleteAnswer;
             this.btnDeleteAnswer.Size = new System.Drawing.Size(87, 36);
@@ -419,7 +439,7 @@ namespace Exam_Preparation_System
             this.dgvAnswer.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAnswer.EnableHeadersVisualStyles = false;
             this.dgvAnswer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAnswer.Location = new System.Drawing.Point(531, 94);
+            this.dgvAnswer.Location = new System.Drawing.Point(530, 86);
             this.dgvAnswer.Name = "dgvAnswer";
             this.dgvAnswer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -511,7 +531,7 @@ namespace Exam_Preparation_System
             this.btnAddAnswer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnAddAnswer.ForeColor = System.Drawing.Color.White;
             this.btnAddAnswer.HoverState.Parent = this.btnAddAnswer;
-            this.btnAddAnswer.Location = new System.Drawing.Point(996, 52);
+            this.btnAddAnswer.Location = new System.Drawing.Point(995, 44);
             this.btnAddAnswer.Name = "btnAddAnswer";
             this.btnAddAnswer.ShadowDecoration.Parent = this.btnAddAnswer;
             this.btnAddAnswer.Size = new System.Drawing.Size(87, 36);
@@ -560,7 +580,7 @@ namespace Exam_Preparation_System
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(447, 58);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(446, 50);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(78, 22);
             this.guna2HtmlLabel3.TabIndex = 3;
@@ -582,7 +602,7 @@ namespace Exam_Preparation_System
             this.txtAnswer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAnswer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAnswer.HoverState.Parent = this.txtAnswer;
-            this.txtAnswer.Location = new System.Drawing.Point(531, 52);
+            this.txtAnswer.Location = new System.Drawing.Point(530, 44);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.PasswordChar = '\0';
             this.txtAnswer.PlaceholderText = "Thêm đáp án";
@@ -590,26 +610,6 @@ namespace Exam_Preparation_System
             this.txtAnswer.ShadowDecoration.Parent = this.txtAnswer;
             this.txtAnswer.Size = new System.Drawing.Size(450, 36);
             this.txtAnswer.TabIndex = 1;
-            // 
-            // cmbSubject
-            // 
-            this.cmbSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cmbSubject.BorderRadius = 4;
-            this.cmbSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbSubject.FocusedState.Parent = this.cmbSubject;
-            this.cmbSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbSubject.HoverState.Parent = this.cmbSubject;
-            this.cmbSubject.ItemHeight = 30;
-            this.cmbSubject.ItemsAppearance.Parent = this.cmbSubject;
-            this.cmbSubject.Location = new System.Drawing.Point(77, 44);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.ShadowDecoration.Parent = this.cmbSubject;
-            this.cmbSubject.Size = new System.Drawing.Size(355, 36);
-            this.cmbSubject.TabIndex = 14;
             // 
             // FormWarehouse
             // 
