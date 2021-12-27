@@ -38,16 +38,16 @@ namespace Exam_Preparation_System
             transition.ShowSync(ptbCrown);
             transition.ShowSync(shapeOne);
             guna2HtmlLabel1.Visible = true;
-            lblQuantity1.Visible = true;
             lblTime1.Visible = true;
+            lblQuantity1.Visible = true;
             transition.ShowSync(shapeTwo);
             guna2HtmlLabel2.Visible = true;
-            lblTime2.Visible = true;
             lblQuantity2.Visible = true;
+            lblTime2.Visible = true;
             transition.ShowSync(shapeThree);
             guna2HtmlLabel3.Visible = true;
-            lblTime3.Visible = true;
             lblQuantity3.Visible = true;
+            lblTime3.Visible = true;
 
         }
 

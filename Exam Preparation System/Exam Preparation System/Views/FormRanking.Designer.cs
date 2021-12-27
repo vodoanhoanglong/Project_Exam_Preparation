@@ -61,12 +61,12 @@ namespace Exam_Preparation_System
             this.lblUserID1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblUserID3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblUserID2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTime2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblQuantity2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblQuantity1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTime1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTime3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblQuantity1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblQuantity3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTime3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblFullName3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel32 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbExamID = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -474,21 +474,6 @@ namespace Exam_Preparation_System
             this.lblUserID2.Text = null;
             this.lblUserID2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTime2
-            // 
-            this.lblTime2.AutoSize = false;
-            this.lblTime2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.transition.SetDecoration(this.lblTime2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblTime2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime2.ForeColor = System.Drawing.Color.Black;
-            this.lblTime2.Location = new System.Drawing.Point(103, 327);
-            this.lblTime2.Name = "lblTime2";
-            this.lblTime2.Size = new System.Drawing.Size(315, 23);
-            this.lblTime2.TabIndex = 11;
-            this.lblTime2.Text = null;
-            this.lblTime2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTime2.Visible = false;
-            // 
             // lblQuantity2
             // 
             this.lblQuantity2.AutoSize = false;
@@ -496,28 +481,28 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblQuantity2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblQuantity2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity2.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantity2.Location = new System.Drawing.Point(103, 352);
+            this.lblQuantity2.Location = new System.Drawing.Point(103, 327);
             this.lblQuantity2.Name = "lblQuantity2";
-            this.lblQuantity2.Size = new System.Drawing.Size(321, 23);
-            this.lblQuantity2.TabIndex = 12;
+            this.lblQuantity2.Size = new System.Drawing.Size(315, 23);
+            this.lblQuantity2.TabIndex = 11;
             this.lblQuantity2.Text = null;
             this.lblQuantity2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblQuantity2.Visible = false;
             // 
-            // lblQuantity1
+            // lblTime2
             // 
-            this.lblQuantity1.AutoSize = false;
-            this.lblQuantity1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.transition.SetDecoration(this.lblQuantity1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblQuantity1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity1.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantity1.Location = new System.Drawing.Point(430, 352);
-            this.lblQuantity1.Name = "lblQuantity1";
-            this.lblQuantity1.Size = new System.Drawing.Size(369, 23);
-            this.lblQuantity1.TabIndex = 13;
-            this.lblQuantity1.Text = null;
-            this.lblQuantity1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lblQuantity1.Visible = false;
+            this.lblTime2.AutoSize = false;
+            this.lblTime2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.transition.SetDecoration(this.lblTime2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime2.ForeColor = System.Drawing.Color.Black;
+            this.lblTime2.Location = new System.Drawing.Point(103, 352);
+            this.lblTime2.Name = "lblTime2";
+            this.lblTime2.Size = new System.Drawing.Size(321, 23);
+            this.lblTime2.TabIndex = 12;
+            this.lblTime2.Text = null;
+            this.lblTime2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTime2.Visible = false;
             // 
             // lblTime1
             // 
@@ -526,28 +511,28 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblTime1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblTime1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime1.ForeColor = System.Drawing.Color.Black;
-            this.lblTime1.Location = new System.Drawing.Point(430, 323);
+            this.lblTime1.Location = new System.Drawing.Point(430, 352);
             this.lblTime1.Name = "lblTime1";
             this.lblTime1.Size = new System.Drawing.Size(369, 23);
-            this.lblTime1.TabIndex = 14;
+            this.lblTime1.TabIndex = 13;
             this.lblTime1.Text = null;
             this.lblTime1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblTime1.Visible = false;
             // 
-            // lblTime3
+            // lblQuantity1
             // 
-            this.lblTime3.AutoSize = false;
-            this.lblTime3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.transition.SetDecoration(this.lblTime3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lblTime3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime3.ForeColor = System.Drawing.Color.Black;
-            this.lblTime3.Location = new System.Drawing.Point(805, 330);
-            this.lblTime3.Name = "lblTime3";
-            this.lblTime3.Size = new System.Drawing.Size(303, 23);
-            this.lblTime3.TabIndex = 16;
-            this.lblTime3.Text = null;
-            this.lblTime3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTime3.Visible = false;
+            this.lblQuantity1.AutoSize = false;
+            this.lblQuantity1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.transition.SetDecoration(this.lblQuantity1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblQuantity1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity1.ForeColor = System.Drawing.Color.Black;
+            this.lblQuantity1.Location = new System.Drawing.Point(430, 323);
+            this.lblQuantity1.Name = "lblQuantity1";
+            this.lblQuantity1.Size = new System.Drawing.Size(369, 23);
+            this.lblQuantity1.TabIndex = 14;
+            this.lblQuantity1.Text = null;
+            this.lblQuantity1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lblQuantity1.Visible = false;
             // 
             // lblQuantity3
             // 
@@ -556,13 +541,28 @@ namespace Exam_Preparation_System
             this.transition.SetDecoration(this.lblQuantity3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblQuantity3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity3.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantity3.Location = new System.Drawing.Point(805, 355);
+            this.lblQuantity3.Location = new System.Drawing.Point(805, 330);
             this.lblQuantity3.Name = "lblQuantity3";
             this.lblQuantity3.Size = new System.Drawing.Size(303, 23);
-            this.lblQuantity3.TabIndex = 15;
+            this.lblQuantity3.TabIndex = 16;
             this.lblQuantity3.Text = null;
             this.lblQuantity3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lblQuantity3.Visible = false;
+            // 
+            // lblTime3
+            // 
+            this.lblTime3.AutoSize = false;
+            this.lblTime3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.transition.SetDecoration(this.lblTime3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.lblTime3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime3.ForeColor = System.Drawing.Color.Black;
+            this.lblTime3.Location = new System.Drawing.Point(805, 355);
+            this.lblTime3.Name = "lblTime3";
+            this.lblTime3.Size = new System.Drawing.Size(303, 23);
+            this.lblTime3.TabIndex = 15;
+            this.lblTime3.Text = null;
+            this.lblTime3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTime3.Visible = false;
             // 
             // lblFullName3
             // 
@@ -684,12 +684,12 @@ namespace Exam_Preparation_System
             this.Controls.Add(this.lblFullName3);
             this.Controls.Add(this.lblFullName1);
             this.Controls.Add(this.lblFullName2);
-            this.Controls.Add(this.lblTime3);
             this.Controls.Add(this.lblQuantity3);
-            this.Controls.Add(this.lblTime1);
+            this.Controls.Add(this.lblTime3);
             this.Controls.Add(this.lblQuantity1);
-            this.Controls.Add(this.lblQuantity2);
+            this.Controls.Add(this.lblTime1);
             this.Controls.Add(this.lblTime2);
+            this.Controls.Add(this.lblQuantity2);
             this.Controls.Add(this.lblUserID2);
             this.Controls.Add(this.lblUserID3);
             this.Controls.Add(this.lblUserID1);
@@ -744,12 +744,12 @@ namespace Exam_Preparation_System
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUserID2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTime1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantity3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTime3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblFullName3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel32;
         private Guna.UI2.WinForms.Guna2ComboBox cmbExamID;
